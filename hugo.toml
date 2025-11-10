@@ -1,0 +1,573 @@
+baseURL = 'https://arielgiamportone.github.io/'
+languageCode = 'es-es'
+title = 'Ariel Lujan Giamportone - Ingeniero Pesquero & Data Scientist'
+theme = 'hugo-profile'
+
+[params]
+  title = "Ariel Lujan Giamportone"
+  description = "Ingeniero Pesquero especializado en Ciencia de Datos, I+D+i y Gestión de Proyectos"
+  favicon = "/fav.png"
+  
+  # Hero Section
+  [params.hero]
+    enable = true
+    intro = "Hola, mi nombre es"
+    title = "Ariel Luján Giamportone"
+    subtitle = "Ingeniero Pesquero & Data Scientist"
+    content = "Especialista en I+D+i, Ciencia de Datos y Gestión de Proyectos con más de 15 años de experiencia en proyectos STEM interdisciplinarios."
+    image = "/images/me.png"
+    button = { enable = true, name = "Ver CV", url = "#about" }
+    
+    [[params.hero.socialLinks.fontAwesomeIcons]]
+      icon = "fab fa-linkedin"
+      url = "https://www.linkedin.com/in/agiamportone"
+    [[params.hero.socialLinks.fontAwesomeIcons]]
+      icon = "fab fa-github"
+      url = "https://github.com/arielgiamportone"
+    [[params.hero.socialLinks.fontAwesomeIcons]]
+      icon = "fab fa-researchgate"
+      url = "https://www.researchgate.net/profile/Ariel-Lujan-Giamportone"
+
+  # About Section
+  [params.about]
+    enable = true
+    title = "Sobre Mí"
+    image = "/hero.png"
+    content = """
+Soy un Ingeniero Pesquero con más de 15 años de experiencia en proyectos STEM interdisciplinarios. 
+Me especializo en I+D+i, Ciencia de Datos, y Gestión de Proyectos, con un enfoque en la innovación 
+y soluciones basadas en datos para la sostenibilidad y el medio ambiente.
+
+Actualmente trabajo como Especialista Técnico en Auditoría de Inventarios en Intervalor Data, 
+liderando proyectos de automatización con IA y Visión por Computadora.
+
+Originario de Tierra del Fuego, he trabajado en entornos internacionales incluyendo Suiza, Italia, 
+Noruega y la Antártida, desarrollando una perspectiva global y adaptabilidad excepcional.
+"""
+    
+    [params.about.skills]
+      enable = true
+      title = "Tecnologías y Herramientas:"
+      items = [
+        "Python", "R", "SQL", "Machine Learning", "Deep Learning",
+        "Tableau", "Power BI", "Excel Avanzado", "AutoCAD", "MATLAB",
+        "Scrum", "Kanban", "Lean Six Sigma", "ISO 9001",
+        "Acuicultura", "Oceanografía", "Gestión Ambiental"
+      ]
+
+  # Experience Section
+  [params.experience]
+    enable = true
+    title = "Experiencia Profesional"
+    
+    [[params.experience.items]]
+      job = "Investigador en Ciencia de Datos e Inteligencia Artificial"
+      company = "Mainly Labs"
+      companyUrl = "https://mainlylabs.com/"
+      companyLogo = "/images/logos/mainly-labs.png"
+      date = "Mar 2025 - Jul 2025"
+      featuredLink = { enable = true, name = "Leer más", url = "/experiencias/mainly-labs/" }
+      content = """
+Liderazgo de proyectos de I+D+i multidisciplinarios en sectores críticos como seguridad contra incendios, agricultura inteligente, IoT y visión por computadora.
+
+• Project Manager del proyecto MICEGEL (microesferas biodegradables)
+• Director de becarios con gestión de talento y mentoría técnica
+• Desarrollo de 15+ proyectos simultáneos de IA y Machine Learning
+• Implementación de metodologías ágiles (Scrumban) en entornos de I+D+i
+"""
+
+  [[params.experience.items]]
+    job = "Especialista Técnico en Auditoría de Inventarios"
+    company = "Intervalor Data"
+    companyUrl = "https://intervalor.com"
+    companyLogo = "/images/logos/intervalor-data.png"
+    date = "Oct 2024 - Feb 2025"
+    featuredLink = { enable = true, name = "Leer más", url = "/experiencias/intervalor-data/" }
+    content = """
+Liderazgo técnico en proyectos de auditoría para clientes como EUIPO y AENA. 
+Automatización de procesos con Ciencia de Datos, IA y Visión por Computadora.
+
+• Implementación de soluciones de IA para optimización de procesos
+• Desarrollo de sistemas de visión por computadora para auditorías
+• Gestión de proyectos técnicos complejos
+• Análisis de datos avanzado para toma de decisiones
+"""
+
+  [[params.experience.items]]
+    job = "Director Provincial de Vinculación en Ciencia y Tecnología"
+    company = "Gobierno de Tierra del Fuego, A e IAS"
+    companyUrl = "https://www.tierradelfuego.gob.ar"
+    companyLogo = "/images/logos/gobierno-tdf.png"
+    date = "Feb 2021 - Ene 2022"
+    featuredLink = { enable = true, name = "Leer más", url = "/experiencias/director-tdf/" }
+    content = """
+Liderazgo de iniciativas estratégicas para fortalecer el ecosistema de I+D+i provincial, impulsando la colaboración entre sectores público, privado y académico.
+
+• Quintupliqué el presupuesto anual provincial de I+D+i (AR$ 65M / USD 298K)
+• Planificación estratégica de políticas de CTI 2021-2030
+• Supervisión de 20+ proyectos de I+D con 95% de tasa de finalización
+• Organización de eventos clave de transferencia tecnológica
+• Gestión de colaboraciones internacionales (Francia, Protocolo de Nagoya)
+"""
+  
+  [[params.experience.items]]
+    job = "Vinculador Tecnológico"
+    company = "CADIC-CONICET"
+    companyUrl = "https://www.cadic.conicet.gov.ar"
+    companyLogo = "/images/logos/cadic-conicet.png"
+    date = "2019 - 2021"
+    featuredLink = { enable = true, name = "Leer más", url = "/experiencias/cadic-vinculador/" }
+    content = """
+Gestión de la Oficina de Transferencia Tecnológica, negociación con clientes y creación 
+de servicios de alta tecnología.
+
+• Optimización de transferencia tecnológica con ETL y análisis de datos
+• Implementación de Sistemas de Gestión de la Calidad
+• Negociación y gestión de acuerdos de I+D y asistencia técnica
+• Desarrollo de servicios tecnológicos innovadores
+"""
+  
+  [[params.experience.items]]
+    job = "Docente Universitario"
+    company = "UTN FRTDF"
+    companyUrl = "https://www.frtdf.utn.edu.ar"
+    companyLogo = "/images/logos/utn-frtdf.png"
+    date = "Abr 2019 - Mar 2023"
+    content = """
+Docencia en Puertos Pesqueros y Procesamiento de Productos Pesqueros.
+
+• Planificación curricular y desarrollo de material didáctico
+• Implementación de sistema de mejora continua
+"""
+    
+    [[params.experience.items]]
+      job = "Analista y Consultor Logístico Semi-senior"
+      company = "AIC Estudios y Proyectos"
+      companyLogo = "/images/logos/aice-logo.jpg"
+      companyUrl = "https://www.aic-consultores.com.ar/es/"
+      date = "Oct 2020 - Jul 2021"
+      content = """
+Análisis estratégico portuario y evaluación de Short Sea Shipping/Cabotaje Nacional.
+
+• Modelado de demanda y análisis predictivo
+• Desarrollo de dashboards para toma de decisiones
+• Análisis estratégico de operaciones portuarias
+• Consultoría en logística y cadena de suministro
+"""
+    
+    [[params.experience.items]]
+      job = "Ingeniero Pesquero - Constructor de Artes de Pesca"
+      company = "Clúster de la Pesca Artesanal de Tierra del Fuego"
+      companyUrl = "#"
+      date = "Mar 2015 - Jul 2016"
+      content = """
+Construcción de 120 trampas para centolla con gestión integral del proyecto.
+
+• Planificación y presupuesto de obra
+• Gestión de equipos de construcción
+• Control de calidad y cumplimiento de especificaciones
+• Liderazgo de proyecto desde diseño hasta entrega
+"""
+    
+
+    
+    [[params.experience.items]]
+      job = "Profesional de la Carrera de Personal de Apoyo en I+D+i"
+      company = "CADIC-CONICET"
+      companyUrl = "https://www.conicet.gov.ar"
+      date = "2012 - 2019"
+      content = """
+Carrera del Personal de Apoyo a la I+D+i, especializado en desarrollo tecnológico.
+
+• Diseño y construcción de sistemas de acuicultura
+• Desarrollo de artes de pesca y equipos oceanográficos
+• Sistemas de control para acuarios
+• Colaboración en campañas científicas (COPLA, CONICET)
+• Mantenimiento de equipos científicos especializados
+"""
+
+  # Education Section
+  [params.education]
+    enable = true
+    title = "Formación Académica"
+    
+    [[params.education.items]]
+      title = "Maestría en Dirección Logística y Operaciones"
+      school = { name = "TECH Universidad Tecnológica", url = "https://www.techtitute.com" }
+      schoolLogo = "/images/logos/education/tech-universidad.png"
+      date = "2020 - 2024"
+      detailPage = "/formaciones/maestria-logistica/"
+      content = """
+Programa de posgrado enfocado en la gestión estratégica de operaciones y cadenas de suministro.
+
+Áreas de especialización:
+• Gestión de la cadena de suministro global
+• Optimización de operaciones logísticas
+• Tecnologías aplicadas a la logística
+• Gestión de proyectos logísticos
+"""
+    
+    [[params.education.items]]
+      title = "Diplomado en Gestión del Medio Ambiente"
+      school = { name = "UTN Facultad Regional Resistencia", url = "https://www.frre.utn.edu.ar" }
+      schoolLogo = "/images/logos/education/utn-frre.png"
+      date = "2020"
+      detailPage = "/formaciones/diplomado-medio-ambiente/"
+      content = """
+Especialización en gestión ambiental y sostenibilidad.
+
+• Sistemas de gestión ambiental
+• Evaluación de impacto ambiental
+• Tecnologías limpias y sostenibilidad
+• Normativas ambientales
+"""
+    
+    [[params.education.items]]
+      title = "Diplomado en Gestión Integral de la Calidad"
+      school = { name = "UTN Facultad Regional Resistencia", url = "https://www.frre.utn.edu.ar" }
+      schoolLogo = "/images/logos/education/utn-frre.png"
+      date = "2019"
+      detailPage = "/formaciones/diplomado-calidad/"
+      content = """
+Formación especializada en sistemas de gestión de la calidad.
+
+• Normas ISO 9001 y sistemas de calidad
+• Auditorías de calidad
+• Mejora continua de procesos
+• Lean Six Sigma
+"""
+    
+    [[params.education.items]]
+      title = "Ingeniero Pesquero"
+      school = { name = "Universidad Tecnológica Nacional - FRRe/FRTDF", url = "https://www.frtdf.utn.edu.ar" }
+      schoolLogo = "/images/logos/education/utn-frtdf.png"
+      date = "2016"
+      GPA = "Egresado"
+      detailPage = "/formaciones/ingenieria-pesquera/"
+      content = """
+Tesis: "Kippa: diseño y construcción de un ROUV con tecnologías libres"
+
+Formación integral en:
+• Ingeniería pesquera y acuicultura
+• Oceanografía y biología marina
+• Tecnologías pesqueras
+• Gestión de recursos marinos
+• Diseño y construcción de equipos
+"""
+      featuredLink = { enable = true, name = "Ver Tesis", url = "#" }
+    
+    [[params.education.items]]
+      title = "Técnico Universitario Pesquero"
+      school = { name = "Universidad Tecnológica Nacional", url = "https://www.utn.edu.ar" }
+      schoolLogo = "/images/logos/education/utn-frtdf.png"
+      date = "2014"
+      detailPage = "/formaciones/tecnico-pesquero/"
+      content = """
+Formación técnica especializada en:
+• Tecnologías pesqueras
+• Procesamiento de productos pesqueros
+• Operaciones portuarias pesqueras
+• Mantenimiento de equipos
+"""
+
+  # Courses Section
+  [params.courses]
+    enable = true
+    title = "Cursos y Certificaciones"
+    
+    [[params.courses.items]]
+      title = "Data Analytics"
+      institution = "Upgrade Hub"
+      institutionUrl = "https://www.upgradhub.com"
+      institutionLogo = "/images/logos/upgrade-hub.png"
+      date = "2024"
+      certificate = "Completado el 19 de febrero de 2024"
+      featuredLink = { enable = true, name = "Leer más", url = "/cursos/data-analytics/" }
+      content = """
+      Bootcamp con una duración de 350 horas lectivas.
+  
+      • Análisis de datos avanzado
+      • Visualización de datos
+      • Estadística aplicada
+      • Herramientas de Business Intelligence
+      """
+    
+    [[params.courses.items]]
+      title = "Data Science"
+      institution = "Programming Hub"
+      institutionUrl = "https://www.programminghub.io"
+      institutionLogo = "/images/logos/programming-hub.png"
+      date = "2024"
+      certificate = "Certificación en ciencia de datos"
+      featuredLink = { enable = true, name = "Leer más", url = "/cursos/data-science/" }
+      content = """
+      Certificación completa en ciencia de datos.
+  
+      • Fundamentos de ciencia de datos
+      • Análisis estadístico
+      • Machine Learning
+      • Visualización de datos
+      """
+    
+    [[params.courses.items]]
+      title = "Fundamentos profesionales de IA generativa"
+      institution = "Microsoft y LinkedIn"
+      institutionUrl = "https://www.linkedin.com"
+      institutionLogo = "/images/logos/microsoft.png"
+      date = "2024"
+      certificate = "Completado el 14 de marzo de 2024"
+      featuredLink = { enable = true, name = "Leer más", url = "/cursos/ia-generativa/" }
+      content = """
+      Ruta de aprendizaje completa sobre IA generativa.
+  
+      • Fundamentos de IA generativa
+      • Aplicaciones prácticas
+      • Ética en IA
+      • Herramientas y tecnologías
+      """
+    
+    [[params.courses.items]]
+      title = "Ética en la era de la inteligencia artificial generativa"
+      institution = "Microsoft y LinkedIn"
+      institutionUrl = "https://www.linkedin.com"
+      institutionLogo = "/images/logos/microsoft.png"
+      date = "2024"
+      certificate = "Completado el 13 de marzo de 2024"
+      featuredLink = { enable = true, name = "Leer más", url = "/cursos/etica-ia/" }
+      content = """
+      Curso que aborda la ética informática y la inteligencia artificial generativa.
+  
+      • Principios éticos en IA
+      • Sesgos y equidad
+      • Privacidad y seguridad
+      • Responsabilidad en el desarrollo de IA
+      """
+    
+    [[params.courses.items]]
+      title = "Machine Learning"
+      institution = "Programming Hub"
+      institutionUrl = "https://www.programminghub.io"
+      institutionLogo = "/images/logos/programming-hub.png"
+      date = "2024"
+      certificate = "Certificación en aprendizaje automático"
+      featuredLink = { enable = true, name = "Leer más", url = "/cursos/machine-learning/" }
+      content = """
+      Certificación completa en machine learning.
+  
+      • Algoritmos de aprendizaje supervisado
+      • Algoritmos de aprendizaje no supervisado
+      • Evaluación de modelos
+      • Implementación práctica
+      """
+    
+    [[params.courses.items]]
+      title = "Python Advanced"
+      institution = "Programming Hub"
+      institutionUrl = "https://www.programminghub.io"
+      institutionLogo = "/images/logos/programming-hub.png"
+      date = "2024"
+      certificate = "Certificación en Python avanzado"
+      featuredLink = { enable = true, name = "Leer más", url = "/cursos/python-advanced/" }
+      content = """
+      Certificación avanzada en programación Python.
+  
+      • Programación orientada a objetos
+      • Estructuras de datos avanzadas
+      • Manejo de excepciones
+      • Desarrollo de aplicaciones
+      """
+    
+    [[params.courses.items]]
+      title = "C++"
+      institution = "Programming Hub"
+      institutionUrl = "https://www.programminghub.io"
+      date = "2023"
+      certificate = "Certificación en C++"
+      content = """
+      Certificación completa en programación C++.
+  
+      • Fundamentos de C++
+      • Programación orientada a objetos
+      • Estructuras de datos
+      • Algoritmos
+      """
+  
+    [[params.courses.items]]
+      title = "Análisis de Riesgo y Daño Ambiental"
+      institution = "UTN Facultad Regional Resistencia"
+      institutionUrl = "https://www.frre.utn.edu.ar"
+      date = "2020"
+      certificate = "Finalizado el 26 de febrero de 2020"
+      content = """
+      Curso a distancia de 30 horas.
+  
+      • Evaluación de riesgos ambientales
+      • Metodologías de análisis
+      • Gestión de impactos
+      • Normativa ambiental
+      """
+  
+    [[params.courses.items]]
+      title = "Toxicología Ambiental, Laboral y Residuos Tóxicos"
+      institution = "UTN Facultad Regional Resistencia"
+      institutionUrl = "https://www.frre.utn.edu.ar"
+      date = "2020"
+      certificate = "Finalizado el 3 de julio de 2020"
+      content = """
+      Curso a distancia de 30 horas.
+  
+      • Toxicología ambiental
+      • Seguridad laboral
+      • Gestión de residuos tóxicos
+      • Normativas y protocolos
+      """
+  
+    [[params.courses.items]]
+      title = "Auditoría de la Calidad"
+      institution = "UTN Facultad Regional Resistencia"
+      institutionUrl = "https://www.frre.utn.edu.ar"
+      date = "2019"
+      certificate = "Finalizado el 19 de junio de 2019"
+      content = """
+      Curso a distancia de 32 horas.
+  
+      • Sistemas de gestión de calidad
+      • Técnicas de auditoría
+      • Normas ISO 9001
+      • Informes y seguimiento
+      """
+
+ # Contact Section
+  [params.contact]
+    enable = true
+    title = "Contacto"
+    content = "Mi bandeja de entrada siempre está abierta. Ya sea que tengas una pregunta o simplemente quieras saludar, ¡haré mi mejor esfuerzo para responderte!"
+    btnName = "Enviar Email"
+    btnLink = "mailto:giamportone1@gmail.com"
+  
+  # CSS personalizado
+  # Al final del archivo
+  customCSS = ["css/custom.css"]
+
+  # Projects Section
+  [params.projects]
+    enable = true
+    title = "Proyectos Destacados"
+    
+    [[params.projects.items]]
+      title = "Sistema de Visión por Computadora para Auditorías"
+      organization = { name = "Intervalor Data", url = "https://intervalor.com" }
+      organizationLogo = "/images/logos/projects/intervalor-project.png"
+      date = "2024"
+      detailPage = "/proyectos/vision-auditoria/"
+      content = """
+Desarrollo de sistema automatizado de auditoría utilizando IA y visión por computadora.
+
+• Implementación de algoritmos de detección de objetos
+• Automatización de procesos de inventario
+• Reducción del 70% en tiempo de auditoría
+• Integración con sistemas existentes
+"""
+      featuredLink = { enable = true, name = "Ver Demo", url = "#" }
+    
+    [[params.projects.items]]
+      title = "KIPPA - ROUV con Tecnologías Libres"
+      organization = { name = "UTN FRTDF - Tesis de Grado", url = "https://www.frtdf.utn.edu.ar" }
+      organizationLogo = "/images/logos/projects/utn-kippa.png"
+      date = "2016"
+      detailPage = "/proyectos/kippa-rouv/"
+      content = """
+Diseño y construcción de un vehículo submarino operado remotamente (ROUV) utilizando tecnologías de código abierto.
+
+• Diseño mecánico y electrónico completo
+• Implementación de sistema de control remoto
+• Uso de Arduino y componentes open-source
+• Aplicación en investigación marina
+"""
+      featuredLink = { enable = true, name = "Ver Documentación", url = "#" }
+    
+    [[params.projects.items]]
+      title = "Plataforma de Análisis de Datos Pesqueros"
+      organization = { name = "CADIC-CONICET", url = "https://www.cadic.conicet.gov.ar" }
+      organizationLogo = "/images/logos/projects/cadic-data.png"
+      date = "2018-2019"
+      detailPage = "/proyectos/analisis-pesquero/"
+      content = """
+Desarrollo de plataforma para análisis y visualización de datos de investigación pesquera.
+
+• ETL de datos oceanográficos
+• Dashboards interactivos con R Shiny
+• Análisis estadístico avanzado
+• Reportes automatizados
+"""
+      featuredLink = { enable = true, name = "Ver Resultados", url = "#" }
+    
+    [[params.projects.items]]
+      title = "Sistema de Gestión de Calidad ISO 9001"
+      organization = { name = "CADIC-CONICET", url = "https://www.cadic.conicet.gov.ar" }
+      organizationLogo = "/images/logos/projects/iso-system.png"
+      date = "2020-2021"
+      detailPage = "/proyectos/sistema-calidad/"
+      content = """
+Implementación completa de Sistema de Gestión de la Calidad según norma ISO 9001.
+
+• Documentación de procesos
+• Capacitación de personal
+• Auditorías internas
+• Mejora continua de procesos
+"""
+      featuredLink = { enable = true, name = "Ver Certificación", url = "#" }
+    
+    [[params.projects.items]]
+      title = "Automatización de Trampas para Centolla"
+      organization = { name = "Clúster Pesca Artesanal TDF", url = "#" }
+      organizationLogo = "/images/logos/projects/cluster-pesca.png"
+      date = "2015-2016"
+      detailPage = "/proyectos/trampas-centolla/"
+      content = """
+Proyecto de construcción masiva de 120 trampas para centolla con gestión integral.
+
+• Diseño optimizado de artes de pesca
+• Gestión de cadena de suministro
+• Control de calidad en producción
+• Capacitación de pescadores artesanales
+"""
+      featuredLink = { enable = true, name = "Ver Galería", url = "#" }
+      
+      # Footer configuration
+      [params.footer]
+        enable = true
+        
+        # Recent posts section
+        [params.footer.recentPosts]
+          enable = false  # Deshabilitamos para usar el nuevo diseño
+          path = "blogs"
+          count = 3
+          title = "Recent Posts"
+          disableFeaturedImage = false
+        
+        # Social networks
+        [params.footer.socialNetworks]
+          github = "https://github.com/giamportone"
+          linkedin = "https://linkedin.com/in/ariel-giamportone"
+          instagram = "https://instagram.com/arielgiamportone"
+          facebook = ""
+          twitter = ""
+        
+        # Footer content
+        [params.footer.content]
+          title = "Ariel Giamportone"
+          description = "Ingeniero Pesquero especializado en tecnología, análisis de datos y gestión de calidad. Uniendo innovación y experiencia para crear soluciones efectivas."
+          
+        # Quick links
+        [params.footer.quickLinks]
+          enable = true
+          title = "Enlaces Rápidos"
+          
+        # Newsletter
+        [params.footer.newsletter]
+          enable = true
+          title = "Mantente Conectado"
+          description = "Recibe actualizaciones sobre mis proyectos y noticias del sector pesquero y tecnológico."
+          placeholder = "Tu correo electrónico"
+          buttonText = "Suscribirse"
