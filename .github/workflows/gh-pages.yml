@@ -35,11 +35,12 @@ jobs:
         uses: actions/configure-pages@v4
 
       - name: Build with Hugo
-        uses: peaceiris/actions-gh-pages@v3
+        run: hugo --gc --minify
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          hugo-version: '0.147.3'
-          extended: true
-          publishDir: ./public
+          path: ./public
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
