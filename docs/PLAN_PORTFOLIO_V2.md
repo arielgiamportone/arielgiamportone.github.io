@@ -109,3 +109,15 @@ Cada proyecto se cierra con: ficha revisada por ti, demo funcionando, capturas, 
 1. Idiomas: **español e inglés desde el principio** (Hugo multilingüe; `/` en español y `/en/` en inglés).
 2. Dominio: **se mantiene `arielgiamportone.github.io`**.
 3. AYUNDATA e Intervalor: **caso de estudio con arquitectura y capturas sobre datos sintéticos**, sin clientes. Ariel lo confirma con la empresa antes de publicar.
+   - **2026-11-22: AYUNDATA en espera hasta nuevo aviso de Ariel.** No se prepara ni se publica su ficha.
+
+## 9. Estado de la fase 3 (2026-11-22)
+
+| Proyecto | Demo | Estado |
+|---|---|---|
+| trawlkit | App real incrustada | Publicada |
+| asset-identity-gs1 | Generador y lector GS1 (port JS verificado contra PyPI) | Publicada |
+| catastro-enrichment-es | Resultados reales de los cinco catastros + simulador del router | Publicada |
+| cfp-audit-intelligence | Presentación y vídeo en pestañas | En `v2`, pendiente de publicar |
+| AYUNDATA | — | En espera hasta nuevo aviso |
+| fisheries-sustainability-mlops | Red bayesiana interactiva | En curso |
