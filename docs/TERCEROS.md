@@ -18,7 +18,7 @@ Las capturas y diagramas de trawlkit proceden de su propio repositorio (código 
 
 | Componente | Versión | Licencia | Uso |
 |---|---|---|---|
-| [Pyodide](https://pyodide.org) | 0.26.4 | MPL-2.0 | Python en el navegador para la demo de paradox-db-py; se descarga de cdn.jsdelivr.net solo al pulsar el botón |
+| [Pyodide](https://pyodide.org) | 0.26.4 | MPL-2.0 | Python en el navegador para las demos de paradox-db-py y del registro de activos multi-tenant; se descarga de cdn.jsdelivr.net solo al pulsar el botón |
 | paradoxdb (wheel de PyPI) | 0.1.0 | MIT (mismo autor) | `content/proyectos/paradox-db-py/paradoxdb-0.1.0-py3-none-any.whl`, SHA-256 `39502ad11347d6e1d9e8dd5d6193e0dd214a04180ce4d2b9d7693837ec240130`, idéntico al publicado en PyPI |
 
 La tabla `ACTIVOS.DB`/`.MB` de esa demo es sintética: la genera `paradoxdb.synthetic` con datos inventados.

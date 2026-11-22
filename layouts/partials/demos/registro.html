@@ -1,0 +1,85 @@
+{{ $en := eq site.Language.Lang "en" }}
+{{ $mods := slice }}{{ range slice "sql_dialect" "depreciation" "reconcile" "demo" }}{{ with $.Resources.Get (printf "codigo/%s.py" .) }}{{ $mods = $mods | append .RelPermalink }}{{ end }}{{ end }}
+<div class="demo-reg" data-demo="registro" data-modulos="{{ delimit $mods " " }}" data-lang="{{ site.Language.Lang }}">
+  <div class="demo-pdx__inicio">
+    <button type="button" class="boton" data-cargar>{{ cond $en "Load Python and the repository modules" "Cargar Python y los módulos del repositorio" }}</button>
+    <p class="tenue pequeno">{{ cond $en "Downloads Pyodide (Python compiled to WebAssembly, about 10 MB, from the jsDelivr CDN) and runs the three clean-room modules of the repository exactly as they are published. Nothing is sent anywhere." "Descarga Pyodide (Python compilado a WebAssembly, unos 10 MB, desde la CDN de jsDelivr) y ejecuta los tres módulos clean-room del repositorio tal como están publicados. No se envía nada a ningún sitio." }}</p>
+    <p class="demo-pdx__estado" data-estado aria-live="polite"></p>
+  </div>
+
+  <div data-resultado hidden>
+    <div class="demo-cat__pestanas" role="tablist">
+      <button type="button" role="tab" aria-selected="true" data-tab="sql">{{ cond $en "SQLite → PostgreSQL" "SQLite → PostgreSQL" }}</button>
+      <button type="button" role="tab" aria-selected="false" data-tab="amort">{{ cond $en "Depreciation with memo" "Amortización con memoria" }}</button>
+      <button type="button" role="tab" aria-selected="false" data-tab="reval">{{ cond $en "Revalue twice" "Revalorizar dos veces" }}</button>
+      <button type="button" role="tab" aria-selected="false" data-tab="conc">{{ cond $en "Reconcile to the cent" "Conciliar al céntimo" }}</button>
+    </div>
+
+    <section class="demo-reg__panel" data-panel="sql">
+      <p class="tenue pequeno">{{ cond $en "The application had ~1,200 raw SQLite statements. Instead of rewriting them, each one is translated when the tenant runs on PostgreSQL. Literals are never touched, and the translator refuses to guess." "La aplicación tenía unas 1.200 sentencias SQL escritas para SQLite. En vez de reescribirlas, cada una se traduce cuando la sede funciona sobre PostgreSQL. Nunca toca los literales y se niega a adivinar." }}</p>
+      <div class="demo-reg__ejemplos" data-ejemplos="sql"></div>
+      <label class="demo-reg__campo">{{ cond $en "SQLite statement" "Sentencia SQLite" }}<textarea name="sql" rows="4" spellcheck="false"></textarea></label>
+      <div class="demo-reg__fila">
+        <label class="demo-reg__check"><input type="checkbox" name="parametros" checked> {{ cond $en "Called with parameters" "Se llama con parámetros" }}</label>
+        <label class="demo-reg__campo demo-reg__campo--corto">{{ cond $en "Conflict keys (table: columns)" "Claves de conflicto (tabla: columnas)" }}<textarea name="claves" rows="2" spellcheck="false"></textarea></label>
+      </div>
+      <p class="demo-reg__etq">PostgreSQL</p>
+      <pre class="demo-reg__salida" data-salida="sql"></pre>
+      <h3>{{ cond $en "Tenant → schema" "Sede → esquema" }}</h3>
+      <p class="tenue pequeno">{{ cond $en "Provisioned tenants in this demo: villanueva, puerto_norte, san_roque (aliases vn, pn). The id builds a schema name, so anything else is refused before it reaches SQL." "Sedes dadas de alta en esta demo: villanueva, puerto_norte y san_roque (alias vn y pn). El identificador construye un nombre de esquema, así que cualquier otra cosa se rechaza antes de llegar al SQL." }}</p>
+      <div class="demo-reg__ejemplos" data-ejemplos="sede"></div>
+      <label class="demo-reg__campo demo-reg__campo--corto">{{ cond $en "Tenant id received (URL, cookie, token…)" "Identificador recibido (URL, cookie, token…)" }}<input name="sede" spellcheck="false"></label>
+      <pre class="demo-reg__salida" data-salida="sede"></pre>
+    </section>
+
+    <section class="demo-reg__panel" data-panel="amort" hidden>
+      <p class="tenue pequeno">{{ cond $en "Straight-line, monthly, with Decimal rounded half up to the cent, as the legacy system did. Every result carries the memo that answers «why this number?»." "Lineal, mensual y con Decimal redondeado al céntimo con la regla «mitad hacia arriba», como el sistema anterior. Cada resultado lleva la memoria que responde «¿por qué esta cifra?»." }}</p>
+      <div class="demo-reg__ejemplos" data-ejemplos="amort"></div>
+      <div class="demo-reg__rejilla">
+        <label class="demo-reg__campo">{{ cond $en "Category" "Categoría" }}<select name="categoria">
+          <option value="building">{{ cond $en "Building" "Edificio" }}</option><option value="vehicle">{{ cond $en "Vehicle" "Vehículo" }}</option><option value="furniture">{{ cond $en "Furniture" "Mobiliario" }}</option><option value="equipment">{{ cond $en "Equipment" "Equipos" }}</option><option value="green_area">{{ cond $en "Green area" "Zona verde" }}</option><option value="land">{{ cond $en "Land" "Suelo" }}</option><option value="heritage">{{ cond $en "Heritage" "Patrimonio histórico-artístico" }}</option>
+        </select></label>
+        <label class="demo-reg__campo">{{ cond $en "Cost (€)" "Coste (€)" }}<input name="coste" inputmode="decimal"></label>
+        <label class="demo-reg__campo">{{ cond $en "In service since" "En servicio desde" }}<input name="alta" type="date"></label>
+        <label class="demo-reg__campo">{{ cond $en "As of" "A fecha de" }}<input name="a_fecha" type="date"></label>
+        <label class="demo-reg__campo">{{ cond $en "Land value (€)" "Valor del suelo (€)" }}<input name="suelo" inputmode="decimal"></label>
+        <label class="demo-reg__campo">{{ cond $en "Residual value (€)" "Valor residual (€)" }}<input name="residual" inputmode="decimal"></label>
+        <label class="demo-reg__campo">{{ cond $en "Useful life on the record (years)" "Vida útil en la ficha (años)" }}<input name="vida" inputmode="numeric"></label>
+        <label class="demo-reg__campo">{{ cond $en "Balance from an approved closing (€)" "Saldo de un cierre aprobado (€)" }}<input name="saldo" inputmode="decimal"></label>
+        <label class="demo-reg__check"><input type="checkbox" name="propio" checked> {{ cond $en "Owned by this entity" "Propiedad de la entidad" }}</label>
+      </div>
+      <div data-salida="amort"></div>
+    </section>
+
+    <section class="demo-reg__panel" data-panel="reval" hidden>
+      <p class="tenue pequeno">{{ cond $en "Each year the replacement cost is updated with an official coefficient. Multiplying is not idempotent: a rerun silently inflates values. Here the valuation records the last year applied, so a second run changes nothing." "Cada año el coste de reposición se actualiza con un coeficiente oficial. Multiplicar no es idempotente: repetir el proceso infla los valores sin avisar. Aquí la valoración guarda el último año aplicado, así que una segunda ejecución no cambia nada." }}</p>
+      <div class="demo-reg__rejilla">
+        <label class="demo-reg__campo">{{ cond $en "Replacement cost (€)" "Coste de reposición (€)" }}<input name="r_coste" inputmode="decimal" value="100000"></label>
+        <label class="demo-reg__campo">{{ cond $en "Accumulated depreciation (€)" "Amortización acumulada (€)" }}<input name="r_acumulada" inputmode="decimal" value="20000"></label>
+        <label class="demo-reg__campo">{{ cond $en "Useful life (years)" "Vida útil (años)" }}<input name="r_vida" inputmode="numeric" value="50"></label>
+        <label class="demo-reg__campo">{{ cond $en "Revalued through" "Revalorizado hasta" }}<input name="r_hasta" inputmode="numeric" value="2023"></label>
+        <label class="demo-reg__campo demo-reg__campo--ancho">{{ cond $en "Coefficients (year: value, one per line)" "Coeficientes (año: valor, uno por línea)" }}<textarea name="r_coef" rows="3" spellcheck="false">2024: 1.02
+2025: 1.03</textarea></label>
+        <label class="demo-reg__campo">{{ cond $en "Bring forward to" "Llevar hasta" }}<input name="r_objetivo" inputmode="numeric" value="2025"></label>
+      </div>
+      <div data-salida="reval"></div>
+    </section>
+
+    <section class="demo-reg__panel" data-panel="conc" hidden>
+      <p class="tenue pequeno">{{ cond $en "A migrated tenant is not opened to users until cost, accumulated depreciation and net value match the legacy closing per account. One cent is a failure, and the report points at the asset responsible." "Una sede migrada no se abre a los usuarios hasta que coste, amortización acumulada y valor neto cuadran por cuenta con el cierre del sistema anterior. Un céntimo es un fallo, y el informe señala el bien responsable." }}</p>
+      <div class="demo-reg__rejilla demo-reg__rejilla--2">
+        <label class="demo-reg__campo">{{ cond $en "Migrated register (id;account;cost;accumulated)" "Registro migrado (id;cuenta;coste;acumulada)" }}<textarea name="c_nuestras" rows="7" spellcheck="false"></textarea></label>
+        <label class="demo-reg__campo">{{ cond $en "Legacy closing (same format)" "Cierre del sistema anterior (mismo formato)" }}<textarea name="c_legado" rows="7" spellcheck="false"></textarea></label>
+      </div>
+      <div data-salida="conc"></div>
+    </section>
+
+    <details class="demo-pdx__codigo">
+      <summary>{{ cond $en "The Python that runs on each change" "El Python que se ejecuta en cada cambio" }}</summary>
+      <p class="tenue pequeno">{{ cond $en "The repository modules are loaded unchanged; this small bridge only converts the form to arguments and the result to JSON." "Los módulos del repositorio se cargan sin cambios; este pequeño puente solo convierte el formulario en argumentos y el resultado en JSON." }}</p>
+      <pre><code data-codigo></code></pre>
+    </details>
+  </div>
+</div>
+{{ $js := resources.Get "js/demos/registro-demo.js" | js.Build (dict "minify" true "format" "esm") | fingerprint }}
+<script type="module" src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
