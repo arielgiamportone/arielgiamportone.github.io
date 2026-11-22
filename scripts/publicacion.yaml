@@ -55,6 +55,13 @@ reemplazos:
 # Enlaces a repositorios privados: no se publican.
 repos_privados: ["github.com/Intervalor-Data", "privado"]
 
+# Qué proyectos muestra la web y en qué orden.
+# Los internos de Intervalor sin repositorio público solo aparecen en la trayectoria.
+# AYUNDATA se publica como caso de estudio (decisión 2026-11-22).
+proyectos_web:
+  ocultar: [interdata, mad6923_dashboard, ens_iso27001, licdatahunter, assetvision, photo_downloader, interval_python, casos_estudio_clean_room_2026]
+  orden: [ayundata, trawlkit, cfp_audit_intelligence, fisheries_mlops, asset_identity_gs1, catastro_enrichment_es, kippa_rov, paradox_db_py, periodic_report_kit, pesqueros_en_ia_cursos, apigfw, casos_estudio_intervalor, transcriptor_placas, pid_liofilizados, investigacion_operativa_ml, vito_gnu_linux, aura_farm_ar]
+
 # Ajustes por proyecto para cumplir las restricciones de publicación de la base (nota_publicacion).
 proyectos_ajustes:
   ayundata:
@@ -66,6 +73,18 @@ proyectos_ajustes:
   interval_python:
     nombre: "Modernización de un sistema legacy de activos fijos (Delphi/Paradox → Python)"
     descripcion: "Modernización en Python de un sistema de control de activos fijos mantenido desde los años 90 sobre Delphi/Pascal y BDE Paradox. Motor numérico portado línea a línea, migración Paradox → SQLite con el 99,97 % de las filas y paridad al céntimo, ida y vuelta SQLite → Paradox y conversión a libro Excel."
+  trawlkit:
+    nombre: "trawlkit · Trawl Design Lab"
+  paradox_db_py:
+    nombre: "paradox-db-py"
+  asset_identity_gs1:
+    nombre: "asset-identity-gs1"
+  catastro_enrichment_es:
+    nombre: "catastro-enrichment-es"
+  periodic_report_kit:
+    nombre: "periodic-report-kit"
+  casos_estudio_intervalor:
+    nombre: "Casos de estudio clean-room"
   photo_downloader:
     nombre: "Photo Downloader: evidencias fotográficas automatizadas"
   ens_iso27001:
@@ -87,6 +106,9 @@ exclusiones_logros:
   - id: gobierno_tdf
     contiene: "más de 10 KPI"
     motivo: "Cifra sin respaldo (base: logros_nota)"
+  - id: mainly_labs
+    contiene: "Observatorio Gerencia de Riesgos"
+    motivo: "Artículo publicado con la firma de otra persona; no se presenta como trabajo propio en la web"
   - id: intervalor_auditoria
     contiene: "en un 10%"
     motivo: "Porcentaje sin documento de respaldo"
@@ -133,3 +155,7 @@ prohibido:
     motivo: número de expediente u orden de trabajo
   - patron: 'github\.com/Intervalor-Data'
     motivo: repositorio privado de la empresa
+  - patron: '(?i)soraya|cristina fern|diego mart|lemos tech'
+    motivo: nombre de un colega o de un tercero
+  - patron: '(?i)\bAriel (no |docente|figura|confirm)|base/|diploma no escaneado|Fuente: CVar'
+    motivo: nota interna de la base

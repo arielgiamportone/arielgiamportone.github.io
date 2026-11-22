@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="{{ site.Language.LanguageCode }}" data-tema="auto">
+<head>
+{{ partial "head.html" . }}
+</head>
+<body>
+<a class="saltar" href="#contenido">{{ i18n "saltar" }}</a>
+{{ partial "header.html" . }}
+<main id="contenido">
+{{ block "main" . }}{{ end }}
+</main>
+{{ partial "footer.html" . }}
+{{ $js := resources.Get "js/main.js" | js.Build (dict "minify" true) | fingerprint }}
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+</body>
+</html>

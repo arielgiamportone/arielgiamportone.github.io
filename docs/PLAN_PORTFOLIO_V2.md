@@ -87,9 +87,9 @@ Proyectos internos de Intervalor sin repo público (INTERDATA, MAD 69/23, Metro 
 
 | Fase | Qué | Resultado |
 |---|---|---|
-| 0 | Rama `v2`; retirar lo falso del sitio actual y arreglar el pie y el workflow | El sitio actual deja de decir cosas sin respaldo (se despliega ya) |
-| 1 | Script de sincronización base → `data/` | Datos de la web generados desde la base |
-| 2 | Tema propio: diseño, portada con lentes, trayectoria, publicaciones | Web nueva navegable, aún sin fichas ricas |
+| 0 ✅ | Rama `v2`; retirar lo falso del sitio actual y arreglar el pie y el workflow | El sitio actual deja de decir cosas sin respaldo (se despliega ya) |
+| 1 ✅ | Script de sincronización base → `data/` | Datos de la web generados desde la base |
+| 2 ✅ | Tema propio: diseño, portada con lentes, trayectoria, publicaciones | Web nueva navegable, aún sin fichas ricas |
 | 3 | Plantilla de ficha de proyecto + proyectos A, uno a uno | 6 fichas completas con demo |
 | 4 | Proyectos B, uno a uno | Resto de fichas con demo o imágenes |
 | 5 | Revisión del inglés, SEO (Open Graph, sitemap), CV en PDF por perfil, analítica sin cookies | Web lista para compartir |

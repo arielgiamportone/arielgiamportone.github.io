@@ -1,0 +1,40 @@
+{{ define "main" }}
+{{ $pub := partial "datos.html" "publicaciones" }}
+{{ $secciones := slice
+  (dict "k" "papers_peer_reviewed" "t" "articulos")
+  (dict "k" "preprints" "t" "preprints")
+  (dict "k" "documentos_de_trabajo" "t" "documentos_trabajo")
+  (dict "k" "software" "t" "software")
+  (dict "k" "trabajos_congresos" "t" "congresos")
+  (dict "k" "informes_tecnicos" "t" "informes")
+  (dict "k" "material_docente" "t" "material_docente")
+}}
+<section class="bloque"><div class="contenedor contenedor--estrecho">
+  <h1>{{ .Title }}</h1>
+  <p class="tenue">{{ .Description }}</p>
+  {{ range $secciones }}
+    {{ $items := index $pub .k }}
+    {{ if $items }}
+      <h2>{{ i18n .t }} <span class="tenue">({{ len $items }})</span></h2>
+      <ol class="publicaciones">
+        {{ range sort $items "año" "desc" }}
+          <li>
+            {{ with .autores }}<span class="pub__autores">{{ replace . "Giamportone, A.L." "<strong>Giamportone, A.L.</strong>" | safeHTML }}</span>{{ end }}
+            {{ with .año }}<span class="tenue">({{ . }})</span>{{ end }}
+            <span class="pub__titulo">{{ with .url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}{{ .titulo }}{{ with .url }}</a>{{ end }}</span>
+            {{ with .revista }}<em>{{ . }}</em>{{ end }}{{ with .volumen }}, {{ . }}{{ end }}{{ with .paginas }}, {{ . }}{{ end }}{{ with .org }}<em>{{ . }}</em>{{ end }}
+            {{ with .doi }}· <a href="https://doi.org/{{ . }}" target="_blank" rel="noopener">doi:{{ . }}</a>{{ end }}
+            {{ with .pypi }}· <a href="{{ . }}" target="_blank" rel="noopener">PyPI</a>{{ end }}
+            {{ with .citas }}{{ with .crossref }}<span class="etiqueta">{{ . }} {{ i18n "citas" }} (Crossref)</span>{{ end }}{{ end }}
+            {{ with .resumen }}<p class="pub__resumen">{{ . }}</p>{{ end }}
+          </li>
+        {{ end }}
+      </ol>
+    {{ end }}
+  {{ end }}
+  {{ with $pub.reconocimientos }}
+    <h2>{{ i18n "reconocimientos" }}</h2>
+    <ul class="publicaciones">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
+  {{ end }}
+</div></section>
+{{ end }}

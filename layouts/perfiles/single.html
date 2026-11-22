@@ -1,0 +1,30 @@
+{{ define "main" }}
+{{ $slug := .Params.lente }}
+{{ $p := index (where (partial "datos.html" "perfiles") "slug" $slug) 0 }}
+{{ $proyectos := partial "datos.html" "proyectos" }}
+{{ $exp := partial "datos.html" "experiencia" }}
+<section class="heroe heroe--perfil" style="--acento: {{ $p.color }}">
+  <div class="contenedor">
+    <p class="heroe__hola">{{ i18n "perfiles" }} · {{ $p.titulo_corto }}</p>
+    <h1 class="heroe__nombre heroe__nombre--perfil">{{ $p.titulo }}</h1>
+    <p class="heroe__resumen">{{ $p.resumen }}</p>
+    {{ with $p.keywords }}<h2 class="mini">{{ i18n "palabras_clave" }}</h2><ul class="chips">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
+  </div>
+</section>
+<section class="bloque" style="--acento: {{ $p.color }}">
+  <div class="contenedor">
+    <h2>{{ i18n "proyectos_destacados" }}</h2>
+    <div class="rejilla">
+      {{ range $proyectos }}{{ if in .perfiles $slug }}{{ partial "proyecto-card.html" . }}{{ end }}{{ end }}
+    </div>
+  </div>
+</section>
+<section class="bloque" style="--acento: {{ $p.color }}">
+  <div class="contenedor">
+    <h2>{{ i18n "experiencia_relevante" }}</h2>
+    <ol class="linea">
+      {{ range $exp }}{{ if in .perfiles $slug }}{{ partial "exp-item.html" (dict "e" . "detalle" true) }}{{ end }}{{ end }}
+    </ol>
+  </div>
+</section>
+{{ end }}

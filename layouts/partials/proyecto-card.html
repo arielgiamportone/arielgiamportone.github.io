@@ -1,0 +1,17 @@
+{{- $p := . -}}
+{{- $grupo := partial "tipo-proyecto.html" $p.tipo -}}
+<article class="tarjeta proyecto" data-perfiles="{{ delimit ($p.perfiles | default slice) " " }}" data-tipo="{{ $grupo }}">
+  <p class="tarjeta__meta"><span class="etiqueta etiqueta--{{ $grupo }}">{{ i18n (printf "tipo_%s" $grupo) }}</span> <span>{{ partial "fechas.html" ($p.fechas | default "") }}</span></p>
+  <h3 class="tarjeta__titulo">{{ $p.nombre }}</h3>
+  {{ with $p.organizacion }}<p class="tarjeta__org">{{ . }}</p>{{ end }}
+  {{ with $p.descripcion }}<p class="tarjeta__texto">{{ . | truncate 260 }}</p>{{ end }}
+  {{ with $p.stack }}
+    <ul class="chips">{{ range first 6 . }}<li>{{ . }}</li>{{ end }}</ul>
+  {{ end }}
+  <p class="tarjeta__enlaces">
+    {{ with $p.repo }}<a href="{{ . }}" target="_blank" rel="noopener">{{ i18n "repositorio" }} ↗</a>{{ end }}
+    {{ with $p.pypi }}<a href="{{ . }}" target="_blank" rel="noopener">{{ i18n "pypi" }} ↗</a>{{ end }}
+    {{ with $p.web }}<a href="{{ . }}" target="_blank" rel="noopener">{{ i18n "web" }} ↗</a>{{ end }}
+  </p>
+  <span class="tarjeta__lentes" aria-hidden="true">{{ range $p.perfiles }}<i class="punto punto--{{ . }}"></i>{{ end }}</span>
+</article>

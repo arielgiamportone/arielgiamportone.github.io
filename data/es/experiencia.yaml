@@ -9,15 +9,14 @@
   descripcion: Fundador de la comunidad de Ingenieros Pesqueros que exploran aplicaciones de IA y Data Science en la industria
     pesquera. Desarrollo de material educativo y proyectos open source.
   logros:
-  - 'Fundé y lidero la comunidad PesquerosEnIA (GitHub: github.com/PesquerosEnIA)'
-  - Desarrollé curso ML & Deep Learning para Ingeniería Pesquera (Jupyter, open source)
-  - Dicté el curso precongreso de alfabetización en datos e IA en CONIPE 2025, Puerto Madryn (unos 15 asistentes)
-  - Desarrollé curso de Deep Learning y Redes Bayesianas para Sostenibilidad Pesquera
-  - 'Co-creé y dicto el curso de extensión universitaria ''IA Aplicada a la Producción Pesquera'' (UTN FRCh, Puerto Madryn,
-    10 unidades, 08/2026 – 05/2027, híbrido; primera cohorte de 70 alumnos): clases de estrategia y transformación digital,
-    datos y sensores, ML, optimización y agentes de IA, y cierre; además dictó la clase 7 (visión por computadora) reemplazando
-    a la co-directora; 20 notebooks en Colab con tres niveles y casos reales (AIS/PSMA, VMS, concentración de renta)'
-  - 'Material open source (GPL-3.0): 4 repositorios, ~141 commits, 200+ páginas de manual'
+  - Fundé y lidero la comunidad PesquerosEnIA (github.com/PesquerosEnIA)
+  - Desarrollé el curso de ML y Deep Learning para Ingeniería Pesquera (Jupyter, open source)
+  - Dicté el curso precongreso de alfabetización en datos e IA en CONIPE 2025, Puerto Madryn
+  - Desarrollé el curso de Deep Learning y Redes Bayesianas para la sostenibilidad pesquera
+  - Co-creé y dicto el curso de extensión universitaria «IA aplicada a la producción pesquera» (UTN FRCh, 10 unidades, 2026-2027,
+    híbrido; primera cohorte de 70 alumnos), con 20 notebooks en Colab en tres niveles y casos reales (AIS/PSMA, VMS, concentración
+    de renta)
+  - 'Material open source (GPL-3.0): 4 repositorios y más de 200 páginas de manual'
   keywords:
   - Community Building
   - Fisheries
@@ -108,12 +107,10 @@
   descripcion: Docente-investigador en la carrera de Ingeniería Pesquera. Liderazgo de proyectos I+D+i orientados al sector
     pesquero y acuícola.
   logros:
-  - Liderazgo de proyectos I+D+i en problemáticas del sector pesquero provincial, regional y nacional
+  - Liderazgo de proyectos de I+D+i sobre problemáticas del sector pesquero provincial, regional y nacional
   - Director del PID PAPPTF0009884 (liofilización de alimentos), 04/2023 – 03/2026 con prórroga
-  - 'Dirección de 3 alumnos becarios de I+D del PID (2024-2025); antes, codirección de 2 técnicos de apoyo de CONICET (2019,
-    2020). Tesis dirigidas: 0'
-  - Gestión de convenios estratégicos con instituciones académicas, gubernamentales y privadas
-  - Desarrollo de vínculos interinstitucionales para proyectos de innovación y sostenibilidad
+  - Dirección de 3 alumnos becarios de I+D del PID (2024-2025) y codirección de 2 técnicos de apoyo de CONICET (2019, 2020)
+  - Gestión de convenios con instituciones académicas, gubernamentales y privadas
   keywords:
   - Higher Education
   - Research
@@ -213,10 +210,6 @@
     con sensores IR, BOM y plan de desarrollo de 45 días'
   - 'HIDROZYM (hidrógeno verde a partir de purines): BOM y plan de un registrador de gases en biorreactores (DHT22, microSD,
     Python)'
-  - Redactor del borrador y de los gráficos del artículo divulgativo sobre incendios en baterías de litio (título de trabajo
-    «El desafío silencioso…»), publicado como «El reto creciente de la seguridad en un mercado en expansión» en Observatorio
-    Gerencia de Riesgos nº 21 (AGERS, julio 2025, p. 34), firmado por Diego Martín como CTO de Lemos Tech; Ariel no figura
-    como autor
   - Coordinador y PM de 2 investigadores del equipo MICEGEL (reportes semanales, revisión de procedimientos de seguridad química)
     y tutor de 2 becarios con planes de 3 meses por proyecto (Ruractive, Hidrozim, MultiGasSensor, Horizon)
   - Asesoría en equipamiento y aporte técnico en reuniones del proyecto MOSSANTIBO (briofitos como biofactoría de anticuerpos);

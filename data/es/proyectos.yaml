@@ -1,125 +1,4 @@
 # GENERADO por scripts/sync_base.py desde la base de conocimiento. No editar a mano.
-- id: casos_estudio_clean_room_2026
-  nombre: Casos de estudio clean-room (4 repos públicos, los 4 publicados)
-  organizacion: Personal · patrones desarrollados en Intervalor Data, publicados con autorización
-  tipo: software_open_source
-  rol: Autor (especificación, implementación independiente y revisión)
-  fechas: 11/2026 – Presente
-  estado: completado · specs escritas el 2026-11-10; publicados paradox-db-py (2026-11-15), asset-identity-gs1 (2026-11-17),
-    catastro-enrichment-es (2026-11-18) y periodic-report-kit (2026-11-20), v0.1.0 los cuatro, en GitHub y PyPI, tras el veredicto
-    de la fase 3
-  descripcion: 'Cuatro librerías Python reimplementadas desde cero a partir de una especificación sin código ni datos de cliente:
-    paradox-db-py (lector/escritor Paradox .DB/.MB/.PX), asset-identity-gs1 (GIAI, EPC GIAI-96, GS1 Digital Link, Code128/ZPL,
-    unicidad multi-tenant offline), catastro-enrichment-es (router provincial DGC + forales, geocoding, imaginería por licencia)
-    y periodic-report-kit (informes periódicos declarativos a Word/PDF/PPTX con portada a sangre).'
-  repos_publicados:
-  - https://github.com/arielgiamportone/paradox-db-py
-  - https://github.com/arielgiamportone/asset-identity-gs1
-  - https://github.com/arielgiamportone/catastro-enrichment-es
-  - https://github.com/arielgiamportone/periodic-report-kit
-  stack:
-  - Python 3.11+
-  - pytest
-  - ruff
-  - GitHub Actions
-  - gitleaks
-  - python-docx
-  - python-pptx
-  - GS1 Digital Link
-  inicio: 2026-11
-  actual: true
-  perfiles:
-  - software
-  - sector-publico
-- id: interdata
-  nombre: INTERDATA
-  organizacion: Intervalor Data
-  tipo: producto_software
-  rol: Arquitecto y desarrollador principal
-  fechas: 10/2026 – Presente
-  estado: Fase F0 (fundación) con F1-F2 adelantadas
-  descripcion: Plataforma SaaS de gestión del inmovilizado y activos fijos para empresas privadas (PGC 2007 / PGC PYMES, LIS).
-    Sustituye a INTERVAL legacy (Delphi + Paradox) y es el producto hermano de AYUNDATA.
-  logros:
-  - Tenants con schema propio, usuarios con MFA TOTP obligatoria, auditoría encadenada, acceso break-glass RS256
-  - 'Backoffice: organizaciones, usuarios, auditoría, cola de jobs en PostgreSQL, migración por etapas con cuarentena'
-  - Libro de movimientos inmutable, periodos con hash encadenado y certificado PDF verificable por QR
-  - Motor de amortización lineal que cuadra al céntimo con el legacy (cliente piloto, 6.693 filas)
-  - Lector y escritor Paradox propios; 5 clientes de referencia en staging
-  - 23 ADRs
-  stack:
-  - Python 3.12
-  - FastAPI
-  - SQLAlchemy 2
-  - Alembic
-  - PostgreSQL 16
-  - psycopg
-  - pydantic
-  - PyJWT
-  - Jinja2
-  - HTMX
-  - segno
-  - reportlab
-  - uv
-  - pytest
-  - hypothesis
-  - ruff
-  - Docker Compose
-  inicio: 2026-10
-  actual: true
-  perfiles:
-  - software
-- id: mad6923_dashboard
-  nombre: Dashboard de controles comerciales del Aeropuerto de Barajas (AENA)
-  organizacion: Intervalor Data · cliente AENA
-  tipo: producto_software
-  rol: Autor único (arquitectura, código, despliegue, documentación)
-  fechas: 05/2026 – Presente
-  estado: En producción (Azure SWA Standard, SLA 99,95 %)
-  descripcion: 'Panel en producción para el servicio de control de arrendamientos comerciales del aeropuerto Adolfo Suárez
-    Madrid-Barajas: pipeline incremental sobre la API PLUG, dos builds por rol (cliente / interno), refresh cada 3 h y bajo
-    demanda, dominio propio.'
-  logros:
-  - Acceso con Microsoft Entra ID y roles custom; invitación de externos vía OTP
-  - 28 Architecture Decision Records, runbook de replicación y manual para el cliente
-  - 'Estrategia de licitación: propuesta de pliego técnico con baremo objetivo y matriz de evidencias; la siguiente licitación
-    se ganó'
-  - SharePoint self-service para informes al contratante
-  stack:
-  - Azure Static Web Apps
-  - Microsoft Entra ID
-  - Azure Functions
-  - Node.js
-  - Python
-  - pandas
-  - GitHub Actions
-  - Cloudflare DNS
-  - Power BI (descartado
-  - documentado)
-  caso_estudio_publico: https://github.com/arielgiamportone/field-inspections-dashboard
-  inicio: 2026-05
-  actual: true
-  perfiles:
-  - software
-  - sector-publico
-- id: ens_iso27001
-  nombre: Diseño del programa corporativo ENS Categoría Alta e ISO 27001
-  organizacion: Intervalor Data (Intervalor Consulting Group, S.A.)
-  tipo: programa_cumplimiento
-  rol: Autor del programa y miembro del equipo ENS; líder de producto AYUNDATA. No integra la comisión de seguridad por el
-    momento (decisión propia, 2026-11-09)
-  fechas: 05/2026 – Presente
-  estado: 'En ejecución: certificación ENS Categoría Alta'
-  descripcion: Planificación, marco legal (ENS RD 311/2022, RGPD, NIS 2, ISO 27001:2022), roadmap a 24 meses, costes y roles,
-    alcance estratégico y alineación de todos los repos de la organización como activos del SGSI.
-  stack:
-  - Markdown
-  - python-docx
-  inicio: 2026-05
-  actual: true
-  perfiles:
-  - software
-  - sector-publico
 - id: ayundata
   nombre: AYUNDATA
   organizacion: Intervalor Data
@@ -171,41 +50,9 @@
   - software
   - sector-publico
   - ia
-- id: pesqueros_en_ia_cursos
-  nombre: PesquerosEnIA — cursos open source
-  organizacion: Pesqueros en IA (fundador)
-  tipo: educativo_open_source
-  rol: Fundador, autor principal y docente
-  fechas: 05/2025 – Presente
-  descripcion: 'curso_alfabetizacion_CONIPE25 (manual de 200+ páginas, 7 módulos, GPL-3.0; curso precongreso CONIPE 2025 en
-    Puerto Madryn); ML_DL_FisheriesEngineers (14 notebooks planificados); curso-dl-bayesiano-pesquerias (6 módulos, 25 notebooks,
-    10 semanas, PyTorch + pgmpy); curso-ia-produccion-pesquera (curso de extensión UTN FRCh, 10 unidades, ago-2026 a may-2027,
-    modalidad híbrida, dirección Ing. Cristina Fernández y co-dirección Ing. Soraya Corvalán; Ariel docente en las clases
-    1, 4, 6, 8 y 10, y en la clase 7 como reemplazo de la co-directora (11/2026: caso «La cámara en la línea», CNN sobre video
-    real) con notebooks en tres niveles y casos reales: AIS/PSMA, VMS 12 millas, concentración de renta CFP).'
-  metricas:
-  - 4 repos, ~141 commits propios
-  - 20 notebooks ejecutables en Colab en el curso UTN FRCh
-  - 'Alumnos: CONIPE 2025 unos 15; curso UTN FRCh primera cohorte de 70 (dato de Ariel, 2026-11-09)'
-  stack:
-  - Python
-  - Jupyter
-  - Colab
-  - scikit-learn
-  - PyTorch
-  - TensorFlow
-  - pgmpy
-  - LaTeX
-  - HTML
-  repo: https://github.com/PesquerosEnIA
-  web: https://sites.google.com/view/pesquerosenia
-  inicio: 2025-05
-  actual: true
-  perfiles:
-  - economia-azul
-  - ia
+  orden: 1
 - id: trawlkit
-  nombre: trawlkit / Trawl Design Lab
+  nombre: trawlkit · Trawl Design Lab
   organizacion: Personal
   tipo: software_open_source
   rol: Autor único
@@ -232,42 +79,65 @@
   perfiles:
   - economia-azul
   - software
-- id: paradox_db_py
-  nombre: paradox-db-py (paquete paradoxdb)
-  organizacion: Personal · patrones desarrollados en Intervalor Data, publicados con autorización
+  orden: 2
+- id: cfp_audit_intelligence
+  nombre: cfp-audit-intelligence
+  organizacion: Proyecto final del Máster en Desarrollo con IA (BIG school)
   tipo: software_open_source
-  rol: Autor (especificación, implementación clean-room y revisión)
-  fechas: 11/2026
-  estado: Público desde 2026-11-15 · release v0.1.0 · PyPI paradoxdb 0.1.0 · MIT · CI verde (Python 3.11 y 3.12)
-  descripcion: 'Lector y escritor en Python puro de tablas Paradox (.DB datos, .MB memos/BLOB, .PX índice primario), versiones
-    3.0 a 7, sin dependencias nativas ni copyleft. Estado explícito por celda (OK / NULL / INVALID) con bytes crudos, codepage
-    por tabla, lectura de todos los registros de los bloques (incluidos los que la cabecera no declara), escritura sobre cabecera
-    plantilla con índice primario reconstruido y verificado, perfil de tablas con SHA-256, exportación CSV/JSON y CLI. Primer
-    caso de estudio clean-room: implementado en una sesión sin acceso al código original a partir de una especificación, revisado
-    en fase 3 contra la fuente (0 fragmentos idénticos, 0 identificadores no triviales compartidos) y publicado tras el veredicto.'
-  metricas:
-  - 104 tests (Hypothesis para ida y vuelta de enteros, dobles y BCD)
-  - '50 000 filas sintéticas: lectura 1,3 s, escritura .DB+.PX 0,09 s'
-  - README bilingüe en formato caso de estudio; 21 decisiones de diseño documentadas
+  rol: Autor único
+  fechas: 11/2025 – 08/2026
+  estado: App desplegada en Streamlit Cloud
+  descripcion: 'Plataforma RAG multi-LLM (OpenAI, Anthropic) para auditoría de las actas del Consejo Federal Pesquero argentino:
+    FastAPI, Streamlit, ChromaDB, datos abiertos, IA responsable.'
   stack:
-  - Python 3.11+
-  - pytest
-  - Hypothesis
-  - ruff
-  - GitHub Actions
-  - gitleaks
-  - hatchling
-  repo: https://github.com/arielgiamportone/paradox-db-py
-  release: https://github.com/arielgiamportone/paradox-db-py/releases/tag/v0.1.0
-  pypi: https://pypi.org/project/paradoxdb/
-  inicio: 2026-11
-  fin: 2026-11
+  - Python
+  - FastAPI
+  - Streamlit
+  - ChromaDB
+  - OpenAI
+  - Anthropic
+  - sentence-transformers
+  - SHAP
+  - SQLAlchemy
+  - PyTorch
+  - Plotly
+  - Docker Compose
+  repo: https://github.com/arielgiamportone/cfp-audit-intelligence
+  inicio: 2025-11
+  fin: 2026-08
   actual: false
   perfiles:
   - software
-  - sector-publico
+  - economia-azul
+  - ia
+  orden: 3
+- id: fisheries_mlops
+  nombre: fisheries-sustainability-mlops
+  organizacion: Personal
+  tipo: software_open_source
+  rol: Autor único
+  fechas: 02/2026
+  descripcion: MLOps end-to-end con deep learning y redes bayesianas para sostenibilidad pesquera.
+  stack:
+  - Python
+  - PyTorch
+  - pgmpy
+  - MLflow
+  - Optuna
+  - FastAPI
+  - NetworkX
+  - Docker
+  - AWS ECS/ECR
+  repo: https://github.com/arielgiamportone/fisheries-sustainability-mlops
+  inicio: 2026-02
+  fin: 2026-02
+  actual: false
+  perfiles:
+  - economia-azul
+  - ia
+  orden: 4
 - id: asset_identity_gs1
-  nombre: asset-identity-gs1 (PyPI `asset-identity-gs1`)
+  nombre: asset-identity-gs1
   organizacion: Personal · patrones desarrollados en Intervalor Data, publicados con autorización
   tipo: software_open_source
   rol: Autor (especificación, implementación clean-room y revisión)
@@ -302,8 +172,9 @@
   perfiles:
   - sector-publico
   - software
+  orden: 5
 - id: catastro_enrichment_es
-  nombre: catastro-enrichment-es (paquete catastro_enrich)
+  nombre: catastro-enrichment-es
   organizacion: Personal · patrones desarrollados en Intervalor Data, publicados con autorización
   tipo: software_open_source
   rol: Autor (especificación, implementación clean-room y revisión)
@@ -340,8 +211,60 @@
   - sector-publico
   - ia
   - software
+  orden: 6
+- id: kippa_rov
+  nombre: KIPPA I — ROV con hardware y software libres
+  organizacion: UTN FRTDF (tesis de grado)
+  tipo: desarrollo_tecnologico
+  rol: Autor
+  fechas: 2015 – 2016
+  descripcion: Vehículo submarino operado remotamente construido íntegramente con hardware y software libres y materiales
+    argentinos, para inspección de cascos, aparejos, hélices y timones de embarcaciones pesqueras pequeñas. Ponencia en el
+    IX Congreso Nacional de Ciencias del Mar (2015).
+  inicio: '2015'
+  fin: '2016'
+  actual: false
+  perfiles:
+  - economia-azul
+  - software
+  orden: 7
+- id: paradox_db_py
+  nombre: paradox-db-py
+  organizacion: Personal · patrones desarrollados en Intervalor Data, publicados con autorización
+  tipo: software_open_source
+  rol: Autor (especificación, implementación clean-room y revisión)
+  fechas: 11/2026
+  estado: Público desde 2026-11-15 · release v0.1.0 · PyPI paradoxdb 0.1.0 · MIT · CI verde (Python 3.11 y 3.12)
+  descripcion: 'Lector y escritor en Python puro de tablas Paradox (.DB datos, .MB memos/BLOB, .PX índice primario), versiones
+    3.0 a 7, sin dependencias nativas ni copyleft. Estado explícito por celda (OK / NULL / INVALID) con bytes crudos, codepage
+    por tabla, lectura de todos los registros de los bloques (incluidos los que la cabecera no declara), escritura sobre cabecera
+    plantilla con índice primario reconstruido y verificado, perfil de tablas con SHA-256, exportación CSV/JSON y CLI. Primer
+    caso de estudio clean-room: implementado en una sesión sin acceso al código original a partir de una especificación, revisado
+    en fase 3 contra la fuente (0 fragmentos idénticos, 0 identificadores no triviales compartidos) y publicado tras el veredicto.'
+  metricas:
+  - 104 tests (Hypothesis para ida y vuelta de enteros, dobles y BCD)
+  - '50 000 filas sintéticas: lectura 1,3 s, escritura .DB+.PX 0,09 s'
+  - README bilingüe en formato caso de estudio; 21 decisiones de diseño documentadas
+  stack:
+  - Python 3.11+
+  - pytest
+  - Hypothesis
+  - ruff
+  - GitHub Actions
+  - gitleaks
+  - hatchling
+  repo: https://github.com/arielgiamportone/paradox-db-py
+  release: https://github.com/arielgiamportone/paradox-db-py/releases/tag/v0.1.0
+  pypi: https://pypi.org/project/paradoxdb/
+  inicio: 2026-11
+  fin: 2026-11
+  actual: false
+  perfiles:
+  - software
+  - sector-publico
+  orden: 8
 - id: periodic_report_kit
-  nombre: periodic-report-kit (PyPI `periodic-report-kit`, import `reportkit`)
+  nombre: periodic-report-kit
   organizacion: Personal · patrones desarrollados en Intervalor Data, publicados con autorización
   tipo: software_open_source
   rol: Autor (especificación, implementación clean-room y revisión)
@@ -384,36 +307,61 @@
   - software
   - ia
   - sector-publico
-- id: photo_downloader
-  nombre: 'Photo Downloader: evidencias fotográficas automatizadas'
-  organizacion: Intervalor Data · expedientes AENA Madrid y Barcelona
-  tipo: automatizacion
-  rol: Autor único
-  fechas: 11/2025 – 10/2026
-  estado: v1.4 en producción 24/7
-  descripcion: Sistema de descarga, renombrado y clasificación automática de evidencias fotográficas desde SharePoint, con
-    watchers 24/7 sobre OneDrive, perfiles configurables por proyecto, traductores Excel con hipervínculos y notificaciones.
-    Evolución de un año desde scripts manuales en R.
+  orden: 9
+- id: pesqueros_en_ia_cursos
+  nombre: PesquerosEnIA — cursos open source
+  organizacion: Pesqueros en IA (fundador)
+  tipo: educativo_open_source
+  rol: Fundador, autor principal y docente
+  fechas: 05/2025 – Presente
   metricas:
-  - 357 imágenes descargadas en 12 min, 30.714 hipervínculos corregidos, 0 errores de clasificación (Barcelona, ene-2026)
-  - Reducción del 70 % del tiempo de procesamiento
+  - 4 repos, ~141 commits propios
+  - 20 notebooks ejecutables en Colab en el curso UTN FRCh
+  - 'Alumnos: CONIPE 2025 unos 15; curso UTN FRCh primera cohorte de 70 (dato de Ariel, 2026-11-09)'
   stack:
   - Python
-  - watchdog
-  - requests
+  - Jupyter
+  - Colab
+  - scikit-learn
+  - PyTorch
+  - TensorFlow
+  - pgmpy
+  - LaTeX
+  - HTML
+  repo: https://github.com/PesquerosEnIA
+  web: https://sites.google.com/view/pesquerosenia
+  inicio: 2025-05
+  actual: true
+  perfiles:
+  - economia-azul
+  - ia
+  orden: 10
+  descripcion: 'Cursos abiertos de la comunidad: manual de alfabetización en datos e IA de más de 200 páginas (CONIPE 2025,
+    GPL-3.0), curso de deep learning y redes bayesianas para pesquerías (6 módulos, 25 notebooks, PyTorch y pgmpy) y el curso
+    de extensión universitaria «IA aplicada a la producción pesquera» (UTN FRCh, 2026-2027), con notebooks en tres niveles
+    y casos reales: AIS/PSMA, VMS y concentración de renta.'
+- id: apigfw
+  nombre: Análisis pesquero con la API de Global Fishing Watch
+  organizacion: Personal · material docente UTN
+  tipo: software_open_source
+  rol: Autor único
+  fechas: 11/2025
+  descripcion: Notebook y cliente de ejemplo de la API de Global Fishing Watch para analizar la pesca argentina.
+  stack:
+  - Python
   - pandas
-  - openpyxl
-  - Pillow
-  - PowerShell
-  - PyInstaller
-  caso_estudio_publico: https://github.com/arielgiamportone/inspection-photo-archiver
+  - requests
+  - Jupyter
+  repo: https://github.com/arielgiamportone/APIGFW
   inicio: 2025-11
-  fin: 2026-10
+  fin: 2025-11
   actual: false
   perfiles:
-  - software
+  - economia-azul
+  - ia
+  orden: 11
 - id: casos_estudio_intervalor
-  nombre: Casos de estudio públicos (clean-room) del trabajo en Intervalor Data
+  nombre: Casos de estudio clean-room
   organizacion: Personal
   tipo: software_open_source
   rol: Autor
@@ -429,84 +377,10 @@
   perfiles:
   - software
   - sector-publico
-- id: cfp_audit_intelligence
-  nombre: cfp-audit-intelligence
-  organizacion: Personal (TFM del Máster en Desarrollo con IA, The BIG school, aprobado 27/09/2026)
-  tipo: software_open_source
-  rol: Autor único
-  fechas: 11/2025 – 08/2026
-  estado: App desplegada en Streamlit Cloud
-  descripcion: 'Plataforma RAG multi-LLM (OpenAI, Anthropic) para auditoría de las actas del Consejo Federal Pesquero argentino:
-    FastAPI, Streamlit, ChromaDB, datos abiertos, IA responsable.'
-  stack:
-  - Python
-  - FastAPI
-  - Streamlit
-  - ChromaDB
-  - OpenAI
-  - Anthropic
-  - sentence-transformers
-  - SHAP
-  - SQLAlchemy
-  - PyTorch
-  - Plotly
-  - Docker Compose
-  repo: https://github.com/arielgiamportone/cfp-audit-intelligence
-  inicio: 2025-11
-  fin: 2026-08
-  actual: false
-  perfiles:
-  - software
-  - economia-azul
-  - ia
-- id: aura_farm_ar
-  nombre: Aura Farm AR
-  organizacion: Personal
-  tipo: software_open_source
-  rol: Autor (desarrollo asistido por agente, un día)
-  fechas: 08/2026
-  descripcion: 'App móvil de gamificación con realidad aumentada sobre la cámara frontal: misiones, duelos, CI y tests. Proyecto
-    menor.'
-  stack:
-  - TypeScript
-  - React Native
-  - Expo
-  - Jest
-  - GitHub Actions
-  repo: https://github.com/arielgiamportone/aura-farm-ar
-  inicio: 2026-08
-  fin: 2026-08
-  actual: false
-  perfiles:
-  - software
-- id: interval_python
-  nombre: Modernización de un sistema legacy de activos fijos (Delphi/Paradox → Python)
-  organizacion: Intervalor Data
-  tipo: modernizacion_legacy
-  rol: Autor único
-  fechas: 04/2026 – 06/2026
-  estado: 'v0.9: Fases A-E completas, 544 tests'
-  descripcion: Modernización en Python de un sistema de control de activos fijos mantenido desde los años 90 sobre Delphi/Pascal
-    y BDE Paradox. Motor numérico portado línea a línea, migración Paradox → SQLite con el 99,97 % de las filas y paridad
-    al céntimo, ida y vuelta SQLite → Paradox y conversión a libro Excel.
-  stack:
-  - Python
-  - SQLAlchemy
-  - Alembic
-  - Tkinter
-  - pypxlib
-  - reportlab
-  - openpyxl
-  - PyInstaller
-  - pytest
-  inicio: 2026-04
-  fin: 2026-06
-  actual: false
-  perfiles:
-  - software
+  orden: 12
 - id: transcriptor_placas
   nombre: Transcriptor de Placas Industriales Asistido
-  organizacion: Intervalor Data (repo público en cuenta personal)
+  organizacion: Intervalor Data · repositorio público
   tipo: producto_software
   rol: Autor
   fechas: 12/2025 – 06/2026
@@ -530,32 +404,7 @@
   perfiles:
   - software
   - ia
-- id: licdatahunter
-  nombre: LicDATAhunter
-  organizacion: Intervalor Data
-  tipo: producto_software
-  rol: Diseño y fase 0
-  fechas: 04/2026 – 06/2026
-  estado: Fase 0 (base de conocimiento) en curso
-  descripcion: 'Inteligencia comercial para licitaciones públicas: indexa el portfolio de la empresa (284 proyectos, 25 CVs,
-    82 certificados) en una KB semántica, captará licitaciones de PLACSP y AENA, analizará pliegos con IA (semáforo de viabilidad)
-    y generará borradores de memoria técnica.'
-  stack:
-  - Python
-  - Claude API
-  - ChromaDB
-  - Ollama
-  - Streamlit
-  - PyMuPDF
-  - python-docx
-  - APScheduler
-  - SQLite
-  inicio: 2026-04
-  fin: 2026-06
-  actual: false
-  perfiles:
-  - software
-  - sector-publico
+  orden: 13
 - id: pid_liofilizados
   nombre: PID PP9884 — Liofilización de alimentos de producción local en Tierra del Fuego
   organizacion: UTN FRTDF · Grupo QA3DS
@@ -572,79 +421,7 @@
   actual: false
   perfiles:
   - economia-azul
-- id: assetvision
-  nombre: AssetVision
-  organizacion: Intervalor Data
-  tipo: producto_software
-  rol: Autor
-  fechas: 01/2026 – 02/2026
-  estado: v2.0.0 (escritorio Tkinter); migrado desde industrial_transcription_tk
-  descripcion: 'Gestión del ciclo de vida de activos industriales ''from nameplate to balance sheet'': transcripción de placas
-    con OCR (EasyOCR) e IA multi-proveedor (OpenAI, Gemini, Cloud Vision, Claude, DeepSeek), valoración híbrida multi-fuente
-    con caché evolutiva y conciliación contable con clasificación PGC 2024.'
-  metricas:
-  - 'Valoración: coste API por activo 0,015 → 0,004 €, precisión 85 → 91 %, 3-6 s por activo'
-  stack:
-  - Python
-  - Tkinter
-  - EasyOCR
-  - torch
-  - OpenCV
-  - openai
-  - google-generativeai
-  - google-cloud-vision
-  - anthropic
-  - fuzzywuzzy
-  - loguru
-  inicio: 2026-01
-  fin: 2026-02
-  actual: false
-  perfiles:
-  - software
-  - ia
-- id: fisheries_mlops
-  nombre: fisheries-sustainability-mlops
-  organizacion: Personal
-  tipo: software_open_source
-  rol: Autor único
-  fechas: 02/2026
-  descripcion: MLOps end-to-end con deep learning y redes bayesianas para sostenibilidad pesquera.
-  stack:
-  - Python
-  - PyTorch
-  - pgmpy
-  - MLflow
-  - Optuna
-  - FastAPI
-  - NetworkX
-  - Docker
-  - AWS ECS/ECR
-  repo: https://github.com/arielgiamportone/fisheries-sustainability-mlops
-  inicio: 2026-02
-  fin: 2026-02
-  actual: false
-  perfiles:
-  - economia-azul
-  - ia
-- id: apigfw
-  nombre: Análisis pesquero con la API de Global Fishing Watch
-  organizacion: Personal (material docente UTN)
-  tipo: software_open_source
-  rol: Autor único
-  fechas: 11/2025
-  descripcion: Notebook y cliente de ejemplo de la API de Global Fishing Watch para analizar la pesca argentina.
-  stack:
-  - Python
-  - pandas
-  - requests
-  - Jupyter
-  repo: https://github.com/arielgiamportone/APIGFW
-  inicio: 2025-11
-  fin: 2025-11
-  actual: false
-  perfiles:
-  - economia-azul
-  - ia
+  orden: 14
 - id: investigacion_operativa_ml
   nombre: Simplex vs ML en Investigación Operativa
   organizacion: Personal
@@ -663,77 +440,7 @@
   actual: false
   perfiles:
   - ia
-- id: cvar_sinergias
-  nombre: Sinergias y conflictos entre las actividades económicas y los socioecosistemas de Tierra del Fuego
-  organizacion: CONICET-CADIC
-  tipo: proyecto_investigacion
-  rol: Personal técnico de apoyo
-  fechas: 11/2016 – 11/2021
-  inicio: 2016-11
-  fin: 2021-11
-  actual: false
-  perfiles:
-  - economia-azul
-- id: cvar_centolla_ras
-  nombre: Desarrollo a escala piloto de la ingeniería del cultivo masivo de larvas de centolla (Lithodes santolla) en RAS
-    para repoblamiento
-  organizacion: CONICET-CADIC
-  tipo: proyecto_investigacion
-  rol: Personal técnico de apoyo
-  fechas: 05/2015 – 12/2019
-  inicio: 2015-05
-  fin: 2019-12
-  actual: false
-  perfiles:
-  - economia-azul
-- id: cvar_renovables
-  nombre: Desarrollo de sistemas híbridos para la provisión sustentable de electricidad y calor empleando energías renovables
-  organizacion: UTN FRTDF
-  tipo: proyecto_investigacion
-  rol: Becario de I+D
-  fechas: 04/2016 – 03/2019
-  inicio: 2016-04
-  fin: 2019-03
-  actual: false
-  perfiles:
-  - economia-azul
-- id: cvar_centolla_limitaciones
-  nombre: Limitaciones a la producción de nuevos individuos de las pesquerías de centolla en la Argentina
-  organizacion: CONICET-CADIC
-  tipo: proyecto_investigacion
-  rol: Personal técnico de apoyo
-  fechas: 11/2013 – 02/2017
-  inicio: 2013-11
-  fin: 2017-02
-  actual: false
-  perfiles:
-  - economia-azul
-- id: cvar_centolla_bases_1
-  nombre: 'Bases para el mejoramiento de la pesquería de centolla: estrategias biológicas para su recuperación y comercialización'
-  organizacion: CONICET-CADIC
-  tipo: proyecto_investigacion
-  rol: Personal técnico de apoyo
-  fechas: 11/2013 – 10/2016 y 05/2014 – 04/2017 (dos proyectos)
-  inicio: 2013-11
-  fin: 2016-10
-  actual: false
-  perfiles:
-  - economia-azul
-- id: kippa_rov
-  nombre: KIPPA I — ROV con hardware y software libres
-  organizacion: UTN FRTDF (tesis de grado)
-  tipo: desarrollo_tecnologico
-  rol: Autor
-  fechas: 2015 – 2016
-  descripcion: Vehículo submarino operado remotamente construido íntegramente con hardware y software libres y materiales
-    argentinos, para inspección de cascos, aparejos, hélices y timones de embarcaciones pesqueras pequeñas. Ponencia en el
-    IX Congreso Nacional de Ciencias del Mar (2015).
-  inicio: '2015'
-  fin: '2016'
-  actual: false
-  perfiles:
-  - economia-azul
-  - software
+  orden: 15
 - id: vito_gnu_linux
   nombre: VITO GNU/Linux — distribución de navegación
   organizacion: Grupo de Tecnología Marítima UTN / UVI-UTN
@@ -748,3 +455,86 @@
   perfiles:
   - economia-azul
   - software
+  orden: 16
+- id: aura_farm_ar
+  nombre: Aura Farm AR
+  organizacion: Personal
+  tipo: software_open_source
+  rol: Autor (desarrollo asistido por agente, un día)
+  fechas: 08/2026
+  descripcion: 'App móvil de gamificación con realidad aumentada sobre la cámara frontal: misiones, duelos, CI y tests. Proyecto
+    menor.'
+  stack:
+  - TypeScript
+  - React Native
+  - Expo
+  - Jest
+  - GitHub Actions
+  repo: https://github.com/arielgiamportone/aura-farm-ar
+  inicio: 2026-08
+  fin: 2026-08
+  actual: false
+  perfiles:
+  - software
+  orden: 17
+- id: cvar_sinergias
+  nombre: Sinergias y conflictos entre las actividades económicas y los socioecosistemas de Tierra del Fuego
+  organizacion: CONICET-CADIC
+  tipo: proyecto_investigacion
+  rol: Personal técnico de apoyo
+  fechas: 11/2016 – 11/2021
+  inicio: 2016-11
+  fin: 2021-11
+  actual: false
+  perfiles:
+  - economia-azul
+  orden: 999
+- id: cvar_centolla_ras
+  nombre: Desarrollo a escala piloto de la ingeniería del cultivo masivo de larvas de centolla (Lithodes santolla) en RAS
+    para repoblamiento
+  organizacion: CONICET-CADIC
+  tipo: proyecto_investigacion
+  rol: Personal técnico de apoyo
+  fechas: 05/2015 – 12/2019
+  inicio: 2015-05
+  fin: 2019-12
+  actual: false
+  perfiles:
+  - economia-azul
+  orden: 999
+- id: cvar_renovables
+  nombre: Desarrollo de sistemas híbridos para la provisión sustentable de electricidad y calor empleando energías renovables
+  organizacion: UTN FRTDF
+  tipo: proyecto_investigacion
+  rol: Becario de I+D
+  fechas: 04/2016 – 03/2019
+  inicio: 2016-04
+  fin: 2019-03
+  actual: false
+  perfiles:
+  - economia-azul
+  orden: 999
+- id: cvar_centolla_limitaciones
+  nombre: Limitaciones a la producción de nuevos individuos de las pesquerías de centolla en la Argentina
+  organizacion: CONICET-CADIC
+  tipo: proyecto_investigacion
+  rol: Personal técnico de apoyo
+  fechas: 11/2013 – 02/2017
+  inicio: 2013-11
+  fin: 2017-02
+  actual: false
+  perfiles:
+  - economia-azul
+  orden: 999
+- id: cvar_centolla_bases_1
+  nombre: 'Bases para el mejoramiento de la pesquería de centolla: estrategias biológicas para su recuperación y comercialización'
+  organizacion: CONICET-CADIC
+  tipo: proyecto_investigacion
+  rol: Personal técnico de apoyo
+  fechas: 11/2013 – 10/2016 y 05/2014 – 04/2017 (dos proyectos)
+  inicio: 2013-11
+  fin: 2016-10
+  actual: false
+  perfiles:
+  - economia-azul
+  orden: 999

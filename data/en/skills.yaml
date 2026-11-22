@@ -1,0 +1,346 @@
+# GENERADO por scripts/sync_base.py desde la base de conocimiento. No editar a mano.
+lenguajes:
+- nombre: Python
+  nivel: 5
+  años: 5
+  contexto: Pandas, NumPy, Scikit-Learn, TensorFlow, automatización, ETL
+- nombre: SQL
+  nivel: 4
+  años: 5
+  contexto: MySQL, PostgreSQL, consultas complejas, optimización
+- nombre: R
+  nivel: 3
+  años: 3
+  contexto: Análisis estadístico, visualización
+- nombre: C++
+  nivel: 2
+  años: 2
+  contexto: Aplicaciones embebidas, IoT
+- nombre: Java
+  nivel: 2
+  años: 1
+  contexto: Conocimiento básico
+ml_data_science:
+- nombre: Machine Learning
+  nivel: 4
+  años: 4
+- nombre: Deep Learning
+  nivel: 4
+  años: 3
+- nombre: Pandas
+  nivel: 5
+  años: 5
+- nombre: NumPy
+  nivel: 5
+  años: 5
+- nombre: Scikit-Learn
+  nivel: 4
+  años: 4
+- nombre: TensorFlow / Keras
+  nivel: 4
+  años: 3
+- nombre: Data Mining
+  nivel: 4
+  años: 4
+- nombre: Predictive Analytics
+  nivel: 4
+  años: 4
+- nombre: ETL
+  nivel: 4
+  años: 4
+- nombre: Feature Engineering
+  nivel: 4
+  años: 3
+- nombre: Statistical Analysis
+  nivel: 4
+  años: 5
+- nombre: CRISP-DM
+  nivel: 4
+  años: 3
+- nombre: PyTorch
+  nivel: 3
+  años: 1
+  contexto: fisheries-sustainability-mlops, curso DL bayesiano, cfp-audit-intelligence [nivel estimado]
+- nombre: Redes bayesianas (pgmpy) e inferencia causal
+  nivel: 3
+  años: 1
+  contexto: fisheries-sustainability-mlops; curso de 6 módulos y 25 notebooks [nivel estimado]
+- nombre: 'MLOps: MLflow, Optuna, AWS ECS/ECR'
+  nivel: 3
+  años: 1
+  contexto: fisheries-sustainability-mlops [nivel estimado]
+- nombre: Web scraping (requests, BeautifulSoup)
+  nivel: 3
+  años: 2
+  contexto: repos personales 2023-2025
+visualizacion:
+- nombre: Power BI
+  nivel: 4
+  años: 3
+- nombre: Tableau
+  nivel: 3
+  años: 2
+- nombre: Matplotlib / Seaborn
+  nivel: 4
+  años: 4
+- nombre: Streamlit
+  nivel: 3
+  años: 2
+- nombre: Data Storytelling
+  nivel: 4
+  años: 4
+- nombre: Plotly
+  nivel: 4
+  años: 2
+  contexto: 6 repos (trawlkit, IO, cfp-audit-intelligence…)
+infraestructura:
+- nombre: Git
+  nivel: 4
+  años: 4
+- nombre: Docker
+  nivel: 3
+  años: 2
+- nombre: AWS
+  nivel: 2
+  años: 2
+- nombre: Azure
+  nivel: 3
+  años: 2
+- nombre: Google Colab
+  nivel: 4
+  años: 3
+- nombre: PostgreSQL
+  nivel: 4
+  años: 3
+- nombre: MySQL
+  nivel: 4
+  años: 3
+gestion_proyectos:
+- nombre: Agile / Scrum
+  nivel: 4
+  años: 5
+- nombre: Kanban / Scrumban
+  nivel: 4
+  años: 4
+- nombre: Trello
+  nivel: 4
+  años: 5
+- nombre: Jira
+  nivel: 3
+  años: 3
+- nombre: MS Project
+  nivel: 3
+  años: 3
+- nombre: LEAN Six Sigma
+  nivel: 4
+  años: 5
+- nombre: Gestión de presupuestos
+  nivel: 4
+  años: 8
+- nombre: Gestión de stakeholders
+  nivel: 4
+  años: 8
+- nombre: Gestión de riesgos
+  nivel: 4
+  años: 6
+- nombre: Team Management
+  nivel: 4
+  años: 8
+- nombre: MS 365
+  nivel: 4
+  años: 5
+iot_ciencias:
+- nombre: IoT / Sensores
+  nivel: 4
+  años: 4
+- nombre: GIS
+  nivel: 3
+  años: 3
+- nombre: MATLAB
+  nivel: 3
+  años: 5
+- nombre: SolidWorks
+  nivel: 2
+  años: 1
+- nombre: AutoCAD / SketchUp
+  nivel: 3
+  años: 5
+  contexto: planos de instalaciones, RAS, puertos y artes de pesca [nivel estimado]
+- nombre: 'Taller: carpintería, herrería, electricidad, refrigeración y mecánica'
+  nivel: 4
+  años: 10
+  contexto: construcción de obra, equipos oceanográficos, RAS y cámaras frigoríficas; base para trabajo con hardware e IoT
+- nombre: Microcontroladores ESP32 / Arduino
+  nivel: 3
+  años: 3
+  contexto: KIPPA ROV, cuantificador de gas, prototipos IoT en Mainly Labs
+desarrollo_software:
+- nombre: FastAPI
+  nivel: 5
+  años: 2
+  contexto: AYUNDATA, INTERDATA, casos de estudio; APIs REST, Jinja2/HTMX, auth, CSRF
+- nombre: SQLAlchemy / Alembic
+  nivel: 4
+  años: 2
+  contexto: Modelos, migraciones, multi-tenant por schema, SQLite y PostgreSQL
+- nombre: Pydantic
+  nivel: 4
+  años: 2
+- nombre: pytest / hypothesis
+  nivel: 4
+  años: 2
+  contexto: 900+ tests en AYUNDATA, 544 en INTERVAL Python
+- nombre: Jinja2 / HTMX
+  nivel: 4
+  años: 2
+- nombre: Tkinter / PySide6 (escritorio)
+  nivel: 4
+  años: 2
+- nombre: PyInstaller / Inno Setup (empaquetado Windows)
+  nivel: 4
+  años: 1
+- nombre: Flask / Django
+  nivel: 3
+  años: 2
+- nombre: JavaScript / HTML / CSS
+  nivel: 3
+  años: 3
+  contexto: Dashboards estáticos, Chart.js, Leaflet, Node.js para funciones
+- nombre: VBA / PowerShell
+  nivel: 3
+  años: 3
+- nombre: uv / ruff / pre-commit
+  nivel: 4
+  años: 1
+- nombre: Empaquetado y publicación open source (PyPI, hatchling, semver, Zenodo DOI, CITATION.cff)
+  nivel: 4
+  años: 1
+  contexto: '5 paquetes en PyPI: trawlkit, paradoxdb, asset-identity-gs1, catastro-enrich, periodic-report-kit'
+- nombre: Generación de documentos (python-docx, python-pptx, reportlab, xhtml2pdf, pypdf)
+  nivel: 4
+  años: 1
+  contexto: periodic-report-kit, informes AENA, área IT, AYUNDATA
+- nombre: Jupyter y LaTeX (material docente y técnico)
+  nivel: 4
+  años: 3
+  contexto: cursos PesquerosEnIA, manual CONIPE 200+ páginas, preprint del PID
+- nombre: Sitios estáticos (Hugo, GitHub Pages)
+  nivel: 3
+  años: 2
+  contexto: portfolio personal, qa3ds.github.io, paneles en GitHub Pages
+- nombre: TypeScript / React Native / Expo (básico)
+  nivel: 2
+  años: 0
+  contexto: aura-farm-ar, proyecto menor
+- nombre: Linux / GNU (administración, distribución propia VITO)
+  nivel: 3
+  años: 8
+  contexto: VITO GNU/Linux (2013-2014), FLISoL, servidores de cliente
+- nombre: BPMN (modelado de procesos)
+  nivel: 3
+  años: 2
+  contexto: transición digital en Intervalor (CV 2025)
+- nombre: Moodle (aula virtual)
+  nivel: 3
+  años: 4
+  contexto: aula virtual híbrida de Puertos Pesqueros, UTN FRTDF
+ia_aplicada:
+- nombre: LLM APIs (OpenAI, Anthropic, Gemini)
+  nivel: 4
+  años: 2
+  contexto: Extracción estructurada, valoración, enriquecimiento registral, análisis de pliegos
+- nombre: Ollama / modelos locales (deepseek-ocr, Llama, Qwen)
+  nivel: 4
+  años: 1
+- nombre: RAG / embeddings / ChromaDB
+  nivel: 4
+  años: 1
+  contexto: LicDATAhunter, cfp-audit-intelligence
+- nombre: OCR (EasyOCR, Tesseract, Google Cloud Vision)
+  nivel: 4
+  años: 2
+  contexto: 1.926 PDFs en AYUNDATA; placas industriales
+- nombre: OpenCV / YOLO (visión por computadora)
+  nivel: 4
+  años: 2
+- nombre: Desarrollo asistido por agentes (Claude Code, Cursor, Copilot; AGENTS.md, MCP)
+  nivel: 5
+  años: 1
+cloud_m365:
+- nombre: Azure Static Web Apps / Azure Functions
+  nivel: 4
+  años: 1
+- nombre: Microsoft Entra ID (roles, SSO)
+  nivel: 4
+  años: 1
+- nombre: SharePoint / Graph API / OneDrive
+  nivel: 4
+  años: 2
+- nombre: Power Automate / Power Apps / Power BI
+  nivel: 4
+  años: 2
+- nombre: GitHub Actions / GitHub Projects
+  nivel: 4
+  años: 2
+- nombre: Docker / Docker Compose
+  nivel: 4
+  años: 2
+- nombre: Tailscale / despliegue on-premise en cliente
+  nivel: 3
+  años: 1
+- nombre: Supabase / Streamlit Cloud
+  nivel: 3
+  años: 1
+seguridad_cumplimiento:
+- nombre: ENS (RD 311/2022) — diseño de programa de certificación
+  nivel: 4
+  años: 1
+- nombre: ISO/IEC 27001:2022 y RGPD (encargo del tratamiento)
+  nivel: 3
+  años: 1
+- nombre: Autenticación y auditoría (MFA TOTP, JWT RS256, CSRF, hash encadenado, break-glass)
+  nivel: 4
+  años: 1
+- nombre: Gestión de secretos y datos de cliente fuera del repo
+  nivel: 4
+  años: 2
+datos_legacy_contabilidad:
+- nombre: Migración de sistemas legacy (Delphi/Paradox/BDE → Python/SQL)
+  nivel: 4
+  años: 1
+  contexto: pypxlib, paridad numérica al céntimo
+- nombre: 'Contabilidad de activos: PGC 2007 / PGC PYMES, PGCP, ICAL, RBEL, amortización'
+  nivel: 4
+  años: 2
+- nombre: Catastro, registro e interoperabilidad (DGC, forales, CartoCiudad, geocoding)
+  nivel: 4
+  años: 1
+- nombre: SQLite FTS5 / PostgreSQL avanzado
+  nivel: 4
+  años: 2
+- nombre: Documentación de arquitectura (ADR, CHANGELOG, runbooks)
+  nivel: 5
+  años: 2
+- nombre: Estándares GS1 y etiquetado (GIAI, EPC, Digital Link, Code128, ZPL/RFID)
+  nivel: 4
+  años: 1
+  contexto: asset-identity-gs1, AYUNDATA
+- nombre: Geoespacial en Python (pyproj, geopandas, folium; UTM↔WGS84, WFS)
+  nivel: 3
+  años: 2
+  contexto: catastro-enrich, notebooks pesqueros
+blandas:
+- nombre: Liderazgo y trabajo en equipo
+  nivel: 4
+- nombre: Comunicación efectiva
+  nivel: 4
+- nombre: Resolución de problemas
+  nivel: 5
+- nombre: Adaptabilidad
+  nivel: 5
+- nombre: Pensamiento analítico
+  nivel: 5
+- nombre: Gestión de equipos multiculturales
+  nivel: 4
+- nombre: Comunicación técnica (papers, presentaciones)
+  nivel: 4

@@ -1,23 +1,55 @@
-{{ define "head" }}
-<meta name="description" content={{ .Site.Params.description }}>
-<link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/index.css" media="all">
-<link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/projects.css" media="all">
-
-<!-- fontawesome -->
-<script defer src="{{ .Site.Params.staticPath }}/fontawesome-6/all-6.4.2.js"></script>
-{{ end }}
-
-{{ define "title" }}
-{{ .Site.Title }}
-{{ end }}
-
 {{ define "main" }}
-{{- partial "sections/hero/index.html" . -}}
-{{- partial "sections/about.html" . -}}
-{{- partial "sections/experience.html" . -}}
-{{- partial "sections/education.html" . -}}
-{{- partial "sections/courses.html" . -}}
-{{- partial "sections/projects.html" . -}}
-{{- partial "sections/achievements.html" . -}}
-{{- partial "sections/contact.html" . -}}
+{{ $c := partial "datos.html" "contacto" }}
+{{ $perfiles := partial "datos.html" "perfiles" }}
+{{ $proyectos := partial "datos.html" "proyectos" }}
+{{ $exp := partial "datos.html" "experiencia" }}
+<section class="heroe">
+  <div class="contenedor heroe__fila">
+    <div class="heroe__texto">
+      <p class="heroe__hola">{{ i18n "hola" }}</p>
+      <h1 class="heroe__nombre">Ariel Luján Giamportone</h1>
+      <p class="heroe__titular" data-texto-general="{{ cond (eq site.Language.Lang "en") $c.titular_en $c.titular }}">{{ cond (eq site.Language.Lang "en") $c.titular_en $c.titular }}</p>
+      {{ range $perfiles }}<template data-titular="{{ .slug }}">{{ .titulo }}</template><template data-resumen="{{ .slug }}">{{ .resumen }}</template>{{ end }}
+      <p class="heroe__resumen" data-resumen-activo>{{ site.Params.description }}</p>
+      {{ partial "redes.html" . }}
+    </div>
+    {{ with resources.Get "images/me.png" }}
+      {{ $img := .Fill "480x480 Center webp q82" }}
+      <img class="heroe__foto" src="{{ $img.RelPermalink }}" width="240" height="240" alt="Ariel Luján Giamportone" fetchpriority="high">
+    {{ end }}
+  </div>
+</section>
+
+<section class="bloque bloque--lentes">
+  <div class="contenedor">
+    <h2>{{ i18n "elige_lente" }}</h2>
+    <p class="tenue">{{ i18n "elige_lente_sub" }}</p>
+    {{ partial "lentes.html" . }}
+    <p class="ver-perfil" hidden>{{ range $perfiles }}<a class="enlace-perfil" data-perfil-enlace="{{ .slug }}" href="{{ partial "url-perfil.html" .slug }}" hidden>{{ i18n "ver_perfil" }}: {{ .titulo_corto }} →</a>{{ end }}</p>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="contenedor">
+    <div class="bloque__cabecera">
+      <h2>{{ i18n "proyectos_destacados" }}</h2>
+      {{ with site.GetPage "/proyectos" }}<a href="{{ .RelPermalink }}">{{ i18n "ver_todos" }} →</a>{{ end }}
+    </div>
+    <div class="rejilla" data-filtrable data-maximo="6">
+      {{ range $proyectos }}{{ partial "proyecto-card.html" . }}{{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="contenedor">
+    <div class="bloque__cabecera">
+      <h2>{{ i18n "experiencia_reciente" }}</h2>
+      {{ with site.GetPage "/trayectoria" }}<a href="{{ .RelPermalink }}">{{ i18n "ver_trayectoria" }} →</a>{{ end }}
+    </div>
+    <ol class="linea" data-filtrable data-maximo="5">
+      {{ range $exp }}{{ partial "exp-item.html" (dict "e" . "detalle" false) }}{{ end }}
+    </ol>
+  </div>
+</section>
 {{ end }}

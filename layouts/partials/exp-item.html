@@ -1,0 +1,16 @@
+{{- $e := .e -}}
+<li class="hito" data-perfiles="{{ delimit ($e.perfiles | default slice) " " }}">
+  <div class="hito__fecha">{{ partial "fechas.html" $e.fechas }}</div>
+  <div class="hito__cuerpo">
+    <h3 class="hito__rol">{{ $e.rol }}</h3>
+    <p class="hito__empresa">{{ $e.empresa }}{{ with $e.ubicacion }} <span class="tenue">· {{ . }}</span>{{ end }}</p>
+    {{ with $e.descripcion }}<p>{{ . }}</p>{{ end }}
+    {{ if and .detalle $e.logros }}
+      <ul class="logros">{{ range $e.logros }}<li>{{ . }}</li>{{ end }}</ul>
+    {{ end }}
+    {{ if .detalle }}{{ with $e.proyectos }}
+      <ul class="logros">{{ range . }}<li><strong>{{ .nombre }}</strong>{{ with .cliente }} — {{ . }}{{ end }}{{ with .fechas }} <span class="tenue">({{ . }})</span>{{ end }}</li>{{ end }}</ul>
+    {{ end }}{{ end }}
+    <span class="tarjeta__lentes" aria-hidden="true">{{ range $e.perfiles }}<i class="punto punto--{{ . }}"></i>{{ end }}</span>
+  </div>
+</li>

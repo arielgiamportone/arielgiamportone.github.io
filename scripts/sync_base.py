@@ -188,9 +188,11 @@ def experiencia(base: Path) -> list[dict]:
 
 def proyectos(base: Path) -> list[dict]:
     datos = leer_frontmatter(base / "base" / "proyectos.md")["proyectos"]
+    web = CONFIG.get("proyectos_web", {})
+    ocultar, orden = set(web.get("ocultar", [])), web.get("orden", [])
     salida = []
     for p in datos:
-        if p.get("publico") is not True:
+        if p.get("publico") is not True or p["id"] in ocultar:
             continue
         ajuste = dict(CONFIG.get("proyectos_ajustes", {}).get(p["id"], {}))
         omitir = set(ajuste.pop("omitir", []))
@@ -200,10 +202,12 @@ def proyectos(base: Path) -> list[dict]:
             entrada.pop("repo", None)
         entrada.update(rango(p.get("fechas", "")))
         entrada["perfiles"] = perfiles_de(p.get("perfiles_relevantes"))
+        entrada["orden"] = orden.index(p["id"]) + 1 if p["id"] in orden else 999
         item = limpiar(entrada, p["id"])
         if completo(item, "proyectos", p["id"]):
             salida.append(item)
-    salida.sort(key=lambda x: (x.get("actual", False), x.get("fin") or x.get("inicio") or ""), reverse=True)
+    salida.sort(key=lambda x: (x.get("fin") or x.get("inicio") or "", x.get("actual", False)), reverse=True)
+    salida.sort(key=lambda x: x["orden"])
     return salida
 
 
@@ -268,6 +272,7 @@ def perfiles(base: Path) -> list[dict]:
         m = re.search(r"## Resumen Ejecutivo\s*\n(.+?)\n---", cuerpo, re.S)
         resumen = m.group(1).strip() if m else ""
         resumen = re.sub(r"\*\*(.+?)\*\*", r"\1", resumen)
+        resumen = re.sub(r"\*(.+?)\*", r"\1", resumen)
         salida.append(limpiar({
             "slug": p["slug"],
             "clave": p["clave"],
@@ -280,6 +285,60 @@ def perfiles(base: Path) -> list[dict]:
     return salida
 
 
+# ------------------------------------------------------------- textos web
+
+def cargar_textos(lang: str) -> dict:
+    """Lee contenido/<lang>/*.yaml: textos de la web que sustituyen a los de la base, por id."""
+    carpeta = RAIZ / "contenido" / lang
+    textos = {}
+    if carpeta.exists():
+        for f in sorted(carpeta.glob("*.yaml")):
+            textos[f.stem] = yaml.safe_load(f.read_text(encoding="utf-8")) or {}
+    return textos
+
+
+def aplicar_textos(ficheros: dict, textos: dict, lang: str, exigir: bool) -> dict:
+    """Devuelve una copia de los datos con los textos de la web aplicados."""
+    import copy
+    salida = copy.deepcopy(ficheros)
+
+    def por_id(nombre: str, clave: str, campos_traducibles: list[str]):
+        capa = textos.get(nombre.removesuffix(".yaml"), {})
+        for item in salida[nombre]:
+            t = capa.get(item[clave])
+            if t:
+                item.update(t)
+            elif exigir and any(item.get(c) for c in campos_traducibles):
+                aviso(f"[{lang}] sin traducir: {nombre} {item[clave]}")
+
+    por_id("experiencia.yaml", "id", ["rol", "descripcion"])
+    por_id("proyectos.yaml", "id", ["descripcion"])
+    por_id("perfiles.yaml", "slug", ["resumen"])
+    por_id("idiomas.yaml", "idioma", ["nivel"])
+
+    pub = textos.get("publicaciones", {})
+    if "reconocimientos" in pub:
+        salida["publicaciones.yaml"]["reconocimientos"] = pub["reconocimientos"]
+    for seccion, items in pub.get("resumenes", {}).items():
+        for it in salida["publicaciones.yaml"].get(seccion, []):
+            if it.get("id") in items:
+                it["resumen"] = items[it["id"]]
+
+    form = textos.get("formacion", {})
+    for seccion in ("titulos", "posgrado_especializacion"):
+        for it in salida["formacion.yaml"].get(seccion, []):
+            t = form.get(it.get("titulo"))
+            if t:
+                it.update(t)
+            elif exigir:
+                aviso(f"[{lang}] sin traducir: formación {it.get('titulo')}")
+
+    con = textos.get("contacto", {})
+    salida["contacto.yaml"].update(con)
+    # Los textos de la web también pasan por las reglas de publicación.
+    return {k: limpiar(v, f"{lang}:{k}") for k, v in salida.items()}
+
+
 # ------------------------------------------------------------------ salida
 
 def volcar(datos) -> str:
@@ -290,7 +349,7 @@ def volcar(datos) -> str:
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--base", required=True, type=Path, help="Ruta al repo cv-perfil-profesional")
-    ap.add_argument("--salida", type=Path, default=RAIZ / "data" / "es")
+    ap.add_argument("--salida", type=Path, default=RAIZ / "data")
     ap.add_argument("--check", action="store_true", help="No escribe; falla si algún fichero cambiaría")
     args = ap.parse_args()
 
@@ -305,19 +364,25 @@ def main() -> int:
         "perfiles.yaml": perfiles(args.base),
     }
 
+    por_idioma = {
+        "es": aplicar_textos(ficheros, cargar_textos("es"), "es", exigir=False),
+        "en": aplicar_textos(ficheros, cargar_textos("en"), "en", exigir=True),
+    }
+
     cambios = []
-    args.salida.mkdir(parents=True, exist_ok=True)
-    for nombre, datos in ficheros.items():
-        ruta = args.salida / nombre
-        nuevo = volcar(datos)
-        if not ruta.exists() or ruta.read_text(encoding="utf-8") != nuevo:
-            cambios.append(nombre)
-            if not args.check:
-                ruta.write_text(nuevo, encoding="utf-8")
+    for lang, datos_lang in por_idioma.items():
+        (args.salida / lang).mkdir(parents=True, exist_ok=True)
+        for nombre, datos in datos_lang.items():
+            ruta = args.salida / lang / nombre
+            nuevo = volcar(datos)
+            if not ruta.exists() or ruta.read_text(encoding="utf-8") != nuevo:
+                cambios.append(f"{lang}/{nombre}")
+                if not args.check:
+                    ruta.write_text(nuevo, encoding="utf-8")
 
     for a in AVISOS:
         print(f"aviso: {a}")
-    print(f"{len(ficheros)} ficheros, {len(cambios)} con cambios: {', '.join(cambios) or '—'}")
+    print(f"{len(ficheros) * len(por_idioma)} ficheros, {len(cambios)} con cambios: {', '.join(cambios) or '—'}")
     if args.check and cambios:
         print("data/ no está al día con la base: ejecuta sync_base.py sin --check", file=sys.stderr)
         return 1

@@ -1,0 +1,9 @@
+{{ $perfiles := partial "datos.html" "perfiles" }}
+<div class="lentes" role="group" aria-label="{{ i18n "elige_lente" }}">
+  <button class="lente lente--todas" type="button" data-lente="" aria-pressed="true">{{ i18n "vista_general" }}</button>
+  {{ range $perfiles }}
+    <button class="lente lente--{{ .slug }}" type="button" data-lente="{{ .slug }}" aria-pressed="false" style="--c: {{ .color }}">
+      <span class="lente__punto" aria-hidden="true"></span>{{ .titulo_corto }}
+    </button>
+  {{ end }}
+</div>

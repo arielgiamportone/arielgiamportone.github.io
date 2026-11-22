@@ -1,0 +1,69 @@
+ayundata:
+  descripcion: "ETL platform and multi-tenant SaaS for the municipal register of assets and rights. It started with a 24-month contract (11/2025-11/2027) with the municipality of San Bartolomé de Tirajana and became a product for any municipality."
+trawlkit:
+  organizacion: "Personal"
+  descripcion: "Calculation engine for the design and sizing of trawl nets: an evolution of the FAO A-3 spreadsheet model for 150-180 HP vessels in the Beagle Channel, rebuilt as reproducible, tested software."
+cfp_audit_intelligence:
+  organizacion: "Final project, Master's in AI Development (BIG school)"
+  descripcion: "Multi-LLM RAG platform (OpenAI, Anthropic) to audit the minutes of Argentina's Federal Fisheries Council: FastAPI, Streamlit, ChromaDB, open data and responsible AI."
+fisheries_mlops:
+  organizacion: "Personal"
+  descripcion: "End-to-end MLOps with deep learning and Bayesian networks for fisheries sustainability."
+asset_identity_gs1:
+  organizacion: "Personal · patterns developed at Intervalor Data, published with permission"
+  descripcion: "Physical identity for inventory assets with GS1 standards: each asset gets one identity in four equivalent forms (canonical GIAI AI 8004, a readable alias with a mod-43 check character for Code128, EPC GIAI-96 for UHF RFID and GS1 Digital Link for QR). Global multi-tenant uniqueness by construction: an authority hands out blocks of the identifier space once and each site mints offline. Issuance register, label life cycle, resolution of any scanned code, vector PDF label sheets and ZPL for RFID printer-encoders. A clean-room case study implemented from a specification without access to the source."
+catastro_enrichment_es:
+  organizacion: "Personal · patterns developed at Intervalor Data, published with permission"
+  descripcion: "Enrichment of real-estate inventories with Spain's five cadastres (national DGC and the regional ones of Álava, Bizkaia, Gipuzkoa and Navarre) behind a single interface routed by municipality code; Nominatim geocoding as fallback with precision by OSM class; UTM-WGS84 conversion; PNOA orthophotos and Mapillary images stored with attribution; idempotent cascade with dry run by default and a six-command CLI. A clean-room case study implemented from a specification."
+kippa_rov:
+  nombre: "KIPPA I — ROV with open hardware and software"
+  organizacion: "UTN Tierra del Fuego (final degree project)"
+  descripcion: "Remotely operated underwater vehicle built entirely with open hardware and software and locally sourced materials, to inspect hulls, gear, propellers and rudders of small fishing vessels. Presented at the 9th National Congress of Marine Sciences (2015)."
+paradox_db_py:
+  organizacion: "Personal · patterns developed at Intervalor Data, published with permission"
+  descripcion: "Pure-Python reader and writer for Paradox tables (.DB data, .MB memos/BLOBs, .PX primary index), versions 3.0 to 7, with no native or copyleft dependencies. Explicit per-cell status (OK / NULL / INVALID) with raw bytes, per-table code page, recovery of records the header does not declare, writing on a template header with a rebuilt and verified primary index, CSV/JSON export and CLI. A clean-room case study."
+periodic_report_kit:
+  organizacion: "Personal · patterns developed at Intervalor Data, published with permission"
+  descripcion: "Declarative periodic reports: tabular input with domain rules (unknown rows quarantined) and branded Word, PDF and PPTX output. Full-bleed cover outside the page numbering, a real Word table of contents, YAML catalogue of sections and conditional charts, named metrics with a declared base, a store of human comments with drift detection, and a validator against the delivered document. A clean-room case study."
+pesqueros_en_ia_cursos:
+  nombre: "PesquerosEnIA — open-source courses"
+  organizacion: "Pesqueros en IA (founder)"
+  descripcion: "The community's open courses: a 200+ page data and AI literacy manual (CONIPE 2025, GPL-3.0), a deep learning and Bayesian networks course for fisheries (6 modules, 25 notebooks, PyTorch and pgmpy) and the university extension course «Applied AI for Fisheries Production» (UTN FRCh, 2026-2027), with notebooks at three levels and real cases: AIS/PSMA, VMS and rent concentration."
+apigfw:
+  nombre: "Fisheries analysis with the Global Fishing Watch API"
+  organizacion: "Personal · UTN teaching material"
+  descripcion: "Notebook and example client for the Global Fishing Watch API to analyse Argentine fishing activity."
+casos_estudio_intervalor:
+  nombre: "Clean-room case studies"
+  organizacion: "Personal"
+  descripcion: "multi-tenant-asset-register (multi-tenant asset register, migration reconciled to the cent, explainable depreciation engine; FastAPI, PostgreSQL, SQLite, Docker), field-inspections-dashboard (incremental pipeline over a third-party API, anti-SSRF proxies, static dashboard with per-role builds, Azure SWA + Entra ID, GitHub Actions) and inspection-photo-archiver (24/7 archiver with a non-destructive ledger). No client code or data."
+transcriptor_placas:
+  nombre: "Assisted Industrial Nameplate Transcriber"
+  organizacion: "Intervalor Data · public repository"
+  descripcion: "Streamlit app for AI-assisted transcription of motor nameplates: local OCR (EasyOCR) or GPT-4o-mini per image, consolidation per asset, checkpoints, row-by-row human validation and Excel export."
+pid_liofilizados:
+  nombre: "Research project PP9884 — Freeze-drying of locally produced food in Tierra del Fuego"
+  organizacion: "UTN Tierra del Fuego · QA3DS group"
+  descripcion: "Reproducible freeze-drying protocols for regional producers; rhubarb matrix, 261 valid observations (3 pre-treatments × 10 times). Team of 6 lecturers and 7 students. Website qa3ds.github.io with an animation of the process; preprint in preparation."
+investigacion_operativa_ml:
+  nombre: "Simplex vs ML in Operations Research"
+  organizacion: "Personal"
+  descripcion: "Streamlit app with an interactive presentation comparing the simplex method with ML route prediction."
+vito_gnu_linux:
+  nombre: "VITO GNU/Linux — navigation distribution"
+  organizacion: "UTN Maritime Technology Group"
+  descripcion: "Stable Debian fork dedicated to navigation, deployed on Antarctic tourism vessels. Declared of municipal, provincial and national interest; award from the Centre of Fishing and Coastal Shipping Masters and Officers (10/2014)."
+aura_farm_ar:
+  organizacion: "Personal"
+  descripcion: "Mobile gamification app with augmented reality on the front camera: missions, duels, CI and tests. A small side project."
+cvar_sinergias:
+  nombre: "Synergies and conflicts between economic activities and the social-ecological systems of Tierra del Fuego"
+cvar_centolla_ras:
+  nombre: "Pilot-scale engineering for mass rearing of southern king crab (Lithodes santolla) larvae in RAS for restocking"
+cvar_renovables:
+  nombre: "Hybrid systems for the sustainable supply of electricity and heat from renewable energy"
+  organizacion: "UTN Tierra del Fuego"
+cvar_centolla_limitaciones:
+  nombre: "Limits to the recruitment of new individuals in Argentina's king crab fisheries"
+cvar_centolla_bases_1:
+  nombre: "Foundations for improving the king crab fishery: biological strategies for recovery and marketing"

@@ -1,0 +1,16 @@
+ia:
+  titulo_corto: "AI and data science"
+  titulo: "Data Scientist / AI Specialist"
+  resumen: "Engineer and data scientist with 10+ years applying data analysis, machine learning and IoT in R&D, industry and consulting. I build predictive models, automated data pipelines and applied AI solutions. Background in scientific research with peer-reviewed publications and in business settings with measurable impact (ML models for physical-to-accounting asset reconciliation, analysis automation). Currently focused on data strategy and digital transformation."
+software:
+  titulo_corto: "AI-powered software"
+  titulo: "AI & Software Engineer · Data Products and Platforms"
+  resumen: "Software and applied AI engineer who builds complete data products: Python backends (FastAPI, SQLAlchemy, PostgreSQL/SQLite), web (Jinja2/HTMX, Streamlit) and desktop interfaces (Tkinter, PySide6, PyInstaller), LLM, OCR and vision integration, deployment on Azure and Microsoft 365, and ENS/GDPR compliance. At Intervalor Data I lead the AYUNDATA product (multi-tenant SaaS for municipal asset management, 1,100+ own commits, 900+ tests, 4 municipalities), started INTERDATA (fixed-asset SaaS for companies) and put a dashboard for AENA into production with Entra ID. I work with agent-assisted development (Claude Code) and document every repository for humans and agents (AGENTS.md, ADRs, CHANGELOG)."
+sector-publico:
+  titulo_corto: "Public-sector data"
+  titulo: "Data Engineer · GovTech & Public Sector"
+  resumen: "Data engineer with real, verifiable deliverables in the Spanish public sector: an ETL platform for the municipal asset register of San Bartolomé de Tirajana, technical inventory audits for EUIPO and AENA, and a multi-tenant asset register with accounting reconciliation. Previously Provincial Director of Science and Technology (government of Tierra del Fuego) and board member of a CONICET research centre. Training in quality (ISO 9001, Lean Six Sigma), environmental management (ISO 14001) and an MBA in operations. Python, SQL, Power BI, FastAPI, Azure and Power Platform."
+economia-azul:
+  titulo_corto: "Blue economy and fisheries"
+  titulo: "Applied AI Engineer · Blue Economy & Marine Technology"
+  resumen: "Fisheries Engineer (UTN) and applied AI engineer with 7 years at CONICET-CADIC (aquaculture, oceanography, surveys in Patagonia and Antarctica) and publications in Aquaculture and Anthropocene. I combine marine science with Python, deep learning, Bayesian networks, MLOps and IoT (KIPPA I ROV, Arduino/ESP8266 sensors). Founder of the PesquerosEnIA community and lecturer-researcher in Fisheries Engineering. A good fit for blue economy, precision aquaculture, environmental monitoring and Horizon Europe consortia."

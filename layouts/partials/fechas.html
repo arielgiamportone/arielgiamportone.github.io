@@ -1,0 +1,4 @@
+{{- /* "03/2021 – Presente" → "mar. 2021 – Actualidad" en el idioma actual */ -}}
+{{- $f := . -}}
+{{- $f = replaceRE `(?i)presente|actualidad` (i18n "presente") $f -}}
+{{- return $f -}}

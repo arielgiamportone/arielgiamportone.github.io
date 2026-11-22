@@ -1,0 +1,15 @@
+{{ $c := partial "datos.html" "contacto" }}
+<footer class="pie" id="contacto">
+  <div class="contenedor pie__fila">
+    <div>
+      <h2 class="pie__titulo">{{ i18n "contacto" }}</h2>
+      <p>{{ i18n "escribeme" }}</p>
+      <p><a class="boton" href="mailto:{{ $c.email }}">{{ $c.email }}</a></p>
+      <p class="tenue">{{ i18n "ubicacion" }}</p>
+    </div>
+    <div>
+      {{ partial "redes.html" . }}
+      <p class="tenue pequeno">© {{ now.Year }} {{ site.Params.autor }} · {{ i18n "generado" }}</p>
+    </div>
+  </div>
+</footer>

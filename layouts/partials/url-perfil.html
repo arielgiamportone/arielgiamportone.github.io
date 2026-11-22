@@ -1,0 +1,5 @@
+{{- /* slug de lente → URL de su página en el idioma actual */ -}}
+{{- $slug := . -}}
+{{- $url := "" -}}
+{{- range where site.RegularPages "Section" "perfiles" }}{{ if eq .Params.lente $slug }}{{ $url = .RelPermalink }}{{ end }}{{ end -}}
+{{- return $url -}}

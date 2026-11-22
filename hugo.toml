@@ -1,338 +1,36 @@
-baseURL = 'https://arielgiamportone.github.io/'
-languageCode = 'es-es'
-title = 'Ariel Luján Giamportone — Datos, IA y Producto · Ingeniero Pesquero'
-theme = 'hugo-profile'
+baseURL = "https://arielgiamportone.github.io/"
+title = "Ariel Luján Giamportone"
+defaultContentLanguage = "es"
+defaultContentLanguageInSubdir = false
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term", "RSS"]
+
+[languages]
+  [languages.es]
+    languageName = "Español"
+    languageCode = "es-ES"
+    weight = 1
+    [languages.es.params]
+      description = "Datos, IA y Producto en Intervalor Data. Ingeniero Pesquero (UTN). Software con IA, datos para el sector público y economía azul."
+  [languages.en]
+    languageName = "English"
+    languageCode = "en"
+    weight = 2
+    [languages.en.params]
+      description = "Data, AI & Product at Intervalor Data. Fisheries Engineer (UTN). AI-powered software, public-sector data and the blue economy."
 
 [params]
-  title = "Ariel Lujan Giamportone"
-  description = "Datos, IA y Producto en Intervalor Data. Ingeniero Pesquero (UTN). Software con IA, datos para el sector público y economía azul."
-  favicon = "/fav.png"
-  
-  # Hero Section
-  [params.hero]
-    enable = true
-    intro = "Hola, mi nombre es"
-    title = "Ariel Luján Giamportone"
-    subtitle = "Datos, IA y Producto · Ingeniero Pesquero"
-    content = "Construyo productos de datos de punta a punta: software con IA, datos para el sector público y tecnología para la pesca y la economía azul."
-    image = "/images/me.png"
-    button = { enable = true, name = "Ver proyectos", url = "#projects" }
+  autor = "Ariel Luján Giamportone"
+  # Lente por defecto en la portada (vacío = vista general)
+  lenteDefecto = ""
 
-    [[params.hero.socialLinks.fontAwesomeIcons]]
-      icon = "fab fa-linkedin"
-      url = "https://www.linkedin.com/in/agiamportone/"
-    [[params.hero.socialLinks.fontAwesomeIcons]]
-      icon = "fab fa-github"
-      url = "https://github.com/arielgiamportone"
-    [[params.hero.socialLinks.fontAwesomeIcons]]
-      icon = "fab fa-researchgate"
-      url = "https://www.researchgate.net/profile/Ariel-Lujan-Giamportone"
-    [[params.hero.socialLinks.fontAwesomeIcons]]
-      icon = "fab fa-orcid"
-      url = "https://orcid.org/0009-0000-1607-9743"
+[markup.goldmark.renderer]
+  unsafe = false
 
-  # About Section
-  [params.about]
-    enable = true
-    title = "Sobre mí"
-    image = "/hero.png"
-    content = """
-Ingeniero Pesquero (UTN) que trabaja en datos, IA y producto. En Intervalor Data lidero AYUNDATA,
-una plataforma de gestión patrimonial para ayuntamientos, y construyo productos de datos de punta a punta:
-arquitectura, backend en Python, interfaces, IA aplicada, despliegue y cumplimiento (ENS, RGPD).
+[outputs]
+  home = ["HTML"]
+  section = ["HTML"]
+  page = ["HTML"]
 
-Vengo de la I+D+i en CONICET-CADIC (2012-2021) (acuicultura, oceanografía y artes de pesca, con campañas en
-Patagonia y la Antártida), de la gestión pública de ciencia y tecnología en Tierra del Fuego y de la docencia
-universitaria. Publico mi software como paquetes abiertos (PyPI, Zenodo) y coordino la comunidad Pesqueros en IA.
-
-Vivo en España (Talavera de la Reina), con ciudadanía de la UE. Trabajo en remoto o desde Madrid.
-"""
-
-    [params.about.skills]
-      enable = true
-      title = "Tecnologías y herramientas:"
-      items = [
-        "Python", "FastAPI", "SQLAlchemy", "PostgreSQL / SQLite", "pandas",
-        "Machine Learning", "Redes bayesianas", "LLM y RAG", "OCR y visión",
-        "Azure", "Microsoft 365 / SharePoint", "Docker", "Git y CI/CD",
-        "Power BI", "R", "Arduino / ESP32", "Acuicultura", "Artes de pesca"
-      ]
-
-  # Experience Section
-  [params.experience]
-    enable = true
-    title = "Experiencia profesional"
-
-    [[params.experience.items]]
-      job = "Datos, IA y Producto · Área de Tecnología"
-      company = "Intervalor Data"
-      companyUrl = "https://intervalor.com"
-      companyLogo = "/images/logos/intervalor-data.png"
-      date = "Jun 2025 - Actualidad"
-      content = """
-Producto y desarrollo de datos e IA en el Área de Tecnología (IT e Innovación).
-
-• Líder de producto de AYUNDATA, plataforma SaaS multi-tenant de gestión patrimonial municipal (FastAPI, SQLAlchemy, PostgreSQL/SQLite)
-• Modernización en Python de un sistema de activos fijos de los años 90 (Delphi/Paradox), con paridad numérica al céntimo
-• Dashboards y pipelines de datos en Azure y Microsoft 365 para clientes del sector público
-• Cumplimiento ENS y RGPD en el ciclo de desarrollo
-"""
-
-    [[params.experience.items]]
-      job = "Investigador en Ciencia de Datos e IA"
-      company = "Mainly Labs"
-      companyUrl = "https://mainlylabs.com/"
-      companyLogo = "/images/logos/mainly-labs.png"
-      date = "Mar 2025 - Jun 2025"
-      content = """
-Investigación aplicada y gestión de proyectos de I+D+i en seguridad contra incendios de baterías de litio, agricultura inteligente, IoT y biotecnología.
-
-• Project Manager de MICEGEL (microesferas biodegradables extintoras), con Scrumban
-• Co-redacción de la memoria técnica NEOTEC (CDTI) de un sistema de detección y extinción de incendios
-• Instrumentación de ensayos de incendio de baterías (termopares, sensores de humo y gas, BMS)
-• Tutela del equipo de becarios
-"""
-
-    [[params.experience.items]]
-      job = "Especialista Técnico en Auditoría de Inventario y Analítica de Datos"
-      company = "Intervalor Data"
-      companyUrl = "https://intervalor.com"
-      companyLogo = "/images/logos/intervalor-data.png"
-      date = "Oct 2024 - Feb 2025"
-      content = """
-Auditoría de inventario para clientes como EUIPO y AENA.
-
-• Coordinación de los equipos de campo en EUIPO y AENA
-• Informes diarios y semanales para la toma de decisiones
-• Propuestas de automatización e integración de IA en el proceso de auditoría
-"""
-
-    [[params.experience.items]]
-      job = "Director Provincial de Vinculación en Ciencia y Tecnología"
-      company = "Gobierno de Tierra del Fuego, AeIAS"
-      companyUrl = "https://www.tierradelfuego.gob.ar"
-      companyLogo = "/images/logos/gobierno-tdf.png"
-      date = "Mar 2021 - Dic 2021"
-      content = """
-Financiación de proyectos de I+D, transferencia tecnológica y planificación de políticas de Ciencia, Tecnología e Innovación.
-
-• Coautor de la Agenda Provincial de Ciencia, Tecnología e Innovación
-• Gestión de convocatorias y seguimiento de proyectos de I+D
-• Vinculación entre empresas, academia y gobierno
-"""
-
-    [[params.experience.items]]
-      job = "Analista y Consultor Logístico"
-      company = "AIC Estudios y Proyectos"
-      companyLogo = "/images/logos/aice-logo.jpg"
-      companyUrl = "https://www.aic-consultores.com.ar/es/"
-      date = "Oct 2020 - Jul 2021"
-      content = """
-Consultor en dos estudios portuarios.
-
-• Plan Estratégico del Sistema Portuario Argentino para el Banco Mundial: referente regional de la Patagonia Sur
-• Perfil Estratégico Competitivo del Puerto de Buenos Aires (Short Sea Shipping) para la AGP
-"""
-
-    [[params.experience.items]]
-      job = "Jefe de la Oficina de Vinculación y Transferencia Tecnológica"
-      company = "CONICET - CADIC"
-      companyUrl = "https://cadic.conicet.gov.ar"
-      companyLogo = "/images/logos/cadic-conicet.png"
-      date = "Ago 2019 - Feb 2021"
-      content = """
-Gestión de la transferencia tecnológica del centro: servicios técnicos, convenios y relación con empresas e instituciones.
-"""
-
-    [[params.experience.items]]
-      job = "Docente universitario"
-      company = "UTN Facultad Regional Tierra del Fuego"
-      companyUrl = "https://www.frtdf.utn.edu.ar"
-      companyLogo = "/images/logos/utn-frtdf.png"
-      date = "2008 - Actualidad"
-      content = """
-• Profesor invitado y docente-investigador desde 2023; director de un proyecto de I+D sobre liofilización de alimentos
-• Profesor Adjunto de Puertos Pesqueros (2019-2023)
-• Máquinas Térmicas, Análisis Matemático II y ayudantías en Recursos Pesqueros I
-"""
-
-    [[params.experience.items]]
-      job = "Ingeniero de Investigación, Desarrollo e Innovación"
-      company = "CONICET - CADIC"
-      companyUrl = "https://cadic.conicet.gov.ar"
-      companyLogo = "/images/logos/cadic-conicet.png"
-      date = "Jun 2012 - Dic 2019"
-      content = """
-Desarrollo tecnológico para la investigación marina y la acuicultura.
-
-• Sistemas de acuicultura con recirculación (RAS) para crustáceos
-• Diseño y construcción de artes de pesca y equipos oceanográficos
-• Campañas científicas en Patagonia y la Antártida
-• Coautor de artículos en Aquaculture y Anthropocene
-"""
-
-  # Education Section
-  [params.education]
-    enable = true
-    title = "Formación"
-
-    [[params.education.items]]
-      title = "Máster en Desarrollo con IA"
-      school = { name = "BIG school", url = "https://bigschool.es" }
-      date = "2025 - 2026"
-      content = """
-Proyecto final: cfp-audit-intelligence, plataforma RAG multi-LLM para auditar las actas del Consejo Federal Pesquero argentino.
-"""
-
-    [[params.education.items]]
-      title = "Máster MBA en Dirección Logística y de Operaciones (COO)"
-      school = { name = "TECH Universidad Tecnológica", url = "https://www.techtitute.com" }
-      schoolLogo = "/images/logos/education/tech-universidad.png"
-      date = "2020 - 2024"
-      content = """
-Título propio, 60 ECTS. Gestión de la cadena de suministro, operaciones y proyectos logísticos.
-"""
-
-    [[params.education.items]]
-      title = "Diplomaturas en Gestión Integral de la Calidad y en Gestión del Medio Ambiente"
-      school = { name = "UTN Facultad Regional Resistencia", url = "https://www.frre.utn.edu.ar" }
-      schoolLogo = "/images/logos/education/utn-frre.png"
-      date = "2019 - 2020"
-      content = """
-Sistemas de gestión de la calidad (ISO 9001), auditoría, gestión ambiental y evaluación de impacto.
-"""
-
-    [[params.education.items]]
-      title = "Ingeniero Pesquero"
-      school = { name = "Universidad Tecnológica Nacional", url = "https://www.frtdf.utn.edu.ar" }
-      schoolLogo = "/images/logos/education/utn-frtdf.png"
-      date = "2016"
-      content = """
-Proyecto final: «Diseño y construcción de un ROUV con tecnologías libres en Tierra del Fuego AeIAS para análisis de embarcaciones (KIPPA)».
-"""
-
-    [[params.education.items]]
-      title = "Técnico Universitario Pesquero"
-      school = { name = "Universidad Tecnológica Nacional", url = "https://www.utn.edu.ar" }
-      schoolLogo = "/images/logos/education/utn-frtdf.png"
-      date = "2014"
-      content = """
-Tecnología pesquera, procesamiento de productos pesqueros y operaciones portuarias.
-"""
-
-  # Courses Section (se regenera desde la base en la v2)
-  [params.courses]
-    enable = false
-
-  # Contact Section
-  [params.contact]
-    enable = true
-    title = "Contacto"
-    content = "¿Un proyecto, una colaboración o una oferta? Escríbeme y te respondo."
-    btnName = "Enviar email"
-    btnLink = "mailto:giamportone1@gmail.com"
-
-  customCSS = ["css/custom.css"]
-
-  # Projects Section
-  [params.projects]
-    enable = true
-    title = "Proyectos destacados"
-
-    [[params.projects.items]]
-      title = "AYUNDATA"
-      organization = { name = "Intervalor Data", url = "https://intervalor.com" }
-      date = "2025 - Actualidad"
-      content = """
-Plataforma SaaS multi-tenant de inventario y gestión patrimonial para ayuntamientos.
-
-• Backend FastAPI y SQLAlchemy, despliegue cliente-servidor y en la nube
-• Amortización, catálogos contables, informes e integración con el trabajo de campo
-• Desarrollo asistido por agentes y cumplimiento ENS
-"""
-
-    [[params.projects.items]]
-      title = "trawlkit / Trawl Design Lab"
-      organization = { name = "Proyecto propio", url = "https://github.com/arielgiamportone/trawl-design-lab" }
-      date = "2024 - Actualidad"
-      content = """
-Motor de cálculo para diseñar y dimensionar redes de arrastre: evolución del modelo FAO A-3 para embarcaciones de 150-180 HP del Canal Beagle, como software reproducible y testeado. Publicado en PyPI y Zenodo.
-"""
-      featuredLink = { enable = true, name = "Ver repositorio", url = "https://github.com/arielgiamportone/trawl-design-lab" }
-
-    [[params.projects.items]]
-      title = "cfp-audit-intelligence"
-      organization = { name = "Proyecto final, BIG school", url = "https://github.com/arielgiamportone/cfp-audit-intelligence" }
-      date = "2025 - 2026"
-      content = """
-Plataforma RAG multi-LLM para auditar las actas del Consejo Federal Pesquero argentino: FastAPI, Streamlit, ChromaDB y datos abiertos.
-"""
-      featuredLink = { enable = true, name = "Ver repositorio", url = "https://github.com/arielgiamportone/cfp-audit-intelligence" }
-
-    [[params.projects.items]]
-      title = "asset-identity-gs1"
-      organization = { name = "Paquete PyPI", url = "https://github.com/arielgiamportone/asset-identity-gs1" }
-      date = "2026"
-      content = """
-Identidad física de activos con estándares GS1: GIAI, alias legible para Code128, EPC para RFID y GS1 Digital Link para QR.
-"""
-      featuredLink = { enable = true, name = "Ver repositorio", url = "https://github.com/arielgiamportone/asset-identity-gs1" }
-
-    [[params.projects.items]]
-      title = "catastro-enrichment-es"
-      organization = { name = "Paquete Python", url = "https://github.com/arielgiamportone/catastro-enrichment-es" }
-      date = "2026"
-      content = """
-Enriquecimiento de inventarios inmobiliarios con los cinco catastros españoles detrás de una sola interfaz, con geocoding de respaldo.
-"""
-      featuredLink = { enable = true, name = "Ver repositorio", url = "https://github.com/arielgiamportone/catastro-enrichment-es" }
-
-    [[params.projects.items]]
-      title = "fisheries-sustainability-mlops"
-      organization = { name = "Proyecto propio", url = "https://github.com/arielgiamportone/fisheries-sustainability-mlops" }
-      date = "2026"
-      content = """
-MLOps de punta a punta con deep learning y redes bayesianas aplicado a la sostenibilidad pesquera.
-"""
-      featuredLink = { enable = true, name = "Ver repositorio", url = "https://github.com/arielgiamportone/fisheries-sustainability-mlops" }
-
-    [[params.projects.items]]
-      title = "KIPPA I — ROV con tecnologías libres"
-      organization = { name = "UTN FRTDF, proyecto final de Ingeniería", url = "https://www.frtdf.utn.edu.ar" }
-      date = "2016"
-      content = """
-Diseño y construcción de un vehículo submarino operado remotamente con hardware y software libres, para el análisis de embarcaciones.
-"""
-
-    [[params.projects.items]]
-      title = "Trampas centolleras para estudio poblacional"
-      organization = { name = "Clúster de la Pesca Artesanal de Tierra del Fuego", url = "" }
-      date = "2015 - 2016"
-      content = """
-Construcción de 120 trampas para centolla para un estudio poblacional, con planificación, compras y control de calidad.
-"""
-
-  # Footer
-  [params.footer]
-    enable = true
-
-    [params.footer.recentPosts]
-      enable = false
-
-    [params.footer.socialNetworks]
-      github = "https://github.com/arielgiamportone"
-      linkedin = "https://www.linkedin.com/in/agiamportone/"
-      instagram = ""
-      facebook = ""
-      twitter = ""
-
-    [params.footer.content]
-      title = "Ariel Luján Giamportone"
-      description = "Datos, IA y Producto. Ingeniero Pesquero. Software con IA, datos para el sector público y economía azul."
-
-    [params.footer.quickLinks]
-      enable = true
-      title = "Enlaces rápidos"
-
-    [params.footer.newsletter]
-      enable = false
+[sitemap]
+  changeFreq = "monthly"

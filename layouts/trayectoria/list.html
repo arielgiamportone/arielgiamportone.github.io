@@ -1,0 +1,41 @@
+{{ define "main" }}
+{{ $f := partial "datos.html" "formacion" }}
+<section class="bloque"><div class="contenedor">
+  <h1>{{ .Title }}</h1>
+  <p class="tenue">{{ .Description }}</p>
+  {{ partial "lentes.html" . }}
+  <ol class="linea" data-filtrable>
+    {{ range partial "datos.html" "experiencia" }}{{ partial "exp-item.html" (dict "e" . "detalle" true) }}{{ end }}
+  </ol>
+</div></section>
+
+<section class="bloque"><div class="contenedor">
+  <h2>{{ i18n "formacion" }}</h2>
+  <ol class="linea">
+    {{ range $f.posgrado_especializacion }}
+      <li class="hito"><div class="hito__fecha">{{ .fechas }}</div><div class="hito__cuerpo"><h3 class="hito__rol">{{ .titulo }}</h3><p class="hito__empresa">{{ .institucion }}{{ with .nivel }} <span class="tenue">· {{ . }}</span>{{ end }}</p>{{ with .tfm }}<p>{{ . }}</p>{{ end }}</div></li>
+    {{ end }}
+    {{ range $f.titulos }}
+      <li class="hito"><div class="hito__fecha">{{ .fechas }}</div><div class="hito__cuerpo"><h3 class="hito__rol">{{ .titulo }}</h3><p class="hito__empresa">{{ .institucion }}{{ with .nivel }} <span class="tenue">· {{ . }}</span>{{ end }}</p></div></li>
+    {{ end }}
+  </ol>
+
+  <h2>{{ i18n "certificaciones" }}</h2>
+  <ul class="lista-columnas">
+    {{ range sort $f.certificaciones "año" "desc" }}<li><strong>{{ .nombre }}</strong> <span class="tenue">· {{ .entidad }}{{ with .año }}, {{ . }}{{ end }}</span></li>{{ end }}
+  </ul>
+
+  <h2>{{ i18n "idiomas" }}</h2>
+  <ul class="lista-columnas">
+    {{ range partial "datos.html" "idiomas" }}<li><strong>{{ .idioma }}</strong> — {{ .nivel }} ({{ .codigo }})</li>{{ end }}
+  </ul>
+
+  <h2>{{ i18n "skills" }}</h2>
+  <div class="rejilla rejilla--skills">
+    {{ range $grupo, $items := partial "datos.html" "skills" }}
+      <div class="tarjeta"><h3 class="tarjeta__titulo mini">{{ i18n (printf "skill_%s" $grupo) | default (replace $grupo "_" " ") }}</h3>
+        <ul class="chips">{{ range $items }}<li title="{{ .contexto }}">{{ .nombre }}</li>{{ end }}</ul></div>
+    {{ end }}
+  </div>
+</div></section>
+{{ end }}

@@ -1,0 +1,5 @@
+{{- /* Devuelve data/<lang>/<fichero>, con respaldo en español. Uso: partial "datos.html" "proyectos" */ -}}
+{{- $lang := index site.Data site.Language.Lang -}}
+{{- $v := index site.Data.es . -}}
+{{- with $lang }}{{ with index . $ }}{{ $v = . }}{{ end }}{{ end -}}
+{{- return $v -}}

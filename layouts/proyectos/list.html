@@ -1,0 +1,16 @@
+{{ define "main" }}
+<section class="bloque"><div class="contenedor">
+  <h1>{{ .Title }}</h1>
+  <p class="tenue">{{ .Description }}</p>
+  {{ partial "lentes.html" . }}
+  <div class="filtro-tipos" role="group" aria-label="{{ i18n "filtrar" }}">
+    {{ range slice "" "producto" "paquete" "investigacion" "hardware" "otros" }}
+      <button type="button" class="tipo" data-tipo="{{ . }}" aria-pressed="{{ cond (eq . "") "true" "false" }}">{{ if eq . "" }}{{ i18n "todos" }}{{ else }}{{ i18n (printf "tipo_%s" .) }}{{ end }}</button>
+    {{ end }}
+  </div>
+  <div class="rejilla" data-filtrable>
+    {{ range partial "datos.html" "proyectos" }}{{ partial "proyecto-card.html" . }}{{ end }}
+  </div>
+  <p class="sin-resultados" hidden>{{ i18n "sin_resultados" }}</p>
+</div></section>
+{{ end }}

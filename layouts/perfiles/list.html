@@ -1,0 +1,14 @@
+{{ define "main" }}
+<section class="bloque"><div class="contenedor">
+  <h1>{{ .Title }}</h1>
+  <div class="rejilla">
+    {{ range partial "datos.html" "perfiles" }}
+      <a class="tarjeta tarjeta--perfil" href="{{ partial "url-perfil.html" .slug }}" style="--acento: {{ .color }}">
+        <p class="tarjeta__meta">{{ .titulo_corto }}</p>
+        <h2 class="tarjeta__titulo">{{ .titulo }}</h2>
+        <p class="tarjeta__texto">{{ .resumen | truncate 220 }}</p>
+      </a>
+    {{ end }}
+  </div>
+</div></section>
+{{ end }}

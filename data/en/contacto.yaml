@@ -1,0 +1,22 @@
+# GENERADO por scripts/sync_base.py desde la base de conocimiento. No editar a mano.
+nombre: Ariel Luján Giamportone
+email: giamportone1@gmail.com
+ubicacion: Talavera de la Reina, España
+modalidad: Remoto (puede desplazarse a Madrid)
+ciudadania: EU citizenship (Italian)
+titular: Datos, IA y Producto en Intervalor Data · AI & Software Engineer (Python, FastAPI, LLM, Azure) · Ingeniero Pesquero
+  · Fundador de Pesqueros en IA · MBA
+titular_en: Data, AI & Product · Fisheries Engineer · Founder of Pesqueros en IA
+redes:
+  linkedin: https://www.linkedin.com/in/agiamportone/
+  github: https://github.com/arielgiamportone
+  researchgate: https://www.researchgate.net/profile/Ariel-Lujan-Giamportone
+  orcid: https://orcid.org/0009-0000-1607-9743
+  zenodo: https://doi.org/10.5281/zenodo.23959629
+  linktree: https://linktr.ee/agiamportone
+pypi:
+- https://pypi.org/project/trawlkit/
+- https://pypi.org/project/paradoxdb/
+- https://pypi.org/project/asset-identity-gs1/
+- https://pypi.org/project/catastro-enrich/
+- https://pypi.org/project/periodic-report-kit/

@@ -24,12 +24,12 @@ posgrado_especializacion:
   nivel: Máster propio (no oficial)
   fechas: 04/2026 – 08/2026
   estado: Completado y aprobado. TFM entregado 22/08/2026, aprobado 27/09/2026; certificado digital emitido 24/09/2026 (Certifier/credsverse)
-  tfm: 'cfp-audit-intelligence: plataforma de auditoría con RAG de las actas del Consejo Federal Pesquero argentino, contrastadas
-    con las recomendaciones del INIDEP (ver base/proyectos.md)'
   certificado: https://credsverse.com/credentials/411e8c2b-3658-4c12-84f5-75e526d239dd
   titulo_universitario: 'Universidad Isabel I: «Experto Universitario en Desarrollo con Inteligencia Artificial», 16 ECTS.
     Pagado 28/09/2026, datos completados 10/2026; en trámite (expedición ~3 meses según BIG school, 29/10/2026). Al 21/11/2026
     no recibido'
+  tfm: 'Proyecto final: cfp-audit-intelligence, auditoría con RAG de las actas del Consejo Federal Pesquero argentino, contrastadas
+    con las recomendaciones del INIDEP.'
 - institucion: Upgrade Hub
   titulo: Data Analytics — Ciencias de la Computación
   nivel: Bootcamp / Formación intensiva (350 h)

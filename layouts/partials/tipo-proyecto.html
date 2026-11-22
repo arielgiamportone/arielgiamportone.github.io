@@ -1,0 +1,7 @@
+{{- $t := . -}}
+{{- $grupo := "otros" -}}
+{{- if in (slice "producto_software" "software_interno" "modernizacion_legacy" "automatizacion" "programa_cumplimiento") $t }}{{ $grupo = "producto" }}
+{{- else if in (slice "software_open_source" "educativo_open_source") $t }}{{ $grupo = "paquete" }}
+{{- else if in (slice "proyecto_investigacion" "analisis_datos") $t }}{{ $grupo = "investigacion" }}
+{{- else if in (slice "desarrollo_tecnologico" "iot") $t }}{{ $grupo = "hardware" }}{{ end -}}
+{{- return $grupo -}}

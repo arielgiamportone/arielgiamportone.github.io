@@ -1,6 +1,6 @@
 # Datos del portfolio
 
-Los datos de la web (`data/es/*.yaml`) **se generan**, no se escriben a mano. La fuente única es la base de conocimiento privada `cv-perfil-profesional` (`base/` y `perfiles/`).
+Los datos de la web (`data/es/*.yaml` y `data/en/*.yaml`) **se generan**, no se escriben a mano. La fuente única es la base de conocimiento privada `cv-perfil-profesional` (`base/` y `perfiles/`).
 
 ```bash
 python3 scripts/sync_base.py --base ../cv-perfil-profesional   # regenera data/es/
@@ -22,3 +22,12 @@ Qué se publica lo decide `scripts/publicacion.yaml`:
 | Proyectos con `publico: false` y experiencias con `mostrar_en_cv: false` | No se publican |
 
 Cada ejecución lista en `aviso:` todo lo que se ha descartado y por qué: es la lista de lo que falta validar en la base.
+
+## Textos de la web e inglés
+
+`contenido/<idioma>/*.yaml` sustituye, por id, los textos de la base que la web debe decir de otra forma:
+
+- `contenido/es/`: redacción para la web cuando la de la base es interna o nombra a terceros.
+- `contenido/en/`: la traducción al inglés. El generador avisa con `[en] sin traducir` de cada elemento nuevo sin traducción, y mientras tanto la web muestra el texto en español.
+
+Los textos de `contenido/` pasan por las mismas reglas de publicación que la base.

@@ -1,0 +1,526 @@
+# GENERADO por scripts/sync_base.py desde la base de conocimiento. No editar a mano.
+- id: ayundata
+  nombre: AYUNDATA
+  organizacion: Intervalor Data
+  tipo: producto_software
+  rol: Líder de producto y único desarrollador
+  fechas: 02/2026 – Presente
+  estado: v0.54.0 (última tag, 2026-07-14), en producción
+  descripcion: ETL platform and multi-tenant SaaS for the municipal register of assets and rights. It started with a 24-month
+    contract (11/2025-11/2027) with the municipality of San Bartolomé de Tirajana and became a product for any municipality.
+  modulos:
+  - ETL multi-fuente (Excel, Access, PDF, KMZ, shapefile)
+  - 'INVAYUNT: amortización PGCP/ICAL, conciliación, cesiones, cierre de ejercicio'
+  - 'KATHARSID: enriquecimiento catastral (DGC + 4 forales), registral con LLM, geocoding, ortofoto/Mapillary'
+  - Portal de Transparencia estático (Ley 19/2013, WCAG 2.1 AA)
+  - Etiquetas Code128/QR/RFID (GS1 GIAI)
+  - Integración PLUG (trabajo de campo, ODTs, fotos, GPS)
+  - Certificados e informes técnicos con hash y QR verificable
+  - Catálogos por municipio, seguros, vehículos, obras y plan plurianual
+  - Backoffice Intervalor con superadmin JWT RS256, facturación de uso de IA, soporte
+  - Ejecutable Windows (PyInstaller + Inno Setup) con wizard de primer arranque
+  metricas:
+  - 900+ tests
+  - 1.987 bienes, 9.553 documentos indexados, 1.926 PDFs con OCR masivo (79 % confianza media), Vision LLM local 100 % éxito
+  - Cierre contable de un ayuntamiento reproducido al céntimo (V.R.M. Δ 0,01 €)
+  - Informes técnicos de 3-8 h manuales a 10-15 min
+  stack:
+  - Python
+  - FastAPI
+  - SQLAlchemy
+  - Jinja2
+  - HTMX
+  - SQLite FTS5
+  - PostgreSQL
+  - pdfplumber
+  - Tesseract
+  - Ollama
+  - pydantic
+  - Docker
+  - PyInstaller
+  - Inno Setup
+  - pytest
+  - Leaflet
+  - Chart.js
+  clientes_publicos: Ayuntamiento de San Bartolomé de Tirajana y otros tres ayuntamientos
+  inicio: 2026-02
+  actual: true
+  perfiles:
+  - software
+  - sector-publico
+  - ia
+  orden: 1
+- id: trawlkit
+  nombre: trawlkit · Trawl Design Lab
+  organizacion: Personal
+  tipo: software_open_source
+  rol: Autor único
+  fechas: 2024 – Presente
+  estado: PyPI 1.2.0 · Zenodo DOI 10.5281/zenodo.23959629 (2026-11-04)
+  descripcion: 'Calculation engine for the design and sizing of trawl nets: an evolution of the FAO A-3 spreadsheet model
+    for 150-180 HP vessels in the Beagle Channel, rebuilt as reproducible, tested software.'
+  stack:
+  - Python
+  - FastAPI
+  - Pydantic
+  - SQLAlchemy
+  - SciPy
+  - Plotly
+  - Docker
+  - pytest
+  - hatchling
+  - PyPI
+  - Zenodo
+  - CITATION.cff
+  repo: https://github.com/arielgiamportone/trawl-design-lab
+  inicio: '2024'
+  actual: true
+  perfiles:
+  - economia-azul
+  - software
+  orden: 2
+- id: cfp_audit_intelligence
+  nombre: cfp-audit-intelligence
+  organizacion: Final project, Master's in AI Development (BIG school)
+  tipo: software_open_source
+  rol: Autor único
+  fechas: 11/2025 – 08/2026
+  estado: App desplegada en Streamlit Cloud
+  descripcion: 'Multi-LLM RAG platform (OpenAI, Anthropic) to audit the minutes of Argentina''s Federal Fisheries Council:
+    FastAPI, Streamlit, ChromaDB, open data and responsible AI.'
+  stack:
+  - Python
+  - FastAPI
+  - Streamlit
+  - ChromaDB
+  - OpenAI
+  - Anthropic
+  - sentence-transformers
+  - SHAP
+  - SQLAlchemy
+  - PyTorch
+  - Plotly
+  - Docker Compose
+  repo: https://github.com/arielgiamportone/cfp-audit-intelligence
+  inicio: 2025-11
+  fin: 2026-08
+  actual: false
+  perfiles:
+  - software
+  - economia-azul
+  - ia
+  orden: 3
+- id: fisheries_mlops
+  nombre: fisheries-sustainability-mlops
+  organizacion: Personal
+  tipo: software_open_source
+  rol: Autor único
+  fechas: 02/2026
+  descripcion: End-to-end MLOps with deep learning and Bayesian networks for fisheries sustainability.
+  stack:
+  - Python
+  - PyTorch
+  - pgmpy
+  - MLflow
+  - Optuna
+  - FastAPI
+  - NetworkX
+  - Docker
+  - AWS ECS/ECR
+  repo: https://github.com/arielgiamportone/fisheries-sustainability-mlops
+  inicio: 2026-02
+  fin: 2026-02
+  actual: false
+  perfiles:
+  - economia-azul
+  - ia
+  orden: 4
+- id: asset_identity_gs1
+  nombre: asset-identity-gs1
+  organizacion: Personal · patterns developed at Intervalor Data, published with permission
+  tipo: software_open_source
+  rol: Autor (especificación, implementación clean-room y revisión)
+  fechas: 11/2026
+  estado: Público desde 2026-11-17 · release v0.1.0 · PyPI asset-identity-gs1 0.1.0 · MIT · CI verde (Python 3.11 y 3.12)
+  descripcion: 'Physical identity for inventory assets with GS1 standards: each asset gets one identity in four equivalent
+    forms (canonical GIAI AI 8004, a readable alias with a mod-43 check character for Code128, EPC GIAI-96 for UHF RFID and
+    GS1 Digital Link for QR). Global multi-tenant uniqueness by construction: an authority hands out blocks of the identifier
+    space once and each site mints offline. Issuance register, label life cycle, resolution of any scanned code, vector PDF
+    label sheets and ZPL for RFID printer-encoders. A clean-room case study implemented from a specification without access
+    to the source.'
+  metricas:
+  - 148 tests
+  - 31 decisiones de diseño documentadas + 2 correcciones de la fase 3
+  - README bilingüe en formato caso de estudio
+  stack:
+  - Python 3.11+
+  - reportlab
+  - pytest
+  - ruff
+  - GitHub Actions
+  - gitleaks
+  - SQLite
+  repo: https://github.com/arielgiamportone/asset-identity-gs1
+  release: https://github.com/arielgiamportone/asset-identity-gs1/releases/tag/v0.1.0
+  pypi: https://pypi.org/project/asset-identity-gs1/
+  inicio: 2026-11
+  fin: 2026-11
+  actual: false
+  perfiles:
+  - sector-publico
+  - software
+  orden: 5
+- id: catastro_enrichment_es
+  nombre: catastro-enrichment-es
+  organizacion: Personal · patterns developed at Intervalor Data, published with permission
+  tipo: software_open_source
+  rol: Autor (especificación, implementación clean-room y revisión)
+  fechas: 11/2026
+  estado: Público desde 2026-11-18 · release v0.1.0 · PyPI catastro-enrich 0.1.0 (2026-11-19) · MIT · CI verde (Python 3.11
+    y 3.12)
+  descripcion: Enrichment of real-estate inventories with Spain's five cadastres (national DGC and the regional ones of Álava,
+    Bizkaia, Gipuzkoa and Navarre) behind a single interface routed by municipality code; Nominatim geocoding as fallback
+    with precision by OSM class; UTM-WGS84 conversion; PNOA orthophotos and Mapillary images stored with attribution; idempotent
+    cascade with dry run by default and a six-command CLI. A clean-room case study implemented from a specification.
+  metricas:
+  - 139 tests sin red (toda respuesta de servicio es sintética), cobertura 97 %
+  - round-trip UTM-WGS84 < 1e-6° en los husos 28-31
+  - README bilingüe en formato caso de estudio
+  stack:
+  - Python 3.11+
+  - pyproj
+  - urllib
+  - sqlite3
+  - pytest
+  - ruff
+  - GitHub Actions
+  - gitleaks
+  repo: https://github.com/arielgiamportone/catastro-enrichment-es
+  release: https://github.com/arielgiamportone/catastro-enrichment-es/releases/tag/v0.1.0
+  pypi: https://pypi.org/project/catastro-enrich/
+  inicio: 2026-11
+  fin: 2026-11
+  actual: false
+  perfiles:
+  - sector-publico
+  - ia
+  - software
+  orden: 6
+- id: kippa_rov
+  nombre: KIPPA I — ROV with open hardware and software
+  organizacion: UTN Tierra del Fuego (final degree project)
+  tipo: desarrollo_tecnologico
+  rol: Autor
+  fechas: 2015 – 2016
+  descripcion: Remotely operated underwater vehicle built entirely with open hardware and software and locally sourced materials,
+    to inspect hulls, gear, propellers and rudders of small fishing vessels. Presented at the 9th National Congress of Marine
+    Sciences (2015).
+  inicio: '2015'
+  fin: '2016'
+  actual: false
+  perfiles:
+  - economia-azul
+  - software
+  orden: 7
+- id: paradox_db_py
+  nombre: paradox-db-py
+  organizacion: Personal · patterns developed at Intervalor Data, published with permission
+  tipo: software_open_source
+  rol: Autor (especificación, implementación clean-room y revisión)
+  fechas: 11/2026
+  estado: Público desde 2026-11-15 · release v0.1.0 · PyPI paradoxdb 0.1.0 · MIT · CI verde (Python 3.11 y 3.12)
+  descripcion: Pure-Python reader and writer for Paradox tables (.DB data, .MB memos/BLOBs, .PX primary index), versions 3.0
+    to 7, with no native or copyleft dependencies. Explicit per-cell status (OK / NULL / INVALID) with raw bytes, per-table
+    code page, recovery of records the header does not declare, writing on a template header with a rebuilt and verified primary
+    index, CSV/JSON export and CLI. A clean-room case study.
+  metricas:
+  - 104 tests (Hypothesis para ida y vuelta de enteros, dobles y BCD)
+  - '50 000 filas sintéticas: lectura 1,3 s, escritura .DB+.PX 0,09 s'
+  - README bilingüe en formato caso de estudio; 21 decisiones de diseño documentadas
+  stack:
+  - Python 3.11+
+  - pytest
+  - Hypothesis
+  - ruff
+  - GitHub Actions
+  - gitleaks
+  - hatchling
+  repo: https://github.com/arielgiamportone/paradox-db-py
+  release: https://github.com/arielgiamportone/paradox-db-py/releases/tag/v0.1.0
+  pypi: https://pypi.org/project/paradoxdb/
+  inicio: 2026-11
+  fin: 2026-11
+  actual: false
+  perfiles:
+  - software
+  - sector-publico
+  orden: 8
+- id: periodic_report_kit
+  nombre: periodic-report-kit
+  organizacion: Personal · patterns developed at Intervalor Data, published with permission
+  tipo: software_open_source
+  rol: Autor (especificación, implementación clean-room y revisión)
+  fechas: 11/2026
+  estado: Público desde 2026-11-20 · release v0.1.0 · PyPI periodic-report-kit 0.1.0 · MIT · CI verde (Python 3.11 y 3.12)
+  descripcion: 'Declarative periodic reports: tabular input with domain rules (unknown rows quarantined) and branded Word,
+    PDF and PPTX output. Full-bleed cover outside the page numbering, a real Word table of contents, YAML catalogue of sections
+    and conditional charts, named metrics with a declared base, a store of human comments with drift detection, and a validator
+    against the delivered document. A clean-room case study.'
+  metricas:
+  - 72 tests
+  - 20 casos de prueba de la spec cubiertos
+  - README bilingüe en formato caso de estudio
+  stack:
+  - Python 3.11+
+  - pandas
+  - matplotlib
+  - python-docx
+  - python-pptx
+  - xhtml2pdf
+  - pypdf
+  - Pillow
+  - PyYAML
+  - typer
+  - pytest
+  - ruff
+  - GitHub Actions
+  - gitleaks
+  repo: https://github.com/arielgiamportone/periodic-report-kit
+  release: https://github.com/arielgiamportone/periodic-report-kit/releases/tag/v0.1.0
+  pypi: https://pypi.org/project/periodic-report-kit/
+  inicio: 2026-11
+  fin: 2026-11
+  actual: false
+  perfiles:
+  - software
+  - ia
+  - sector-publico
+  orden: 9
+- id: pesqueros_en_ia_cursos
+  nombre: PesquerosEnIA — open-source courses
+  organizacion: Pesqueros en IA (founder)
+  tipo: educativo_open_source
+  rol: Fundador, autor principal y docente
+  fechas: 05/2025 – Presente
+  metricas:
+  - 4 repos, ~141 commits propios
+  - 20 notebooks ejecutables en Colab en el curso UTN FRCh
+  - 'Alumnos: CONIPE 2025 unos 15; curso UTN FRCh primera cohorte de 70 (dato de Ariel, 2026-11-09)'
+  stack:
+  - Python
+  - Jupyter
+  - Colab
+  - scikit-learn
+  - PyTorch
+  - TensorFlow
+  - pgmpy
+  - LaTeX
+  - HTML
+  repo: https://github.com/PesquerosEnIA
+  web: https://sites.google.com/view/pesquerosenia
+  inicio: 2025-05
+  actual: true
+  perfiles:
+  - economia-azul
+  - ia
+  orden: 10
+  descripcion: 'The community''s open courses: a 200+ page data and AI literacy manual (CONIPE 2025, GPL-3.0), a deep learning
+    and Bayesian networks course for fisheries (6 modules, 25 notebooks, PyTorch and pgmpy) and the university extension course
+    «Applied AI for Fisheries Production» (UTN FRCh, 2026-2027), with notebooks at three levels and real cases: AIS/PSMA,
+    VMS and rent concentration.'
+- id: apigfw
+  nombre: Fisheries analysis with the Global Fishing Watch API
+  organizacion: Personal · UTN teaching material
+  tipo: software_open_source
+  rol: Autor único
+  fechas: 11/2025
+  descripcion: Notebook and example client for the Global Fishing Watch API to analyse Argentine fishing activity.
+  stack:
+  - Python
+  - pandas
+  - requests
+  - Jupyter
+  repo: https://github.com/arielgiamportone/APIGFW
+  inicio: 2025-11
+  fin: 2025-11
+  actual: false
+  perfiles:
+  - economia-azul
+  - ia
+  orden: 11
+- id: casos_estudio_intervalor
+  nombre: Clean-room case studies
+  organizacion: Personal
+  tipo: software_open_source
+  rol: Autor
+  fechas: 10/2026
+  descripcion: multi-tenant-asset-register (multi-tenant asset register, migration reconciled to the cent, explainable depreciation
+    engine; FastAPI, PostgreSQL, SQLite, Docker), field-inspections-dashboard (incremental pipeline over a third-party API,
+    anti-SSRF proxies, static dashboard with per-role builds, Azure SWA + Entra ID, GitHub Actions) and inspection-photo-archiver
+    (24/7 archiver with a non-destructive ledger). No client code or data.
+  repo: https://github.com/arielgiamportone/multi-tenant-asset-register · field-inspections-dashboard · inspection-photo-archiver
+  inicio: 2026-10
+  fin: 2026-10
+  actual: false
+  perfiles:
+  - software
+  - sector-publico
+  orden: 12
+- id: transcriptor_placas
+  nombre: Assisted Industrial Nameplate Transcriber
+  organizacion: Intervalor Data · public repository
+  tipo: producto_software
+  rol: Autor
+  fechas: 12/2025 – 06/2026
+  estado: V1 production ready
+  descripcion: 'Streamlit app for AI-assisted transcription of motor nameplates: local OCR (EasyOCR) or GPT-4o-mini per image,
+    consolidation per asset, checkpoints, row-by-row human validation and Excel export.'
+  stack:
+  - Python
+  - Streamlit
+  - EasyOCR
+  - torch
+  - OpenCV
+  - openai
+  - anthropic
+  - google-generativeai
+  - Docker
+  repo: https://github.com/arielgiamportone/transcriptor-placas-asistido (público) · espejo en Intervalor-Data
+  inicio: 2025-12
+  fin: 2026-06
+  actual: false
+  perfiles:
+  - software
+  - ia
+  orden: 13
+- id: pid_liofilizados
+  nombre: Research project PP9884 — Freeze-drying of locally produced food in Tierra del Fuego
+  organizacion: UTN Tierra del Fuego · QA3DS group
+  tipo: proyecto_investigacion
+  rol: Director
+  fechas: 04/2023 – 03/2026
+  codigo: PAPPTF0009884
+  descripcion: Reproducible freeze-drying protocols for regional producers; rhubarb matrix, 261 valid observations (3 pre-treatments
+    × 10 times). Team of 6 lecturers and 7 students. Website qa3ds.github.io with an animation of the process; preprint in
+    preparation.
+  repo: https://github.com/QA3DS/PID-Liofilizados · https://qa3ds.github.io
+  inicio: 2023-04
+  fin: 2026-03
+  actual: false
+  perfiles:
+  - economia-azul
+  orden: 14
+- id: investigacion_operativa_ml
+  nombre: Simplex vs ML in Operations Research
+  organizacion: Personal
+  tipo: software_open_source
+  rol: Autor único
+  fechas: 08/2025
+  descripcion: Streamlit app with an interactive presentation comparing the simplex method with ML route prediction.
+  stack:
+  - Python
+  - Streamlit
+  - Plotly
+  - SciPy
+  repo: https://github.com/arielgiamportone/Investigacion_Operativa
+  inicio: 2025-08
+  fin: 2025-08
+  actual: false
+  perfiles:
+  - ia
+  orden: 15
+- id: vito_gnu_linux
+  nombre: VITO GNU/Linux — navigation distribution
+  organizacion: UTN Maritime Technology Group
+  tipo: desarrollo_tecnologico
+  rol: Desarrollador
+  descripcion: Stable Debian fork dedicated to navigation, deployed on Antarctic tourism vessels. Declared of municipal, provincial
+    and national interest; award from the Centre of Fishing and Coastal Shipping Masters and Officers (10/2014).
+  inicio: '2013'
+  fin: '2014'
+  actual: false
+  perfiles:
+  - economia-azul
+  - software
+  orden: 16
+- id: aura_farm_ar
+  nombre: Aura Farm AR
+  organizacion: Personal
+  tipo: software_open_source
+  rol: Autor (desarrollo asistido por agente, un día)
+  fechas: 08/2026
+  descripcion: 'Mobile gamification app with augmented reality on the front camera: missions, duels, CI and tests. A small
+    side project.'
+  stack:
+  - TypeScript
+  - React Native
+  - Expo
+  - Jest
+  - GitHub Actions
+  repo: https://github.com/arielgiamportone/aura-farm-ar
+  inicio: 2026-08
+  fin: 2026-08
+  actual: false
+  perfiles:
+  - software
+  orden: 17
+- id: cvar_sinergias
+  nombre: Synergies and conflicts between economic activities and the social-ecological systems of Tierra del Fuego
+  organizacion: CONICET-CADIC
+  tipo: proyecto_investigacion
+  rol: Personal técnico de apoyo
+  fechas: 11/2016 – 11/2021
+  inicio: 2016-11
+  fin: 2021-11
+  actual: false
+  perfiles:
+  - economia-azul
+  orden: 999
+- id: cvar_centolla_ras
+  nombre: Pilot-scale engineering for mass rearing of southern king crab (Lithodes santolla) larvae in RAS for restocking
+  organizacion: CONICET-CADIC
+  tipo: proyecto_investigacion
+  rol: Personal técnico de apoyo
+  fechas: 05/2015 – 12/2019
+  inicio: 2015-05
+  fin: 2019-12
+  actual: false
+  perfiles:
+  - economia-azul
+  orden: 999
+- id: cvar_renovables
+  nombre: Hybrid systems for the sustainable supply of electricity and heat from renewable energy
+  organizacion: UTN Tierra del Fuego
+  tipo: proyecto_investigacion
+  rol: Becario de I+D
+  fechas: 04/2016 – 03/2019
+  inicio: 2016-04
+  fin: 2019-03
+  actual: false
+  perfiles:
+  - economia-azul
+  orden: 999
+- id: cvar_centolla_limitaciones
+  nombre: Limits to the recruitment of new individuals in Argentina's king crab fisheries
+  organizacion: CONICET-CADIC
+  tipo: proyecto_investigacion
+  rol: Personal técnico de apoyo
+  fechas: 11/2013 – 02/2017
+  inicio: 2013-11
+  fin: 2017-02
+  actual: false
+  perfiles:
+  - economia-azul
+  orden: 999
+- id: cvar_centolla_bases_1
+  nombre: 'Foundations for improving the king crab fishery: biological strategies for recovery and marketing'
+  organizacion: CONICET-CADIC
+  tipo: proyecto_investigacion
+  rol: Personal técnico de apoyo
+  fechas: 11/2013 – 10/2016 y 05/2014 – 04/2017 (dos proyectos)
+  inicio: 2013-11
+  fin: 2016-10
+  actual: false
+  perfiles:
+  - economia-azul
+  orden: 999

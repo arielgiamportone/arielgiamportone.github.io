@@ -1,0 +1,22 @@
+"Ingeniero Pesquero":
+  titulo: "Fisheries Engineer"
+  nivel: "Undergraduate degree"
+"Técnico Universitario Pesquero":
+  titulo: "University Fisheries Technician"
+  nivel: "Intermediate university degree (within the Fisheries Engineering programme)"
+"Máster título propio MBA en Dirección Logística y de Operaciones (COO)":
+  titulo: "MBA in Logistics and Operations Management (COO), university-specific master's"
+  nivel: "University-specific master's (1,500 h, 60 ECTS)"
+"Máster en Desarrollo con IA":
+  titulo: "Master's in AI Development"
+  nivel: "Non-official master's"
+  tfm: "Final project: cfp-audit-intelligence, RAG-based audit of the minutes of Argentina's Federal Fisheries Council, checked against the recommendations of INIDEP."
+"Data Analytics — Ciencias de la Computación":
+  titulo: "Data Analytics — Computer Science"
+  nivel: "Intensive bootcamp (350 h)"
+"Diplomatura en Gestión del Medio Ambiente":
+  titulo: "Diploma in Environmental Management"
+  nivel: "Specialisation diploma (120 h)"
+"Diplomatura en Gestión Integral de la Calidad":
+  titulo: "Diploma in Integrated Quality Management"
+  nivel: "Specialisation diploma (160 h)"
