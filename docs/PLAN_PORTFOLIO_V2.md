@@ -118,6 +118,9 @@ Cada proyecto se cierra con: ficha revisada por ti, demo funcionando, capturas, 
 | trawlkit | App real incrustada | Publicada |
 | asset-identity-gs1 | Generador y lector GS1 (port JS verificado contra PyPI) | Publicada |
 | catastro-enrichment-es | Resultados reales de los cinco catastros + simulador del router | Publicada |
-| cfp-audit-intelligence | Presentación y vídeo en pestañas | En `v2`, pendiente de publicar |
+| cfp-audit-intelligence | Presentación y vídeo en pestañas | Publicada |
 | AYUNDATA | — | En espera hasta nuevo aviso |
-| fisheries-sustainability-mlops | Red bayesiana interactiva | En curso |
+| fisheries-sustainability-mlops | Red bayesiana interactiva | Publicada |
+| paradox-db-py | Lector Paradox con el paquete real en Pyodide | Publicada |
+| APIGFW | Ficha docente con figuras sintéticas | En `v2`, pendiente de publicar |
+| periodic-report-kit | Informes mensual y semestral de ejemplo (PDF en visor + descargas Word/PDF) | En `v2`, pendiente de publicar |

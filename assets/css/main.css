@@ -199,6 +199,7 @@ a.tarjeta { color: inherit; text-decoration: none; }
 .lente-mini { display: inline-flex; align-items: center; gap: .4rem; font-size: .85rem; font-weight: 600; padding: .3rem .7rem; border-radius: 999px; border: 1px solid var(--borde); background: var(--superficie); color: var(--texto); text-decoration: none; }
 .lente-mini .lente__punto { width: 8px; height: 8px; border-radius: 50%; background: var(--c); }
 .ficha__enlaces { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0; }
+.ficha__descargas { margin-top: .5rem; }
 .boton--secundario { background: var(--superficie); color: var(--texto); border: 1px solid var(--borde); padding: .55rem .9rem; font-size: .9rem; }
 .boton--secundario:hover { border-color: var(--acento); color: var(--acento); }
 .indicadores { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: .75rem; list-style: none; padding: 0; margin: 0; }
@@ -288,6 +289,7 @@ a.tarjeta { color: inherit; text-decoration: none; }
 @media (max-width: 640px) { .demo-cat__geo table { display: block; overflow-x: auto; } }
 .demo-pest { background: var(--superficie); border: 1px solid var(--borde); border-radius: var(--radio); box-shadow: var(--sombra); padding: 1.25rem; }
 .demo-pest__marco { width: 100%; aspect-ratio: 16 / 9; border: 1px solid var(--borde); border-radius: 10px; overflow: hidden; background: #000; }
+.demo-pest--documento .demo-pest__marco { aspect-ratio: auto; height: min(82vh, 1100px); background: var(--fondo); }
 .demo-pest__marco iframe { display: block; width: 100%; height: 100%; border: 0; }
 .demo-pest .demo-cat__pestanas button { font: inherit; font-size: .88rem; font-weight: 600; padding: .45rem .8rem; border-radius: 9px; border: 1px solid var(--borde); background: var(--fondo); color: var(--texto); cursor: pointer; }
 .demo-pest .demo-cat__pestanas button[aria-selected="true"] { background: var(--acento); border-color: var(--acento); color: var(--acento-texto); }

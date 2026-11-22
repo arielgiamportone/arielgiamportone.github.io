@@ -12,6 +12,7 @@
       {{ with .Params.subtitulo }}<p class="heroe__titular">{{ . }}</p>{{ end }}
       {{ with $p.perfiles }}<p class="ficha__lentes">{{ range . }}<a class="lente-mini lente--{{ . }}" href="{{ partial "url-perfil.html" . }}"><span class="lente__punto"></span>{{ $s := . }}{{ range partial "datos.html" "perfiles" }}{{ if eq .slug $s }}{{ .titulo_corto }}{{ end }}{{ end }}</a>{{ end }}</p>{{ end }}
       {{ with .Params.enlaces }}<p class="ficha__enlaces">{{ range . }}<a class="boton boton--secundario" href="{{ .url }}" target="_blank" rel="noopener">{{ .t }} ↗</a>{{ end }}</p>{{ end }}
+      {{ with .Params.descargas }}<p class="ficha__enlaces ficha__descargas">{{ range . }}{{ $t := .t }}{{ with $.Resources.Get .recurso }}<a class="boton boton--secundario" href="{{ .RelPermalink }}" download>⬇ {{ $t }} <span class="tenue">({{ printf "%.1f MB" (div (float (len .Content)) 1048576) }})</span></a>{{ end }}{{ end }}</p>{{ end }}
     </div>
   </header>
 
