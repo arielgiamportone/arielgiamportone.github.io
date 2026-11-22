@@ -25,9 +25,13 @@
   <section class="bloque" id="demo"><div class="contenedor">
     <h2>{{ .titulo }}</h2>
     {{ with .nota }}<p class="tenue">{{ . }}</p>{{ end }}
+    {{ if .parcial }}
+      {{ partial (printf "demos/%s.html" .parcial) $ }}
+    {{ else }}
     <div class="demo">
       <iframe src="{{ .url }}" title="{{ .titulo }}" loading="lazy" allow="clipboard-write" referrerpolicy="no-referrer"></iframe>
     </div>
+    {{ end }}
   </div></section>
   {{ end }}
 

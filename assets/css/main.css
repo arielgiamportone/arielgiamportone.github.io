@@ -222,3 +222,32 @@ a.tarjeta { color: inherit; text-decoration: none; }
 .tarjeta__enlace::after { content: ""; position: absolute; inset: 0; border-radius: var(--radio); }
 .tarjeta--con-ficha .tarjeta__enlaces a { position: relative; z-index: 1; }
 .tarjeta--con-ficha { cursor: pointer; }
+
+/* Demo asset-identity-gs1 */
+.demo-gs1 { background: var(--superficie); border: 1px solid var(--borde); border-radius: var(--radio); box-shadow: var(--sombra); padding: 1.25rem; }
+.demo-gs1__fila { display: grid; grid-template-columns: minmax(260px, 1fr) 1.4fr; gap: 1.5rem; }
+@media (max-width: 860px) { .demo-gs1__fila { grid-template-columns: 1fr; } }
+.demo-gs1 fieldset { border: 1px solid var(--borde); border-radius: 10px; margin: 0 0 1rem; padding: .75rem 1rem 1rem; }
+.demo-gs1 legend { font-weight: 650; font-size: .9rem; padding: 0 .3rem; }
+.demo-gs1 label { display: block; font-size: .82rem; color: var(--texto-2); margin-top: .6rem; }
+.demo-gs1 input { display: block; width: 100%; margin-top: .25rem; font: inherit; font-size: .95rem; padding: .5rem .65rem; border: 1px solid var(--borde); border-radius: 8px; background: var(--fondo); color: var(--texto); }
+.demo-gs1 input:focus { outline: 2px solid var(--acento); outline-offset: 0; border-color: var(--acento); }
+.demo-gs1__error { color: #b91c1c; font-weight: 600; font-size: .9rem; }
+.demo-gs1__salidas.atenuado { opacity: .35; }
+.etiqueta-fisica { background: #fff; color: #000; border: 1px dashed #94a3b8; border-radius: 8px; padding: .9rem 1rem .6rem; max-width: 440px; }
+.etiqueta-fisica__codigos { display: grid; grid-template-columns: 1fr 108px; gap: .8rem; align-items: center; }
+.etiqueta-fisica__barras p { margin: .2rem 0 0; text-align: center; font-family: var(--mono); font-size: .85rem; letter-spacing: .04em; }
+.etiqueta-fisica__qr svg { width: 108px; height: 108px; display: block; }
+.etiqueta-fisica__pie { margin: .5rem 0 0; font-size: .72rem; text-align: center; color: #334155; }
+.formas { margin: 1rem 0 0; display: grid; gap: .6rem; }
+.formas dt { font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--texto-2); }
+.formas dd { margin: .15rem 0 0; display: flex; gap: .5rem; align-items: center; }
+.formas code { font-family: var(--mono); font-size: .9rem; background: var(--superficie-2); padding: .35rem .55rem; border-radius: 6px; overflow-wrap: anywhere; flex: 1; }
+.copiar, .demo-gs1__ejemplos button { font: inherit; font-size: .8rem; padding: .3rem .6rem; border-radius: 7px; border: 1px solid var(--borde); background: var(--superficie); color: var(--texto-2); cursor: pointer; }
+.copiar:hover, .demo-gs1__ejemplos button:hover { border-color: var(--acento); color: var(--acento); }
+.demo-gs1__lector { border-top: 1px solid var(--borde); margin-top: 1.25rem; padding-top: 1rem; }
+.demo-gs1__lector h3 { margin: 0 0 .2rem; }
+.demo-gs1__ejemplos { display: flex; flex-wrap: wrap; gap: .4rem; margin: .6rem 0; }
+.demo-gs1__resultado p { margin: .25rem 0; }
+.demo-gs1__resultado .ok { color: #15803d; font-weight: 600; }
+.demo-gs1__resultado .mal { color: #b91c1c; font-weight: 600; }

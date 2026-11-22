@@ -29,6 +29,7 @@ jobs:
           python3 -m pip install --quiet pyyaml pytest
           python3 scripts/lint_data.py
           python3 -m pytest -q tests
+          node tests/js/gs1.test.mjs
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2

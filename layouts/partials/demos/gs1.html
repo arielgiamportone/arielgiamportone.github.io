@@ -1,0 +1,51 @@
+{{ $en := eq site.Language.Lang "en" }}
+<div class="demo-gs1" data-demo="gs1">
+  <div class="demo-gs1__fila">
+    <form class="demo-gs1__form" onsubmit="return false">
+      <fieldset>
+        <legend>{{ cond $en "Namespace (assigned once per site)" "Espacio de nombres (se asigna una vez por sede)" }}</legend>
+        <label>{{ cond $en "GS1 company prefix" "Prefijo de empresa GS1" }}<input name="prefijo" value="9520012" inputmode="numeric" autocomplete="off"></label>
+        <label>{{ cond $en "Block" "Bloque" }}<input name="bloque" value="1000" inputmode="numeric" autocomplete="off"></label>
+        <label>{{ cond $en "Site code" "Código de sede" }}<input name="sede" value="NOR" autocomplete="off" style="text-transform:uppercase"></label>
+        <label>{{ cond $en "Resolver domain" "Dominio resolvedor" }}<input name="dominio" value="verify.example.org" autocomplete="off"></label>
+      </fieldset>
+      <fieldset>
+        <legend>{{ cond $en "Asset" "Activo" }}</legend>
+        <label>{{ cond $en "Serial (minted locally, never changes)" "Serial (se acuña en local, no cambia)" }}<input name="serial" value="42" inputmode="numeric" autocomplete="off"></label>
+        <label>{{ cond $en "Inventory number (what people recognise)" "Número de inventario (el que reconoce la gente)" }}<input name="numero" value="MOB-0042" autocomplete="off"></label>
+      </fieldset>
+      <p class="demo-gs1__error" data-error hidden></p>
+    </form>
+    <div class="demo-gs1__salidas" data-salidas>
+      <div class="etiqueta-fisica" aria-label="{{ cond $en "Label preview" "Vista previa de la etiqueta" }}">
+        <div class="etiqueta-fisica__codigos">
+          <div class="etiqueta-fisica__barras"><div data-codigo="code128"></div><p data-texto="alias"></p></div>
+          <div class="etiqueta-fisica__qr" data-codigo="qr"></div>
+        </div>
+        <p class="etiqueta-fisica__pie">{{ cond $en "Example Town Council · Inventory" "Ayuntamiento de Ejemplo · Inventario" }}</p>
+      </div>
+      <dl class="formas">
+        {{ range slice (dict "k" "alias" "es" "Alias · Code 128 y personas" "en" "Alias · Code 128 and people")
+                      (dict "k" "giai" "es" "GIAI · clave GS1 (AI 8004)" "en" "GIAI · GS1 key (AI 8004)")
+                      (dict "k" "epc" "es" "EPC GIAI-96 · chip RFID UHF" "en" "EPC GIAI-96 · UHF RFID chip")
+                      (dict "k" "link" "es" "GS1 Digital Link · QR" "en" "GS1 Digital Link · QR") }}
+          <div><dt>{{ cond $en .en .es }}</dt><dd><code data-salida="{{ .k }}"></code><button type="button" class="copiar" data-copiar="{{ .k }}">{{ cond $en "Copy" "Copiar" }}</button></dd></div>
+        {{ end }}
+      </dl>
+    </div>
+  </div>
+  <div class="demo-gs1__lector">
+    <h3>{{ cond $en "Field reader: paste or type any code" "Lector de campo: pega o teclea cualquier código" }}</h3>
+    <p class="tenue pequeno">{{ cond $en "A laser gun reads the alias, a phone reads the QR and an RFID reader returns the EPC. All four forms resolve to the same asset." "La pistola láser lee el alias, el móvil lee el QR y el lector RFID devuelve el EPC. Las cuatro formas resuelven al mismo activo." }}</p>
+    <input name="lectura" placeholder="AID-NOR-MOB0042-1 · 3416450E… · https://…/8004/…" autocomplete="off" aria-label="{{ cond $en "Scanned code" "Código leído" }}">
+    <p class="demo-gs1__ejemplos">
+      <button type="button" data-ejemplo="alias">{{ cond $en "Try the alias" "Probar el alias" }}</button>
+      <button type="button" data-ejemplo="epc">{{ cond $en "Try the EPC" "Probar el EPC" }}</button>
+      <button type="button" data-ejemplo="link">{{ cond $en "Try the QR link" "Probar el enlace del QR" }}</button>
+      <button type="button" data-ejemplo="error">{{ cond $en "Alias with a typo" "Alias con un error" }}</button>
+    </p>
+    <div class="demo-gs1__resultado" data-lectura aria-live="polite"></div>
+  </div>
+</div>
+{{ $js := resources.Get "js/demos/gs1-demo.js" | js.Build (dict "minify" true "format" "esm") | fingerprint }}
+<script type="module" src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
