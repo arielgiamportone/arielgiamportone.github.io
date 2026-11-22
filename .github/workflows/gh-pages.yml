@@ -26,6 +26,12 @@ jobs:
           submodules: recursive
           fetch-depth: 0
 
+      - name: Comprobar datos publicados
+        run: |
+          python3 -m pip install --quiet pyyaml pytest
+          python3 scripts/lint_data.py
+          python3 -m pytest -q tests
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:

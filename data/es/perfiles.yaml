@@ -1,0 +1,94 @@
+# GENERADO por scripts/sync_base.py desde la base de conocimiento. No editar a mano.
+- slug: ia
+  clave: data_scientist_ai
+  color: '#7c3aed'
+  titulo_corto: IA y ciencia de datos
+  titulo: Data Scientist / AI Specialist
+  resumen: Ingeniero y Data Scientist con 10+ años de experiencia aplicando análisis de datos, machine learning e IoT en entornos
+    de I+D, industria y consultoría. Especializado en construir modelos predictivos de alto rendimiento, pipelines de datos
+    automatizados y soluciones de IA aplicada. Experiencia en investigación científica con publicaciones peer-reviewed y en
+    entornos empresariales con impacto medible (modelos de ML para conciliación físico-contable de activos, automatización
+    de análisis). Actualmente enfocado en estrategia de datos y transformación digital.
+  keywords:
+  - Machine Learning
+  - Deep Learning
+  - Python
+  - TensorFlow
+  - Scikit-Learn
+  - SQL
+  - Data Pipeline
+  - MLOps
+  - NLP
+  - Computer Vision
+  - Power BI
+  - Tableau
+- slug: software
+  clave: ai_software_engineer
+  color: '#2563eb'
+  titulo_corto: Software con IA
+  titulo: AI & Software Engineer · Producto y Plataformas de Datos
+  resumen: 'Ingeniero de software e IA aplicada que construye productos de datos completos: backend Python (FastAPI, SQLAlchemy,
+    PostgreSQL/SQLite), interfaces web (Jinja2/HTMX, Streamlit) y de escritorio (Tkinter, PySide6, PyInstaller), integración
+    de LLM, OCR y visión, despliegue en Azure y Microsoft 365 y cumplimiento ENS/RGPD. En Intervalor Data lidero el producto
+    AYUNDATA (plataforma SaaS multi-tenant de gestión patrimonial municipal, 1.100+ commits propios, 900+ tests, 4 ayuntamientos),
+    arranqué INTERDATA (SaaS de inmovilizado para empresas) y puse en producción un dashboard para AENA con Entra ID. Trabajo
+    con desarrollo asistido por agentes (Claude Code) y documento cada repo para humanos y agentes (AGENTS.md, ADRs, CHANGELOG).'
+  keywords:
+  - AI Engineer
+  - Software Engineer
+  - Python
+  - FastAPI
+  - SQLAlchemy
+  - PostgreSQL
+  - SaaS
+  - Multi-tenant
+  - LLM
+  - RAG
+  - OCR
+  - OpenAI
+- slug: sector-publico
+  clave: govtech_data_engineer
+  color: '#059669'
+  titulo_corto: Datos para el sector público
+  titulo: Data Engineer · GovTech & Sector Público
+  resumen: 'Ingeniero de datos con entregables reales y verificables en el sector público español: plataforma ETL para el
+    Inventario General de Bienes del Ayuntamiento de San Bartolomé de Tirajana, auditorías técnicas de inventario para EUIPO
+    y AENA, registro patrimonial multi-tenant con conciliación contable. Experiencia previa como Director Provincial de Ciencia
+    y Tecnología (gobierno de Tierra del Fuego) y consejero en un centro CONICET. Formación en calidad (ISO 9001, LEAN Six
+    Sigma), gestión ambiental (ISO 14001) y MBA en operaciones. Python, SQL, Power BI, FastAPI, Azure y Power Platform.'
+  keywords:
+  - Data Engineer
+  - ETL
+  - Sector Público
+  - Administración Pública
+  - GovTech
+  - Gobierno Digital
+  - Inventario Municipal
+  - Gestión Patrimonial
+  - Open Data
+  - Interoperabilidad
+  - Smart City
+  - Licitación
+- slug: economia-azul
+  clave: blue_economy_marine
+  color: '#0891b2'
+  titulo_corto: Economía azul y pesca
+  titulo: Applied AI Engineer · Blue Economy & Marine Technology
+  resumen: Ingeniero Pesquero (UTN) e ingeniero de IA aplicada con 7 años en CONICET-CADIC (acuicultura, oceanografía, campañas
+    en Patagonia y Antártida) y publicaciones en *Aquaculture* y *Anthropocene*. Combino dominio científico marino con Python,
+    deep learning, redes bayesianas, MLOps e IoT (ROV KIPPA I, sensores Arduino/ESP8266). Fundador de la comunidad PesquerosEnIA
+    y docente-investigador en Ingeniería Pesquera. Perfil único para proyectos de economía azul, acuicultura de precisión,
+    monitoreo ambiental y consorcios Horizon Europe.
+  keywords:
+  - Aquaculture
+  - Fisheries
+  - Marine
+  - Oceanography
+  - Blue Economy
+  - Sustainability
+  - Biodiversity
+  - Ecological Modeling
+  - Remote Sensing
+  - IoT Sensors
+  - RAS
+  - Deep Learning

@@ -1,0 +1,135 @@
+# Reglas de publicación del portfolio.
+# La base (cv-perfil-profesional) es privada; aquí se decide qué sale a la web pública.
+
+# Campos internos que nunca se publican, en cualquier entidad.
+campos_internos:
+  - fuente
+  - fuentes
+  - evidencia
+  - nota
+  - notas_internas
+  - riesgo
+  - nota_publicacion
+  - clientes_nota
+  - clientes_internos
+  - commits_ariel
+  - commits_total
+  - relacion_conicet
+  - fuente_conciliacion
+  - feedback_tfm
+  - financiacion
+  - equivalencia_espana
+  - telefono
+  - fecha_nacimiento
+  - mostrar_en_cv_nota
+  - titulo_linkedin_2025
+  - rol_contrato
+  - designacion
+  - proceso
+
+# Además se descarta cualquier campo cuyo nombre termine en "_nota" o "_detalle".
+sufijos_internos: ["_nota", "_detalle"]
+
+# Cualquier texto con estas marcas se descarta entero (y se informa): no se publica nada sin validar.
+marcas_sin_validar: ["[VALIDAR", "[SUPUESTO", "[?]", "[PENDIENTE]"]
+
+# Campos mínimos por tipo de elemento: si alguno se descarta por no estar validado, se descarta el elemento entero.
+requeridos:
+  publicaciones: ["titulo", "autores"]
+  experiencia: ["empresa", "rol", "fechas"]
+  proyectos: ["nombre"]
+
+# Sustituciones de texto aplicadas a todo antes de publicar, para conservar el dato sin nombrar lo que no se puede.
+reemplazos:
+  - buscar: "(Brugarolas, 6.693 filas)"
+    reemplazar: "(cliente piloto, 6.693 filas)"
+  - buscar: "Zamudio 2025 reproducido al céntimo"
+    reemplazar: "Cierre contable de un ayuntamiento reproducido al céntimo"
+  - buscar: " (MAD-112/2026)"
+    reemplazar: ""
+  - buscar: "lectura de la BMS del cliente GreenLoft"
+    reemplazar: "lectura de la BMS del cliente"
+  - buscar: "Modernicé INTERVAL, sistema de activos fijos"
+    reemplazar: "Modernicé un sistema de activos fijos"
+
+# Enlaces a repositorios privados: no se publican.
+repos_privados: ["github.com/Intervalor-Data", "privado"]
+
+# Ajustes por proyecto para cumplir las restricciones de publicación de la base (nota_publicacion).
+proyectos_ajustes:
+  ayundata:
+    nombre: "AYUNDATA"
+    omitir: ["clientes"]
+    clientes_publicos: "Ayuntamiento de San Bartolomé de Tirajana y otros tres ayuntamientos"
+  mad6923_dashboard:
+    nombre: "Dashboard de controles comerciales del Aeropuerto de Barajas (AENA)"
+  interval_python:
+    nombre: "Modernización de un sistema legacy de activos fijos (Delphi/Paradox → Python)"
+    descripcion: "Modernización en Python de un sistema de control de activos fijos mantenido desde los años 90 sobre Delphi/Pascal y BDE Paradox. Motor numérico portado línea a línea, migración Paradox → SQLite con el 99,97 % de las filas y paridad al céntimo, ida y vuelta SQLite → Paradox y conversión a libro Excel."
+  photo_downloader:
+    nombre: "Photo Downloader: evidencias fotográficas automatizadas"
+  ens_iso27001:
+    nombre: "Diseño del programa corporativo ENS Categoría Alta e ISO 27001"
+    estado: "En ejecución: certificación ENS Categoría Alta"
+
+# Logros concretos que no se publican aunque estén en la base, con su motivo.
+# Se identifican por id de la entrada y un fragmento del texto.
+exclusiones_logros:
+  - id: gobierno_tdf
+    contiene: "5 veces el presupuesto"
+    motivo: "Cifra de LinkedIn sin documento de respaldo (base: logros_nota)"
+  - id: gobierno_tdf
+    contiene: "más de 5 eventos"
+    motivo: "Cifra sin respaldo (base: logros_nota)"
+  - id: gobierno_tdf
+    contiene: "Más de 20 evaluaciones"
+    motivo: "Cifra sin respaldo (base: logros_nota)"
+  - id: gobierno_tdf
+    contiene: "más de 10 KPI"
+    motivo: "Cifra sin respaldo (base: logros_nota)"
+  - id: intervalor_auditoria
+    contiene: "en un 10%"
+    motivo: "Porcentaje sin documento de respaldo"
+  - id: intervalor_auditoria
+    contiene: "en un 100%"
+    motivo: "Porcentaje sin documento de respaldo"
+
+# Perfiles (lentes) de la web: clave de la base → slug de URL y color.
+perfiles:
+  - clave: data_scientist_ai
+    slug: ia
+    color: "#7c3aed"
+    titulo_corto: "IA y ciencia de datos"
+  - clave: ai_software_engineer
+    slug: software
+    color: "#2563eb"
+    titulo_corto: "Software con IA"
+  - clave: govtech_data_engineer
+    slug: sector-publico
+    color: "#059669"
+    titulo_corto: "Datos para el sector público"
+  - clave: blue_economy_marine
+    slug: economia-azul
+    color: "#0891b2"
+    titulo_corto: "Economía azul y pesca"
+
+# Textos que nunca deben aparecer en data/ (los comprueba lint_data.py, también en CI).
+prohibido:
+  - patron: '\+34\s?\d{3}\s?\d{3}\s?\d{3}'
+    motivo: teléfono
+  - patron: '16/11/1987'
+    motivo: fecha de nacimiento
+  - patron: '(?i)\bDNI\b|\bNIE\b'
+    motivo: documento de identidad
+  - patron: '(?i)pasword|contraseñ'
+    motivo: credenciales
+  - patron: '(?i)\[VALIDAR|\[SUPUESTO|\[PENDIENTE'
+    motivo: dato sin validar
+  - patron: '(?i)brugarolas|olaberria|firgas|zamudio|sagunto|centurion|robama|pondertrade'
+    motivo: cliente no autorizado (solo San Bartolomé de Tirajana es nombrable)
+  - patron: '(?i)ingertec|\bADOK\b'
+    motivo: proveedor del programa ENS (no se publica)
+  - patron: '(?i)MAD[ -]?69/23|MAD-112|\bOT ?18\d{3}|ARC-2026|Diputación de Soria'
+    motivo: número de expediente u orden de trabajo
+  - patron: 'github\.com/Intervalor-Data'
+    motivo: repositorio privado de la empresa

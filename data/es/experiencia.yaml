@@ -1,0 +1,564 @@
+# GENERADO por scripts/sync_base.py desde la base de conocimiento. No editar a mano.
+- id: pesqueros_en_ia
+  empresa: Pesqueros en IA
+  rol: Fundador y Líder de la Comunidad
+  fechas: 01/2026 – Presente
+  inicio: 2026-01
+  actual: true
+  ubicacion: Argentina / Internacional (comunidad virtual)
+  descripcion: Fundador de la comunidad de Ingenieros Pesqueros que exploran aplicaciones de IA y Data Science en la industria
+    pesquera. Desarrollo de material educativo y proyectos open source.
+  logros:
+  - 'Fundé y lidero la comunidad PesquerosEnIA (GitHub: github.com/PesquerosEnIA)'
+  - Desarrollé curso ML & Deep Learning para Ingeniería Pesquera (Jupyter, open source)
+  - Dicté el curso precongreso de alfabetización en datos e IA en CONIPE 2025, Puerto Madryn (unos 15 asistentes)
+  - Desarrollé curso de Deep Learning y Redes Bayesianas para Sostenibilidad Pesquera
+  - 'Co-creé y dicto el curso de extensión universitaria ''IA Aplicada a la Producción Pesquera'' (UTN FRCh, Puerto Madryn,
+    10 unidades, 08/2026 – 05/2027, híbrido; primera cohorte de 70 alumnos): clases de estrategia y transformación digital,
+    datos y sensores, ML, optimización y agentes de IA, y cierre; además dictó la clase 7 (visión por computadora) reemplazando
+    a la co-directora; 20 notebooks en Colab con tres niveles y casos reales (AIS/PSMA, VMS, concentración de renta)'
+  - 'Material open source (GPL-3.0): 4 repositorios, ~141 commits, 200+ páginas de manual'
+  keywords:
+  - Community Building
+  - Fisheries
+  - AI
+  - Data Science
+  - Education
+  - Open Source
+  - Python
+  - Jupyter
+  - Deep Learning
+  - Bayesian Networks
+  - Sustainability
+  perfiles:
+  - economia-azul
+  - ia
+  links:
+    github_org: https://github.com/PesquerosEnIA
+    web: https://sites.google.com/view/pesquerosenia
+    linkedin: https://linkedin.com/company/pesqueros-en-ia
+- id: intervalor_estrategia
+  empresa: Intervalor Data
+  rol: Datos, IA y Producto · Área de Tecnología (IT e Innovación)
+  fechas: 06/2025 – Presente
+  inicio: 2025-06
+  actual: true
+  ubicacion: Madrid y Barcelona, España (híbrido)
+  descripcion: 'Responsable de Datos, IA y Producto en el Área de Tecnología (IT e Innovación) de Intervalor Data (Intervalor
+    Consulting Group, S.A.). Líder de producto de AYUNDATA. Construyo productos de datos de punta a punta: arquitectura, backend,
+    UI, IA aplicada, despliegue, cumplimiento y documentación.'
+  logros:
+  - 'Lideré AYUNDATA, plataforma SaaS multi-tenant de inventario y gestión patrimonial municipal (FastAPI, SQLAlchemy, SQLite/PostgreSQL):
+    1.128 commits, 900+ tests, módulos de ETL, amortización PGCP/ICAL, enriquecimiento catastral y registral con LLM, OCR
+    masivo, portal de transparencia, etiquetas QR/RFID, integración de campo y ejecutable Windows; en producción en 4 ayuntamientos'
+  - 'Diseñé y desarrollé INTERDATA, SaaS de inmovilizado para empresas: tenants por schema, MFA, auditoría encadenada, certificados
+    PDF verificables por QR y motor de amortización que cuadra al céntimo con el sistema legacy'
+  - Puse en producción el dashboard de controles comerciales del Aeropuerto de Barajas para AENA (Azure Static Web Apps +
+    Entra ID, pipeline incremental sobre API de terceros, SLA 99,95 %) y automaticé sus informes mensuales y anuales (121
+    tests)
+  - Modernicé un sistema de activos fijos Delphi/Paradox de los años 90, en Python con paridad numérica al céntimo (544 tests,
+    99,97 % de filas migradas)
+  - Automaticé la descarga y clasificación 24/7 de evidencias fotográficas desde SharePoint (357 imágenes en 12 min, 0 errores;
+    70 % menos tiempo) con watchers y perfiles configurables
+  - 'Desarrollé AssetVision y el Transcriptor de placas: OCR (EasyOCR) + LLM multi-proveedor para placas industriales, valoración
+    híbrida y conciliación contable PGC'
+  - Diseñé el programa corporativo de certificación ENS Categoría Alta / ISO 27001 (marco legal, roadmap, costes, alcance)
+    como miembro del equipo del programa; consultor y certificadora contratados en jul-2026
+  - Elaboré los informes del Área de IT a los socios (Markdown → docx/pptx con marca) y la auditoría de los 10 sites SharePoint
+    del tenant
+  - Supervisé asistencias técnicas de datos al sector público (una agencia autonómica de residuos y una diputación provincial)
+    con paneles de avance automatizados y gestión por GitHub Projects
+  - Diseñé LicDATAhunter, inteligencia comercial para licitaciones con RAG (Claude API + ChromaDB) sobre el portfolio de 284
+    proyectos de la empresa
+  - 'Desarrollé inventario-municipal: plataforma ETL modular para Inventario General de Bienes — Ayto. San Bartolomé de Tirajana'
+  - Publiqué 3 casos de estudio clean-room en GitHub (multi-tenant-asset-register, field-inspections-dashboard, inspection-photo-archiver)
+  keywords:
+  - Data Strategy
+  - Digital Transformation
+  - Product Leadership
+  - Python
+  - FastAPI
+  - SQLAlchemy
+  - PostgreSQL
+  - SaaS
+  - Multi-tenant
+  - LLM
+  - OCR
+  - RAG
+  - Azure
+  - Entra ID
+  - SharePoint
+  - ENS
+  - ISO 27001
+  - ETL
+  - Predictive Analytics
+  - Asset Management
+  - Legacy Migration
+  perfiles:
+  - software
+  - sector-publico
+  - ia
+- id: utn_docencia_actual
+  empresa: Universidad Tecnológica Nacional - FRTDF
+  rol: Profesor invitado ad honorem / Docente-investigador
+  fechas: 05/2023 – Presente
+  inicio: 2023-05
+  actual: true
+  ubicacion: Ushuaia, Argentina (Remoto)
+  descripcion: Docente-investigador en la carrera de Ingeniería Pesquera. Liderazgo de proyectos I+D+i orientados al sector
+    pesquero y acuícola.
+  logros:
+  - Liderazgo de proyectos I+D+i en problemáticas del sector pesquero provincial, regional y nacional
+  - Director del PID PAPPTF0009884 (liofilización de alimentos), 04/2023 – 03/2026 con prórroga
+  - 'Dirección de 3 alumnos becarios de I+D del PID (2024-2025); antes, codirección de 2 técnicos de apoyo de CONICET (2019,
+    2020). Tesis dirigidas: 0'
+  - Gestión de convenios estratégicos con instituciones académicas, gubernamentales y privadas
+  - Desarrollo de vínculos interinstitucionales para proyectos de innovación y sostenibilidad
+  keywords:
+  - Higher Education
+  - Research
+  - Fisheries Engineering
+  - Innovation
+  - Sustainability
+  - Academic Collaboration
+  perfiles:
+  - economia-azul
+- id: quimica_aplicada
+  empresa: Química Aplicada al Ambiente, los Alimentos y el Desarrollo Sostenible
+  rol: Director de I+D y Project Manager
+  fechas: 01/2022 – Presente
+  inicio: 2022-01
+  actual: true
+  ubicacion: Argentina
+  descripcion: Director del grupo de I+D+i QA3DS (UTN FRTDF, Ushuaia y Río Grande). Gerente de grupo y líder de equipo multidisciplinar
+    en proyectos de investigación, desarrollo e innovación en sostenibilidad, calidad y tecnología. Dedicación parcial, remoto.
+  logros:
+  - Dirigí un proyecto de I+D utilizando metodologías Ágiles, Kanban y Scrum
+  - Capacité 4 investigadores y 7 estudiantes-investigadores
+  - Procesamiento de datos bibliográficos y experimentales del grupo para exposiciones, preprints y publicaciones conjuntas
+  - Gestión de más de 3 bases de datos de investigación
+  - +1 convenio de colaboración en I+D+i Industria+Universidad
+  - Dirección de planificación estratégica y cultura organizacional
+  - 'Director del PID PP9884 ''Liofilización de alimentos de producción local en Tierra del Fuego'' (UTN FRTDF, 04/2023 –
+    2026 con prórroga): equipo de 6 docentes y 7 alumnos, 261 observaciones experimentales, web qa3ds.github.io y organización
+    GitHub QA3DS'
+  keywords:
+  - R&D Management
+  - I+D+i
+  - Project Management
+  - Agile
+  - Kanban
+  - Scrum
+  - Team Leadership
+  - Knowledge Management
+  - Technology Transfer
+  - Sustainability
+  perfiles:
+  - economia-azul
+  - sector-publico
+- id: colegio_ingenieros
+  empresa: Colegio de Ingenieros de la Provincia de TDF (A.e.I.A.S)
+  rol: Representante suplente del Departamento de Pesca, Acuicultura y Actividades Marítimas
+  fechas: 02/2021 – Presente
+  inicio: 2021-02
+  actual: true
+  ubicacion: Ushuaia, Tierra del Fuego, Argentina
+  descripcion: Miembro consultivo del Consejo Superior. Defensa de estándares profesionales en acuicultura y pesca.
+  logros:
+  - Promoví ética y profesionalismo en ingeniería dentro de acuicultura y pesca
+  - Propuse mejoras normativas para elevar estándares de calidad en la industria
+  - Facilité acuerdos con otros colegios profesionales y universidades
+  keywords:
+  - Professional Association
+  - Aquaculture
+  - Fisheries Engineering
+  - Ethics
+  - Regulatory
+  perfiles:
+  - economia-azul
+- id: aiipyc
+  empresa: AIIPyC — Asociación Internacional de Profesionales de Puertos y Costas
+  rol: Miembro (admisión por invitación)
+  fechas: 01/2020 – Presente
+  inicio: 2020-01
+  actual: true
+  descripcion: Asociación profesional de ingeniería portuaria, planificación y gestión portuaria, relación puerto-ciudad,
+    gestión costera, comercio internacional y logística.
+  logros:
+  - 'Gestioné el acuerdo de colaboración AIIPyC – UTN FRTDF, firmado el 16/09/2020 (temas: Short Sea Shipping, cabotaje, puertos)'
+  perfiles:
+  - economia-azul
+  - sector-publico
+- id: mainly_labs
+  empresa: Mainly Labs
+  rol: Investigador en Ciencia de Datos e IA
+  fechas: 03/2025 – 06/2025
+  inicio: 2025-03
+  fin: 2025-06
+  actual: false
+  ubicacion: Zamora, Castilla y León, España (laboratorio presencial con viajes semanales desde Talavera de la Reina)
+  descripcion: 'Investigación aplicada y gestión de proyectos de I+D+i en seguridad contra incendios de baterías de litio,
+    agricultura inteligente, IoT y biotecnología: instrumentación de ensayos, prototipos IoT, memorias técnicas y de financiación,
+    y tutela de equipo.'
+  logros:
+  - 'MICEGEL (microesferas biodegradables extintoras a partir de residuos agrícolas): Project Manager con Scrumban; informe
+    de cierre del Sprint 1 (05/2025) y guía de continuidad para el siguiente PM (06/2025)'
+  - 'NEOTEC (CDTI): co-redacción de la memoria técnica (v1.3 a v1.5) y del presupuesto de activos de un sistema inteligente
+    de detección y extinción de incendios en baterías basado en Extingel, con componente de IA'
+  - 'Ensayos de incendio de baterías (CubiLab): instrumentación con termopares, sensores de humo y gas, microcontroladores
+    y lectura de la BMS del cliente (CAN/RS485)'
+  - 'AgroData-Smart Crop (RURACTIVE, Diputación de Zamora): propuesta técnica de monitorización agraria con sensores IoT (ESP8266,
+    NodeRED)'
+  - 'Proyecto Horizon: diseño de un sistema de detección térmica precoz para el garaje de vehículos eléctricos de un cliente,
+    con sensores IR, BOM y plan de desarrollo de 45 días'
+  - 'HIDROZYM (hidrógeno verde a partir de purines): BOM y plan de un registrador de gases en biorreactores (DHT22, microSD,
+    Python)'
+  - Redactor del borrador y de los gráficos del artículo divulgativo sobre incendios en baterías de litio (título de trabajo
+    «El desafío silencioso…»), publicado como «El reto creciente de la seguridad en un mercado en expansión» en Observatorio
+    Gerencia de Riesgos nº 21 (AGERS, julio 2025, p. 34), firmado por Diego Martín como CTO de Lemos Tech; Ariel no figura
+    como autor
+  - Coordinador y PM de 2 investigadores del equipo MICEGEL (reportes semanales, revisión de procedimientos de seguridad química)
+    y tutor de 2 becarios con planes de 3 meses por proyecto (Ruractive, Hidrozim, MultiGasSensor, Horizon)
+  - Asesoría en equipamiento y aporte técnico en reuniones del proyecto MOSSANTIBO (briofitos como biofactoría de anticuerpos);
+    la empresa certificó 150 h de I+D imputadas a ese proyecto en 2025
+  keywords:
+  - IoT
+  - Python
+  - ESP8266
+  - Arduino
+  - NodeRED
+  - Sensores
+  - Termografía
+  - BMS
+  - Baterías de litio
+  - Agile
+  - Scrumban
+  - Trello
+  - R&D
+  - Project Management
+  - Grant writing
+  perfiles:
+  - ia
+  - economia-azul
+- id: intervalor_auditoria
+  empresa: Intervalor Data (Intervalor Consulting Group)
+  rol: Especialista Técnico en Auditoría de Inventario y Analítica de Datos
+  fechas: 10/2024 – 02/2025
+  inicio: 2024-10
+  fin: 2025-02
+  actual: false
+  ubicacion: Madrid, España
+  descripcion: Especialista técnico en auditoría de inventario para clientes de alto perfil (EUIPO, AENA). Desarrollo de automatización
+    de procesos mediante ciencia y analítica de datos.
+  logros:
+  - Coordiné los equipos de campo en EUIPO y AENA, con ejecución en dos turnos contiguos para maximizar la productividad
+  - Generé informes diarios y semanales para toma de decisiones basada en datos
+  - Propuse soluciones de automatización e integración de IA para mejorar eficiencia operativa
+  - 'Trabajé con clientes de alto perfil: EUIPO y AENA'
+  keywords:
+  - Inventory Audit
+  - SAP
+  - Rosmiman
+  - Process Automation
+  - Data Analytics
+  - Excel
+  - Forms
+  - ETL
+  - Operational Continuity
+  perfiles:
+  - ia
+  - sector-publico
+- id: utn_docencia_puertos
+  empresa: Universidad Tecnológica Nacional - FRTDF
+  rol: Profesor Adjunto de Puertos Pesqueros (rentado)
+  fechas: 04/2019 – 04/2023
+  inicio: 2019-04
+  fin: 2023-04
+  actual: false
+  ubicacion: Tierra del Fuego, Argentina
+  descripcion: Profesor Adjunto en Puertos Pesqueros y Procesamiento del Producto Pesquero. Desarrollo de aula virtual (Moodle)
+    y sistema de enseñanza híbrido.
+  logros:
+  - Diseñé y gestioné aula-taller para prácticas de procesamiento pesquero
+  - Desarrollé aula virtual Moodle con sistema de enseñanza híbrido
+  - +1 convenio de colaboración en I+D+i, organizé +3 jornadas temáticas
+  - Implementé técnicas de enseñanza innovadoras para fortalecer competencias técnicas
+  keywords:
+  - Higher Education
+  - Teaching
+  - Fisheries
+  - Port Engineering
+  - Moodle
+  - Research
+  - Innovation
+  perfiles:
+  - economia-azul
+- id: gobierno_tdf
+  empresa: Gobierno de la Provincia de Tierra del Fuego (AIAS)
+  rol: Director Provincial de Vinculación en Ciencia y Tecnología de TDF
+  fechas: 03/2021 – 12/2021
+  inicio: 2021-03
+  fin: 2021-12
+  actual: false
+  ubicacion: Ushuaia, Tierra del Fuego, Argentina
+  descripcion: Líder en gestión de financiamiento de proyectos I+D, coordinación de eventos de transferencia tecnológica y
+    planificación estratégica de políticas de Ciencia, Tecnología e Innovación.
+  logros:
+  - 1 planificación estratégica provincial y 1 nacional para políticas de CTI 2021-2030
+  - Organización de la Semana Nacional de la Ciencia y la Tecnología 2021 en Tierra del Fuego (15-19/11/2021)
+  - Coautor de la Agenda Provincial de Ciencia, Tecnología e Innovación 2020-2021
+  keywords:
+  - Science Policy
+  - Technology Transfer
+  - R&D Funding
+  - Public Management
+  - Innovation Policy
+  - Stakeholder Management
+  - KPI
+  - Strategic Planning
+  perfiles:
+  - sector-publico
+  - economia-azul
+- id: celentano_iot
+  empresa: Grupo Celentano — Patagonia Supply S.A., sección Integrar Salud (Ushuaia)
+  rol: Ingeniero de monitorización y cadena de frío (habilitación ANMAT) — consultor externo
+  fechas: 03/2020 – 08/2021
+  inicio: 2020-03
+  fin: 2021-08
+  actual: false
+  ubicacion: Ushuaia, Tierra del Fuego, Argentina
+  descripcion: Diseño e implantación del sistema de monitorización termohigrométrica de un depósito farmacéutico y un contenedor
+    frigorífico (2–8 °C) para su habilitación ante la ANMAT como droguería (comercialización y distribución de fármacos).
+  logros:
+  - Dimensioné, instalé y configuré 13 puntos de medición de temperatura y humedad (8 controladores combinados, 1 de frío,
+    1 datalogger y 4 de alarma) con monitorización centralizada y alertas por cuatro canales
+  - 'Gestioné la calibración trazable de los equipos: primero en el centro tecnológico de TDF (10 certificados, 05/2021) y,
+    tras la observación de la ANMAT, en un laboratorio acreditado INTI-SAC (10 certificados, 07/2021)'
+  - 'Redacté la documentación técnica y regulatoria presentada a la ANMAT: croquis, POE de calibración, almacenamiento y alarmas,
+    registro de desvíos, gráficos de calificación y respuesta a las observaciones'
+  keywords:
+  - IoT
+  - Cold Chain
+  - Temperature Monitoring
+  - ANMAT
+  - GDP
+  - Pharmaceutical Warehouse
+  - Calibration
+  - Sitrad
+  - Regulatory Documentation
+  perfiles:
+  - ia
+  - sector-publico
+- id: aic_logistica
+  empresa: AIC Estudios y Proyectos S.R.L.
+  rol: Analista y Consultor Logístico Semi-Senior — Referente Regional Patagonia Sur
+  fechas: 10/2020 – 07/2021
+  inicio: 2020-10
+  fin: 2021-07
+  actual: false
+  ubicacion: Ushuaia, Tierra del Fuego, Argentina (remoto)
+  modalidad: Consultor externo por honorarios, contra hitos de los proyectos
+  descripcion: 'Consultor de AIC en dos estudios portuarios: el Plan Estratégico del Sistema Portuario Argentino para el Banco
+    Mundial y el Perfil Estratégico Competitivo del Puerto de Buenos Aires para la AGP.'
+  logros:
+  - Elaboré los antecedentes de la Región Patagonia Sur y las tablas de producción, comercio exterior (OPEX-INDEC) y tráfico
+    portuario de Tierra del Fuego y Santa Cruz, insumo del Informe de Diagnóstico aprobado por el Banco Mundial (01/2021)
+  - Respondí el cuestionario de referentes y distribuí la encuesta del estudio entre los actores portuarios de la región
+  - Participé en la evaluación preliminar de proyectos del plan estratégico (04/2021)
+  - En el estudio para la AGP aporté datos locales para el modelo de demanda y competitividad del Puerto de Buenos Aires (cabotaje,
+    Short Sea Shipping, Hidrovía), con 5 informes entregados hasta el informe final aprobado (07/2021)
+  proyectos:
+  - nombre: Plan Estratégico Nacional del Sistema Portuario Argentino (National Ports Strategic Plan)
+    cliente: Banco Mundial (consorcio AIC + MTBS + M&L)
+    fechas: 11/2020 – 05/2021
+    rol: Referente regional de la Patagonia Sur (Región 8, Puerto Deseado a Ushuaia), en el equipo de investigadores regionales
+      (~27 personas)
+  - nombre: Perfil Estratégico Competitivo del Puerto de Buenos Aires — Hub regional de Short Sea Shipping
+    cliente: Administración General de Puertos S.E. (AGP)
+    fechas: 03/2021 – 07/2021
+    rol: Consultor semisenior; datos de Patagonia y apoyo a la calibración del modelo de demanda Patagonia–Buenos Aires
+  keywords:
+  - Port Planning
+  - Logistics
+  - Short Sea Shipping
+  - Cabotage
+  - Market Research
+  - Hinterland
+  - Stakeholder Surveys
+  - World Bank
+  - Excel
+  perfiles:
+  - sector-publico
+  - economia-azul
+- id: cadic_vinculacion_jefe
+  empresa: CONICET - CADIC
+  rol: Jefe de Oficina de Vinculación y Transferencia Tecnológica
+  fechas: 08/2019 – 02/2021
+  inicio: 2019-08
+  fin: 2021-02
+  actual: false
+  ubicacion: Tierra del Fuego, Argentina
+  descripcion: Jefe de la Oficina de Transferencia Tecnológica del CADIC. Análisis de capacidades tecnológicas y gestión del
+    conocimiento I+D.
+  logros:
+  - Negociación exitosa de más de 30 Servicios de Alta Tecnología
+  - Creación de más de 5 nuevos Servicios de Alta Tecnología
+  - Gestión de más de 3 acuerdos de Asistencia Técnica
+  - Gestión de más de 2 acuerdos de Investigación y Desarrollo
+  - Co-gestión de una red provincial y networking para Vinculación y Transferencia
+  - Promoción del proyecto de cooperación descentralizada Brest – Tierra del Fuego (2020)
+  - Organización de la capacitación sobre el Protocolo de Nagoya (11/2020)
+  keywords:
+  - Technology Transfer
+  - Knowledge Management
+  - R&D
+  - High-Tech Services
+  - Intellectual Property
+  - Networking
+  - Innovation
+  - CONICET
+  perfiles:
+  - economia-azul
+  - sector-publico
+- id: cadic_investigacion
+  empresa: CONICET - CADIC (Centro Austral de Investigaciones Científicas)
+  rol: Ingeniero de Investigación, Desarrollo e Innovación
+  fechas: 06/2012 – 12/2019
+  inicio: 2012-06
+  fin: 2019-12
+  actual: false
+  ubicacion: Ushuaia, Tierra del Fuego, Argentina
+  descripcion: Investigador y técnico en el CADIC-CONICET. Gestión de laboratorios biológicos, sistemas de recirculación en
+    acuicultura, campañas de pesca costera y de altura, y mantenimiento de equipos oceanográficos.
+  logros:
+  - Ampliación de la capacidad del acuario y RAS en un 80%
+  - Realización de más de 10 campañas de recolección y muestreo en la Patagonia
+  - Más de 30 reparaciones, instalaciones y diseños de equipos oceanográficos
+  - Participación en más de 20 proyectos de I+D y sesiones de formación profesional
+  - ETL y AED de datos de Calidad del Agua y mantenimiento preventivo de equipos
+  - Coautor en Aquaculture (2018, vol. 495)
+  - Coautor en Anthropocene (2014, vol. 7; 80+ citas en Crossref)
+  - Desarrollé ROV KIPPA I con componentes Arduino/open-source (tesis de grado)
+  keywords:
+  - Marine Research
+  - Aquaculture
+  - RAS
+  - Oceanography
+  - Laboratory Management
+  - Field Campaigns
+  - Data Analysis
+  - CONICET
+  - Antarctica
+  perfiles:
+  - economia-azul
+- id: utopia_soluciones
+  empresa: Utopía Soluciones
+  rol: Cofundador
+  fechas: 08/2018 – 02/2019
+  inicio: 2018-08
+  fin: 2019-02
+  actual: false
+  ubicacion: Ushuaia, Tierra del Fuego, Argentina
+  descripcion: Startup tecnológica dedicada al diseño, cálculo, construcción e implementación de soluciones de ingeniería
+    e IoT.
+  logros:
+  - Contrato de actualización de más de 3 sistemas electrónicos de navegación (GPS, RADAR, VHF) para embarcación turística
+    AKAWAIA
+  - Desarrollo de más de 3 sistemas IoT para medición de parámetros de temperatura y humedad en riego doméstico e industrial
+  keywords:
+  - Entrepreneurship
+  - IoT
+  - Engineering Solutions
+  - Navigation Systems
+  - Sensors
+  - Startup
+  perfiles:
+  - ia
+  - economia-azul
+- id: cadic_consejo_directivo
+  empresa: CONICET - CADIC
+  rol: Consejero del Consejo Directivo (representante del personal de apoyo)
+  fechas: 06/2015 – 03/2018
+  inicio: 2015-06
+  fin: 2018-03
+  actual: false
+  ubicacion: Ushuaia, Tierra del Fuego, Argentina
+  descripcion: 'Gestión institucional del centro: actas, reglamento de funcionamiento del Consejo y evaluación de licitaciones.'
+  logros:
+  - Evaluador de licitaciones públicas del CADIC (2014, 2015, 2017, 2019) y de un concurso de precios (2020)
+  - Evaluador de personal de apoyo a la I+D del CADIC (2014)
+  - Desde 2021, evaluador de programas y proyectos de la Secretaría de CyT de Tierra del Fuego
+  keywords:
+  - Institutional Governance
+  - Public Procurement
+  - Evaluation
+  - CONICET
+  perfiles:
+  - sector-publico
+- id: trampas_centolla_cluster
+  empresa: Clúster de la Pesca Artesanal de Tierra del Fuego (beca de práctica profesional)
+  rol: 'Constructor de artes de pesca: trampas centolleras para estudio poblacional'
+  fechas: 06/2015 – 05/2016
+  inicio: 2015-06
+  fin: 2016-05
+  actual: false
+  ubicacion: Ushuaia, Tierra del Fuego, Argentina
+  descripcion: Cálculo, dimensionamiento y construcción de trampas troncocónicas para el estudio poblacional de la centolla
+    (Lithodes santolla) en el Canal Beagle.
+  logros:
+  - Diseño y construcción de 120 trampas troncocónicas para el relevamiento poblacional de centolla
+  - Coautor del informe técnico «Estado poblacional de la centolla (Lithodes santolla) del Canal Beagle 2016» (inédito, 03/2017)
+  keywords:
+  - Fishing Gear
+  - Trap Design
+  - King Crab
+  - Lithodes santolla
+  - Stock Assessment
+  - Artisanal Fisheries
+  perfiles:
+  - economia-azul
+- id: diagnostico_pesca_artesanal_cfi
+  empresa: UTN FRTDF — Consejo Federal de Inversiones (CFI)
+  rol: Integrante del equipo técnico
+  fechas: 08/2012 – 07/2013
+  inicio: 2012-08
+  fin: 2013-07
+  actual: false
+  ubicacion: Tierra del Fuego, Argentina
+  descripcion: Asesoramiento técnico «Diagnóstico de pesquerías artesanales de Tierra del Fuego» para la Secretaría de Desarrollo
+    Local y PyME del gobierno provincial, financiado por el CFI, y capacitación a pescadores artesanales (06/2012 – 06/2013).
+  logros:
+  - Coautor del informe «Diagnóstico de la pesca artesanal en Río Grande» (07/2013, 325 pp.)
+  keywords:
+  - Artisanal Fisheries
+  - Fisheries Assessment
+  - Public Policy
+  - Capacity Building
+  perfiles:
+  - economia-azul
+  - sector-publico
+- id: campanas_cientificas
+  empresa: Campañas oceanográficas y antárticas (CADIC-CONICET, IAA, COPLA)
+  rol: Técnico de artes de pesca, maniobras y muestreo
+  fechas: 2007 – 2011
+  inicio: '2007'
+  fin: '2011'
+  actual: false
+  ubicacion: Mar Argentino y Antártida
+  descripcion: 'Participación como estudiante y técnico en campañas científicas: diseño y construcción de artes de pesca y
+    equipos de muestreo, maniobras a bordo y toma de muestras.'
+  logros:
+  - 'Campaña Antártica de Verano 2010-2011 (Instituto Antártico Argentino, base Jubany/Carlini, 12/2010 – 01/2011): pasante
+    en el proyecto PICTO sobre deshielo glaciar y plancton; muestreo de agua, fitoplancton y zooplancton en Caleta Potter,
+    mediciones espectrofotométricas y fluorométricas'
+  - 'Campaña oceanográfica CONCACEN (BO ARA Puerto Deseado, 11–12/2009; CADIC y Escuela Nacional de Pesca): encargado del
+    diseño de maniobras y construcción de artes de pesca (arrastre de fondo, redes pelágicas y trampas)'
+  keywords:
+  - Oceanographic Campaigns
+  - Antarctica
+  - Fishing Gear
+  - Sampling
+  - Plankton
+  - Research Vessel
+  perfiles:
+  - economia-azul
