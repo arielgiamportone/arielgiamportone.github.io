@@ -1,0 +1,72 @@
+{{ define "main" }}
+{{ $id := .Params.proyecto }}
+{{ $p := dict }}
+{{ range partial "datos.html" "proyectos" }}{{ if eq .id $id }}{{ $p = . }}{{ end }}{{ end }}
+{{ $grupo := partial "tipo-proyecto.html" ($p.tipo | default "") }}
+<article class="ficha">
+  <header class="heroe heroe--ficha">
+    <div class="contenedor contenedor--estrecho">
+      <p class="heroe__hola"><a href="{{ .Parent.RelPermalink }}">← {{ .Parent.Title }}</a></p>
+      <p class="tarjeta__meta"><span class="etiqueta etiqueta--{{ $grupo }}">{{ i18n (printf "tipo_%s" $grupo) }}</span>{{ with $p.fechas }} <span>{{ partial "fechas.html" . }}</span>{{ end }}{{ with $p.rol }} <span>· {{ . }}</span>{{ end }}</p>
+      <h1 class="heroe__nombre heroe__nombre--perfil">{{ .Title }}</h1>
+      {{ with .Params.subtitulo }}<p class="heroe__titular">{{ . }}</p>{{ end }}
+      {{ with $p.perfiles }}<p class="ficha__lentes">{{ range . }}<a class="lente-mini lente--{{ . }}" href="{{ partial "url-perfil.html" . }}"><span class="lente__punto"></span>{{ $s := . }}{{ range partial "datos.html" "perfiles" }}{{ if eq .slug $s }}{{ .titulo_corto }}{{ end }}{{ end }}</a>{{ end }}</p>{{ end }}
+      {{ with .Params.enlaces }}<p class="ficha__enlaces">{{ range . }}<a class="boton boton--secundario" href="{{ .url }}" target="_blank" rel="noopener">{{ .t }} ↗</a>{{ end }}</p>{{ end }}
+    </div>
+  </header>
+
+  {{ with .Params.indicadores }}
+  <section class="bloque"><div class="contenedor contenedor--estrecho">
+    <ul class="indicadores">{{ range . }}<li><strong>{{ .v }}</strong><span>{{ .e }}</span></li>{{ end }}</ul>
+  </div></section>
+  {{ end }}
+
+  {{ with .Params.demo }}
+  <section class="bloque" id="demo"><div class="contenedor">
+    <h2>{{ .titulo }}</h2>
+    {{ with .nota }}<p class="tenue">{{ . }}</p>{{ end }}
+    <div class="demo">
+      <iframe src="{{ .url }}" title="{{ .titulo }}" loading="lazy" allow="clipboard-write" referrerpolicy="no-referrer"></iframe>
+    </div>
+  </div></section>
+  {{ end }}
+
+  <section class="bloque"><div class="contenedor contenedor--estrecho prosa">
+    {{ .Content }}
+  </div></section>
+
+  {{ with .Params.diagramas }}
+  <section class="bloque"><div class="contenedor contenedor--estrecho">
+    {{ range . }}
+      {{ $pie := .pie }}
+      {{ with $.Resources.Get .src }}<figure class="diagrama"><img src="{{ .RelPermalink }}" alt="" loading="lazy">{{ with $pie }}<figcaption>{{ . }}</figcaption>{{ end }}</figure>{{ end }}
+    {{ end }}
+  </div></section>
+  {{ end }}
+
+  {{ with .Params.galeria }}
+  <section class="bloque"><div class="contenedor">
+    <div class="galeria">
+      {{ range . }}
+        {{ $pie := .pie }}
+        {{ with $.Resources.Get .src }}
+          {{ $img := .Resize "1200x webp q80" }}
+          {{ $mini := .Resize "600x webp q78" }}
+          <figure>
+            <a href="{{ $img.RelPermalink }}" target="_blank"><img src="{{ $mini.RelPermalink }}" width="{{ $mini.Width }}" height="{{ $mini.Height }}" alt="{{ $pie }}" loading="lazy"></a>
+            <figcaption>{{ $pie }}</figcaption>
+          </figure>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div></section>
+  {{ end }}
+
+  {{ with $p.stack }}
+  <section class="bloque"><div class="contenedor contenedor--estrecho">
+    <h2 class="mini">{{ i18n "skills" }}</h2>
+    <ul class="chips">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
+  </div></section>
+  {{ end }}
+</article>
+{{ end }}

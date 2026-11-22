@@ -191,3 +191,34 @@ a.tarjeta { color: inherit; text-decoration: none; }
   body { background: #fff; color: #000; font-size: 11pt; }
   .tarjeta { box-shadow: none; break-inside: avoid; }
 }
+
+/* Fichas de proyecto */
+.heroe--ficha { padding-bottom: 1.5rem; }
+.heroe--ficha .heroe__hola a { text-decoration: none; }
+.ficha__lentes { display: flex; flex-wrap: wrap; gap: .4rem; margin: 0 0 1rem; }
+.lente-mini { display: inline-flex; align-items: center; gap: .4rem; font-size: .85rem; font-weight: 600; padding: .3rem .7rem; border-radius: 999px; border: 1px solid var(--borde); background: var(--superficie); color: var(--texto); text-decoration: none; }
+.lente-mini .lente__punto { width: 8px; height: 8px; border-radius: 50%; background: var(--c); }
+.ficha__enlaces { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0; }
+.boton--secundario { background: var(--superficie); color: var(--texto); border: 1px solid var(--borde); padding: .55rem .9rem; font-size: .9rem; }
+.boton--secundario:hover { border-color: var(--acento); color: var(--acento); }
+.indicadores { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: .75rem; list-style: none; padding: 0; margin: 0; }
+.indicadores li { background: var(--superficie); border: 1px solid var(--borde); border-radius: var(--radio); padding: 1rem; }
+.indicadores strong { display: block; font-size: 1.8rem; line-height: 1.1; color: var(--acento); font-variant-numeric: tabular-nums; }
+.indicadores span { font-size: .85rem; color: var(--texto-2); }
+.demo { border: 1px solid var(--borde); border-radius: var(--radio); overflow: hidden; box-shadow: var(--sombra); background: var(--superficie); }
+.demo iframe { display: block; width: 100%; height: min(82vh, 820px); border: 0; }
+.prosa h2 { margin-top: 2rem; }
+.prosa ul { padding-left: 1.2rem; }
+.prosa li { margin: .35rem 0; }
+.prosa code { font-family: var(--mono); font-size: .9em; background: var(--superficie-2); padding: .1rem .35rem; border-radius: 5px; }
+.diagrama { margin: 0 0 2rem; background: #fff; border: 1px solid var(--borde); border-radius: var(--radio); padding: 1rem; }
+.diagrama img { display: block; width: 100%; }
+.diagrama figcaption, .galeria figcaption { font-size: .88rem; color: #475569; margin-top: .6rem; }
+.galeria { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1rem; }
+.galeria figure { margin: 0; }
+.galeria img { display: block; width: 100%; height: auto; max-height: 360px; object-fit: contain; background: var(--superficie-2); border-radius: 10px; border: 1px solid var(--borde); }
+.galeria figcaption { color: var(--texto-2); }
+.tarjeta__enlace { color: inherit; text-decoration: none; }
+.tarjeta__enlace::after { content: ""; position: absolute; inset: 0; border-radius: var(--radio); }
+.tarjeta--con-ficha .tarjeta__enlaces a { position: relative; z-index: 1; }
+.tarjeta--con-ficha { cursor: pointer; }
