@@ -8,14 +8,14 @@ subtitulo: "El informe mensual que alguien montaba a mano en horas, generado en 
 indicadores:
   - { v: "~11 s", e: "para generar seis meses de datos y dos informes con PDF" }
   - { v: "14", e: "reglas de dominio, todas con test" }
-  - { v: "72", e: "tests" }
+  - { v: "75", e: "tests" }
   - { v: "0", e: "discrepancias al contrastar el informe con su propio modelo" }
   - { v: "3", e: "formatos de salida: Word, PDF y PowerPoint" }
-  - { v: "MIT", e: "licencia · PyPI 0.1.0" }
+  - { v: "MIT", e: "licencia · PyPI 0.1.1" }
 demo:
   formato: documento
   titulo: "Informes de ejemplo generados con el paquete"
-  nota: "Generados con «reportkit demo» a partir de seis meses de datos sintéticos que incluyen las trampas reales para las que existe cada regla: borradores, ficheros de bloqueo, resultados en blanco, controles duplicados, una hoja que miente sobre su tamaño y una exportación en UTC. La marca «Nordal Analytics» es ficticia. El anexo final lista los avisos de carga: lo que se apartó y por qué."
+  nota: "Generados con «reportkit demo» (0.1.1, recién instalado desde PyPI) a partir de seis meses de datos sintéticos que incluyen las trampas reales para las que existe cada regla: borradores, ficheros de bloqueo, resultados en blanco, controles duplicados, una hoja que miente sobre su tamaño y una exportación en UTC. La marca «Nordal Analytics» es ficticia. El anexo final lista los avisos de carga: lo que se apartó y por qué."
   pestanas:
     - { titulo: "Informe semestral (22 páginas)", recurso: "informes/informe-semestral-sintetico.pdf" }
     - { titulo: "Informe mensual (15 páginas)", recurso: "informes/informe-mensual-sintetico.pdf" }

@@ -8,14 +8,14 @@ subtitulo: "The monthly report someone used to assemble by hand over hours, gene
 indicadores:
   - { v: "~11 s", e: "to generate six months of data and two reports with PDF" }
   - { v: "14", e: "domain rules, each with a test" }
-  - { v: "72", e: "tests" }
+  - { v: "75", e: "tests" }
   - { v: "0", e: "discrepancies when checking the report against its own model" }
   - { v: "3", e: "output formats: Word, PDF and PowerPoint" }
-  - { v: "MIT", e: "licence · PyPI 0.1.0" }
+  - { v: "MIT", e: "licence · PyPI 0.1.1" }
 demo:
   formato: documento
   titulo: "Sample reports generated with the package"
-  nota: "Generated with «reportkit demo» from six months of synthetic data that includes the real-world traps each rule exists for: drafts, lock files, blank results, duplicate controls, a sheet that lies about its size and a UTC export. The «Nordal Analytics» brand is fictitious and the reports are in Spanish. The final annex lists the loading warnings: what was set aside and why."
+  nota: "Generated with «reportkit demo» (0.1.1, freshly installed from PyPI) from six months of synthetic data that includes the real-world traps each rule exists for: drafts, lock files, blank results, duplicate controls, a sheet that lies about its size and a UTC export. The «Nordal Analytics» brand is fictitious and the reports are in Spanish. The final annex lists the loading warnings: what was set aside and why."
   pestanas:
     - { titulo: "Semester report (22 pages)", recurso: "informes/informe-semestral-sintetico.pdf" }
     - { titulo: "Monthly report (15 pages)", recurso: "informes/informe-mensual-sintetico.pdf" }
