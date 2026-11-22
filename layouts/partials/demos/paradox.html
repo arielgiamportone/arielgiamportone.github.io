@@ -1,0 +1,26 @@
+{{ $en := eq site.Language.Lang "en" }}
+{{ $whl := .Resources.Get "paradoxdb-0.1.0-py3-none-any.whl" }}
+{{ $db := .Resources.Get "tabla/ACTIVOS.DB" }}
+{{ $mb := .Resources.Get "tabla/ACTIVOS.MB" }}
+<div class="demo-pdx" data-demo="paradox" data-whl="{{ $whl.RelPermalink }}" data-db="{{ $db.RelPermalink }}" data-mb="{{ $mb.RelPermalink }}" data-lang="{{ site.Language.Lang }}">
+  <div class="demo-pdx__inicio">
+    <button type="button" class="boton" data-cargar>{{ cond $en "Load Python and open the sample table" "Cargar Python y abrir la tabla de ejemplo" }}</button>
+    <p class="tenue pequeno">{{ cond $en "Downloads Pyodide (Python compiled to WebAssembly, about 10 MB, from the jsDelivr CDN) and installs the paradoxdb 0.1.0 wheel published on PyPI, served from this page. Everything runs in your browser." "Descarga Pyodide (Python compilado a WebAssembly, unos 10 MB, desde la CDN de jsDelivr) e instala el wheel de paradoxdb 0.1.0 publicado en PyPI, servido desde esta página. Todo se ejecuta en tu navegador." }}</p>
+    <p class="demo-pdx__estado" data-estado aria-live="polite"></p>
+  </div>
+  <div data-resultado hidden>
+    <div class="demo-pdx__resumen" data-resumen></div>
+    <div class="demo-pdx__tabla" data-tabla></div>
+    <details class="demo-pdx__codigo">
+      <summary>{{ cond $en "The Python code that just ran" "El código Python que se acaba de ejecutar" }}</summary>
+      <pre><code data-codigo></code></pre>
+    </details>
+    <div class="demo-pdx__propia">
+      <h3>{{ cond $en "Open your own table" "Abre una tabla tuya" }}</h3>
+      <p class="tenue pequeno">{{ cond $en "Choose a .DB file and, if it has memos, its .MB. The files are read in your browser and never leave your computer." "Elige un fichero .DB y, si tiene memos, su .MB. Los ficheros se leen en tu navegador y no salen de tu ordenador." }}</p>
+      <input type="file" data-ficheros accept=".db,.DB,.mb,.MB" multiple>
+    </div>
+  </div>
+</div>
+{{ $js := resources.Get "js/demos/paradox-demo.js" | js.Build (dict "minify" true "format" "esm") | fingerprint }}
+<script type="module" src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
