@@ -251,3 +251,8 @@ a.tarjeta { color: inherit; text-decoration: none; }
 .demo-gs1__resultado p { margin: .25rem 0; }
 .demo-gs1__resultado .ok { color: #15803d; font-weight: 600; }
 .demo-gs1__resultado .mal { color: #b91c1c; font-weight: 600; }
+.prosa table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.5rem; font-size: .92rem; background: var(--superficie); border: 1px solid var(--borde); border-radius: 10px; overflow: hidden; }
+.prosa th { text-align: left; font-size: .78rem; text-transform: uppercase; letter-spacing: .05em; color: var(--texto-2); background: var(--superficie-2); }
+.prosa th, .prosa td { padding: .55rem .75rem; border-bottom: 1px solid var(--borde); vertical-align: top; }
+.prosa tr:last-child td { border-bottom: 0; }
+@media (max-width: 640px) { .prosa table { display: block; overflow-x: auto; } }
