@@ -43,7 +43,6 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
-          name: hugo-site
 
       - name: Deploy to GitHub Pages
         if: github.event_name != 'pull_request'
