@@ -1,0 +1,400 @@
+{
+ "consultas": [
+  {
+   "evidencia": {},
+   "objetivo": "Sustainable",
+   "p": [
+    0.18336397659946277,
+    0.8166360234005372
+   ]
+  },
+  {
+   "evidencia": {},
+   "objetivo": "CPUE_disc",
+   "p": [
+    0.333993399339934,
+    0.333003300330033,
+    0.33300330033003306
+   ]
+  },
+  {
+   "evidencia": {
+    "CPUE_disc": "Alto"
+   },
+   "objetivo": "Sustainable",
+   "p": [
+    0.16121238779270913,
+    0.8387876122072909
+   ]
+  },
+  {
+   "evidencia": {},
+   "objetivo": "CPUE_disc",
+   "p": [
+    0.333993399339934,
+    0.333003300330033,
+    0.33300330033003306
+   ]
+  },
+  {
+   "evidencia": {
+    "Fishing_Effort_hours_disc": "Alto",
+    "Fish_Price_USD_ton_disc": "Bajo"
+   },
+   "objetivo": "Sustainable",
+   "p": [
+    0.37295560796020877,
+    0.6270443920397912
+   ]
+  },
+  {
+   "evidencia": {
+    "Fishing_Effort_hours_disc": "Alto",
+    "Fish_Price_USD_ton_disc": "Bajo"
+   },
+   "objetivo": "CPUE_disc",
+   "p": [
+    0.333993399339934,
+    0.333003300330033,
+    0.33300330033003306
+   ]
+  },
+  {
+   "evidencia": {
+    "SST_C_disc": "Alto"
+   },
+   "objetivo": "Sustainable",
+   "p": [
+    0.18440032457118757,
+    0.8155996754288124
+   ]
+  },
+  {
+   "evidencia": {
+    "SST_C_disc": "Alto"
+   },
+   "objetivo": "CPUE_disc",
+   "p": [
+    0.333993399339934,
+    0.333003300330033,
+    0.33300330033003306
+   ]
+  },
+  {
+   "evidencia": {
+    "Fuel_Consumption_L_disc": "Alto"
+   },
+   "objetivo": "Sustainable",
+   "p": [
+    0.27065266292802614,
+    0.729347337071974
+   ]
+  },
+  {
+   "evidencia": {
+    "Fuel_Consumption_L_disc": "Alto"
+   },
+   "objetivo": "CPUE_disc",
+   "p": [
+    0.333993399339934,
+    0.333003300330033,
+    0.33300330033003306
+   ]
+  },
+  {
+   "evidencia": {
+    "Fish_Price_USD_ton_disc": "Alto",
+    "SST_C_disc": "Medio"
+   },
+   "objetivo": "Sustainable",
+   "p": [
+    0.16761199595117904,
+    0.832388004048821
+   ]
+  },
+  {
+   "evidencia": {
+    "Fish_Price_USD_ton_disc": "Alto",
+    "SST_C_disc": "Medio"
+   },
+   "objetivo": "CPUE_disc",
+   "p": [
+    0.333993399339934,
+    0.333003300330033,
+    0.33300330033003306
+   ]
+  },
+  {
+   "evidencia": {
+    "CPUE_disc": "Medio"
+   },
+   "objetivo": "Sustainable",
+   "p": [
+    0.16219362837293486,
+    0.8378063716270652
+   ]
+  },
+  {
+   "evidencia": {},
+   "objetivo": "CPUE_disc",
+   "p": [
+    0.333993399339934,
+    0.333003300330033,
+    0.33300330033003306
+   ]
+  },
+  {
+   "evidencia": {
+    "Fishing_Effort_hours_disc": "Medio",
+    "Chlorophyll_mg_m3_disc": "Alto",
+    "Fuel_Consumption_L_disc": "Alto"
+   },
+   "objetivo": "Sustainable",
+   "p": [
+    0.035269548965753926,
+    0.964730451034246
+   ]
+  },
+  {
+   "evidencia": {
+    "Fishing_Effort_hours_disc": "Medio",
+    "Chlorophyll_mg_m3_disc": "Alto",
+    "Fuel_Consumption_L_disc": "Alto"
+   },
+   "objetivo": "CPUE_disc",
+   "p": [
+    0.35414601916088534,
+    0.3184671291707961,
+    0.32738685166831843
+   ]
+  },
+  {
+   "evidencia": {
+    "Operating_Cost_USD_disc": "Alto",
+    "Fuel_Consumption_L_disc": "Bajo",
+    "Chlorophyll_mg_m3_disc": "Alto",
+    "SST_C_disc": "Medio"
+   },
+   "objetivo": "Sustainable",
+   "p": [
+    0.4260313294684624,
+    0.5739686705315377
+   ]
+  },
+  {
+   "evidencia": {
+    "Operating_Cost_USD_disc": "Alto",
+    "Fuel_Consumption_L_disc": "Bajo",
+    "Chlorophyll_mg_m3_disc": "Alto",
+    "SST_C_disc": "Medio"
+   },
+   "objetivo": "CPUE_disc",
+   "p": [
+    0.35414601916088534,
+    0.3184671291707961,
+    0.32738685166831843
+   ]
+  },
+  {
+   "evidencia": {
+    "Chlorophyll_mg_m3_disc": "Bajo"
+   },
+   "objetivo": "Sustainable",
+   "p": [
+    0.18405665093783555,
+    0.8159433490621645
+   ]
+  },
+  {
+   "evidencia": {
+    "Chlorophyll_mg_m3_disc": "Bajo"
+   },
+   "objetivo": "CPUE_disc",
+   "p": [
+    0.3442028985507246,
+    0.35902503293807636,
+    0.2967720685111989
+   ]
+  },
+  {
+   "evidencia": {
+    "Fleet_Size_disc": "Bajo"
+   },
+   "objetivo": "Sustainable",
+   "p": [
+    0.18722018354454184,
+    0.8127798164554582
+   ]
+  },
+  {
+   "evidencia": {
+    "Fleet_Size_disc": "Bajo"
+   },
+   "objetivo": "CPUE_disc",
+   "p": [
+    0.333993399339934,
+    0.333003300330033,
+    0.33300330033003306
+   ]
+  },
+  {
+   "evidencia": {
+    "SST_C_disc": "Medio",
+    "Fleet_Size_disc": "Alto",
+    "Fuel_Consumption_L_disc": "Medio"
+   },
+   "objetivo": "Sustainable",
+   "p": [
+    0.12329702216193503,
+    0.876702977838065
+   ]
+  },
+  {
+   "evidencia": {
+    "SST_C_disc": "Medio",
+    "Fleet_Size_disc": "Alto",
+    "Fuel_Consumption_L_disc": "Medio"
+   },
+   "objetivo": "CPUE_disc",
+   "p": [
+    0.333993399339934,
+    0.333003300330033,
+    0.33300330033003306
+   ]
+  },
+  {
+   "evidencia": {
+    "SST_C_disc": "Bajo",
+    "Chlorophyll_mg_m3_disc": "Bajo",
+    "Fish_Price_USD_ton_disc": "Medio",
+    "CPUE_disc": "Bajo"
+   },
+   "objetivo": "Sustainable",
+   "p": [
+    0.25755441627180814,
+    0.7424455837281918
+   ]
+  },
+  {
+   "evidencia": {
+    "SST_C_disc": "Bajo",
+    "Chlorophyll_mg_m3_disc": "Bajo",
+    "Fish_Price_USD_ton_disc": "Medio"
+   },
+   "objetivo": "CPUE_disc",
+   "p": [
+    0.3442028985507246,
+    0.35902503293807636,
+    0.2967720685111989
+   ]
+  },
+  {
+   "evidencia": {
+    "Operating_Cost_USD_disc": "Medio",
+    "SST_C_disc": "Medio",
+    "Fuel_Consumption_L_disc": "Alto"
+   },
+   "objetivo": "Sustainable",
+   "p": [
+    0.17843211779869797,
+    0.8215678822013021
+   ]
+  },
+  {
+   "evidencia": {
+    "Operating_Cost_USD_disc": "Medio",
+    "SST_C_disc": "Medio",
+    "Fuel_Consumption_L_disc": "Alto"
+   },
+   "objetivo": "CPUE_disc",
+   "p": [
+    0.333993399339934,
+    0.333003300330033,
+    0.33300330033003306
+   ]
+  },
+  {
+   "evidencia": {
+    "Fuel_Consumption_L_disc": "Alto",
+    "Fleet_Size_disc": "Bajo",
+    "Operating_Cost_USD_disc": "Medio",
+    "Fishing_Effort_hours_disc": "Alto"
+   },
+   "objetivo": "Sustainable",
+   "p": [
+    0.20450147816059572,
+    0.7954985218394044
+   ]
+  },
+  {
+   "evidencia": {
+    "Fuel_Consumption_L_disc": "Alto",
+    "Fleet_Size_disc": "Bajo",
+    "Operating_Cost_USD_disc": "Medio",
+    "Fishing_Effort_hours_disc": "Alto"
+   },
+   "objetivo": "CPUE_disc",
+   "p": [
+    0.333993399339934,
+    0.333003300330033,
+    0.33300330033003306
+   ]
+  }
+ ],
+ "intervenciones": [
+  {
+   "do": {
+    "Fishing_Effort_hours_disc": "Bajo"
+   },
+   "p": [
+    0.1897266132566542,
+    0.8102733867433458
+   ]
+  },
+  {
+   "do": {
+    "Fishing_Effort_hours_disc": "Medio"
+   },
+   "p": [
+    0.03461987577488909,
+    0.9653801242251109
+   ]
+  },
+  {
+   "do": {
+    "Fishing_Effort_hours_disc": "Alto"
+   },
+   "p": [
+    0.3257265231157335,
+    0.6742734768842664
+   ]
+  },
+  {
+   "do": {
+    "CPUE_disc": "Bajo"
+   },
+   "p": [
+    0.22655748891821886,
+    0.7734425110817812
+   ]
+  },
+  {
+   "do": {
+    "CPUE_disc": "Medio"
+   },
+   "p": [
+    0.16219362837293486,
+    0.8378063716270652
+   ]
+  },
+  {
+   "do": {
+    "CPUE_disc": "Alto"
+   },
+   "p": [
+    0.1612123877927091,
+    0.8387876122072908
+   ]
+  }
+ ]
+}

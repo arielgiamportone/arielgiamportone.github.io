@@ -1,0 +1,22 @@
+{{ $en := eq site.Language.Lang "en" }}
+{{ $red := (.Resources.Get "red.json") }}
+<div class="demo-bn" data-demo="bn" data-red="{{ $red.RelPermalink }}" data-lang="{{ site.Language.Lang }}">
+  <div class="demo-bn__barra">
+    <div class="demo-bn__modo" role="radiogroup" aria-label="{{ cond $en "How to fix a variable" "Cómo fijar una variable" }}">
+      <label><input type="radio" name="modo" value="obs" checked> {{ cond $en "I observe (evidence)" "Observo (evidencia)" }}</label>
+      <label><input type="radio" name="modo" value="do"> {{ cond $en "I intervene (do-operator)" "Intervengo (operador do)" }}</label>
+    </div>
+    <button type="button" class="copiar" data-reset>{{ cond $en "Reset" "Reiniciar" }}</button>
+  </div>
+  <p class="tenue pequeno" data-explica-modo></p>
+  <div class="demo-bn__grafo">
+    <svg class="demo-bn__aristas" aria-hidden="true"></svg>
+    <div class="demo-bn__col" data-col="0"><h4>{{ cond $en "Environment" "Ambiente" }}</h4></div>
+    <div class="demo-bn__col" data-col="1"><h4>{{ cond $en "Operation" "Operación" }}</h4></div>
+    <div class="demo-bn__col" data-col="2"><h4>{{ cond $en "Economics" "Economía" }}</h4></div>
+    <div class="demo-bn__col" data-col="3"><h4>{{ cond $en "Outcome" "Resultado" }}</h4></div>
+  </div>
+  <p class="tenue pequeno">{{ cond $en "Exact inference by enumeration in your browser, checked against pgmpy (36 queries, maximum error 3·10⁻⁹). Network trained on the project's synthetic data: it shows the method, not real fisheries conclusions." "Inferencia exacta por enumeración en tu navegador, comprobada contra pgmpy (36 consultas, error máximo 3·10⁻⁹). Red entrenada con los datos sintéticos del proyecto: muestra el método, no conclusiones reales sobre una pesquería." }}</p>
+</div>
+{{ $js := resources.Get "js/demos/bn-demo.js" | js.Build (dict "minify" true "format" "esm") | fingerprint }}
+<script type="module" src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
