@@ -256,3 +256,33 @@ a.tarjeta { color: inherit; text-decoration: none; }
 .prosa th, .prosa td { padding: .55rem .75rem; border-bottom: 1px solid var(--borde); vertical-align: top; }
 .prosa tr:last-child td { border-bottom: 0; }
 @media (max-width: 640px) { .prosa table { display: block; overflow-x: auto; } }
+
+/* Demo catastro-enrichment-es */
+.demo-cat { background: var(--superficie); border: 1px solid var(--borde); border-radius: var(--radio); box-shadow: var(--sombra); padding: 1.25rem; }
+.demo-cat__pestanas { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1rem; }
+.demo-cat__pestanas button { font: inherit; font-size: .88rem; font-weight: 600; padding: .45rem .8rem; border-radius: 9px; border: 1px solid var(--borde); background: var(--fondo); color: var(--texto); cursor: pointer; }
+.demo-cat__pestanas button[aria-selected="true"] { background: var(--acento); border-color: var(--acento); color: var(--acento-texto); }
+.demo-cat__driver { font-size: .7rem; letter-spacing: .05em; opacity: .8; margin-right: .2rem; }
+.demo-cat__fila { display: grid; grid-template-columns: 1.4fr minmax(240px, 1fr); gap: 1.5rem; align-items: start; }
+@media (max-width: 860px) { .demo-cat__fila { grid-template-columns: 1fr; } }
+.demo-cat__pasos { list-style: none; padding: 0; margin: 0; display: grid; gap: .8rem; }
+.demo-cat__pasos li { display: grid; grid-template-columns: 28px 1fr; gap: .6rem; font-size: .93rem; }
+.paso__n { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: var(--superficie-2); color: var(--acento); font-weight: 700; font-size: .85rem; }
+.demo-cat code { font-family: var(--mono); font-size: .86em; background: var(--superficie-2); padding: .05rem .35rem; border-radius: 5px; }
+.demo-cat__datos { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: .5rem; margin: .5rem 0 0; }
+.demo-cat__datos div { background: var(--fondo); border: 1px solid var(--borde); border-radius: 8px; padding: .4rem .6rem; }
+.demo-cat__datos dt { font-size: .72rem; text-transform: uppercase; letter-spacing: .04em; color: var(--texto-2); }
+.demo-cat__datos dd { margin: 0; font-weight: 650; }
+.demo-cat__orto { position: relative; margin: 0; }
+.demo-cat__orto img { display: block; width: 100%; height: auto; border-radius: 10px; }
+.demo-cat__marco { position: relative; }
+.demo-cat__mira { position: absolute; left: 50%; top: 50%; width: 26px; height: 26px; margin: -13px 0 0 -13px; border: 3px solid #f43f5e; border-radius: 50%; box-shadow: 0 0 0 2px #fff; }
+.demo-cat__orto figcaption { font-size: .8rem; color: var(--texto-2); margin-top: .4rem; }
+.demo-cat__router, .demo-cat__geo { border-top: 1px solid var(--borde); margin-top: 1.25rem; padding-top: 1rem; }
+.demo-cat__router h3, .demo-cat__geo h3 { margin: 0 0 .4rem; }
+.demo-cat__router label { display: block; font-size: .85rem; color: var(--texto-2); max-width: 280px; }
+.demo-cat__router input { display: block; width: 100%; margin-top: .25rem; font: inherit; font-family: var(--mono); padding: .5rem .65rem; border: 1px solid var(--borde); border-radius: 8px; background: var(--fondo); color: var(--texto); }
+.demo-cat__geo table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+.demo-cat__geo th, .demo-cat__geo td { text-align: left; padding: .45rem .6rem; border-bottom: 1px solid var(--borde); }
+.demo-cat__geo th { font-size: .75rem; text-transform: uppercase; color: var(--texto-2); }
+@media (max-width: 640px) { .demo-cat__geo table { display: block; overflow-x: auto; } }

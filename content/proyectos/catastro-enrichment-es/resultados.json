@@ -1,0 +1,211 @@
+{
+ "fecha": "2026-11-22",
+ "paquete": "catastro-enrich 0.1.0",
+ "casos": [
+  {
+   "id": "madrid",
+   "consulta_lat": 40.4138,
+   "consulta_lon": -3.6921,
+   "ine": "28079",
+   "provincia": "28",
+   "driver": "dgc",
+   "attribution": "Dirección General del Catastro (Sede Electrónica del Catastro)",
+   "rc": "1341701VK4714A",
+   "ok": true,
+   "lat": 40.4134609341573,
+   "lon": -3.69167131327452,
+   "area_m2": null,
+   "descripcion": "PS PRADO 11 MADRID (MADRID)",
+   "pasos": [
+    {
+     "metodo": "rc_at_point",
+     "rc": "1341701VK4714A",
+     "descripcion": "PS PRADO 11 MADRID (MADRID)"
+    }
+   ],
+   "fisico": {
+    "ok": true,
+    "error": "",
+    "area_m2": 30456.0,
+    "year": 1999,
+    "use": "Cultural",
+    "unidades": 1
+   },
+   "orto_ok": true,
+   "orto": "orto-madrid.jpg",
+   "orto_attr": "PNOA © Instituto Geográfico Nacional",
+   "links": {
+    "street_view": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=40.413461,-3.691671",
+    "maps": "https://www.google.com/maps/search/?api=1&query=40.413461,-3.691671",
+    "satellite": "https://www.google.com/maps/@40.413461,-3.691671,18z/data=!3m1!1e3"
+   },
+   "ciudad": "Madrid",
+   "referencia_es": "el Museo del Prado",
+   "referencia_en": "the Prado Museum"
+  },
+  {
+   "id": "donostia",
+   "consulta_lat": 43.3246,
+   "consulta_lon": -1.9787,
+   "ine": "20069",
+   "provincia": "20",
+   "driver": "gipuzkoa",
+   "attribution": "Gipuzkoako Foru Aldundia / Diputación Foral de Gipuzkoa (CC-BY)",
+   "rc": "069-8297591-3232",
+   "ok": true,
+   "lat": 43.324548,
+   "lon": -1.978755,
+   "area_m2": 12097.0,
+   "descripcion": "Gipuzkoa parcel 069-8297591-3232",
+   "pasos": [],
+   "fisico": {
+    "ok": false,
+    "error": "NOT_SUPPORTED",
+    "area_m2": null,
+    "year": null,
+    "use": "",
+    "unidades": null
+   },
+   "orto_ok": true,
+   "orto": "orto-donostia.jpg",
+   "orto_attr": "PNOA © Instituto Geográfico Nacional",
+   "links": {
+    "street_view": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=43.324548,-1.978755",
+    "maps": "https://www.google.com/maps/search/?api=1&query=43.324548,-1.978755",
+    "satellite": "https://www.google.com/maps/@43.324548,-1.978755,18z/data=!3m1!1e3"
+   },
+   "ciudad": "Donostia / San Sebastián",
+   "referencia_es": "el Palacio Kursaal",
+   "referencia_en": "the Kursaal"
+  },
+  {
+   "id": "pamplona",
+   "consulta_lat": 42.8147,
+   "consulta_lon": -1.6447,
+   "ine": "31201",
+   "provincia": "31",
+   "driver": "navarra",
+   "attribution": "Gobierno de Navarra - IDENA (CC-BY 4.0)",
+   "rc": "201011340",
+   "ok": true,
+   "lat": 42.8154404525,
+   "lon": -1.644551054868421,
+   "area_m2": 7977.0596,
+   "descripcion": "Navarra parcel 201011340",
+   "pasos": [],
+   "fisico": {
+    "ok": false,
+    "error": "NOT_SUPPORTED",
+    "area_m2": null,
+    "year": null,
+    "use": "",
+    "unidades": null
+   },
+   "orto_ok": true,
+   "orto": "orto-pamplona.jpg",
+   "orto_attr": "PNOA © Instituto Geográfico Nacional",
+   "links": {
+    "street_view": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.815440,-1.644551",
+    "maps": "https://www.google.com/maps/search/?api=1&query=42.815440,-1.644551",
+    "satellite": "https://www.google.com/maps/@42.815440,-1.644551,18z/data=!3m1!1e3"
+   },
+   "ciudad": "Pamplona",
+   "referencia_es": "el Palacio de Navarra",
+   "referencia_en": "the Palace of Navarre"
+  },
+  {
+   "id": "vitoria",
+   "consulta_lat": 42.8505,
+   "consulta_lon": -2.672,
+   "ine": "01059",
+   "provincia": "01",
+   "driver": "alava",
+   "attribution": "Arabako Foru Aldundia / Diputación Foral de Álava (CC-BY)",
+   "rc": "05900600287",
+   "ok": true,
+   "lat": 42.85068095238356,
+   "lon": -2.6722934155377893,
+   "area_m2": 3190.9310075,
+   "descripcion": "https://catastroalava.tracasa.es/ref_catastral/subparcelas.aspx?C=59&PO=60&PA=287",
+   "pasos": [],
+   "fisico": {
+    "ok": false,
+    "error": "NOT_SUPPORTED",
+    "area_m2": null,
+    "year": null,
+    "use": "",
+    "unidades": null
+   },
+   "orto_ok": true,
+   "orto": "orto-vitoria.jpg",
+   "orto_attr": "PNOA © Instituto Geográfico Nacional",
+   "links": {
+    "street_view": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=42.850681,-2.672293",
+    "maps": "https://www.google.com/maps/search/?api=1&query=42.850681,-2.672293",
+    "satellite": "https://www.google.com/maps/@42.850681,-2.672293,18z/data=!3m1!1e3"
+   },
+   "ciudad": "Vitoria-Gasteiz",
+   "referencia_es": "la Catedral de Santa María",
+   "referencia_en": "Santa María Cathedral"
+  },
+  {
+   "id": "bilbao",
+   "consulta_lat": 43.2687,
+   "consulta_lon": -2.934,
+   "ine": "48020",
+   "provincia": "48",
+   "driver": "bizkaia",
+   "attribution": "Bizkaiko Foru Aldundia / Diputación Foral de Bizkaia (CC-BY 4.0)",
+   "rc": "20-1601-1904",
+   "ok": true,
+   "lat": 43.26860156795359,
+   "lon": -2.933277345145968,
+   "area_m2": 25942.9059,
+   "descripcion": "Bizkaia parcel 20-1601-1904",
+   "pasos": [],
+   "fisico": {
+    "ok": false,
+    "error": "NOT_SUPPORTED",
+    "area_m2": null,
+    "year": null,
+    "use": "",
+    "unidades": null
+   },
+   "orto_ok": true,
+   "orto": "orto-bilbao.jpg",
+   "orto_attr": "PNOA © Instituto Geográfico Nacional",
+   "links": {
+    "street_view": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=43.268602,-2.933277",
+    "maps": "https://www.google.com/maps/search/?api=1&query=43.268602,-2.933277",
+    "satellite": "https://www.google.com/maps/@43.268602,-2.933277,18z/data=!3m1!1e3"
+   },
+   "ciudad": "Bilbao",
+   "referencia_es": "el Museo Guggenheim",
+   "referencia_en": "the Guggenheim Museum"
+  }
+ ],
+ "geocoding": [
+  {
+   "consulta": "Paseo del Prado 8, Madrid",
+   "ok": true,
+   "error": "",
+   "precision": "exact",
+   "clase": "tourism",
+   "tipo": "museum",
+   "lat": 40.4162159,
+   "lon": -3.6949317,
+   "nombre": "Museo Thyssen-Bornemisza, 8, Paseo del Prado, Cortes, Centro, Madrid, Comunidad de Madrid, 28014, España"
+  },
+  {
+   "consulta": "Lavapiés, Madrid",
+   "ok": true,
+   "error": "",
+   "precision": "zone",
+   "clase": "railway",
+   "tipo": "station",
+   "lat": 40.4084539,
+   "lon": -3.7006613,
+   "nombre": "Lavapiés, Plaza de Lavapiés, Lavapiés, Embajadores, Centro, Madrid, Comunidad de Madrid, 28012, España"
+  }
+ ]
+}

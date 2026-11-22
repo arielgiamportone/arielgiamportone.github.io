@@ -1,0 +1,77 @@
+{{ $en := eq site.Language.Lang "en" }}
+{{ $d := (.Resources.Get "resultados.json") | transform.Unmarshal }}
+{{ $protocolo := dict
+  "dgc" (cond $en "National Directorate (DGC) · OVC XML services + INSPIRE WFS" "Dirección General del Catastro · servicios OVC XML + WFS INSPIRE")
+  "gipuzkoa" (cond $en "Gipuzkoa foral cadastre · INSPIRE WFS 2.0 stored query" "Catastro foral de Gipuzkoa · WFS INSPIRE 2.0, consulta almacenada")
+  "navarra" (cond $en "Navarre cadastre · INSPIRE WFS 2.0 with cql_filter" "Catastro de Navarra · WFS INSPIRE 2.0 con cql_filter")
+  "alava" (cond $en "Álava foral cadastre · ArcGIS WFS with FES XML filter" "Catastro foral de Álava · WFS de ArcGIS con filtro FES XML")
+  "bizkaia" (cond $en "Bizkaia foral cadastre · ArcGIS WFS, reference split into municipality, polygon and parcel" "Catastro foral de Bizkaia · WFS de ArcGIS, referencia partida en municipio, polígono y parcela")
+}}
+<div class="demo-cat" data-demo="catastro">
+  <div class="demo-cat__pestanas" role="tablist">
+    {{ range $i, $c := $d.casos }}
+      <button type="button" role="tab" id="tab-{{ $c.id }}" aria-controls="panel-{{ $c.id }}" aria-selected="{{ cond (eq $i 0) "true" "false" }}" data-caso="{{ $c.id }}">
+        <span class="demo-cat__driver">{{ upper $c.driver }}</span> {{ $c.ciudad }}
+      </button>
+    {{ end }}
+  </div>
+  {{ range $i, $c := $d.casos }}
+  <div class="demo-cat__panel" role="tabpanel" id="panel-{{ $c.id }}" aria-labelledby="tab-{{ $c.id }}" {{ if ne $i 0 }}hidden{{ end }}>
+    <div class="demo-cat__fila">
+      <div>
+        <ol class="demo-cat__pasos">
+          <li><span class="paso__n">1</span><div><strong>{{ cond $en "Query point" "Punto de consulta" }}</strong><br>{{ cond $en (printf "Next to %s, %s" $c.referencia_en $c.ciudad) (replace (printf "Junto a %s, %s" $c.referencia_es $c.ciudad) "Junto a el " "Junto al ") }} · <code>{{ printf "%.4f, %.4f" $c.consulta_lat $c.consulta_lon }}</code></div></li>
+          <li><span class="paso__n">2</span><div><strong>{{ cond $en "Router" "Router" }}</strong><br>{{ cond $en "INE code" "Código INE" }} <code>{{ $c.ine }}</code> → {{ cond $en "province" "provincia" }} <code>{{ $c.provincia }}</code> → <strong>{{ index $protocolo $c.driver }}</strong></div></li>
+          <li><span class="paso__n">3</span><div><strong>{{ cond $en "Cadastral reference" "Referencia catastral" }}</strong><br><code>{{ $c.rc }}</code>
+            {{ with $c.pasos }}<br><span class="tenue pequeno">{{ cond $en "Obtained from the point with" "Obtenida desde el punto con" }} <code>rc_at_point</code>: {{ (index . 0).descripcion }}</span>{{ end }}</div></li>
+          <li><span class="paso__n">4</span><div><strong>{{ cond $en "Result" "Resultado" }}</strong>
+            <dl class="demo-cat__datos">
+              <div><dt>WGS84</dt><dd><code>{{ printf "%.6f, %.6f" $c.lat $c.lon }}</code></dd></div>
+              {{ with $c.area_m2 }}<div><dt>{{ cond $en "Parcel area" "Superficie de parcela" }}</dt><dd>{{ lang.FormatNumber 0 . }} m²</dd></div>{{ end }}
+              {{ if $c.fisico.ok }}
+                <div><dt>{{ cond $en "Built area" "Superficie construida" }}</dt><dd>{{ lang.FormatNumber 0 $c.fisico.area_m2 }} m²</dd></div>
+                <div><dt>{{ cond $en "Year per cadastre (oldest unit)" "Año según el catastro (unidad más antigua)" }}</dt><dd>{{ $c.fisico.year }}</dd></div>
+                <div><dt>{{ cond $en "Cadastral use" "Uso catastral" }}</dt><dd>{{ $c.fisico.use }}</dd></div>
+              {{ else }}
+                <div><dt>{{ cond $en "Physical data" "Datos físicos" }}</dt><dd><code>{{ $c.fisico.error }}</code> <span class="tenue pequeno">{{ cond $en "only the DGC publishes them" "solo los publica la DGC" }}</span></dd></div>
+              {{ end }}
+            </dl></div></li>
+        </ol>
+        <p class="demo-cat__enlaces pequeno">{{ cond $en "Live links (never stored):" "Enlaces en vivo (nunca se guardan):" }}
+          <a href="{{ $c.links.maps }}" target="_blank" rel="noopener">Google Maps ↗</a> · <a href="{{ $c.links.street_view }}" target="_blank" rel="noopener">Street View ↗</a></p>
+        <p class="tenue pequeno">{{ cond $en "Source" "Fuente" }}: {{ $c.attribution }}</p>
+      </div>
+      {{ with $.Resources.Get $c.orto }}
+      <figure class="demo-cat__orto">
+        {{ $img := .Resize "512x webp q82" }}
+        <div class="demo-cat__marco"><img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="{{ cond $en "PNOA orthophoto centred on the returned point" "Ortofoto PNOA centrada en el punto devuelto" }}" loading="lazy">
+        <span class="demo-cat__mira" aria-hidden="true"></span></div>
+        <figcaption>{{ cond $en "PNOA orthophoto, stored with its attribution" "Ortofoto PNOA, almacenada con su atribución" }} · {{ $c.orto_attr }}</figcaption>
+      </figure>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+  <div class="demo-cat__router">
+    <h3>{{ cond $en "Router: which cadastre answers a municipality?" "Router: ¿qué catastro responde por un municipio?" }}</h3>
+    <label>{{ cond $en "INE municipality code (5 digits)" "Código INE del municipio (5 dígitos)" }}
+      <input name="ine" value="48020" inputmode="numeric" maxlength="5" autocomplete="off"></label>
+    <p class="demo-cat__ruta" data-ruta aria-live="polite"></p>
+    <p class="tenue pequeno">{{ cond $en "Try 28079 (Madrid), 20069 (Donostia), 31201 (Pamplona), 01059 (Vitoria) or 48020 (Bilbao)." "Prueba 28079 (Madrid), 20069 (Donostia), 31201 (Pamplona), 01059 (Vitoria) o 48020 (Bilbao)." }}</p>
+  </div>
+
+  {{ with $d.geocoding }}
+  <div class="demo-cat__geo">
+    <h3>{{ cond $en "Fallback geocoding: precision by OSM class" "Geocoding de respaldo: precisión por clase de OSM" }}</h3>
+    <p class="tenue pequeno">{{ cond $en "When the cadastre cannot resolve, the address goes to Nominatim. The library labels each hit by its OpenStreetMap class and only stores «exact» ones by default: a neighbourhood centroid is not the property." "Cuando el catastro no resuelve, la dirección va a Nominatim. La librería etiqueta cada resultado por su clase de OpenStreetMap y por defecto solo guarda los «exactos»: el centroide de un barrio no es el inmueble." }}</p>
+    <table>
+      <thead><tr><th>{{ cond $en "Query" "Consulta" }}</th><th>{{ cond $en "OSM class" "Clase OSM" }}</th><th>{{ cond $en "Precision" "Precisión" }}</th><th>{{ cond $en "Stored by default" "Se guarda por defecto" }}</th></tr></thead>
+      <tbody>{{ range . }}<tr><td>{{ .consulta }}</td><td><code>{{ .clase }}/{{ .tipo }}</code></td><td><code>{{ .precision }}</code></td><td>{{ if eq .precision "exact" }}✔{{ else }}✘ <span class="tenue">(--accept-zone)</span>{{ end }}</td></tr>{{ end }}</tbody>
+    </table>
+  </div>
+  {{ end }}
+  <p class="tenue pequeno">{{ cond $en "Results obtained on" "Resultados obtenidos el" }} {{ $d.fecha }} {{ cond $en "with" "con" }} <code>{{ $d.paquete }}</code> {{ cond $en "against the public services; the page shows them without querying anything." "contra los servicios públicos; la página los muestra sin consultar nada." }}</p>
+</div>
+{{ $js := resources.Get "js/demos/catastro-demo.js" | js.Build (dict "minify" true "format" "esm") | fingerprint }}
+<script type="module" src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
