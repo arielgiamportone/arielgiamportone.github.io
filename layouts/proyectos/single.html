@@ -25,7 +25,9 @@
   <section class="bloque" id="demo"><div class="contenedor">
     <h2>{{ .titulo }}</h2>
     {{ with .nota }}<p class="tenue">{{ . }}</p>{{ end }}
-    {{ if .parcial }}
+    {{ if .pestanas }}
+      {{ partial "demos/pestanas.html" $ }}
+    {{ else if .parcial }}
       {{ partial (printf "demos/%s.html" .parcial) $ }}
     {{ else }}
     <div class="demo">

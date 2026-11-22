@@ -1,0 +1,17 @@
+{{/* Demo en pestañas de iframes (carga diferida): .Params.demo.pestanas = [{titulo, url, nota}] */}}
+{{ $p := .Params.demo.pestanas }}
+<div class="demo-pest" data-demo="pestanas">
+  <div class="demo-cat__pestanas" role="tablist">
+    {{ range $i, $t := $p }}<button type="button" role="tab" id="dp-tab-{{ $i }}" aria-controls="dp-panel-{{ $i }}" aria-selected="{{ cond (eq $i 0) "true" "false" }}">{{ $t.titulo }}</button>{{ end }}
+  </div>
+  {{ range $i, $t := $p }}
+  <div class="demo-pest__panel" role="tabpanel" id="dp-panel-{{ $i }}" aria-labelledby="dp-tab-{{ $i }}" {{ if ne $i 0 }}hidden{{ end }}>
+    <div class="demo-pest__marco">
+      <iframe {{ if eq $i 0 }}src{{ else }}data-src{{ end }}="{{ $t.url }}" title="{{ $t.titulo }}" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+    {{ with $t.nota }}<p class="tenue pequeno">{{ . }}</p>{{ end }}
+  </div>
+  {{ end }}
+</div>
+{{ $js := resources.Get "js/demos/pestanas.js" | js.Build (dict "minify" true "format" "esm") | fingerprint }}
+<script type="module" src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
