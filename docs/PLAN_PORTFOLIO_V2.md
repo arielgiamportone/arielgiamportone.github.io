@@ -26,7 +26,7 @@ El sitio es Hugo con el tema `hugo-profile` (submódulo) y casi todo el contenid
 2. **Cuatro perfiles, una web:** el visitante elige la lente (o llega desde el CV ya con ella) y ve primero lo relevante para ese perfil.
 3. **Proyectos que se pueden tocar:** cada proyecto con imagen, contexto, qué hiciste, stack, enlaces, y una demo o simulador cuando sea posible.
 4. **Mantenible:** actualizar la base y ejecutar un script debe bastar para refrescar la web.
-5. **Bilingüe ES/EN** (pendiente de tu decisión, ver §8).
+5. **Bilingüe ES/EN** desde el principio.
 
 ## 3. Arquitectura propuesta
 
@@ -92,7 +92,7 @@ Proyectos internos de Intervalor sin repo público (INTERDATA, MAD 69/23, Metro 
 | 2 | Tema propio: diseño, portada con lentes, trayectoria, publicaciones | Web nueva navegable, aún sin fichas ricas |
 | 3 | Plantilla de ficha de proyecto + proyectos A, uno a uno | 6 fichas completas con demo |
 | 4 | Proyectos B, uno a uno | Resto de fichas con demo o imágenes |
-| 5 | Inglés, SEO (Open Graph, sitemap), CV en PDF por perfil, analítica sin cookies | Web lista para compartir |
+| 5 | Revisión del inglés, SEO (Open Graph, sitemap), CV en PDF por perfil, analítica sin cookies | Web lista para compartir |
 | 6 | Linktree, LinkedIn y CV apuntando a las páginas de perfil | Todo enlazado |
 
 Cada proyecto se cierra con: ficha revisada por ti, demo funcionando, capturas, enlaces comprobados y despliegue.
@@ -104,8 +104,8 @@ Cada proyecto se cierra con: ficha revisada por ti, demo funcionando, capturas, 
 - Visto bueno de cada ficha antes de publicarla.
 - Para AYUNDATA y los casos de Intervalor: confirmar que la descripción pública es aceptable para la empresa.
 
-## 8. Decisiones abiertas
+## 8. Decisiones (2026-11-22)
 
-1. Idiomas: ¿español e inglés desde el principio, o español primero?
-2. Dominio: ¿seguir con `arielgiamportone.github.io` o usar un dominio propio?
-3. AYUNDATA y Intervalor: ¿se puede publicar un caso de estudio con capturas sobre datos sintéticos?
+1. Idiomas: **español e inglés desde el principio** (Hugo multilingüe; `/` en español y `/en/` en inglés).
+2. Dominio: **se mantiene `arielgiamportone.github.io`**.
+3. AYUNDATA e Intervalor: **caso de estudio con arquitectura y capturas sobre datos sintéticos**, sin clientes. Ariel lo confirma con la empresa antes de publicar.
