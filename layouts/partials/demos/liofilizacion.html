@@ -1,0 +1,20 @@
+{{ $en := eq site.Language.Lang "en" }}
+<div class="demo-reg demo-lio" data-demo="liofilizacion" data-lang="{{ site.Language.Lang }}">
+  <div class="demo-cat__pestanas" role="tablist">
+    <button type="button" role="tab" aria-selected="true" data-tab="cinetica">{{ cond $en "Drying kinetics (Page model)" "Cinética de secado (modelo de Page)" }}</button>
+    <button type="button" role="tab" aria-selected="false" data-tab="proceso">{{ cond $en "How freeze-drying works" "Cómo funciona la liofilización" }}</button>
+  </div>
+  <section class="demo-reg__panel" data-panel="cinetica">
+    <p class="tenue pequeno">{{ cond $en "The fraction of water still to remove, MR(t) = exp(−k·tⁿ), with the parameters fitted to the 261 observations of the project for each pre-treatment. Move the time and compare." "La fracción de agua que falta eliminar, MR(t) = exp(−k·tⁿ), con los parámetros ajustados a las 261 observaciones del proyecto para cada pretratamiento. Mueve el tiempo y compara." }}</p>
+    <label class="demo-lp__des">{{ cond $en "Hours in the freeze-dryer" "Horas en el liofilizador" }} <output data-v="t"></output><input type="range" name="t" min="0" max="96" step="1" value="24"></label>
+    <div class="demo-lio__grafico" data-grafico></div>
+    <div data-tabla></div>
+    <p class="tenue pequeno">{{ cond $en "Page parameters from resultados_clave.md in the project repository. The fit is better for pre-frozen samples (R² > 0.91) than for fresh ones (0.76): pre-freezing makes the cell structure more uniform and the drying more predictable. The observations level off at about 6-10 % residual moisture while the model tends to zero, so beyond about 40 h it should not be read literally." "Parámetros de Page de resultados_clave.md del repositorio del proyecto. El ajuste es mejor con las muestras precongeladas (R² > 0,91) que con las frescas (0,76): el precongelado homogeneiza la estructura celular y hace el secado más predecible. Las observaciones se estabilizan en torno a un 6-10 % de humedad residual mientras el modelo tiende a cero, así que a partir de unas 40 horas no debe leerse al pie de la letra." }}</p>
+  </section>
+  <section class="demo-reg__panel" data-panel="proceso" hidden>
+    <div class="demo-pest__marco demo-lio__marco"><iframe data-src="https://qa3ds.github.io/proceso/" title="{{ cond $en "Animation of the freeze-drying process" "Animación del proceso de liofilización" }}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+    <p class="pequeno"><a href="https://qa3ds.github.io/proceso/" target="_blank" rel="noopener">{{ cond $en "Open the animation in a new tab" "Abrir la animación en otra pestaña" }} ↗</a> · {{ cond $en "In Spanish, from the group's website." "Desde la web del grupo." }}</p>
+  </section>
+</div>
+{{ $js := resources.Get "js/demos/liofilizacion-demo.js" | js.Build (dict "minify" true "format" "esm") | fingerprint }}
+<script type="module" src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
