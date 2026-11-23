@@ -444,21 +444,40 @@
   perfiles:
   - ia
   orden: 15
+- id: utn_antartida_argentina
+  nombre: UTN Antártida Argentina (UTNAA) — Grupo de Desarrollo Logístico
+  organizacion: UTN Facultad Regional Tierra del Fuego
+  tipo: desarrollo_tecnologico
+  rol: Cofundador y coordinador
+  descripcion: 'Grupo de desarrollo logístico de Ingeniería Pesquera (UTN FRTDF, Ushuaia) para vincular la universidad con
+    los sectores portuario, marítimo y pesquero. Continúa el trabajo del Grupo de Tecnología Marítima Tierra del Fuego, su
+    precursor (cartografía digital antártica, VITO GNU/Linux, KIPPA, dragas para COPLA, estudio del proyecto de ley de Marina
+    Mercante de 2014). Desde 2020: participación en el Estudio Estratégico del Sistema Portuario Argentino, acuerdo con la
+    Asociación Internacional de Profesionales de Puertos y Costas para diseñar un sistema de Short Sea Shipping regional,
+    proyecto de desarrollo logístico-portuario para Río Grande y conversatorio académico anual sobre el sistema portuario.
+    Web cedeslogtdf.com.ar (caída) y canal de YouTube.'
+  inicio: '2020'
+  actual: false
+  perfiles:
+  - economia-azul
+  - sector-publico
+  orden: 16
 - id: vito_gnu_linux
   nombre: VITO GNU/Linux — distribución de navegación
   organizacion: Grupo de Tecnología Marítima UTN / UVI-UTN
   tipo: desarrollo_tecnologico
   rol: Desarrollador
+  fechas: 2012 – 2015
   descripcion: Fork de Debian estable dedicado a la navegación, implementado en buques de turismo antártico (Buque Ushuaia,
     Antarpply). Reconocido de interés municipal, provincial y nacional; premio del Centro de Patrones y Oficiales Fluviales
     de Pesca y Cabotaje Marítimo (10/2014).
-  inicio: '2013'
-  fin: '2014'
+  inicio: '2012'
+  fin: '2015'
   actual: false
   perfiles:
   - economia-azul
   - software
-  orden: 16
+  orden: 17
 - id: aura_farm_ar
   nombre: Aura Farm AR
   organizacion: Personal
@@ -479,7 +498,7 @@
   actual: false
   perfiles:
   - software
-  orden: 17
+  orden: 18
 - id: cvar_sinergias
   nombre: Sinergias y conflictos entre las actividades económicas y los socioecosistemas de Tierra del Fuego
   organizacion: CONICET-CADIC

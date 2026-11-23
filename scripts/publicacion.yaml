@@ -60,7 +60,7 @@ repos_privados: ["github.com/Intervalor-Data", "privado"]
 # AYUNDATA se publica como caso de estudio (decisión 2026-11-22).
 proyectos_web:
   ocultar: [interdata, mad6923_dashboard, ens_iso27001, licdatahunter, assetvision, photo_downloader, interval_python, casos_estudio_clean_room_2026]
-  orden: [ayundata, trawlkit, cfp_audit_intelligence, fisheries_mlops, asset_identity_gs1, catastro_enrichment_es, kippa_rov, paradox_db_py, periodic_report_kit, pesqueros_en_ia_cursos, apigfw, casos_estudio_intervalor, transcriptor_placas, pid_liofilizados, investigacion_operativa_ml, vito_gnu_linux, aura_farm_ar]
+  orden: [ayundata, trawlkit, cfp_audit_intelligence, fisheries_mlops, asset_identity_gs1, catastro_enrichment_es, kippa_rov, paradox_db_py, periodic_report_kit, pesqueros_en_ia_cursos, apigfw, casos_estudio_intervalor, transcriptor_placas, pid_liofilizados, investigacion_operativa_ml, utn_antartida_argentina, vito_gnu_linux, aura_farm_ar]
 
 # Ajustes por proyecto para cumplir las restricciones de publicación de la base (nota_publicacion).
 proyectos_ajustes:
