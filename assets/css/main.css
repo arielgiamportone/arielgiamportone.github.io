@@ -407,3 +407,15 @@ a.tarjeta { color: inherit; text-decoration: none; }
 .demo-ins__tarjeta.bien { border-color: #16a34a; }
 .demo-ins__tarjeta .demo-reg__etq { margin-top: 0; }
 .demo-ins__cifra { font-size: 1.3rem; font-weight: 750; margin: 0 0 .2rem; }
+
+/* Demo: archivador de fotos */
+.demo-reg__ejemplos .boton.activo { border-color: var(--acento); color: var(--acento); box-shadow: inset 0 0 0 1px var(--acento); }
+.demo-arc__fich, .demo-arc__enl { margin: 0; padding-left: 1rem; font-size: .8rem; }
+.demo-arc__enl { list-style: none; padding-left: 0; }
+.demo-arc__enl li, .demo-arc__fich li { margin: .15rem 0; word-break: break-all; }
+.demo-arc__ruta { margin: 0 0 .3rem; font-size: .95rem; word-break: break-all; }
+.demo-ins__tarjeta p { font-size: .9rem; margin: .25rem 0; }
+.demo-ins__tarjeta .pequeno { font-size: .8rem; }
+.demo-reg .aviso { color: #b45309; font-weight: 600; }
+:root[data-tema="oscuro"] .demo-reg .aviso { color: #fbbf24; }
+@media (prefers-color-scheme: dark) { :root[data-tema="auto"] .demo-reg .aviso { color: #fbbf24; } }

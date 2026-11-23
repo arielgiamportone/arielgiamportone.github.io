@@ -91,3 +91,35 @@ def test_puente_inspecciones():
     r = json.loads(d.refrescar(json.dumps({"historia": hist, "respuesta": resp[:5], "fotos": [],
                                            "desde": "2026-10-01", "hasta": "2026-12-31"})))
     assert not r["ok"]
+
+
+# -------------------------------------------------- inspection-photo-archiver
+ARCHIVADOR = RAIZ / "content/proyectos/inspection-photo-archiver/codigo"
+MODULOS_ARCHIVADOR = {  # SHA-256 en el repositorio público, commit 3883db7
+    "safe_ledger.py": "c5cdbdd2cb2586acf17cb0db7b583b12536049fab12ca44b4cd98b912cf537c6",
+    "destination_resolver.py": "242c0426a1a69285b8b82d2ed0ceec3ad9d938e49292d48fee5e2ae8602869ab",
+    "relative_links.py": "da15557a7ffd20021109bbf5b62a560fda8c2b9b52bc73b9e67bb579d28ca813",
+}
+
+
+def test_modulos_archivador_sin_cambios():
+    for nombre, sha in MODULOS_ARCHIVADOR.items():
+        assert hashlib.sha256((ARCHIVADOR / nombre).read_bytes()).hexdigest() == sha, nombre
+
+
+def test_puente_archivador(tmp_path):
+    sys.path.insert(0, str(ARCHIVADOR))
+    try:
+        sys.modules.pop("demo", None)
+        d = importlib.import_module("demo")
+    finally:
+        sys.path.remove(str(ARCHIVADOR))
+        sys.modules.pop("demo", None)
+    q = lambda fn, **kw: json.loads(getattr(d, fn)(json.dumps({"base": str(tmp_path), **kw})))  # noqa: E731
+    r = q("registro", caso="bloqueado")
+    assert not r["ok"] and r["despues"][0]["filas"] == 5
+    assert q("registro", caso="antiguo")["accion"] == "migrated"
+    assert q("destino", local="L12", fecha="2026-10-03")["carpeta"] == "2026/11/L12/photos"
+    e = q("enlaces", paso="duplicado")
+    assert e["reparacion"]["reparados"] == [9] and e["reparacion"]["ambiguos"] == [8]
+    assert "error" in q("enlaces", paso="desmontado")["reparacion"]

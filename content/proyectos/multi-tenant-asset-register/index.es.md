@@ -1,5 +1,6 @@
 ---
 title: "Registro de activos multi-tenant"
+weight: 1
 proyecto: casos_estudio_intervalor
 translationKey: "proyecto-multi-tenant-asset-register"
 url: "/proyectos/multi-tenant-asset-register/"

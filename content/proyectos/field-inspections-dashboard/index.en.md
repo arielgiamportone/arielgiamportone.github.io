@@ -1,5 +1,6 @@
 ---
 title: "Field inspections dashboard"
+weight: 2
 proyecto: casos_estudio_intervalor
 translationKey: "proyecto-field-inspections-dashboard"
 url: "/en/projects/field-inspections-dashboard/"

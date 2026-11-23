@@ -1,5 +1,6 @@
 ---
 title: "Panel de inspecciones de campo"
+weight: 2
 proyecto: casos_estudio_intervalor
 translationKey: "proyecto-field-inspections-dashboard"
 url: "/proyectos/field-inspections-dashboard/"

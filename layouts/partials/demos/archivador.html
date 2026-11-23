@@ -1,0 +1,47 @@
+{{ $en := eq site.Language.Lang "en" }}
+{{ $mods := slice }}{{ range slice "safe_ledger" "destination_resolver" "relative_links" "demo" }}{{ with $.Resources.Get (printf "codigo/%s.py" .) }}{{ $mods = $mods | append .RelPermalink }}{{ end }}{{ end }}
+<div class="demo-reg demo-arc" data-demo="archivador" data-modulos="{{ delimit $mods " " }}" data-lang="{{ site.Language.Lang }}">
+  <div class="demo-pdx__inicio" data-inicio>
+    <button type="button" class="boton" data-cargar>{{ cond $en "Load Python and the repository modules" "Cargar Python y los módulos del repositorio" }}</button>
+    <p class="tenue pequeno">{{ cond $en "Downloads Pyodide (about 10 MB, from the jsDelivr CDN) and runs the three clean-room modules of the repository exactly as published, on a file system that lives only in your browser's memory." "Descarga Pyodide (unos 10 MB, desde la CDN de jsDelivr) y ejecuta los tres módulos clean-room del repositorio tal como están publicados, sobre un sistema de ficheros que solo existe en la memoria de tu navegador." }}</p>
+    <p class="demo-pdx__estado" data-estado aria-live="polite"></p>
+  </div>
+
+  <div data-resultado hidden>
+    <div class="demo-cat__pestanas" role="tablist">
+      <button type="button" role="tab" aria-selected="true" data-tab="registro">{{ cond $en "A ledger that cannot empty itself" "Un registro que no se vacía" }}</button>
+      <button type="button" role="tab" aria-selected="false" data-tab="destino">{{ cond $en "Which folder does the photo go to?" "¿A qué carpeta va la foto?" }}</button>
+      <button type="button" role="tab" aria-selected="false" data-tab="enlaces">{{ cond $en "Links that survive a move" "Enlaces que sobreviven a una mudanza" }}</button>
+    </div>
+
+    <section class="demo-reg__panel" data-panel="registro">
+      <p class="tenue pequeno">{{ cond $en "The ledger maps every archived photo to its source and only grows. The original code recreated it empty whenever it could not read it, and months of history disappeared without an error. Pick what the run finds on disk; then two new photos are appended." "El registro enlaza cada foto archivada con su origen y solo crece. El código original lo recreaba vacío cada vez que no podía leerlo, y desaparecieron meses de historia sin un solo error. Elige qué encuentra el proceso en disco; después se añaden dos fotos nuevas." }}</p>
+      <div class="demo-reg__ejemplos" data-ejemplos="registro"></div>
+      <div data-salida="registro"></div>
+    </section>
+
+    <section class="demo-reg__panel" data-panel="destino" hidden>
+      <p class="tenue pequeno">{{ cond $en "A site's folder is created when its inspection is written up: the month of the visit or later, never earlier. Looking only in the photo's own month sent late write-ups to the error folder while the run said «0 errors»." "La carpeta de un local se crea cuando se redacta su parte de inspección: el mes de la visita o uno posterior, nunca antes. Buscar solo en el mes de la foto mandaba los partes tardíos a la carpeta de errores mientras el proceso decía «0 errores»." }}</p>
+      <div class="demo-reg__ejemplos" data-ejemplos="destino"></div>
+      <div class="demo-reg__fila">
+        <label class="demo-reg__campo demo-reg__campo--corto">{{ cond $en "Site" "Local" }}<select name="local"><option>L03</option><option>L07</option><option>L09</option><option>L12</option><option>L21</option></select></label>
+        <label class="demo-reg__campo demo-reg__campo--corto">{{ cond $en "Date the photo was taken" "Fecha de la foto" }}<input type="date" name="fecha" value="2026-10-03"></label>
+      </div>
+      <div data-salida="destino"></div>
+    </section>
+
+    <section class="demo-reg__panel" data-panel="enlaces" hidden>
+      <p class="tenue pequeno">{{ cond $en "The ledger used to store an absolute link per photo, and every reorganisation of the folder tree broke them (three times, up to about 8,000 links at once). Now links are relative to the ledger, verified by resolving them to a file, and repaired without guessing. Ten synthetic photos; go step by step." "El registro guardaba un enlace absoluto por foto y cada reorganización del árbol de carpetas los rompía (tres veces, hasta unos 8.000 enlaces de golpe). Ahora los enlaces son relativos al registro, se verifican resolviéndolos a un fichero y se reparan sin adivinar. Diez fotos sintéticas; ve paso a paso." }}</p>
+      <div class="demo-reg__ejemplos" data-ejemplos="enlaces"></div>
+      <div data-salida="enlaces"></div>
+    </section>
+
+    <details class="demo-pdx__codigo">
+      <summary>{{ cond $en "The Python bridge that runs on each change" "El puente en Python que se ejecuta en cada cambio" }}</summary>
+      <p class="tenue pequeno">{{ cond $en "The repository modules are loaded unchanged; the bridge prepares each scenario on disk and returns the result as JSON." "Los módulos del repositorio se cargan sin cambios; el puente prepara cada escenario en disco y devuelve el resultado en JSON." }}</p>
+      <pre><code data-codigo></code></pre>
+    </details>
+  </div>
+</div>
+{{ $js := resources.Get "js/demos/archivador-demo.js" | js.Build (dict "minify" true "format" "esm") | fingerprint }}
+<script type="module" src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>

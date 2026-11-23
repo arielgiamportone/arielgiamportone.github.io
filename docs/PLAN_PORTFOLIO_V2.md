@@ -126,3 +126,4 @@ Cada proyecto se cierra con: ficha revisada por ti, demo funcionando, capturas, 
 | periodic-report-kit | Informes mensual y semestral de ejemplo (PDF en visor + descargas Word/PDF) | Publicada |
 | Registro de activos multi-tenant (clean-room) | Traductor SQL, amortización con memoria, revalorización idempotente y conciliación, con el código del repo en Pyodide | Publicada |
 | Panel de inspecciones de campo (clean-room) | Proxy de fotos real contra servidor simulado + ventana de autoridad con pandas en Pyodide | En `v2`, pendiente de visto bueno |
+| Archivador de fotos de inspección (clean-room) | Registro que no se vacía, resolutor de carpeta y enlaces relativos con reparación, en Pyodide | En `v2`, pendiente de visto bueno |

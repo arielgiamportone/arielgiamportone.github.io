@@ -1,7 +1,8 @@
 {{- $p := . -}}
 {{- $grupo := partial "tipo-proyecto.html" $p.tipo -}}
-{{- $ficha := "" -}}
-{{- range where site.RegularPages "Section" "proyectos" }}{{ if eq .Params.proyecto $p.id }}{{ $ficha = .RelPermalink }}{{ end }}{{ end -}}
+{{- $fichas := slice -}}
+{{- range sort (where site.RegularPages "Section" "proyectos") "Weight" }}{{ if eq .Params.proyecto $p.id }}{{ $fichas = $fichas | append . }}{{ end }}{{ end -}}
+{{- $ficha := "" -}}{{- with $fichas }}{{ $ficha = (index . 0).RelPermalink }}{{ end -}}
 <article class="tarjeta proyecto{{ if $ficha }} tarjeta--con-ficha{{ end }}" data-perfiles="{{ delimit ($p.perfiles | default slice) " " }}" data-tipo="{{ $grupo }}">
   <p class="tarjeta__meta"><span class="etiqueta etiqueta--{{ $grupo }}">{{ i18n (printf "tipo_%s" $grupo) }}</span> <span>{{ partial "fechas.html" ($p.fechas | default "") }}</span></p>
   <h3 class="tarjeta__titulo">{{ if $ficha }}<a class="tarjeta__enlace" href="{{ $ficha }}">{{ $p.nombre }}</a>{{ else }}{{ $p.nombre }}{{ end }}</h3>
@@ -11,8 +12,9 @@
     <ul class="chips">{{ range first 6 . }}<li>{{ . }}</li>{{ end }}</ul>
   {{ end }}
   <p class="tarjeta__enlaces">
-    {{ with $ficha }}<a href="{{ . }}">{{ i18n "ver_ficha" }} →</a>{{ end }}
-    {{ with $p.repo }}<a href="{{ . }}" target="_blank" rel="noopener">{{ i18n "repositorio" }} ↗</a>{{ end }}
+    {{ if gt (len $fichas) 1 }}{{ range $fichas }}<a href="{{ .RelPermalink }}">{{ .Title }} →</a>{{ end }}
+    {{ else }}{{ with $ficha }}<a href="{{ . }}">{{ i18n "ver_ficha" }} →</a>{{ end }}{{ end }}
+    {{ with $p.repo }}{{ if not (strings.Contains . " ") }}<a href="{{ . }}" target="_blank" rel="noopener">{{ i18n "repositorio" }} ↗</a>{{ end }}{{ end }}
     {{ with $p.pypi }}<a href="{{ . }}" target="_blank" rel="noopener">{{ i18n "pypi" }} ↗</a>{{ end }}
     {{ with $p.web }}<a href="{{ . }}" target="_blank" rel="noopener">{{ i18n "web" }} ↗</a>{{ end }}
   </p>

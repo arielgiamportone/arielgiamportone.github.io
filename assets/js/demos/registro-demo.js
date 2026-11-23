@@ -86,6 +86,7 @@ function iniciar(raiz) {
     py.runPython("import sys; sys.path.insert(0, '/registro')\nfrom demo import traducir, sede, amortizar, revalorizar, conciliar");
     $('[data-codigo]').textContent = puente.trim();
     estado.textContent = T.listo(((performance.now() - t0) / 1000).toFixed(1));
+    $('[data-cargar]').hidden = true;
     $('[data-resultado]').hidden = false;
     rellenarEjemplos();
     sql(); sedeR(); amort(); reval(); conc();
