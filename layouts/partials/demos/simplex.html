@@ -1,0 +1,26 @@
+{{ $en := eq site.Language.Lang "en" }}
+<div class="demo-reg demo-lp" data-demo="simplex" data-lang="{{ site.Language.Lang }}">
+  <p class="tenue pequeno">{{ cond $en "The repository's teaching model: choose how many boats of each type to send out, given the fuel, crew and fleet available. Everything is computed in your browser, exactly (by enumerating the vertices of the feasible region), and checked against SciPy in the site's tests." "El modelo docente del repositorio: decidir cuántos barcos de cada tipo salen a faenar con el combustible, la tripulación y la flota disponibles. Todo se calcula en tu navegador de forma exacta (enumerando los vértices de la región factible) y se comprueba contra SciPy en los tests del sitio." }}</p>
+  <div class="demo-lp__cols">
+    <div>
+      <p class="demo-reg__etq">{{ cond $en "Resources available" "Recursos disponibles" }}</p>
+      <label class="demo-lp__des">{{ cond $en "Fuel (L)" "Combustible (L)" }} <output data-v="b0"></output><input type="range" name="b0" min="1000" max="9000" step="100" value="3000"></label>
+      <label class="demo-lp__des">{{ cond $en "Crew (people)" "Tripulación (personas)" }} <output data-v="b1"></output><input type="range" name="b1" min="50" max="400" step="5" value="150"></label>
+      <label class="demo-lp__des">{{ cond $en "Boats in the fleet" "Barcos de la flota" }} <output data-v="b2"></output><input type="range" name="b2" min="3" max="25" step="1" value="15"></label>
+      <p class="demo-reg__etq">{{ cond $en "Each boat type" "Cada tipo de barco" }}</p>
+      <div class="demo-reg__tabla"><table class="demo-lp__tipos">
+        <tr><th></th><th>{{ cond $en "Profit" "Beneficio" }}</th><th>{{ cond $en "Fuel" "Combustible" }}</th><th>{{ cond $en "Crew" "Tripulación" }}</th></tr>
+        <tr><th>{{ cond $en "Type 1" "Tipo 1" }}</th><td><input name="c0" value="800" inputmode="decimal"></td><td><input name="a00" value="200" inputmode="decimal"></td><td><input name="a10" value="8" inputmode="decimal"></td></tr>
+        <tr><th>{{ cond $en "Type 2" "Tipo 2" }}</th><td><input name="c1" value="1200" inputmode="decimal"></td><td><input name="a01" value="300" inputmode="decimal"></td><td><input name="a11" value="12" inputmode="decimal"></td></tr>
+        <tr><th>{{ cond $en "Type 3" "Tipo 3" }}</th><td><input name="c2" value="1800" inputmode="decimal"></td><td><input name="a02" value="500" inputmode="decimal"></td><td><input name="a12" value="18" inputmode="decimal"></td></tr>
+      </table></div>
+      <label class="demo-lp__des">{{ cond $en "Expected yield of type 3 (estimated by a model)" "Rendimiento previsto del tipo 3 (lo estima un modelo)" }} <output data-v="r"></output><input type="range" name="r" min="0.6" max="1.4" step="0.01" value="1"></label>
+      <p class="tenue pequeno">{{ cond $en "This is where prediction enters: if the profit of a boat type depends on the weather or the price, a model can estimate it, and the optimisation decides with that estimate." "Aquí entra la predicción: si el beneficio de un tipo de barco depende del clima o del precio, un modelo puede estimarlo y la optimización decide con esa estimación." }}</p>
+      <label class="demo-reg__check"><input type="checkbox" name="entero"> {{ cond $en "Whole boats only (integer solution)" "Solo barcos enteros (solución entera)" }}</label>
+      <p><button type="button" class="boton boton--secundario boton--chico" data-reset>{{ cond $en "Back to the repository model" "Volver al modelo del repositorio" }}</button></p>
+    </div>
+    <div data-salida></div>
+  </div>
+</div>
+{{ $js := resources.Get "js/demos/simplex-demo.js" | js.Build (dict "minify" true "format" "esm") | fingerprint }}
+<script type="module" src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>

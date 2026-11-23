@@ -127,3 +127,4 @@ Cada proyecto se cierra con: ficha revisada por ti, demo funcionando, capturas, 
 | Registro de activos multi-tenant (clean-room) | Traductor SQL, amortización con memoria, revalorización idempotente y conciliación, con el código del repo en Pyodide | Publicada |
 | Panel de inspecciones de campo (clean-room) | Proxy de fotos real contra servidor simulado + ventana de autoridad con pandas en Pyodide | Publicada |
 | Archivador de fotos de inspección (clean-room) | Registro que no se vacía, resolutor de carpeta y enlaces relativos con reparación, en Pyodide | Publicada |
+| Simplex vs ML (docente) | Programación lineal interactiva: plan óptimo, recurso que limita, valor de una unidad más, solución entera y efecto de una estimación; solver verificado contra SciPy | En `v2`, pendiente de visto bueno (repo en corrección por otro agente) |
