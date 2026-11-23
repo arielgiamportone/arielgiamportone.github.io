@@ -1,0 +1,110 @@
+{{- /* CV imprimible (A4) de un perfil, con los mismos datos validados de la web. Lo imprime a PDF scripts/cv_pdf.mjs. */ -}}
+{{- $slug := .Params.lente -}}
+{{- $en := eq site.Language.Lang "en" -}}
+{{- $p := index (where (partial "datos.html" "perfiles") "slug" $slug) 0 -}}
+{{- $c := partial "datos.html" "contacto" -}}
+{{- $exp := where (partial "datos.html" "experiencia") "perfiles" "intersect" (slice $slug) -}}
+{{- $proy := where (partial "datos.html" "proyectos") "perfiles" "intersect" (slice $slug) -}}
+{{- $sk := partial "datos.html" "skills" -}}
+{{- $form := partial "datos.html" "formacion" -}}
+{{- $pubs := partial "datos.html" "publicaciones" -}}
+{{- $cats := dict
+  "ia" (slice "ml_data_science" "ia_aplicada" "lenguajes" "visualizacion")
+  "software" (slice "desarrollo_software" "ia_aplicada" "lenguajes" "cloud_m365")
+  "sector-publico" (slice "datos_legacy_contabilidad" "seguridad_cumplimiento" "cloud_m365" "gestion_proyectos")
+  "economia-azul" (slice "iot_ciencias" "ml_data_science" "gestion_proyectos" "lenguajes") -}}
+<!doctype html>
+<html lang="{{ site.Language.Lang }}">
+<head>
+<meta charset="utf-8">
+<title>{{ $c.nombre }} — CV · {{ $p.titulo }}</title>
+<meta name="robots" content="noindex">
+<style>
+  @page { size: A4; margin: 13mm 12mm 13mm 12mm; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Inter", "Segoe UI", system-ui, sans-serif; font-size: 9.2pt; line-height: 1.38; color: #1e293b; }
+  .cv { display: grid; grid-template-columns: 58mm 1fr; gap: 7mm; }
+  h1 { font-size: 21pt; margin: 0; letter-spacing: -.01em; color: #0f172a; }
+  .titulo { font-size: 11.5pt; font-weight: 650; color: {{ $p.color }}; margin: 1mm 0 3mm; }
+  h2 { font-size: 9.5pt; text-transform: uppercase; letter-spacing: .08em; color: {{ $p.color }}; margin: 5mm 0 2mm; padding-bottom: 1mm; border-bottom: 1.2pt solid {{ $p.color }}; }
+  aside h2:first-child, main > h2:first-of-type { margin-top: 0; }
+  p { margin: 0 0 2mm; }
+  ul { margin: 0; padding-left: 4mm; }
+  li { margin: 0 0 .8mm; }
+  a { color: inherit; text-decoration: none; }
+  aside { font-size: 8.6pt; }
+  aside ul { list-style: none; padding: 0; }
+  .franja { height: 2mm; background: {{ $p.color }}; margin: 0 0 5mm; border-radius: 1mm; }
+  .exp { margin-bottom: 3mm; break-inside: avoid; }
+  .exp__cab { display: flex; justify-content: space-between; gap: 3mm; }
+  .exp__rol { font-weight: 700; color: #0f172a; }
+  .exp__fecha { white-space: nowrap; color: #64748b; font-size: 8.4pt; }
+  .exp__emp { color: #475569; margin-bottom: .8mm; }
+  .proy { margin-bottom: 1.8mm; break-inside: avoid; }
+  .proy b { color: #0f172a; }
+  .tenue { color: #64748b; }
+  .chips { display: flex; flex-wrap: wrap; gap: 1mm; list-style: none; padding: 0; }
+  .chips li { border: .6pt solid #cbd5e1; border-radius: 1.5mm; padding: .3mm 1.5mm; font-size: 8pt; margin: 0; }
+  .pie { margin-top: 4mm; font-size: 8pt; color: #64748b; }
+</style>
+</head>
+<body>
+<div class="franja"></div>
+<div class="cv">
+<aside>
+  <h2>{{ i18n "cv_contacto" }}</h2>
+  <ul>
+    <li>{{ $c.email }}</li>
+    <li>{{ $c.ubicacion }}</li>
+    <li>{{ $c.ciudadania }}</li>
+    <li>{{ replace site.BaseURL "https://" "" | strings.TrimSuffix "/" }}</li>
+    {{ with $c.redes.linkedin }}<li>{{ replace . "https://www." "" | strings.TrimSuffix "/" }}</li>{{ end }}
+    {{ with $c.redes.github }}<li>{{ replace . "https://" "" }}</li>{{ end }}
+    {{ with $c.redes.orcid }}<li>ORCID {{ replace . "https://orcid.org/" "" }}</li>{{ end }}
+  </ul>
+
+  <h2>{{ i18n "cv_formacion" }}</h2>
+  <ul>
+    {{ range $form.titulos }}<li><b>{{ .titulo }}</b><br><span class="tenue">{{ .institucion }} · {{ .fechas }}</span></li>{{ end }}
+    {{ range $form.posgrado_especializacion }}<li><b>{{ .titulo }}</b><br><span class="tenue">{{ .institucion }}{{ with .fechas }} · {{ . }}{{ end }}</span></li>{{ end }}
+  </ul>
+
+  <h2>{{ i18n "cv_idiomas" }}</h2>
+  <ul>{{ range partial "datos.html" "idiomas" }}<li>{{ .idioma }} — {{ .nivel }}{{ with .codigo }} ({{ . }}){{ end }}</li>{{ end }}</ul>
+
+  <h2>{{ i18n "cv_competencias" }}</h2>
+  <ul class="chips">
+    {{ range index $cats $slug }}{{ range first 3 (index $sk .) }}<li>{{ .nombre }}</li>{{ end }}{{ end }}
+  </ul>
+</aside>
+
+<main>
+  <h1>{{ $c.nombre }}</h1>
+  <p class="titulo">{{ $p.titulo }}</p>
+  <p>{{ $p.resumen }}</p>
+
+  <h2>{{ i18n "cv_experiencia" }}</h2>
+  {{ range first 5 $exp }}
+  <div class="exp">
+    <div class="exp__cab"><span class="exp__rol">{{ .rol }}</span><span class="exp__fecha">{{ partial "fechas.html" .fechas }}</span></div>
+    <div class="exp__emp">{{ .empresa }}{{ with .ubicacion }} · {{ . }}{{ end }}</div>
+    {{ with .logros }}<ul>{{ range first 3 . }}<li>{{ . }}</li>{{ end }}</ul>{{ else }}{{ with .descripcion }}<p>{{ . }}</p>{{ end }}{{ end }}
+  </div>
+  {{ end }}
+
+  <h2>{{ i18n "cv_proyectos" }}</h2>
+  {{ $nexp := len (first 5 $exp) }}{{ $np := cond (lt $nexp 3) 8 (cond (lt $nexp 5) 6 5) }}{{ if in (slice "ia" "economia-azul") $slug }}{{ $np = sub $np 1 }}{{ end }}
+  {{ range first $np $proy }}
+  <div class="proy"><b>{{ .nombre }}</b>{{ with .fechas }} <span class="tenue">· {{ partial "fechas.html" . }}</span>{{ end }}<br>{{ .descripcion | truncate 230 }}</div>
+  {{ end }}
+
+  {{ if in (slice "ia" "economia-azul") $slug }}{{ with $pubs.papers_peer_reviewed }}
+  <h2>{{ i18n "cv_publicaciones" }}</h2>
+  <ul>{{ range . }}<li>{{ .autores }} ({{ .año }}). {{ .titulo }}. <i>{{ .revista }}</i>{{ with .volumen }} {{ . }}{{ end }}{{ with .paginas }}, {{ . }}{{ end }}. doi:{{ .doi }}</li>{{ end }}</ul>
+  {{ end }}{{ end }}
+
+  <p class="pie">{{ i18n "cv_mas" }} {{ .Permalink }}</p>
+</main>
+</div>
+</body>
+</html>

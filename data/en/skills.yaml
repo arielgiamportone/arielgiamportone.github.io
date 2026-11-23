@@ -223,7 +223,7 @@ desarrollo_software:
 - nombre: Jupyter y LaTeX (material docente y técnico)
   nivel: 4
   años: 3
-  contexto: cursos PesquerosEnIA, manual CONIPE 200+ páginas, preprint del PID
+  contexto: cursos PesquerosEnIA, manual CONIPE de 170 páginas, preprint del PID
 - nombre: Sitios estáticos (Hugo, GitHub Pages)
   nivel: 3
   años: 2

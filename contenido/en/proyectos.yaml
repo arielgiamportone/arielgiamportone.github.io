@@ -28,7 +28,7 @@ periodic_report_kit:
 pesqueros_en_ia_cursos:
   nombre: "PesquerosEnIA — open-source courses"
   organizacion: "Pesqueros en IA (founder)"
-  descripcion: "The community's open courses: a 200+ page data and AI literacy manual (CONIPE 2025, GPL-3.0), a deep learning and Bayesian networks course for fisheries (6 modules, 25 notebooks, PyTorch and pgmpy) and the university extension course «Applied AI for Fisheries Production» (UTN FRCh, 2026-2027), with notebooks at three levels and real cases: AIS/PSMA, VMS and rent concentration."
+  descripcion: "The community's open courses: a 170-page data and AI literacy manual (CONIPE 2025, GPL-3.0), a deep learning and Bayesian networks course for fisheries (6 modules, 25 notebooks, PyTorch and pgmpy) and the university extension course «Applied AI for Fisheries Production» (UTN FRCh, 2026-2027), with notebooks at three levels and real cases: AIS/PSMA, VMS and rent concentration."
 apigfw:
   nombre: "Fisheries analysis with the Global Fishing Watch API"
   organizacion: "Personal · UTN teaching material"

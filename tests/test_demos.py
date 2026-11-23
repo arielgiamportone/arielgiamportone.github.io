@@ -123,3 +123,11 @@ def test_puente_archivador(tmp_path):
     e = q("enlaces", paso="duplicado")
     assert e["reparacion"]["reparados"] == [9] and e["reparacion"]["ambiguos"] == [8]
     assert "error" in q("enlaces", paso="desmontado")["reparacion"]
+
+
+def test_cv_pdf_por_perfil():
+    # Los genera scripts/cv_pdf.cjs desde las páginas cv.html; uno por perfil e idioma.
+    for perfil in ("ia", "software", "sector-publico", "economia-azul"):
+        for idioma in ("es", "en"):
+            pdf = RAIZ / f"static/cv/Ariel_Giamportone_CV_{perfil}_{idioma}.pdf"
+            assert pdf.read_bytes()[:5] == b"%PDF-", pdf.name

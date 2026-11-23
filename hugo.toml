@@ -34,3 +34,11 @@ disableKinds = ["taxonomy", "term", "RSS"]
 
 [sitemap]
   changeFreq = "monthly"
+
+# CV imprimible por perfil: /perfiles/<lente>/cv.html (los PDF se generan con scripts/cv_pdf.mjs)
+[outputFormats.cv]
+  mediaType = "text/html"
+  baseName = "cv"
+  isHTML = true
+  permalinkable = false
+  noUgly = false
