@@ -416,7 +416,10 @@
   tipo: software_open_source
   rol: Autor único
   fechas: 08/2025
-  descripcion: Streamlit app with an interactive presentation comparing the simplex method with ML route prediction.
+  descripcion: 'Teaching material from the CONIPE 2025 course on how operations research evolved, with a fishing-fleet case
+    and synthetic data. It separates three questions: deciding with linear programming (optimal plan, binding resource, shadow
+    prices), predicting with ML against baselines and the ceiling of the generating formula, and predict-then-optimise (from
+    91 % to 99.8 % of the optimum). Streamlit app, presentation and 9 tests in CI.'
   stack:
   - Python
   - Streamlit

@@ -48,7 +48,7 @@ pid_liofilizados:
 investigacion_operativa_ml:
   nombre: "Simplex vs ML in Operations Research"
   organizacion: "Personal"
-  descripcion: "Streamlit app with an interactive presentation comparing the simplex method with ML route prediction."
+  descripcion: "Teaching material from the CONIPE 2025 course on how operations research evolved, with a fishing-fleet case and synthetic data. It separates three questions: deciding with linear programming (optimal plan, binding resource, shadow prices), predicting with ML against baselines and the ceiling of the generating formula, and predict-then-optimise (from 91 % to 99.8 % of the optimum). Streamlit app, presentation and 9 tests in CI."
 vito_gnu_linux:
   nombre: "VITO GNU/Linux — navigation distribution"
   organizacion: "UTN Maritime Technology Group"

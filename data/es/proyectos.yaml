@@ -428,7 +428,10 @@
   tipo: software_open_source
   rol: Autor único
   fechas: 08/2025
-  descripcion: App Streamlit con presentación interactiva que compara el método simplex con la predicción ML de rutas.
+  descripcion: 'Material docente del curso CONIPE 2025 sobre la evolución de la investigación operativa, con un caso de flota
+    pesquera y datos sintéticos. Separa tres preguntas: decidir con programación lineal (plan óptimo, recurso que limita,
+    precios sombra), predecir con ML frente a líneas base y al techo de la fórmula, y predecir y luego optimizar (de 91 %
+    a 99,8 % del óptimo). App Streamlit, presentación y 9 tests en CI.'
   stack:
   - Python
   - Streamlit
