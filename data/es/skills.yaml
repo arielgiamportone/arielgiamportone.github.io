@@ -178,7 +178,7 @@ desarrollo_software:
 - nombre: FastAPI
   nivel: 5
   años: 2
-  contexto: AYUNDATA, INTERDATA, casos de estudio; APIs REST, Jinja2/HTMX, auth, CSRF
+  contexto: INTERDATA, casos de estudio; APIs REST, Jinja2/HTMX, auth, CSRF
 - nombre: SQLAlchemy / Alembic
   nivel: 4
   años: 2
@@ -189,7 +189,7 @@ desarrollo_software:
 - nombre: pytest / hypothesis
   nivel: 4
   años: 2
-  contexto: 900+ tests en AYUNDATA, 544 en INTERVAL Python
+  contexto: 544 en INTERVAL Python
 - nombre: Jinja2 / HTMX
   nivel: 4
   años: 2
@@ -219,7 +219,7 @@ desarrollo_software:
 - nombre: Generación de documentos (python-docx, python-pptx, reportlab, xhtml2pdf, pypdf)
   nivel: 4
   años: 1
-  contexto: periodic-report-kit, informes AENA, área IT, AYUNDATA
+  contexto: periodic-report-kit, informes AENA, área IT
 - nombre: Jupyter y LaTeX (material docente y técnico)
   nivel: 4
   años: 3
@@ -259,7 +259,7 @@ ia_aplicada:
 - nombre: OCR (EasyOCR, Tesseract, Google Cloud Vision)
   nivel: 4
   años: 2
-  contexto: 1.926 PDFs en AYUNDATA; placas industriales
+  contexto: placas industriales
 - nombre: OpenCV / YOLO (visión por computadora)
   nivel: 4
   años: 2
@@ -324,7 +324,7 @@ datos_legacy_contabilidad:
 - nombre: Estándares GS1 y etiquetado (GIAI, EPC, Digital Link, Code128, ZPL/RFID)
   nivel: 4
   años: 1
-  contexto: asset-identity-gs1, AYUNDATA
+  contexto: asset-identity-gs1
 - nombre: Geoespacial en Python (pyproj, geopandas, folium; UTM↔WGS84, WFS)
   nivel: 3
   años: 2

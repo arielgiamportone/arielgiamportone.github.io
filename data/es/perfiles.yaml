@@ -29,10 +29,9 @@
   titulo: AI & Software Engineer · Producto y Plataformas de Datos
   resumen: 'Ingeniero de software e IA aplicada que construye productos de datos completos: backend Python (FastAPI, SQLAlchemy,
     PostgreSQL/SQLite), interfaces web (Jinja2/HTMX, Streamlit) y de escritorio (Tkinter, PySide6, PyInstaller), integración
-    de LLM, OCR y visión, despliegue en Azure y Microsoft 365 y cumplimiento ENS/RGPD. En Intervalor Data lidero el producto
-    AYUNDATA (plataforma SaaS multi-tenant de gestión patrimonial municipal, 1.100+ commits propios, 900+ tests, 4 ayuntamientos),
-    arranqué INTERDATA (SaaS de inmovilizado para empresas) y puse en producción un dashboard para AENA con Entra ID. Trabajo
-    con desarrollo asistido por agentes (Claude Code) y documento cada repo para humanos y agentes (AGENTS.md, ADRs, CHANGELOG).'
+    de LLM, OCR y visión, despliegue en Azure y Microsoft 365 y cumplimiento ENS/RGPD. En Intervalor Data arranqué INTERDATA
+    (SaaS de inmovilizado para empresas) y puse en producción un dashboard para AENA con Entra ID. Trabajo con desarrollo
+    asistido por agentes (Claude Code) y documento cada repo para humanos y agentes (AGENTS.md, ADRs, CHANGELOG).'
   keywords:
   - AI Engineer
   - Software Engineer

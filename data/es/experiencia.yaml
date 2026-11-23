@@ -44,12 +44,9 @@
   actual: true
   ubicacion: Madrid y Barcelona, España (híbrido)
   descripcion: 'Responsable de Datos, IA y Producto en el Área de Tecnología (IT e Innovación) de Intervalor Data (Intervalor
-    Consulting Group, S.A.). Líder de producto de AYUNDATA. Construyo productos de datos de punta a punta: arquitectura, backend,
-    UI, IA aplicada, despliegue, cumplimiento y documentación.'
+    Consulting Group, S.A.). Construyo productos de datos de punta a punta: arquitectura, backend, UI, IA aplicada, despliegue,
+    cumplimiento y documentación.'
   logros:
-  - 'Lideré AYUNDATA, plataforma SaaS multi-tenant de inventario y gestión patrimonial municipal (FastAPI, SQLAlchemy, SQLite/PostgreSQL):
-    1.128 commits, 900+ tests, módulos de ETL, amortización PGCP/ICAL, enriquecimiento catastral y registral con LLM, OCR
-    masivo, portal de transparencia, etiquetas QR/RFID, integración de campo y ejecutable Windows; en producción en 4 ayuntamientos'
   - 'Diseñé y desarrollé INTERDATA, SaaS de inmovilizado para empresas: tenants por schema, MFA, auditoría encadenada, certificados
     PDF verificables por QR y motor de amortización que cuadra al céntimo con el sistema legacy'
   - Puse en producción el dashboard de controles comerciales del Aeropuerto de Barajas para AENA (Azure Static Web Apps +

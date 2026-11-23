@@ -13,9 +13,8 @@ pesqueros_en_ia:
 intervalor_estrategia:
   rol: "Data, AI & Product · Technology Department (IT & Innovation)"
   ubicacion: "Madrid and Barcelona, Spain (hybrid)"
-  descripcion: "Data, AI & Product lead in the Technology Department of Intervalor Data (Intervalor Consulting Group, S.A.) and product lead of AYUNDATA. I build data products end to end: architecture, backend, UI, applied AI, deployment, compliance and documentation."
+  descripcion: "Data, AI & Product lead in the Technology Department of Intervalor Data (Intervalor Consulting Group, S.A.) I build data products end to end: architecture, backend, UI, applied AI, deployment, compliance and documentation."
   logros:
-    - "Led AYUNDATA, a multi-tenant SaaS platform for municipal asset inventory and management (FastAPI, SQLAlchemy, SQLite/PostgreSQL): 1,128 commits, 900+ tests, ETL, public-sector depreciation (PGCP/ICAL), cadastral and land-registry enrichment with LLMs, bulk OCR, transparency portal, QR/RFID labels, field-work integration and a Windows installer; in production in 4 municipalities"
     - "Designed and built INTERDATA, a fixed-asset SaaS for companies: schema-per-tenant, MFA, hash-chained audit log, QR-verifiable PDF certificates and a depreciation engine that matches the legacy system to the cent"
     - "Put into production the commercial-controls dashboard for AENA at Madrid-Barajas Airport (Azure Static Web Apps + Entra ID, incremental pipeline over a third-party API, 99.95% SLA) and automated its monthly and annual reports (121 tests)"
     - "Modernised a 1990s Delphi/Paradox fixed-asset system into Python with numerical parity to the cent (544 tests, 99.97% of rows migrated)"

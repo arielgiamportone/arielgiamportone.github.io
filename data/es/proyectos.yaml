@@ -1,56 +1,4 @@
 # GENERADO por scripts/sync_base.py desde la base de conocimiento. No editar a mano.
-- id: ayundata
-  nombre: AYUNDATA
-  organizacion: Intervalor Data
-  tipo: producto_software
-  rol: Líder de producto y único desarrollador
-  fechas: 02/2026 – Presente
-  estado: v0.54.0 (última tag, 2026-07-14), en producción
-  descripcion: Plataforma ETL + SaaS multi-tenant para el Inventario General de Bienes y Derechos municipales. Nació del contrato
-    de 24 meses (11/2025-11/2027) con el Ayuntamiento de San Bartolomé de Tirajana y se convirtió en producto para cualquier
-    municipio.
-  modulos:
-  - ETL multi-fuente (Excel, Access, PDF, KMZ, shapefile)
-  - 'INVAYUNT: amortización PGCP/ICAL, conciliación, cesiones, cierre de ejercicio'
-  - 'KATHARSID: enriquecimiento catastral (DGC + 4 forales), registral con LLM, geocoding, ortofoto/Mapillary'
-  - Portal de Transparencia estático (Ley 19/2013, WCAG 2.1 AA)
-  - Etiquetas Code128/QR/RFID (GS1 GIAI)
-  - Integración PLUG (trabajo de campo, ODTs, fotos, GPS)
-  - Certificados e informes técnicos con hash y QR verificable
-  - Catálogos por municipio, seguros, vehículos, obras y plan plurianual
-  - Backoffice Intervalor con superadmin JWT RS256, facturación de uso de IA, soporte
-  - Ejecutable Windows (PyInstaller + Inno Setup) con wizard de primer arranque
-  metricas:
-  - 900+ tests
-  - 1.987 bienes, 9.553 documentos indexados, 1.926 PDFs con OCR masivo (79 % confianza media), Vision LLM local 100 % éxito
-  - Cierre contable de un ayuntamiento reproducido al céntimo (V.R.M. Δ 0,01 €)
-  - Informes técnicos de 3-8 h manuales a 10-15 min
-  stack:
-  - Python
-  - FastAPI
-  - SQLAlchemy
-  - Jinja2
-  - HTMX
-  - SQLite FTS5
-  - PostgreSQL
-  - pdfplumber
-  - Tesseract
-  - Ollama
-  - pydantic
-  - Docker
-  - PyInstaller
-  - Inno Setup
-  - pytest
-  - Leaflet
-  - Chart.js
-  clientes_publicos: Ayuntamiento de San Bartolomé de Tirajana y otros tres ayuntamientos
-  inicio: 2026-02
-  actual: true
-  perfiles:
-  - software
-  - sector-publico
-  - ia
-  orden: 1
 - id: trawlkit
   nombre: trawlkit · Trawl Design Lab
   organizacion: Personal
@@ -79,7 +27,7 @@
   perfiles:
   - economia-azul
   - software
-  orden: 2
+  orden: 1
 - id: cfp_audit_intelligence
   nombre: cfp-audit-intelligence
   organizacion: Proyecto final del Máster en Desarrollo con IA (BIG school)
@@ -110,7 +58,7 @@
   - software
   - economia-azul
   - ia
-  orden: 3
+  orden: 2
 - id: fisheries_mlops
   nombre: fisheries-sustainability-mlops
   organizacion: Personal
@@ -135,7 +83,7 @@
   perfiles:
   - economia-azul
   - ia
-  orden: 4
+  orden: 3
 - id: asset_identity_gs1
   nombre: asset-identity-gs1
   organizacion: Personal · patrones desarrollados en Intervalor Data, publicados con autorización
@@ -172,7 +120,7 @@
   perfiles:
   - sector-publico
   - software
-  orden: 5
+  orden: 4
 - id: catastro_enrichment_es
   nombre: catastro-enrichment-es
   organizacion: Personal · patrones desarrollados en Intervalor Data, publicados con autorización
@@ -211,7 +159,7 @@
   - sector-publico
   - ia
   - software
-  orden: 6
+  orden: 5
 - id: kippa_rov
   nombre: KIPPA I — ROV con hardware y software libres
   organizacion: UTN FRTDF (tesis de grado)
@@ -227,7 +175,7 @@
   perfiles:
   - economia-azul
   - software
-  orden: 7
+  orden: 6
 - id: paradox_db_py
   nombre: paradox-db-py
   organizacion: Personal · patrones desarrollados en Intervalor Data, publicados con autorización
@@ -262,7 +210,7 @@
   perfiles:
   - software
   - sector-publico
-  orden: 8
+  orden: 7
 - id: periodic_report_kit
   nombre: periodic-report-kit
   organizacion: Personal · patrones desarrollados en Intervalor Data, publicados con autorización
@@ -307,7 +255,7 @@
   - software
   - ia
   - sector-publico
-  orden: 9
+  orden: 8
 - id: pesqueros_en_ia_cursos
   nombre: PesquerosEnIA — cursos open source
   organizacion: Pesqueros en IA (fundador)
@@ -335,7 +283,7 @@
   perfiles:
   - economia-azul
   - ia
-  orden: 10
+  orden: 9
   descripcion: 'Cursos abiertos de la comunidad: manual de alfabetización en datos e IA de más de 200 páginas (CONIPE 2025,
     GPL-3.0), curso de deep learning y redes bayesianas para pesquerías (6 módulos, 25 notebooks, PyTorch y pgmpy) y el curso
     de extensión universitaria «IA aplicada a la producción pesquera» (UTN FRCh, 2026-2027), con notebooks en tres niveles
@@ -359,7 +307,7 @@
   perfiles:
   - economia-azul
   - ia
-  orden: 11
+  orden: 10
 - id: casos_estudio_intervalor
   nombre: Casos de estudio clean-room
   organizacion: Personal
@@ -377,7 +325,7 @@
   perfiles:
   - software
   - sector-publico
-  orden: 12
+  orden: 11
 - id: transcriptor_placas
   nombre: Transcriptor de Placas Industriales Asistido
   organizacion: Intervalor Data · repositorio público
@@ -404,7 +352,7 @@
   perfiles:
   - software
   - ia
-  orden: 13
+  orden: 12
 - id: pid_liofilizados
   nombre: PID PP9884 — Liofilización de alimentos de producción local en Tierra del Fuego
   organizacion: UTN FRTDF · Grupo QA3DS
@@ -421,7 +369,7 @@
   actual: false
   perfiles:
   - economia-azul
-  orden: 14
+  orden: 13
 - id: investigacion_operativa_ml
   nombre: Simplex vs ML en Investigación Operativa
   organizacion: Personal
@@ -443,7 +391,7 @@
   actual: false
   perfiles:
   - ia
-  orden: 15
+  orden: 14
 - id: utn_antartida_argentina
   nombre: UTN Antártida Argentina (UTNAA) — Grupo de Desarrollo Logístico
   organizacion: UTN Facultad Regional Tierra del Fuego
@@ -467,7 +415,7 @@
   perfiles:
   - economia-azul
   - sector-publico
-  orden: 16
+  orden: 15
 - id: vito_gnu_linux
   nombre: VITO GNU/Linux — distribución de navegación
   organizacion: Grupo de Tecnología Marítima UTN / UVI-UTN
@@ -483,7 +431,7 @@
   perfiles:
   - economia-azul
   - software
-  orden: 17
+  orden: 16
 - id: aura_farm_ar
   nombre: Aura Farm AR
   organizacion: Personal
@@ -504,7 +452,7 @@
   actual: false
   perfiles:
   - software
-  orden: 18
+  orden: 17
 - id: cvar_sinergias
   nombre: Sinergias y conflictos entre las actividades económicas y los socioecosistemas de Tierra del Fuego
   organizacion: CONICET-CADIC

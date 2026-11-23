@@ -51,16 +51,29 @@ reemplazos:
     reemplazar: "lectura de la BMS del cliente"
   - buscar: "Modernicé INTERVAL, sistema de activos fijos"
     reemplazar: "Modernicé un sistema de activos fijos"
+  # AYUNDATA oculto hasta nuevo aviso (2026-11-23)
+  - buscar: " Líder de producto de AYUNDATA."
+    reemplazar: ""
+  - buscar: "lidero el producto AYUNDATA (plataforma SaaS multi-tenant de gestión patrimonial municipal, 1.100+ commits propios, 900+ tests, 4 ayuntamientos), arranqué"
+    reemplazar: "arranqué"
+  - buscar: "AYUNDATA, INTERDATA"
+    reemplazar: "INTERDATA"
+  - buscar: "900+ tests en AYUNDATA, "
+    reemplazar: ""
+  - buscar: ", AYUNDATA"
+    reemplazar: ""
+  - buscar: "1.926 PDFs en AYUNDATA; "
+    reemplazar: ""
 
 # Enlaces a repositorios privados: no se publican.
 repos_privados: ["github.com/Intervalor-Data", "privado"]
 
 # Qué proyectos muestra la web y en qué orden.
 # Los internos de Intervalor sin repositorio público solo aparecen en la trayectoria.
-# AYUNDATA se publica como caso de estudio (decisión 2026-11-22).
+# AYUNDATA: oculto en toda la web hasta nuevo aviso (decisión de Ariel, 2026-11-23).
 proyectos_web:
-  ocultar: [interdata, mad6923_dashboard, ens_iso27001, licdatahunter, assetvision, photo_downloader, interval_python, casos_estudio_clean_room_2026]
-  orden: [ayundata, trawlkit, cfp_audit_intelligence, fisheries_mlops, asset_identity_gs1, catastro_enrichment_es, kippa_rov, paradox_db_py, periodic_report_kit, pesqueros_en_ia_cursos, apigfw, casos_estudio_intervalor, transcriptor_placas, pid_liofilizados, investigacion_operativa_ml, utn_antartida_argentina, vito_gnu_linux, aura_farm_ar]
+  ocultar: [ayundata, interdata, mad6923_dashboard, ens_iso27001, licdatahunter, assetvision, photo_downloader, interval_python, casos_estudio_clean_room_2026]
+  orden: [trawlkit, cfp_audit_intelligence, fisheries_mlops, asset_identity_gs1, catastro_enrichment_es, kippa_rov, paradox_db_py, periodic_report_kit, pesqueros_en_ia_cursos, apigfw, casos_estudio_intervalor, transcriptor_placas, pid_liofilizados, investigacion_operativa_ml, utn_antartida_argentina, vito_gnu_linux, aura_farm_ar]
 
 # Ajustes por proyecto para cumplir las restricciones de publicación de la base (nota_publicacion).
 proyectos_ajustes:
@@ -94,6 +107,9 @@ proyectos_ajustes:
 # Logros concretos que no se publican aunque estén en la base, con su motivo.
 # Se identifican por id de la entrada y un fragmento del texto.
 exclusiones_logros:
+  - id: intervalor_estrategia
+    contiene: "Lideré AYUNDATA"
+    motivo: "AYUNDATA oculto en la web hasta nuevo aviso (2026-11-23)"
   - id: gobierno_tdf
     contiene: "5 veces el presupuesto"
     motivo: "Cifra de LinkedIn sin documento de respaldo (base: logros_nota)"
@@ -159,3 +175,4 @@ prohibido:
     motivo: nombre de un colega o de un tercero
   - patron: '(?i)\bAriel (no |docente|figura|confirm)|base/|diploma no escaneado|Fuente: CVar'
     motivo: nota interna de la base
+  - patron: 'AYUNDATA'

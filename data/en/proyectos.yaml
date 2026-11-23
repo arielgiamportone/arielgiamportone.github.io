@@ -1,55 +1,4 @@
 # GENERADO por scripts/sync_base.py desde la base de conocimiento. No editar a mano.
-- id: ayundata
-  nombre: AYUNDATA
-  organizacion: Intervalor Data
-  tipo: producto_software
-  rol: Líder de producto y único desarrollador
-  fechas: 02/2026 – Presente
-  estado: v0.54.0 (última tag, 2026-07-14), en producción
-  descripcion: ETL platform and multi-tenant SaaS for the municipal register of assets and rights. It started with a 24-month
-    contract (11/2025-11/2027) with the municipality of San Bartolomé de Tirajana and became a product for any municipality.
-  modulos:
-  - ETL multi-fuente (Excel, Access, PDF, KMZ, shapefile)
-  - 'INVAYUNT: amortización PGCP/ICAL, conciliación, cesiones, cierre de ejercicio'
-  - 'KATHARSID: enriquecimiento catastral (DGC + 4 forales), registral con LLM, geocoding, ortofoto/Mapillary'
-  - Portal de Transparencia estático (Ley 19/2013, WCAG 2.1 AA)
-  - Etiquetas Code128/QR/RFID (GS1 GIAI)
-  - Integración PLUG (trabajo de campo, ODTs, fotos, GPS)
-  - Certificados e informes técnicos con hash y QR verificable
-  - Catálogos por municipio, seguros, vehículos, obras y plan plurianual
-  - Backoffice Intervalor con superadmin JWT RS256, facturación de uso de IA, soporte
-  - Ejecutable Windows (PyInstaller + Inno Setup) con wizard de primer arranque
-  metricas:
-  - 900+ tests
-  - 1.987 bienes, 9.553 documentos indexados, 1.926 PDFs con OCR masivo (79 % confianza media), Vision LLM local 100 % éxito
-  - Cierre contable de un ayuntamiento reproducido al céntimo (V.R.M. Δ 0,01 €)
-  - Informes técnicos de 3-8 h manuales a 10-15 min
-  stack:
-  - Python
-  - FastAPI
-  - SQLAlchemy
-  - Jinja2
-  - HTMX
-  - SQLite FTS5
-  - PostgreSQL
-  - pdfplumber
-  - Tesseract
-  - Ollama
-  - pydantic
-  - Docker
-  - PyInstaller
-  - Inno Setup
-  - pytest
-  - Leaflet
-  - Chart.js
-  clientes_publicos: Ayuntamiento de San Bartolomé de Tirajana y otros tres ayuntamientos
-  inicio: 2026-02
-  actual: true
-  perfiles:
-  - software
-  - sector-publico
-  - ia
-  orden: 1
 - id: trawlkit
   nombre: trawlkit · Trawl Design Lab
   organizacion: Personal
@@ -78,7 +27,7 @@
   perfiles:
   - economia-azul
   - software
-  orden: 2
+  orden: 1
 - id: cfp_audit_intelligence
   nombre: cfp-audit-intelligence
   organizacion: Final project, Master's in AI Development (BIG school)
@@ -109,7 +58,7 @@
   - software
   - economia-azul
   - ia
-  orden: 3
+  orden: 2
 - id: fisheries_mlops
   nombre: fisheries-sustainability-mlops
   organizacion: Personal
@@ -134,7 +83,7 @@
   perfiles:
   - economia-azul
   - ia
-  orden: 4
+  orden: 3
 - id: asset_identity_gs1
   nombre: asset-identity-gs1
   organizacion: Personal · patterns developed at Intervalor Data, published with permission
@@ -169,7 +118,7 @@
   perfiles:
   - sector-publico
   - software
-  orden: 5
+  orden: 4
 - id: catastro_enrichment_es
   nombre: catastro-enrichment-es
   organizacion: Personal · patterns developed at Intervalor Data, published with permission
@@ -205,7 +154,7 @@
   - sector-publico
   - ia
   - software
-  orden: 6
+  orden: 5
 - id: kippa_rov
   nombre: KIPPA I — ROV with open hardware and software
   organizacion: UTN Tierra del Fuego (final degree project)
@@ -221,7 +170,7 @@
   perfiles:
   - economia-azul
   - software
-  orden: 7
+  orden: 6
 - id: paradox_db_py
   nombre: paradox-db-py
   organizacion: Personal · patterns developed at Intervalor Data, published with permission
@@ -254,7 +203,7 @@
   perfiles:
   - software
   - sector-publico
-  orden: 8
+  orden: 7
 - id: periodic_report_kit
   nombre: periodic-report-kit
   organizacion: Personal · patterns developed at Intervalor Data, published with permission
@@ -295,7 +244,7 @@
   - software
   - ia
   - sector-publico
-  orden: 9
+  orden: 8
 - id: pesqueros_en_ia_cursos
   nombre: PesquerosEnIA — open-source courses
   organizacion: Pesqueros en IA (founder)
@@ -323,7 +272,7 @@
   perfiles:
   - economia-azul
   - ia
-  orden: 10
+  orden: 9
   descripcion: 'The community''s open courses: a 170-page data and AI literacy manual (CONIPE 2025, GPL-3.0), a deep learning
     and Bayesian networks course for fisheries (6 modules, 25 notebooks, PyTorch and pgmpy) and the university extension course
     «Applied AI for Fisheries Production» (UTN FRCh, 2026-2027), with notebooks at three levels and real cases: AIS/PSMA,
@@ -347,7 +296,7 @@
   perfiles:
   - economia-azul
   - ia
-  orden: 11
+  orden: 10
 - id: casos_estudio_intervalor
   nombre: Clean-room case studies
   organizacion: Personal
@@ -365,7 +314,7 @@
   perfiles:
   - software
   - sector-publico
-  orden: 12
+  orden: 11
 - id: transcriptor_placas
   nombre: Assisted Industrial Nameplate Transcriber
   organizacion: Intervalor Data · public repository
@@ -392,7 +341,7 @@
   perfiles:
   - software
   - ia
-  orden: 13
+  orden: 12
 - id: pid_liofilizados
   nombre: Research project PP9884 — Freeze-drying of locally produced food in Tierra del Fuego
   organizacion: UTN Tierra del Fuego · QA3DS group
@@ -409,7 +358,7 @@
   actual: false
   perfiles:
   - economia-azul
-  orden: 14
+  orden: 13
 - id: investigacion_operativa_ml
   nombre: Simplex vs ML in Operations Research
   organizacion: Personal
@@ -431,7 +380,7 @@
   actual: false
   perfiles:
   - ia
-  orden: 15
+  orden: 14
 - id: utn_antartida_argentina
   nombre: UTN Antártida Argentina (UTNAA) — Logistics Development Group
   organizacion: UTN Tierra del Fuego
@@ -454,7 +403,7 @@
   perfiles:
   - economia-azul
   - sector-publico
-  orden: 16
+  orden: 15
 - id: vito_gnu_linux
   nombre: VITO GNU/Linux — navigation distribution
   organizacion: UTN Maritime Technology Group
@@ -469,7 +418,7 @@
   perfiles:
   - economia-azul
   - software
-  orden: 17
+  orden: 16
 - id: aura_farm_ar
   nombre: Aura Farm AR
   organizacion: Personal
@@ -490,7 +439,7 @@
   actual: false
   perfiles:
   - software
-  orden: 18
+  orden: 17
 - id: cvar_sinergias
   nombre: Synergies and conflicts between economic activities and the social-ecological systems of Tierra del Fuego
   organizacion: CONICET-CADIC
