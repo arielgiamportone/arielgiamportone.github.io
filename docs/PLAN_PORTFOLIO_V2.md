@@ -128,5 +128,5 @@ Cada proyecto se cierra con: ficha revisada por ti, demo funcionando, capturas, 
 | Panel de inspecciones de campo (clean-room) | Proxy de fotos real contra servidor simulado + ventana de autoridad con pandas en Pyodide | Publicada |
 | Archivador de fotos de inspección (clean-room) | Registro que no se vacía, resolutor de carpeta y enlaces relativos con reparación, en Pyodide | Publicada |
 | Simplex vs ML (docente) | Programación lineal interactiva: plan óptimo, recurso que limita, valor de una unidad más, solución entera y efecto de una estimación; solver verificado contra SciPy | Publicada (repo corregido, PR #1 y #2) |
-| PesquerosEnIA (cursos) | Seis simuladores del curso de la UTN FRCh en pestañas (GitHub Pages del curso) + galería | En `v2`, pendiente de visto bueno |
-| PID PP9884 liofilización (QA3DS) | Cinética de Page interactiva con los parámetros de resultados_clave.md + animación del proceso de qa3ds.github.io | En `v2`, pendiente de visto bueno |
+| PesquerosEnIA (cursos) | Seis simuladores del curso de la UTN FRCh en pestañas (GitHub Pages del curso) + galería | Publicada |
+| PID PP9884 liofilización (QA3DS) | Cinética de Page interactiva con los parámetros de resultados_clave.md + animación del proceso de qa3ds.github.io | Publicada |
