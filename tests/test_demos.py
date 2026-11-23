@@ -40,9 +40,11 @@ def test_modulos_registro_sin_cambios():
 def _puente():
     sys.path.insert(0, str(REGISTRO))
     try:
+        sys.modules.pop("demo", None)
         return importlib.import_module("demo")
     finally:
         sys.path.remove(str(REGISTRO))
+        sys.modules.pop("demo", None)
 
 
 def test_puente_registro():
@@ -57,3 +59,35 @@ def test_puente_registro():
     assert v["una"] == v["dos"] and v["sin_estado"]["coste"] != v["una"]["coste"]
     fila = {"id": "A", "cuenta": "211", "coste": "100", "acumulada": "33.33"}
     assert json.loads(d.conciliar(json.dumps({"nuestras": [fila], "legado": [fila]}))) == []
+
+
+# ------------------------------------------------ field-inspections-dashboard
+INSPECCIONES = RAIZ / "content/proyectos/field-inspections-dashboard/codigo"
+
+
+def test_modulos_inspecciones_sin_cambios():
+    # SHA-256 de los ficheros del repositorio público, commit bd33a9e.
+    assert hashlib.sha256((INSPECCIONES / "incremental_merge.py").read_bytes()).hexdigest() == \
+        "1325db57e88b67b51f0ff23db891a8bc9b685ba408bd8611ee199961395116f1"
+    assert hashlib.sha256((RAIZ / "assets/js/demos/inspecciones/photo-proxy.js").read_bytes()).hexdigest() == \
+        "c748241d6aea8dc8fc77a68d44bd9166cc001bb55fc0cdd5d182ee4b6026e9e2"
+
+
+def test_puente_inspecciones():
+    import pytest
+    pytest.importorskip("pandas")
+    sys.path.insert(0, str(INSPECCIONES))
+    try:
+        sys.modules.pop("demo", None)
+        d = importlib.import_module("demo")
+    finally:
+        sys.path.remove(str(INSPECCIONES))
+        sys.modules.pop("demo", None)
+    hist = [["T-1", "2026-03-10", "ok"]] + [[f"T-{i}", "2026-11-01", "ok"] for i in range(2, 26)]
+    resp = [r for r in hist[1:] if r[0] != "T-2"]
+    r = json.loads(d.refrescar(json.dumps({"historia": hist, "respuesta": resp, "fotos": [["F", "T-2"]],
+                                           "desde": "2026-10-01", "hasta": "2026-12-31"})))
+    assert r["ok"] and r["borradas"] == ["T-2"] and r["filas"] == 24 and r["fotos_despues"] == 0
+    r = json.loads(d.refrescar(json.dumps({"historia": hist, "respuesta": resp[:5], "fotos": [],
+                                           "desde": "2026-10-01", "hasta": "2026-12-31"})))
+    assert not r["ok"]

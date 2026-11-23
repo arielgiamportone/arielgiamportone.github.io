@@ -1,0 +1,54 @@
+{{ $en := eq site.Language.Lang "en" }}
+{{ $mods := slice }}{{ range slice "incremental_merge" "demo" }}{{ with $.Resources.Get (printf "codigo/%s.py" .) }}{{ $mods = $mods | append .RelPermalink }}{{ end }}{{ end }}
+<div class="demo-reg demo-ins" data-demo="inspecciones" data-modulos="{{ delimit $mods " " }}" data-lang="{{ site.Language.Lang }}">
+  <div class="demo-cat__pestanas" role="tablist">
+    <button type="button" role="tab" aria-selected="true" data-tab="proxy">{{ cond $en "Photo proxy (anti-SSRF)" "Proxy de fotos (anti-SSRF)" }}</button>
+    <button type="button" role="tab" aria-selected="false" data-tab="ventana">{{ cond $en "Refresh with an authority window" "Refresco con ventana de autoridad" }}</button>
+  </div>
+
+  <section class="demo-reg__panel" data-panel="proxy">
+    <p class="tenue pequeno">{{ cond $en "The photos live in a third-party app that needs a session. The browser never sees the token: it asks the proxy, which only fetches from an allow-list of hosts, re-checks every redirect and refuses anything that is not an image. This is the repository's photo-proxy.js running in your browser against a simulated upstream: no request leaves this page." "Las fotos viven en una aplicación de terceros que exige sesión. El navegador nunca ve el token: se las pide al proxy, que solo descarga de una lista de hosts permitidos, vuelve a comprobar cada redirección y rechaza todo lo que no sea una imagen. Es el photo-proxy.js del repositorio ejecutándose en tu navegador contra un servidor simulado: ninguna petición sale de esta página." }}</p>
+    <p class="demo-reg__etq">{{ cond $en "Scenarios" "Escenarios" }}</p>
+    <div class="demo-reg__ejemplos" data-ejemplos="proxy"></div>
+    <div class="demo-reg__fila">
+      <label class="demo-reg__campo">{{ cond $en "Photo URL requested (parameter u)" "URL de la foto pedida (parámetro u)" }}<input name="url" spellcheck="false"></label>
+      <label class="demo-reg__campo demo-reg__campo--corto">{{ cond $en "What the upstream server does" "Qué hace el servidor de origen" }}<select name="origen"></select></label>
+    </div>
+    <p class="tenue pequeno">{{ cond $en "Allowed host: files.inspections.example" "Host permitido: files.inspections.example" }}</p>
+    <div data-salida="proxy"></div>
+  </section>
+
+  <section class="demo-reg__panel" data-panel="ventana" hidden>
+    <p class="tenue pequeno">{{ cond $en "Every 3 hours the pipeline asks the source only for the last three months and merges the answer into the cached history. Records deleted at source must disappear, but a partial answer must not wipe real data. Synthetic history: 96 inspections in 2026, 24 of them inside the window (October to December)." "Cada 3 horas el proceso pide a la fuente solo los tres últimos meses y fusiona la respuesta con el histórico guardado. Lo que se borra en la fuente tiene que desaparecer, pero una respuesta incompleta no puede llevarse datos reales. Histórico sintético: 96 inspecciones en 2026, 24 de ellas dentro de la ventana (de octubre a diciembre)." }}</p>
+    <div class="demo-pdx__inicio" data-inicio>
+      <button type="button" class="boton" data-cargar>{{ cond $en "Load Python, pandas and the repository module" "Cargar Python, pandas y el módulo del repositorio" }}</button>
+      <p class="tenue pequeno">{{ cond $en "Downloads Pyodide and pandas (about 20 MB, from the jsDelivr CDN) and runs src/incremental_merge.py exactly as published." "Descarga Pyodide y pandas (unos 20 MB, desde la CDN de jsDelivr) y ejecuta src/incremental_merge.py tal como está publicado." }}</p>
+      <p class="demo-pdx__estado" data-estado aria-live="polite"></p>
+    </div>
+    <div data-controles hidden>
+      <div class="demo-reg__rejilla">
+        <label class="demo-reg__campo">{{ cond $en "Test records deleted at source (inside the window)" "Trabajos de prueba borrados en la fuente (dentro de la ventana)" }}<input type="number" name="borrados" min="0" max="6" value="2"></label>
+        <label class="demo-reg__campo">{{ cond $en "New records at source" "Altas nuevas en la fuente" }}<input type="number" name="altas" min="0" max="5" value="1"></label>
+        <label class="demo-reg__campo">{{ cond $en "Answer from the API" "Respuesta de la API" }}<select name="respuesta">
+          <option value="completa">{{ cond $en "Complete" "Completa" }}</option>
+          <option value="parcial">{{ cond $en "Partial (cut at 60 %)" "Incompleta (se corta al 60 %)" }}</option>
+          <option value="vacia">{{ cond $en "Empty (transient failure)" "Vacía (fallo pasajero)" }}</option>
+        </select></label>
+        <label class="demo-reg__campo">{{ cond $en "Abort threshold" "Umbral de aborto" }}<select name="umbral"><option value="0.10">10 %</option><option value="0.25">25 %</option><option value="1">{{ cond $en "none" "ninguno" }}</option></select></label>
+        <label class="demo-reg__check"><input type="checkbox" name="viejo" checked> {{ cond $en "One record deleted at source back in March (outside the window)" "Un trabajo borrado en la fuente en marzo (fuera de la ventana)" }}</label>
+        <label class="demo-reg__check"><input type="checkbox" name="modificado" checked> {{ cond $en "One record corrected at source" "Un trabajo corregido en la fuente" }}</label>
+      </div>
+      <div class="demo-ins__linea" data-linea></div>
+      <div class="demo-ins__leyenda" data-leyenda></div>
+      <div class="demo-ins__comparar" data-comparar></div>
+    </div>
+  </section>
+
+  <details class="demo-pdx__codigo">
+    <summary>{{ cond $en "The code that runs" "El código que se ejecuta" }}</summary>
+    <p class="tenue pequeno">{{ cond $en "photo-proxy.js and src/incremental_merge.py are loaded unchanged from the repository. The Python bridge only converts the form into DataFrames and the result into JSON:" "photo-proxy.js y src/incremental_merge.py se cargan sin cambios desde el repositorio. El puente en Python solo convierte el formulario en DataFrames y el resultado en JSON:" }}</p>
+    <pre><code data-codigo></code></pre>
+  </details>
+</div>
+{{ $js := resources.Get "js/demos/inspecciones-demo.js" | js.Build (dict "minify" true "format" "esm") | fingerprint }}
+<script type="module" src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>

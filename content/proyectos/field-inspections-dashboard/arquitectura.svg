@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="1200" height="500" role="img" aria-labelledby="t"><title id="t">Arquitectura del panel de inspecciones</title>
+<style>
+  :root { --ink: #1b2a3a; --muted: #5b6b7b; --box: #ffffff; --boxline: #b9c8d8; --accent: #2563eb; --accent2: #059669; --soft: #eef4fb; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink: #e6edf3; --muted: #9fb0c0; --box: #18212b; --boxline: #3a4b5d; --accent: #60a5fa; --accent2: #34d399; --soft: #13202e; }
+  }
+  text { font-family: "DejaVu Sans", "Segoe UI", Arial, sans-serif; fill: var(--ink); }
+  .muted { fill: var(--muted); }
+  .box { fill: var(--box); stroke: var(--boxline); stroke-width: 1.5; }
+  .boxa { fill: var(--box); stroke: var(--accent); stroke-width: 2.2; }
+  .boxv { fill: var(--box); stroke: var(--accent2); stroke-width: 2.2; }
+  .zona { fill: var(--soft); stroke: none; }
+  .arrow { stroke: var(--muted); stroke-width: 1.8; fill: none; marker-end: url(#arrow); }
+  .dash { stroke: var(--muted); stroke-width: 1.5; fill: none; stroke-dasharray: 5 4; marker-end: url(#arrow); }
+</style>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill: var(--muted)"/></marker></defs>
+<text x="600" y="34" font-size="22" font-weight="800" text-anchor="middle">Arquitectura del panel de inspecciones</text>
+<rect x="30" y="70" width="230" height="90" rx="12" class="box"/><text x="145.0" y="96" font-size="16" font-weight="700" text-anchor="middle">App de inspecciones</text><text x="145.0" y="118" font-size="13" text-anchor="middle" class="muted">SaaS de terceros · API REST</text><text x="145.0" y="137" font-size="13" text-anchor="middle" class="muted">checklists y fotos</text>
+<rect x="30" y="200" width="230" height="90" rx="12" class="box"/><text x="145.0" y="226" font-size="16" font-weight="700" text-anchor="middle">Datos maestros</text><text x="145.0" y="248" font-size="13" text-anchor="middle" class="muted">Excel en Microsoft 365</text><text x="145.0" y="267" font-size="13" text-anchor="middle" class="muted">vía Graph API</text>
+<rect x="30" y="360" width="230" height="90" rx="12" class="box"/><text x="145.0" y="386" font-size="16" font-weight="700" text-anchor="middle">GitHub Actions</text><text x="145.0" y="408" font-size="13" text-anchor="middle" class="muted">cron + botón bajo demanda</text><text x="145.0" y="427" font-size="13" text-anchor="middle" class="muted">~200 comprobaciones antes</text>
+<rect x="320" y="135" width="220" height="90" rx="12" class="boxa"/><text x="430.0" y="161" font-size="16" font-weight="700" text-anchor="middle">Extractor Python</text><text x="430.0" y="183" font-size="13" text-anchor="middle" class="muted">incremental cada 3 h</text><text x="430.0" y="202" font-size="13" text-anchor="middle" class="muted">pandas · httpx</text>
+<rect x="600" y="135" width="220" height="90" rx="12" class="box"/><text x="710.0" y="161" font-size="16" font-weight="700" text-anchor="middle">Estrella en CSV</text><text x="710.0" y="183" font-size="13" text-anchor="middle" class="muted">histórico en caché</text><text x="710.0" y="202" font-size="13" text-anchor="middle" class="muted">+ ventana viva de 3 meses</text>
+<rect x="880" y="70" width="290" height="90" rx="12" class="boxv"/><text x="1025.0" y="96" font-size="16" font-weight="700" text-anchor="middle">Generador estático</text><text x="1025.0" y="118" font-size="13" text-anchor="middle" class="muted">Plotly + JS sin framework</text><text x="1025.0" y="137" font-size="13" text-anchor="middle" class="muted">build cliente ≠ build interno</text>
+<rect x="880" y="200" width="290" height="90" rx="12" class="box"/><text x="1025.0" y="226" font-size="16" font-weight="700" text-anchor="middle">Informes</text><text x="1025.0" y="248" font-size="13" text-anchor="middle" class="muted">Word mensual</text><text x="1025.0" y="267" font-size="13" text-anchor="middle" class="muted">Excel de certificación</text>
+<rect x="600" y="330" width="220" height="90" rx="12" class="box"/><text x="710.0" y="356" font-size="16" font-weight="700" text-anchor="middle">Static Web App</text><text x="710.0" y="378" font-size="13" text-anchor="middle" class="muted">login con Entra ID</text><text x="710.0" y="397" font-size="13" text-anchor="middle" class="muted">roles por lista permitida</text>
+<rect x="880" y="330" width="290" height="90" rx="12" class="boxv"/><text x="1025.0" y="356" font-size="16" font-weight="700" text-anchor="middle">Funciones serverless</text><text x="1025.0" y="378" font-size="13" text-anchor="middle" class="muted">proxy de fotos y de ficheros · roles</text><text x="1025.0" y="397" font-size="13" text-anchor="middle" class="muted">el token del SaaS solo vive aquí</text>
+<path d="M260 115 L318 165" class="arrow"/>
+<path d="M260 245 L318 200" class="arrow"/>
+<path d="M260 395 C300 395 330 300 360 227" class="arrow"/>
+<path d="M540 180 L598 180" class="arrow"/>
+<path d="M820 165 L878 120" class="arrow"/>
+<path d="M820 195 L878 240" class="arrow"/>
+<path d="M885 158 L765 328" class="arrow"/>
+<path d="M820 375 L878 375" class="arrow"/>
+</svg>
