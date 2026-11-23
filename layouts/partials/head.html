@@ -8,12 +8,31 @@
 <link rel="canonical" href="{{ .Permalink }}">
 {{ range .AllTranslations }}<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
 {{ end }}
-<meta property="og:type" content="website">
+{{ $c := partial "datos.html" "contacto" }}
+{{ $esFicha := and .IsPage (eq .Section "proyectos") }}
+<meta property="og:type" content="{{ cond $esFicha "article" "website" }}">
+<meta property="og:site_name" content="{{ site.Title }}">
 <meta property="og:title" content="{{ $titulo }}">
 <meta property="og:description" content="{{ $desc }}">
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:locale" content="{{ replace site.Language.LanguageCode "-" "_" }}">
-{{ with resources.Get "images/me.png" }}{{ with .Fill "1200x630 Center webp q80" }}<meta property="og:image" content="{{ .Permalink }}">{{ end }}{{ end }}
+{{ range .Translations }}<meta property="og:locale:alternate" content="{{ replace .Language.LanguageCode "-" "_" }}">{{ end }}
+{{ $ogTitulo := cond .IsHome site.Title .Title }}
+{{ $ogSub := cond .IsHome (cond (eq site.Language.Lang "en") $c.titular_en $c.titular) (.Params.subtitulo | default $desc) }}
+{{ $og := partial "og-imagen.html" (dict "titulo" $ogTitulo "sub" $ogSub) }}
+<meta property="og:image" content="{{ $og.Permalink }}">
+<meta property="og:image:width" content="{{ $og.Width }}">
+<meta property="og:image:height" content="{{ $og.Height }}">
+<meta property="og:image:alt" content="{{ $ogTitulo }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $titulo }}">
+<meta name="twitter:description" content="{{ $desc }}">
+<meta name="twitter:image" content="{{ $og.Permalink }}">
+{{ if .IsHome }}
+{{ $same := slice }}{{ range $k, $v := $c.redes }}{{ $same = $same | append $v }}{{ end }}
+{{ $persona := dict "@context" "https://schema.org" "@type" "Person" "name" site.Params.autor "url" site.BaseURL "jobTitle" (cond (eq site.Language.Lang "en") "Data, AI & Product" "Datos, IA y Producto") "worksFor" (dict "@type" "Organization" "name" "Intervalor Data") "alumniOf" (dict "@type" "CollegeOrUniversity" "name" "Universidad Tecnológica Nacional") "address" (dict "@type" "PostalAddress" "addressLocality" "Talavera de la Reina" "addressCountry" "ES") "sameAs" $same "image" ((resources.Get "images/me.png").Resize "400x webp q80").Permalink }}
+<script type="application/ld+json">{{ $persona | jsonify | safeJS }}</script>
+{{ end }}
 <meta name="theme-color" content="#0f172a">
 <script>
   (function(){try{var t=localStorage.getItem('tema');if(t)document.documentElement.dataset.tema=t;}catch(e){}})();

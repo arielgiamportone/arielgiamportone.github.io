@@ -1,0 +1,33 @@
+{{- /* Tarjeta Open Graph 1200x630: fondo común + título de la página (y descripción) escritos por Hugo. */ -}}
+{{- $base := resources.Get "images/og-base.png" -}}
+{{- $bold := resources.Get "fonts/DejaVuSans-Bold.ttf" -}}
+{{- $reg := resources.Get "fonts/DejaVuSans.ttf" -}}
+{{- $titulo := .titulo -}}
+{{- $sub := .sub -}}
+{{- /* Ajuste de línea manual: images.Text no parte líneas por ancho. */ -}}
+{{- $lineas := slice -}}{{- $actual := "" -}}
+{{- range split $titulo " " -}}
+  {{- if and $actual (gt (add (len $actual) (len .) 1) 26) }}{{ $lineas = $lineas | append $actual }}{{ $actual = . }}{{ else }}{{ $actual = cond (eq $actual "") . (printf "%s %s" $actual .) }}{{ end -}}
+{{- end -}}{{- $lineas = $lineas | append $actual -}}
+{{- $lineas = first 4 $lineas -}}
+{{- $tam := cond (gt (len $lineas) 3) 46 54 -}}
+{{- $filtros := slice (images.Text (delimit $lineas "\n") (dict "color" "#f8fafc" "size" $tam "linespacing" 10 "x" 70 "y" 70 "font" $bold)) -}}
+{{- with $sub -}}
+  {{- $s := replace (. | plainify) " ·" " ·" -}}
+  {{- $ls := slice -}}{{- $a := "" -}}{{- $corto := false -}}
+  {{- range split $s " " -}}
+    {{- if not $corto -}}
+      {{- if and $a (gt (add (len $a) (len .) 1) 44) -}}
+        {{- $ls = $ls | append $a -}}{{- $a = . -}}
+        {{- if eq (len $ls) 3 }}{{ $corto = true }}{{ end -}}
+      {{- else }}{{ $a = cond (eq $a "") . (printf "%s %s" $a .) }}{{ end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if $corto -}}
+    {{- $ult := index $ls 2 -}}{{- $ls = first 2 $ls | append (printf "%s…" (strings.TrimRight ".,;:" $ult)) -}}
+  {{- else }}{{ $ls = $ls | append $a }}{{ end -}}
+  {{- $y := add 100 (mul (len $lineas) (add $tam 12)) -}}
+  {{- $filtros = $filtros | append (images.Text (delimit $ls "\n") (dict "color" "#94a3b8" "size" 26 "linespacing" 8 "x" 70 "y" $y "font" $reg)) -}}
+{{- end -}}
+{{- $img := ($base | images.Filter $filtros).Process "jpg q85" -}}
+{{- return $img -}}
