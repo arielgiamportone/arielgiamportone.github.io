@@ -449,6 +449,7 @@
   organizacion: UTN Facultad Regional Tierra del Fuego
   tipo: desarrollo_tecnologico
   rol: Cofundador y coordinador
+  fechas: 2020 – 2022
   descripcion: 'Grupo de desarrollo logístico de Ingeniería Pesquera (UTN FRTDF, Ushuaia) para vincular la universidad con
     los sectores portuario, marítimo y pesquero. Continúa el trabajo del Grupo de Tecnología Marítima Tierra del Fuego, su
     precursor (cartografía digital antártica, VITO GNU/Linux, KIPPA, dragas para COPLA, estudio del proyecto de ley de Marina
@@ -461,6 +462,7 @@
     conversatorio académico anual sobre el sistema portuario. Web cedeslogtdf.com.ar (caída), página de LinkedIn (company/grupo-de-desarrollo-logístico-utn-antártida-argentina),
     Facebook (UTNAATDF) y canal de YouTube.'
   inicio: '2020'
+  fin: '2022'
   actual: false
   perfiles:
   - economia-azul
