@@ -4,50 +4,50 @@ proyecto: periodic_report_kit
 translationKey: "proyecto-periodic-report-kit"
 url: "/en/projects/periodic-report-kit/"
 description: "Declarative periodic reports: from the spreadsheets a field system exports to a branded Word document, PDF or slide deck, with nothing rebuilt by hand each month."
-subtitulo: "The monthly report someone used to assemble by hand over hours, generated in seconds from the data, with consistent figures and without erasing the comment a person already wrote."
+subtitulo: "The monthly report someone used to spend hours assembling by hand, generated in seconds from the data, with consistent figures and without erasing the comment a person already wrote."
 indicadores:
-  - { v: "~11 s", e: "to generate six months of data and two reports with PDF" }
+  - { v: "~11 s", e: "to generate six months of data and two reports, PDF included" }
   - { v: "14", e: "domain rules, each with a test" }
   - { v: "75", e: "tests" }
   - { v: "0", e: "discrepancies when checking the report against its own model" }
   - { v: "3", e: "output formats: Word, PDF and PowerPoint" }
-  - { v: "MIT", e: "licence · PyPI 0.1.1" }
+  - { v: "MIT", e: "license · PyPI 0.1.1" }
 demo:
   formato: documento
   titulo: "Sample reports generated with the package"
-  nota: "Generated with «reportkit demo» (0.1.1, freshly installed from PyPI) from six months of synthetic data that includes the real-world traps each rule exists for: drafts, lock files, blank results, duplicate controls, a sheet that lies about its size and a UTC export. The «Nordal Analytics» brand is fictitious and the reports are in Spanish. The final annex lists the loading warnings: what was set aside and why."
+  nota: "Generated with “reportkit demo” (0.1.1, freshly installed from PyPI) from six months of synthetic data that includes the real-world traps each rule exists for: drafts, lock files, blank results, duplicate controls, a sheet that lies about its size and a UTC export. The “Nordal Analytics” brand is fictitious and the reports are in Spanish. The final annex lists the loading warnings: what was set aside and why."
   pestanas:
-    - { titulo: "Semester report (22 pages)", recurso: "informes/informe-semestral-sintetico.pdf" }
+    - { titulo: "Semiannual report (22 pages)", recurso: "informes/informe-semestral-sintetico.pdf" }
     - { titulo: "Monthly report (15 pages)", recurso: "informes/informe-mensual-sintetico.pdf" }
 descargas:
-  - { t: "Semester report, Word", recurso: "informes/informe-semestral-sintetico.docx" }
-  - { t: "Semester report, PDF", recurso: "informes/informe-semestral-sintetico.pdf" }
+  - { t: "Semiannual report, Word", recurso: "informes/informe-semestral-sintetico.docx" }
+  - { t: "Semiannual report, PDF", recurso: "informes/informe-semestral-sintetico.pdf" }
   - { t: "Monthly report, Word", recurso: "informes/informe-mensual-sintetico.docx" }
 enlaces:
   - { t: "Repository", url: "https://github.com/arielgiamportone/periodic-report-kit" }
   - { t: "PyPI: periodic-report-kit", url: "https://pypi.org/project/periodic-report-kit/" }
 galeria:
   - { src: "pag-01.png", pie: "Full-bleed cover, outside the PDF page numbering, flagged as synthetic data." }
-  - { src: "pag-02.png", pie: "Semester summary: every percentage states its base." }
+  - { src: "pag-02.png", pie: "Semiannual summary: every percentage states its base." }
   - { src: "pag-03.png", pie: "Monthly trend and methodology." }
-  - { src: "pag-04.png", pie: "One chapter per group with its indicators and the gap for the human comment." }
+  - { src: "pag-04.png", pie: "One chapter per group with its indicators and a placeholder for the human comment." }
   - { src: "pag-06.png", pie: "Conditional charts: they only appear when the data justifies them." }
 ---
 
 ## The problem
 
-In many recurring inspection or control services, the periodic report is assembled by hand: someone exports spreadsheets from the field system, recalculates totals in pivot tables, pastes figures and charts into a letterhead Word document and redoes the cover every month. It takes hours, the summary figures end up contradicting the chapters, and regenerating the document erases the comments someone had already written.
+In many recurring inspection or control services, the periodic report is assembled by hand: someone exports spreadsheets from the field system, recalculates totals in pivot tables, pastes figures and charts into a Word document on letterhead and redoes the cover every month. It takes hours, the summary figures end up contradicting the chapters, and regenerating the document erases the comments a person had already written.
 
 ## How I solved it
 
 - **Loaders that translate rather than interpret**: they accept whatever the field system exports (inconsistent names, hand-made summary sheets, drafts) and send anything unknown to quarantine with a typed warning.
 - **A canonical model as the boundary**: one row per evaluated item. Above it nothing knows which file the data came from, so switching the source to an API only touches the loader.
 - **Named metrics with a declared base**: two easily confused rates have fixed names, volume is summed and rates only compare like with like. Whatever cannot be computed is `[[PENDIENTE]]` (pending), never zero.
-- **Rules in configuration**: the data schema, groups, items and the catalogue of sections and charts are YAML with tests. A changing criterion is one line, not a deployment.
+- **Rules in configuration**: the data schema, groups, items and the catalog of sections and charts are YAML with tests. A changing criterion is one line, not a deployment.
 - **The human comment survives**: it is stored in YAML per period; if its figures no longer match the current ones, the report flags it. It is never written automatically.
 - **Branded output**: Word with a real table of contents that Word updates and a cover made of text over an anchored background; PDF rendered in two passes joined with pypdf so the cover stays outside the page numbering; Markdown to Word or PowerPoint with nine visual blocks.
 - **Validator**: checks the report against what was delivered and exits with an error on any discrepancy. Each run writes to a new versioned folder: a deliverable is never overwritten.
 
 ## A clean-room case study
 
-The patterns come from my work at Intervalor Data and are published with the company's permission. It was rebuilt from a written specification, with synthetic data and a fictitious brand generated by script; the independent review against the original repositories found no copied fragments.
+The patterns come from my work at Intervalor Data and are published with the company's permission. The kit was rebuilt from a written specification, with synthetic data and a fictitious brand generated by script; the independent review against the original repositories found no copied fragments.

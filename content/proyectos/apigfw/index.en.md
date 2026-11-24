@@ -30,8 +30,8 @@ Teaching material for the **Pesqueros en IA** community and for teaching at UTN:
 - **Using a real API**: two clients for the [Global Fishing Watch](https://globalfishingwatch.org) v3 API to search vessels, query their events and get the fishing effort of an area. The key is read from an environment variable, never from the code.
 - **An ETL pipeline**: extraction, transformation with data quality checks, and loading to CSV and Parquet.
 - **Exploratory analysis**: activity by month, zone, vessel type and flag, temporal patterns, geographical distribution and distance from the coast.
-- **Good practice**: commented, reproducible code organised step by step.
+- **Good practice**: commented, reproducible code organized step by step.
 
 ## About the notebook's data
 
-So that the course works without every student having to register for the API, **the notebook generates synthetic data** shaped like the real data (vessels, positions and fishing hours). The charts on this page come from that made-up data: they are there to learn the technique and do not describe real fishing activity in the Argentine Sea. With their own key, the included clients let you repeat the analysis with real data.
+So that the course works without every student having to register for the API, **the notebook generates synthetic data** shaped like the real data (vessels, positions and fishing hours). The charts on this page come from that synthetic data: they are there to learn the technique and do not describe real fishing activity in the Argentine Sea. With your own key, the included clients let you repeat the analysis with real data.

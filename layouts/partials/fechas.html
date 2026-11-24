@@ -1,4 +1,7 @@
 {{- /* "03/2021 – Presente" → "mar. 2021 – Actualidad" en el idioma actual */ -}}
 {{- $f := . -}}
 {{- $f = replaceRE `(?i)presente|actualidad` (i18n "presente") $f -}}
+{{- if eq site.Language.Lang "en" -}}
+{{- $f = replace $f " y " " and " | replaceRE `\(dos proyectos\)` "(two projects)" -}}
+{{- end -}}
 {{- return $f -}}

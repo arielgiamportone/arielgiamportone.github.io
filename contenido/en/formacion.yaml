@@ -3,7 +3,7 @@
   nivel: "Undergraduate degree"
 "Técnico Universitario Pesquero":
   titulo: "University Fisheries Technician"
-  nivel: "Intermediate university degree (within the Fisheries Engineering programme)"
+  nivel: "Intermediate university degree (within the Fisheries Engineering program)"
 "Máster título propio MBA en Dirección Logística y de Operaciones (COO)":
   titulo: "MBA in Logistics and Operations Management (COO), university-specific master's"
   nivel: "University-specific master's (1,500 h, 60 ECTS)"
@@ -16,7 +16,7 @@
   nivel: "Intensive bootcamp (350 h)"
 "Diplomatura en Gestión del Medio Ambiente":
   titulo: "Diploma in Environmental Management"
-  nivel: "Specialisation diploma (120 h)"
+  nivel: "Specialization diploma (120 h)"
 "Diplomatura en Gestión Integral de la Calidad":
   titulo: "Diploma in Integrated Quality Management"
-  nivel: "Specialisation diploma (160 h)"
+  nivel: "Specialization diploma (160 h)"

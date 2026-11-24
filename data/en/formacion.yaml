@@ -10,7 +10,7 @@ titulos:
   ubicacion: Ushuaia, Argentina
 - institucion: Universidad Tecnológica Nacional (UTN), Facultad Regional Río Grande (Extensión Áulica Ushuaia)
   titulo: University Fisheries Technician
-  nivel: Intermediate university degree (within the Fisheries Engineering programme)
+  nivel: Intermediate university degree (within the Fisheries Engineering program)
   fechas: 2006 – 2014
 posgrado_especializacion:
 - institucion: TECH Universidad Tecnológica
@@ -37,12 +37,12 @@ posgrado_especializacion:
   detalle_fechas: Diploma emitido en Madrid el 19/02/2024
 - institucion: UTN FRRe (Facultad Regional Resistencia Chaco)
   titulo: Diploma in Environmental Management
-  nivel: Specialisation diploma (120 h)
+  nivel: Specialization diploma (120 h)
   fechas: '2020'
   detalle_fechas: Certificado del 08/07/2020
 - institucion: UTN FRRe (Facultad Regional Resistencia Chaco)
   titulo: Diploma in Integrated Quality Management
-  nivel: Specialisation diploma (160 h)
+  nivel: Specialization diploma (160 h)
   fechas: '2019'
   detalle_fechas: Certificado del 28/08/2019
 certificaciones:

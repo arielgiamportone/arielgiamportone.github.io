@@ -313,6 +313,12 @@ def aplicar_textos(ficheros: dict, textos: dict, lang: str, exigir: bool) -> dic
 
     por_id("experiencia.yaml", "id", ["rol", "descripcion"])
     por_id("proyectos.yaml", "id", ["descripcion"])
+    roles = textos.get("roles_proyecto", {})
+    for item in salida["proyectos.yaml"]:
+        if item.get("rol") in roles:
+            item["rol"] = roles[item["rol"]]
+        elif exigir and item.get("rol"):
+            aviso(f"[{lang}] rol sin traducir: proyectos {item.get('id')} {item['rol']!r}")
     por_id("perfiles.yaml", "slug", ["resumen"])
     por_id("idiomas.yaml", "idioma", ["nivel"])
 
@@ -332,6 +338,34 @@ def aplicar_textos(ficheros: dict, textos: dict, lang: str, exigir: bool) -> dic
                 it.update(t)
             elif exigir:
                 aviso(f"[{lang}] sin traducir: formación {it.get('titulo')}")
+
+    # Certificaciones: por nombre exacto de la base (contenido/<lang>/certificaciones.yaml).
+    cert = textos.get("certificaciones", {})
+    for it in salida["formacion.yaml"].get("certificaciones", []):
+        t = cert.get(it.get("nombre"))
+        if t:
+            it.update(t)
+        elif exigir:
+            aviso(f"[{lang}] sin traducir: certificación {it.get('nombre')}")
+
+    # Competencias: por nombre exacto de la base (contenido/<lang>/skills.yaml).
+    sk = textos.get("skills", {})
+    for grupo, items in salida["skills.yaml"].items():
+        for it in items:
+            t = sk.get(it.get("nombre"))
+            if t:
+                it.update(t)
+            elif exigir:
+                aviso(f"[{lang}] sin traducir: competencia {grupo}/{it.get('nombre')}")
+
+    # Publicaciones en español: el título original se mantiene y se añade la traducción.
+    tit = pub.get("titulos", {})
+    for seccion, items in salida["publicaciones.yaml"].items():
+        if not isinstance(items, list):
+            continue
+        for it in items:
+            if isinstance(it, dict) and it.get("titulo") in tit:
+                it["titulo_traducido"] = tit[it["titulo"]]
 
     con = textos.get("contacto", {})
     salida["contacto.yaml"].update(con)

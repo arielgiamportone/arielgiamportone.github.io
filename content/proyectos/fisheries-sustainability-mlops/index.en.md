@@ -15,7 +15,7 @@ indicadores:
 demo:
   parcial: "bn"
   titulo: "Try it: the project's Bayesian network"
-  nota: "Fix any variable and watch how the others and the probability of a sustainable operation change. Try fixing fishing effort: if you observe it, what you know about sea temperature, its cause, also changes; if you intervene, it does not, because you cut that arrow."
+  nota: "Set any variable and watch how the others and the probability of a sustainable operation change. Try setting fishing effort: if you observe it, what you know about sea temperature (its cause) also changes; if you intervene on it, it does not, because you cut that arrow."
 enlaces:
   - { t: "Repository", url: "https://github.com/arielgiamportone/fisheries-sustainability-mlops" }
 galeria:
@@ -27,12 +27,12 @@ galeria:
 
 ## The problem
 
-Fisheries decisions are made with noisy data and a lot of uncertainty: sea temperature, fleet effort, costs and fish prices change together and influence each other. A model that only says "sustainable" or "not sustainable" hides what matters most: **how confident** it is and **what would happen if** you acted on a variable.
+Fisheries decisions are made with noisy data and a lot of uncertainty: sea temperature, fleet effort, costs and fish prices all change at once and influence each other. A model that only says "sustainable" or "not sustainable" hides what matters most: **how confident** it is and **what would happen if** you acted on a variable.
 
 ## What I built
 
-- **A Bayesian network with a domain causal structure** (pgmpy): environmental, operational and economic variables leading to sustainability, with structure learning (BIC, K2, BDeu), cross-validation and method comparison.
-- **Causal analysis**: an explicit DAG and the *do*-operator to separate "what I observe" from "what would happen if I intervene", which is the question a regulator asks.
+- **A Bayesian network with a domain causal structure** (pgmpy): environmental, operational and economic variables that drive sustainability, with structure learning (BIC, K2, BDeu), cross-validation and method comparison.
+- **Causal analysis**: an explicit DAG and the *do*-operator to separate "what I observe" from "what would happen if I intervene", which is the question a regulator actually asks.
 - **Deep learning with uncertainty**: a Bayesian neural network (BNN), an MLP and a Causal VAE in PyTorch, with counterfactuals.
 - **End-to-end MLOps**: experiment tracking and model registry with MLflow, tuning with Optuna, a FastAPI API, a web dashboard, Docker and CI/CD with deployment ready for AWS ECS.
 

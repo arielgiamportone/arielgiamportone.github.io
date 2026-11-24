@@ -64,7 +64,7 @@
   {{ with $d.geocoding }}
   <div class="demo-cat__geo">
     <h3>{{ cond $en "Fallback geocoding: precision by OSM class" "Geocoding de respaldo: precisión por clase de OSM" }}</h3>
-    <p class="tenue pequeno">{{ cond $en "When the cadastre cannot resolve, the address goes to Nominatim. The library labels each hit by its OpenStreetMap class and only stores «exact» ones by default: a neighbourhood centroid is not the property." "Cuando el catastro no resuelve, la dirección va a Nominatim. La librería etiqueta cada resultado por su clase de OpenStreetMap y por defecto solo guarda los «exactos»: el centroide de un barrio no es el inmueble." }}</p>
+    <p class="tenue pequeno">{{ cond $en "When the cadastre cannot resolve, the address goes to Nominatim. The library labels each hit by its OpenStreetMap class and only stores “exact” ones by default: a neighbourhood centroid is not the property." "Cuando el catastro no resuelve, la dirección va a Nominatim. La librería etiqueta cada resultado por su clase de OpenStreetMap y por defecto solo guarda los «exactos»: el centroide de un barrio no es el inmueble." }}</p>
     <table>
       <thead><tr><th>{{ cond $en "Query" "Consulta" }}</th><th>{{ cond $en "OSM class" "Clase OSM" }}</th><th>{{ cond $en "Precision" "Precisión" }}</th><th>{{ cond $en "Stored by default" "Se guarda por defecto" }}</th></tr></thead>
       <tbody>{{ range . }}<tr><td>{{ .consulta }}</td><td><code>{{ .clase }}/{{ .tipo }}</code></td><td><code>{{ .precision }}</code></td><td>{{ if eq .precision "exact" }}✔{{ else }}✘ <span class="tenue">(--accept-zone)</span>{{ end }}</td></tr>{{ end }}</tbody>

@@ -28,14 +28,14 @@ if (raiz) {
     '31': en ? 'Navarre cadastre (INSPIRE WFS 2.0, cql_filter)' : 'Catastro de Navarra (WFS INSPIRE 2.0, cql_filter)',
     '48': en ? 'Bizkaia foral cadastre (ArcGIS WFS, reference split in three)' : 'Catastro foral de Bizkaia (WFS de ArcGIS, referencia partida en tres)',
   };
-  const DGC = en ? 'National Directorate of Cadastre, DGC (OVC XML + INSPIRE WFS)' : 'Dirección General del Catastro, DGC (OVC XML + WFS INSPIRE)';
+  const DGC = en ? 'Directorate General for Cadastre, DGC (OVC XML + INSPIRE WFS)' : 'Dirección General del Catastro, DGC (OVC XML + WFS INSPIRE)';
   const entrada = raiz.querySelector('[name="ine"]');
   const ruta = raiz.querySelector('[data-ruta]');
   function rutear() {
     const v = entrada.value.trim();
     if (!/^\d{5}$/.test(v)) { ruta.textContent = en ? 'Type a 5-digit code.' : 'Escribe un código de 5 dígitos.'; return; }
     const prov = v.slice(0, 2);
-    if (Number(prov) < 1 || Number(prov) > 52) { ruta.textContent = en ? 'That province code does not exist (01-52).' : 'Ese código de provincia no existe (01-52).'; return; }
+    if (Number(prov) < 1 || Number(prov) > 52) { ruta.textContent = en ? 'No province has that code (01-52).' : 'Ese código de provincia no existe (01-52).'; return; }
     const destino = FORALES[prov] || DGC;
     ruta.innerHTML = `${en ? 'Province' : 'Provincia'} <code>${prov}</code> → <strong>${destino}</strong>`;
   }

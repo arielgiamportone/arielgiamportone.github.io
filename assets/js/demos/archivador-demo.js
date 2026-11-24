@@ -19,10 +19,10 @@ function iniciar(raiz) {
     resultado: 'safe_ledger (repository)', original: 'Original code', carpeta: (a) => `Folder ${a}`, antes: 'before', despues: 'after',
     filas: (n) => (n < 0 ? 'unreadable' : `${n} rows`), intentos: (n) => `read attempts: ${n}`, aborta: 'Run aborted: nothing written, alert sent',
     perdidas: (n) => `ledger saved with only the 2 new photos: ${n} rows lost, no error`, origBien: 'same result',
-    ejDestino: ['Same month', 'Write-up a month later', 'Two visits, months apart', 'Write-up not done yet'],
-    resolutor: 'Resolver (repository)', ingenuo: 'Only the photo\'s month', motivos: { same_month: 'its own month', later_month: 'earliest later month', errors: 'error folder: the write-up does not exist yet' },
+    ejDestino: ['Same month', 'Report written a month later', 'Two visits, months apart', 'Report not written yet'],
+    resolutor: 'Resolver (repository)', ingenuo: 'Only the photo\'s month', motivos: { same_month: 'its own month', later_month: 'earliest later month', errors: 'error folder: the report does not exist yet' },
     indice: 'Index built in one scan', local: 'Site', meses: 'Months with a folder', erroresFalsos: 'photo lost in the error folder',
-    pasos: { inicial: '1. Archive as created', mover: '2. Move the whole tree', reorganizar: '3. Someone reorganises one site by hand', duplicado: '4. …and leaves a copy elsewhere', desmontado: '5. Archive not synced' },
+    pasos: { inicial: '1. Archive as created', mover: '2. Move the whole tree', reorganizar: '3. Someone reorganizes one site by hand', duplicado: '4. …and leaves a copy elsewhere', desmontado: '5. Archive not synced' },
     absoluto: 'Absolute link', relativo: 'Relative link', resuelve: (a, b) => `${a} of ${b} resolve to a file`,
     reparacion: 'Repair', reparados: 'repaired', noEnc: 'not found', ambiguos: 'ambiguous: found twice, left for a person', nada: 'nothing to repair',
   } : {

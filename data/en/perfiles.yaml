@@ -28,9 +28,9 @@
   titulo: AI & Software Engineer · Data Products and Platforms
   resumen: 'Software and applied AI engineer who builds complete data products: Python backends (FastAPI, SQLAlchemy, PostgreSQL/SQLite),
     web (Jinja2/HTMX, Streamlit) and desktop interfaces (Tkinter, PySide6, PyInstaller), LLM, OCR and vision integration,
-    deployment on Azure and Microsoft 365, and ENS/GDPR compliance. At Intervalor Data I started INTERDATA (fixed-asset SaaS
-    for companies) and put a dashboard for AENA into production with Entra ID. I work with agent-assisted development (Claude
-    Code) and document every repository for humans and agents (AGENTS.md, ADRs, CHANGELOG).'
+    deployment on Azure and Microsoft 365, and ENS/GDPR compliance. At Intervalor Data I launched INTERDATA (a fixed-asset
+    SaaS for companies) and deployed a dashboard for AENA to production with Entra ID. I work with agent-assisted development
+    (Claude Code) and document every repository for humans and agents (AGENTS.md, ADRs, CHANGELOG).'
   keywords:
   - AI Engineer
   - Software Engineer
@@ -52,7 +52,7 @@
   resumen: 'Data engineer with real, verifiable deliverables in the Spanish public sector: an ETL platform for the municipal
     asset register of San Bartolomé de Tirajana, technical inventory audits for EUIPO and AENA, and a multi-tenant asset register
     with accounting reconciliation. Previously Provincial Director of Science and Technology (government of Tierra del Fuego)
-    and board member of a CONICET research centre. Training in quality (ISO 9001, Lean Six Sigma), environmental management
+    and board member of a CONICET research centre. Trained in quality (ISO 9001, Lean Six Sigma), environmental management
     (ISO 14001) and an MBA in operations. Python, SQL, Power BI, FastAPI, Azure and Power Platform.'
   keywords:
   - Data Engineer

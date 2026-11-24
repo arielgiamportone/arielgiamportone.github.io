@@ -11,11 +11,11 @@ indicadores:
   - { v: "148", e: "tests, including an anti-leak sweep" }
   - { v: "23", e: "specification test cases covered" }
   - { v: "~270,000/s", e: "GIAI-96 round trips" }
-  - { v: "MIT", e: "licence · PyPI 0.1.0" }
+  - { v: "MIT", e: "license · PyPI 0.1.0" }
 demo:
   parcial: "gs1"
   titulo: "Try it: generate and read identities"
-  nota: "Change any field and the label is recalculated. It is a JavaScript port of the package's logic, checked against the package published on PyPI. Everything happens in your browser and all data are examples."
+  nota: "Change any field and the label is recalculated. It is a JavaScript port of the package's logic, checked against the package published on PyPI. Everything happens in your browser and all the data are examples."
 enlaces:
   - { t: "Repository", url: "https://github.com/arielgiamportone/asset-identity-gs1" }
   - { t: "PyPI: asset-identity-gs1", url: "https://pypi.org/project/asset-identity-gs1/" }
@@ -25,7 +25,7 @@ diagramas:
 
 ## The problem
 
-An inventory of physical assets (buildings, furniture, equipment, works of art) has to be **labelled** and then **recognised in the field**. That is harder than printing a barcode:
+An inventory of physical assets (buildings, furniture, equipment, works of art) has to be **labeled** and then **recognized in the field**. That is harder than printing a barcode:
 
 1. **Several sites.** Each one labels at its own pace, often offline. Two sites must never produce the same code.
 2. **Three readers, one identity.** The laser gun reads text, the phone reads a URL and the RFID reader returns 96 bits. All of them must lead to the same asset.
@@ -33,8 +33,8 @@ An inventory of physical assets (buildings, furniture, equipment, works of art) 
 
 ## How I solved it
 
-- **Uniqueness by construction, not by lookup.** An authority gives each site **one block, once**; the site then increments its serial locally. Different blocks give different codes, like MAC address or GS1 company prefixes. Nothing is checked at print time.
-- **Two numbers, one register.** The serial feeds the GIAI and the EPC and never changes; the inventory number feeds the alias because it is what people recognise. Renumbering never invalidates a chip already in place.
+- **Uniqueness by construction, not by lookup.** An authority gives each site **one block, once**; the site then increments its serial locally. Different blocks give different codes, like MAC address prefixes or GS1 company prefixes. Nothing is checked at print time.
+- **Two numbers, one register.** The serial feeds the GIAI and the EPC and never changes; the inventory number feeds the alias because it is what people recognize. Renumbering never invalidates a chip already in place.
 - **Typos caught on the spot.** The alias carries a visible mod-43 check character: a mistyped number is rejected before it reaches the database.
 - **Labels before assets.** A site can reserve a batch of identities before registering the assets, without inflating the indicators; when the assets are registered they inherit the label already stuck on them.
 - **Full label life cycle** (issued, printed, placed, retired), resolution of any scanned code and detection of swapped labels.
@@ -46,13 +46,13 @@ An inventory of physical assets (buildings, furniture, equipment, works of art) 
 |---|---|---|
 | GIAI as the key | SGTIN | A public asset is an individual asset, not a product with a GTIN |
 | Partitioned identifier space | Central register queried at print time | Sites print offline |
-| Numeric reference | Alphanumeric GIAI-202 | Fits the cheap 96-bit RFID chips |
+| Numeric reference | Alphanumeric GIAI-202 | Fits low-cost 96-bit RFID chips |
 | Code 128 | Code 39 | Denser: fits 63 mm labels |
 | QR with GS1 Digital Link | QR with the alias | One payload that is both a verification URL and a GS1 key |
 
 ## How it is built
 
-Pure Python with SQLite persistence, reportlab for vector PDFs and the partition table of the EPC Tag Data Standard. 148 tests that follow the 23 specification cases one by one, CI on Python 3.11 and 3.12, and published on PyPI.
+Pure Python with SQLite persistence, reportlab for vector PDFs and the partition table of the EPC Tag Data Standard. 148 tests that follow the 23 specification cases one by one, CI on Python 3.11 and 3.12, and a release on PyPI.
 
 ## A clean-room case study
 

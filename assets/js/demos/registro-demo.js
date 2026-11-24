@@ -14,7 +14,7 @@ function iniciar(raiz) {
 
   const T = en ? {
     cargando: 'Loading Pyodide…', modulos: 'Loading the repository modules…', listo: (s) => `Ready in ${s} s.`, error: 'Could not run the demo: ',
-    rechazo: 'Refused', acumulada: 'Accumulated depreciation', dotacion: 'Charge for the year', neto: 'Net book value', noAmort: 'Not depreciated',
+    rechazo: 'Refused', acumulada: 'Accumulated depreciation', dotacion: 'Depreciation for the year', neto: 'Net book value', noAmort: 'Not depreciated',
     memoria: 'Calculation memo', inicial: 'Starting point', una: 'First run', dos: 'Second run (same target year)', sinEstado: 'Second run without recording the last year applied',
     coste: 'Replacement cost', hasta: 'Revalued through', cuadra: 'Reconciled: every account matches to the cent.', cuenta: 'Account', metrica: 'Metric', nuestro: 'Migrated', legado: 'Legacy', delta: 'Delta', sospechosos: 'Assets to check',
     metricas: { cost: 'cost', accumulated: 'accumulated', net: 'net' }, inflado: (p) => `+${p} %, no warning`, igual: 'no change',
@@ -57,11 +57,11 @@ function iniciar(raiz) {
   const EJ_SEDE = ['VN', ' San_Roque ', 'puerto_norte', 'otra_sede', "vn'; DROP SCHEMA public;--", '../../etc'];
   const EJ_AMORT = [
     { t: en ? 'Building with land' : 'Edificio con suelo', v: { categoria: 'building', coste: '250000', alta: '2015-03-31', a_fecha: '2025-12-31', suelo: '50000' } },
-    { t: en ? 'Vehicle, record sets 8 years' : 'Vehículo con vida en la ficha', v: { categoria: 'vehicle', coste: '32450.50', alta: '2022-07-15', a_fecha: '2025-12-31', vida: '8' } },
-    { t: en ? 'Furniture with residual' : 'Mobiliario con residual', v: { categoria: 'furniture', coste: '1499.99', alta: '2025-01-31', a_fecha: '2025-12-31', residual: '99.99' } },
+    { t: en ? 'Vehicle, 8-year life on record' : 'Vehículo con vida en la ficha', v: { categoria: 'vehicle', coste: '32450.50', alta: '2022-07-15', a_fecha: '2025-12-31', vida: '8' } },
+    { t: en ? 'Furniture with residual value' : 'Mobiliario con residual', v: { categoria: 'furniture', coste: '1499.99', alta: '2025-01-31', a_fecha: '2025-12-31', residual: '99.99' } },
     { t: en ? 'Heritage with no date' : 'Patrimonio sin fecha', v: { categoria: 'heritage', coste: '18000', a_fecha: '2025-12-31' } },
-    { t: en ? 'Assigned, not owned' : 'Cedido, no propio', v: { categoria: 'equipment', coste: '5400', alta: '2021-05-01', a_fecha: '2025-12-31', propio: false } },
-    { t: en ? 'Balance from a closing' : 'Saldo de un cierre', v: { categoria: 'building', coste: '410000', alta: '1998-06-01', a_fecha: '2025-12-31', saldo: '226120.37' } },
+    { t: en ? 'On loan, not owned' : 'Cedido, no propio', v: { categoria: 'equipment', coste: '5400', alta: '2021-05-01', a_fecha: '2025-12-31', propio: false } },
+    { t: en ? 'Balance from a year-end close' : 'Saldo de un cierre', v: { categoria: 'building', coste: '410000', alta: '1998-06-01', a_fecha: '2025-12-31', saldo: '226120.37' } },
   ];
   const CONC_NUESTRAS = 'A-001;211;180000.00;43200.00\nA-002;211;95000.00;12666.67\nA-003;216;1499.99;140.00\nA-004;218;32450.50;12169.00';
   const CONC_LEGADO = 'A-001;211;180000.00;43200.00\nA-002;211;95000.00;12666.66\nA-003;216;1499.99;140.00\nA-004;218;32450.50;12169.00';

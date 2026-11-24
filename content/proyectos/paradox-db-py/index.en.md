@@ -4,14 +4,14 @@ proyecto: paradox_db_py
 translationKey: "proyecto-paradox-db-py"
 url: "/en/projects/paradox-db-py/"
 description: "A pure-Python reader and writer for Paradox tables (.DB, .MB, .PX), with no native or copyleft dependencies and no silent conversions."
-subtitulo: "Modernising a 1990s system means reading its data without losing a single record, and handing tables back so the old and new systems can coexist for months."
+subtitulo: "Modernizing a 1990s system means reading its data without losing a single record, and handing tables back so the old and new systems can coexist for months."
 indicadores:
   - { v: "104", e: "tests, including round-trip properties (Hypothesis)" }
   - { v: "0", e: "runtime dependencies" }
   - { v: "1.3 s", e: "to open and decode 50,000 records" }
   - { v: "3", e: "explicit cell states: OK, NULL, INVALID" }
   - { v: "3.0-7", e: "Paradox versions supported" }
-  - { v: "MIT", e: "licence · PyPI 0.1.0" }
+  - { v: "MIT", e: "license · PyPI 0.1.0" }
 demo:
   parcial: "paradox"
   titulo: "Try it: the real package, in your browser"
@@ -23,14 +23,14 @@ enlaces:
 
 ## The problem
 
-A fixed-asset management system written in Delphi on the Borland Database Engine kept decades of history in Paradox tables. Modernising it required two things at once: **extracting every record without loss**, including those the old engine left in the blocks without counting them in the header and BCD amounts that no longer decoded; and **handing tables back** to the old application during a long transition.
+A fixed-asset management system written in Delphi on the Borland Database Engine kept decades of history in Paradox tables. Modernizing it required two things at once: **extracting every record without loss**, including those the old engine left in the blocks without counting them in the header and BCD amounts that no longer decoded; and **handing tables back** to the old application during a long transition.
 
-What the Python ecosystem offered was a binding over a GPL C library: read-only in practice, with a global text encoding, skipping undeclared records and corrupting its memory after a few dozen writes. For a product installed on the client's own servers, none of that would do.
+What the Python ecosystem offered was a binding over a GPL-licensed C library: read-only in practice, with a single global text encoding; it skipped undeclared records and corrupted its own memory after a few dozen writes. For a product installed on the client's own servers, none of that would do.
 
 ## How I solved it
 
-- **Pure Python and MIT licence**, with no runtime dependencies.
-- **No silent conversions**: every cell comes back as `OK`, `NULL` or `INVALID`, with its raw bytes and the reason. The previous version turned unreadable amounts and sentinel dates into blanks: invisible data loss at scale.
+- **Pure Python and MIT license**, with no runtime dependencies.
+- **No silent conversions**: every cell comes back as `OK`, `NULL` or `INVALID`, with its raw bytes and the reason. The previous version turned unreadable amounts and sentinel dates into blanks: silent data loss at scale.
 - **Every record in every block**, including those the header does not declare, with the mismatch reported.
 - **Code page per table**, read from the header: real datasets mix CP437 and CP1252.
 - **`Decimal` for amounts and BCD** of up to 32 digits; never `float`.

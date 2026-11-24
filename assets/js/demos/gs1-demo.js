@@ -7,9 +7,9 @@ if (raiz) {
   const en = document.documentElement.lang.startsWith('en');
   const T = en ? {
     prefijo: 'The GS1 company prefix must have 6 to 12 digits.',
-    bloque: 'The block goes from 0 to 9999.',
-    serial: 'The serial goes from 0 to 99,999,999.',
-    sede: 'The site code must have 1 to 8 characters A-Z or 0-9.',
+    bloque: 'The block must be between 0 and 9999.',
+    serial: 'The serial must be between 0 and 99,999,999.',
+    sede: 'The site code must have 1 to 8 characters (A-Z or 0-9).',
     numero: 'The inventory number needs at least one letter or digit.',
     dominio: 'The resolver domain must be a host name, e.g. verify.example.org.',
     referencia: 'The asset reference does not fit in the EPC.',
@@ -17,8 +17,8 @@ if (raiz) {
     code128: 'Code 128 only allows printable ASCII.',
     epc: 'Not a valid GIAI-96 EPC.',
     alias: 'Not a valid alias.',
-    ALIAS: 'Alias (Code 128, people)', GIAI: 'GIAI (GS1 key)', EPC: 'EPC GIAI-96 (RFID)', GS1_LINK: 'GS1 Digital Link (QR)', UNKNOWN: 'Not recognised',
-    ok: 'Check character OK', mal: (e) => `Wrong check character: should be «${e}». Probably a typo.`,
+    ALIAS: 'Alias (Code 128, people)', GIAI: 'GIAI (GS1 key)', EPC: 'EPC GIAI-96 (RFID)', GS1_LINK: 'GS1 Digital Link (QR)', UNKNOWN: 'Not recognized',
+    ok: 'Check character is correct', mal: (e) => `Wrong check character: should be “${e}”. Probably a typo.`,
     sedeNum: (s, n) => `Site ${s} · inventory number ${n}`,
     bloqueSerial: (p, b, s, part) => `Prefix ${p} · block ${b} · serial ${s} · partition ${part}`,
     giaiNota: 'Prefix + block + serial. Resolve it against the register to find the asset.',

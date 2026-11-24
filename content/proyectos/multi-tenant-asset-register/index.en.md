@@ -39,8 +39,8 @@ Architect and lead developer end to end: data model, ETL, valuation engine, mult
 - **One schema per tenant** instead of shared tables with a tenant column: it maps one to one onto the original file-per-tenant model, and a cross-tenant leak takes more than one forgotten `WHERE`.
 - **Translate SQL at runtime** instead of rewriting about 1,200 statements with an ORM or maintaining two hand-written dialects. The translator only converts what the application uses and would rather fail than guess.
 - **`Decimal` rounded to the cent like the legacy system**, never `float` or Python's banker's rounding: one cent of drift per asset is a failed audit.
-- **A calculation memo on every figure**: where each input came from and which rule applied, so «why this number?» is answered without reading code.
-- **Balances from an approved closing are loaded, not recomputed**: the register must agree with accounts that were already signed off.
+- **A calculation memo on every figure**: where each input came from and which rule applied, so “why this number?” is answered without reading code.
+- **Balances from an approved year-end close are loaded, not recomputed**: the register must agree with accounts that were already signed off.
 - **Support access with signed tokens (RS256)** instead of a super-admin seeded in each database: no credential is left at the client to read or attack offline.
 
 ## What went wrong and stayed fixed

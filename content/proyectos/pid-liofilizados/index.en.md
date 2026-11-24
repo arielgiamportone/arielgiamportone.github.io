@@ -25,17 +25,17 @@ galeria:
 
 ## The project
 
-Research project PP9884 at UTN Tierra del Fuego (2023-2026, extended) studies freeze-drying, drying by sublimation at low pressure, to preserve and add value to locally produced food. I led it within the QA3DS R&D group (Chemistry Applied to the Environment, Food and Sustainable Development), with a team of lecturers in chemical and industrial engineering and science, and student grant holders.
+Research project PP9884 at UTN Tierra del Fuego (2023-2026, extended) studies freeze-drying, drying by sublimation at low pressure, to preserve and add value to locally produced food. I led it within the QA3DS R&D group (Chemistry Applied to the Environment, Food and Sustainable Development), with a team of lecturers in chemical engineering, industrial engineering and science, plus students on research grants.
 
 Of the three planned matrices, rhubarb went ahead; samphire and sea urchin were dropped.
 
 ## What we found
 
-- **The optimal time is 48 hours** with frozen or deep-frozen samples and 72 with fresh ones; in practice 36 to 48 hours is recommended. About 92 % of the weight is lost.
-- **Pre-freezing makes drying more predictable**: the Page model fits with R² of 0.91 and 0.92 against 0.76 for fresh samples.
+- **The optimal time is 48 hours** with frozen or deep-frozen samples and 72 with fresh ones; in practice 36 to 48 hours is recommended. About 92% of the weight is lost.
+- **Pre-freezing makes drying more predictable**: the Page model fits with an R² of 0.91 and 0.92, compared with 0.76 for fresh samples.
 - **From 36 hours the three pre-treatments are equivalent** (Kruskal-Wallis, p = 0.51), although at 24 hours the fresh samples are ahead.
 - **The results reproduce**: the month of the trial has no effect (p = 0.10), and neither do the equipment conditions within their range.
 
 ## How we worked
 
-A reproducible notebook compiles the trials, excludes invalid observations with their reason and produces the figures and a key-results document from which every published figure comes, including those on the group's website. An ETL loads the data into SQLite for a monitoring dashboard. The laboratory protocol, the quality framework and the scale-up study are finished; the technical-economic manual, the final report and a preprint are still in preparation. The project material is in Spanish.
+A reproducible notebook compiles the trials, excludes invalid observations with their reason and produces the figures and a key-results document from which every published number comes, including those on the group's website. An ETL loads the data into SQLite for a monitoring dashboard. The laboratory protocol, the regulatory quality framework and the scale-up study are finished; the technical-economic manual, the final report and a preprint are still in preparation. The project material is in Spanish.

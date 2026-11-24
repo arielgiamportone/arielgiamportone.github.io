@@ -21,7 +21,7 @@
           <li>
             {{ with .autores }}<span class="pub__autores">{{ replace . "Giamportone, A.L." "<strong>Giamportone, A.L.</strong>" | safeHTML }}</span>{{ end }}
             {{ with .año }}<span class="tenue">({{ . }})</span>{{ end }}
-            <span class="pub__titulo">{{ with .url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}{{ .titulo }}{{ with .url }}</a>{{ end }}</span>
+            <span class="pub__titulo">{{ with .url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}{{ .titulo }}{{ with .url }}</a>{{ end }}</span>{{ with .titulo_traducido }} <span class="tenue">[{{ . }}]</span>{{ end }}
             {{ with .revista }}<em>{{ . }}</em>{{ end }}{{ with .volumen }}, {{ . }}{{ end }}{{ with .paginas }}, {{ . }}{{ end }}{{ with .org }}<em>{{ . }}</em>{{ end }}
             {{ with .doi }}· <a href="https://doi.org/{{ . }}" target="_blank" rel="noopener">doi:{{ . }}</a>{{ end }}
             {{ with .pypi }}· <a href="{{ . }}" target="_blank" rel="noopener">PyPI</a>{{ end }}
