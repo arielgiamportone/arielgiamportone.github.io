@@ -44,6 +44,8 @@ preprints:
   tipo: preprint
   doi: 10.13140/RG.2.2.26962.94404
   url: https://doi.org/10.13140/RG.2.2.26962.94404
+  titulo_traducido: 'Sustainable Integration: Exploring Economic Growth and Its Relationship with Fisheries in Tierra del
+    Fuego'
 - titulo: 'Optimizando la sostenibilidad pesquera: explorando la selectividad artificial (Method)'
   autores: Giamportone, A.L.
   revista: Preprint (ResearchGate)
@@ -52,6 +54,7 @@ preprints:
   tipo: preprint
   doi: 10.13140/RG.2.2.10439.06562
   url: https://doi.org/10.13140/RG.2.2.10439.06562
+  titulo_traducido: 'Optimizing Fisheries Sustainability: Exploring Artificial Selectivity (Method)'
 - titulo: Optimización y Diseño Avanzado de Redes de arrastre
   autores: Giamportone, A.L.
   revista: Preprint (ResearchGate)
@@ -60,6 +63,7 @@ preprints:
   tipo: preprint
   doi: 10.13140/RG.2.2.32069.26080
   url: https://doi.org/10.13140/RG.2.2.32069.26080
+  titulo_traducido: Optimization and Advanced Design of Trawl Nets
 - titulo: 'Puertos pesqueros: aspectos técnicos para el emplazamiento y construcción de un muelle para la pesca artesanal
     en Ushuaia'
   autores: Giamportone, A.L.
@@ -69,6 +73,7 @@ preprints:
   tipo: preprint
   doi: 10.13140/RG.2.2.21488.06403
   url: https://doi.org/10.13140/RG.2.2.21488.06403
+  titulo_traducido: 'Fishing Ports: Technical Aspects of Siting and Building an Artisanal Fishing Pier in Ushuaia'
 - titulo: '1ª Jornada Fueguina de Vinculación, Transferencia Tecnológica y Propiedad Intelectual: un puente entre la innovación
     y el desarrollo territorial (coautoría)'
   autores: Giamportone, A.L. y otros
@@ -78,6 +83,8 @@ preprints:
   tipo: preprint
   doi: 10.13140/RG.2.2.21761.36965
   url: https://doi.org/10.13140/RG.2.2.21761.36965
+  titulo_traducido: '1st Tierra del Fuego Conference on Outreach, Technology Transfer and Intellectual Property: A Bridge
+    Between Innovation and Territorial Development (co-authored)'
 - titulo: 'Conciliación de datos en la industria retail: desafíos y soluciones para PYMEs'
   autores: Giamportone, A.L.
   revista: Preprint (ResearchGate)
@@ -86,6 +93,7 @@ preprints:
   tipo: preprint
   doi: 10.13140/RG.2.2.23513.84325
   url: https://doi.org/10.13140/RG.2.2.23513.84325
+  titulo_traducido: 'Data Reconciliation in the Retail Industry: Challenges and Solutions for SMEs'
 - titulo: Alfabetización en ciencia de datos e IA para profesionales del sector pesquero y acuícola
   autores: Giamportone, A.L.
   revista: Preprint (ResearchGate)
@@ -94,6 +102,7 @@ preprints:
   tipo: preprint
   doi: 10.13140/RG.2.2.10057.25448
   url: https://doi.org/10.13140/RG.2.2.10057.25448
+  titulo_traducido: Data Science and AI Literacy for Fisheries and Aquaculture Professionals
 - titulo: Deep Learning y Redes Bayesianas en pesquerías de Lithodes santolla
   autores: Giamportone, A.L.
   revista: Preprint (ResearchGate)
@@ -102,6 +111,7 @@ preprints:
   tipo: preprint
   doi: 10.13140/RG.2.2.35335.25767
   url: https://doi.org/10.13140/RG.2.2.35335.25767
+  titulo_traducido: Deep Learning and Bayesian Networks in Lithodes santolla Fisheries
 - titulo: Plan Estratégico Pesquero TDF 2050
   autores: Giamportone, A.L.
   revista: Preprint (ResearchGate)
@@ -110,6 +120,7 @@ preprints:
   tipo: preprint
   doi: 10.13140/RG.2.2.11329.72803
   url: https://doi.org/10.13140/RG.2.2.11329.72803
+  titulo_traducido: Tierra del Fuego Fisheries Strategic Plan 2050
 documentos_de_trabajo:
 - titulo: 'DT-ALGP-2026-002: La asimetría oculta del sistema pesquero-científico argentino'
   autores: Giamportone, A.L.
@@ -120,6 +131,7 @@ documentos_de_trabajo:
   tipo: documento_de_trabajo
   doi: 10.13140/RG.2.2.23063.12964
   url: https://doi.org/10.13140/RG.2.2.23063.12964
+  titulo_traducido: 'DT-ALGP-2026-002: The Hidden Asymmetry of Argentina''s Fisheries-Science System'
 - titulo: 'DT-ALGP-2026-003: Análisis crítico del modelo acuícola de Tierra del Fuego: Ley 1601'
   autores: Giamportone, A.L.
   revista: Serie DT-ALGP-2026, Documentos de Trabajo sobre Gobernanza Pesquera y Acuícola (UTN FRTDF / Pesqueros en IA), CC
@@ -129,6 +141,7 @@ documentos_de_trabajo:
   tipo: documento_de_trabajo
   doi: 10.13140/RG.2.2.36167.05288
   url: https://doi.org/10.13140/RG.2.2.36167.05288
+  titulo_traducido: 'DT-ALGP-2026-003: A Critical Analysis of Tierra del Fuego''s Aquaculture Model: Law 1601'
 - titulo: 'DT-ALGP-2026-005: La pesca fueguina, 2026: diecisiete años de antilogía institucional'
   autores: Giamportone, A.L.
   revista: Serie DT-ALGP-2026, Documentos de Trabajo sobre Gobernanza Pesquera y Acuícola (UTN FRTDF / Pesqueros en IA), CC
@@ -138,6 +151,7 @@ documentos_de_trabajo:
   tipo: documento_de_trabajo
   doi: 10.13140/RG.2.2.16751.19367
   url: https://doi.org/10.13140/RG.2.2.16751.19367
+  titulo_traducido: 'DT-ALGP-2026-005: Tierra del Fuego Fisheries, 2026: Seventeen Years of Institutional Self-Contradiction'
 - titulo: 'DT-ALGP-2026-006: Resolución CFP N.º 7/2026 sobre procesamiento de colas de langostino a bordo'
   autores: Giamportone, A.L.
   revista: Serie DT-ALGP-2026, Documentos de Trabajo sobre Gobernanza Pesquera y Acuícola (UTN FRTDF / Pesqueros en IA), CC
@@ -147,6 +161,7 @@ documentos_de_trabajo:
   tipo: documento_de_trabajo
   doi: 10.13140/RG.2.2.22961.95840
   url: https://doi.org/10.13140/RG.2.2.22961.95840
+  titulo_traducido: 'DT-ALGP-2026-006: CFP Resolution No. 7/2026 on Onboard Processing of Argentine Red Shrimp Tails'
 - titulo: 'DT-ALGP-2026-007: SOFIA 2026 y el caso argentino: convergencias, divergencias y vacíos analíticos'
   autores: Giamportone, A.L.
   revista: Serie DT-ALGP-2026, Documentos de Trabajo sobre Gobernanza Pesquera y Acuícola (UTN FRTDF / Pesqueros en IA), CC
@@ -156,6 +171,7 @@ documentos_de_trabajo:
   tipo: documento_de_trabajo
   doi: 10.13140/RG.2.2.18534.18240
   url: https://doi.org/10.13140/RG.2.2.18534.18240
+  titulo_traducido: 'DT-ALGP-2026-007: SOFIA 2026 and the Argentine Case: Convergences, Divergences and Analytical Gaps'
 - titulo: 'DT-ALGP-2026-008: El polo que no declara su tamaño'
   autores: Giamportone, A.L.
   revista: Serie DT-ALGP-2026, Documentos de Trabajo sobre Gobernanza Pesquera y Acuícola (UTN FRTDF / Pesqueros en IA), CC
@@ -165,6 +181,7 @@ documentos_de_trabajo:
   tipo: documento_de_trabajo
   doi: 10.13140/RG.2.2.15481.84320
   url: https://doi.org/10.13140/RG.2.2.15481.84320
+  titulo_traducido: 'DT-ALGP-2026-008: The Hub That Does Not Declare Its Size'
 - titulo: 'DT-ALGP-2026-009: Dependencia tecnológica naval e investigación pesquera en el recurso premium del Mar Argentino'
   autores: Giamportone, A.L.
   revista: Serie DT-ALGP-2026, Documentos de Trabajo sobre Gobernanza Pesquera y Acuícola (UTN FRTDF / Pesqueros en IA), CC
@@ -174,6 +191,8 @@ documentos_de_trabajo:
   tipo: documento_de_trabajo
   doi: 10.13140/RG.2.2.24588.68483
   url: https://doi.org/10.13140/RG.2.2.24588.68483
+  titulo_traducido: 'DT-ALGP-2026-009: Naval Technological Dependence and Fisheries Research on the Argentine Sea''s Premium
+    Resource'
 - titulo: 'DT-ALGP-2026-010: La centolla, de la CBA a la cuota'
   autores: Giamportone, A.L.
   revista: Serie DT-ALGP-2026, Documentos de Trabajo sobre Gobernanza Pesquera y Acuícola (UTN FRTDF / Pesqueros en IA), CC
@@ -181,6 +200,7 @@ documentos_de_trabajo:
   año: 2026
   fecha: 2026-11
   tipo: documento_de_trabajo
+  titulo_traducido: 'DT-ALGP-2026-010: Southern King Crab, from the CBA to the Quota'
 trabajos_congresos:
 - id: colacmar_2011_densidad_energetica
   tipo: trabajo_congreso
@@ -191,6 +211,8 @@ trabajos_congresos:
   revista: XIV Congreso Latinoamericano de Ciencias del Mar (COLACMAR) — resumen en libro de actas
   lugar: Camboriú, Brasil
   año: 2011
+  titulo_traducido: Energy Density of Cottoperca gobio (Bovichthidae) and Patagonotothen ramsayi (Nototheniidae) from the
+    Southern Argentine Sea
 informes_tecnicos:
 - id: centolla_beagle_2016
   tipo: informe_tecnico
@@ -199,6 +221,7 @@ informes_tecnicos:
   revista: Informe técnico inédito
   año: 2017
   fecha: 03/2017
+  titulo_traducido: Population Status of the Southern King Crab (Lithodes santolla) in the Beagle Channel, 2016
 - id: pesca_artesanal_rio_grande
   tipo: informe_tecnico
   titulo: Diagnóstico de la pesca artesanal en Río Grande — Variables sociales, económicas y técnicas vinculadas a su ordenamiento
@@ -209,6 +232,8 @@ informes_tecnicos:
     por el Consejo Federal de Inversiones (CFI)
   año: 2013
   periodo: 2012–2013
+  titulo_traducido: 'Assessment of Artisanal Fishing in Río Grande: Social, Economic and Technical Variables Related to Its
+    Management and Development'
 - id: fauna_bentonica_2009
   tipo: informe_tecnico
   titulo: Fauna bentónica e isótopos estables
@@ -217,6 +242,7 @@ informes_tecnicos:
   revista: Informe técnico inédito (no es publicación con referato)
   año: 2009
   fecha: 12/2009
+  titulo_traducido: Benthic Fauna and Stable Isotopes
 software:
 - id: trawlkit
   tipo: software
@@ -231,6 +257,7 @@ software:
   url: https://doi.org/10.5281/zenodo.23959629
   pypi: https://pypi.org/project/trawlkit/
   repositorio: https://github.com/arielgiamportone/trawl-design-lab
+  titulo_traducido: 'Trawl Design Lab (trawlkit): Design and Sizing of Trawl Nets'
 - id: paradoxdb
   tipo: paquete_pypi
   titulo: paradoxdb — lector y escritor en Python puro de tablas Paradox (.DB/.MB/.PX)
@@ -241,6 +268,7 @@ software:
   fecha: 11/2026
   url: https://pypi.org/project/paradoxdb/
   repositorio: https://github.com/arielgiamportone/paradox-db-py
+  titulo_traducido: 'paradoxdb: pure-Python reader and writer for Paradox tables (.DB/.MB/.PX)'
 - id: asset_identity_gs1
   tipo: paquete_pypi
   titulo: asset-identity-gs1 — identidad GS1 (GIAI, EPC GIAI-96, GS1 Digital Link) para activos de inventario
@@ -251,6 +279,7 @@ software:
   fecha: 11/2026
   url: https://pypi.org/project/asset-identity-gs1/
   repositorio: https://github.com/arielgiamportone/asset-identity-gs1
+  titulo_traducido: 'asset-identity-gs1: GS1 identity (GIAI, EPC GIAI-96, GS1 Digital Link) for inventory assets'
 - id: catastro_enrich
   tipo: paquete_pypi
   titulo: catastro-enrich — enriquecimiento de inventarios inmobiliarios con datos catastrales (DGC y forales)
@@ -261,6 +290,7 @@ software:
   fecha: 11/2026
   url: https://pypi.org/project/catastro-enrich/
   repositorio: https://github.com/arielgiamportone/catastro-enrichment-es
+  titulo_traducido: 'catastro-enrich: enrichment of real-estate inventories with cadastral data (DGC and regional foral cadastres)'
 - id: periodic_report_kit
   tipo: paquete_pypi
   titulo: periodic-report-kit — informes periódicos declarativos a Word/PDF/PPTX con marca
@@ -271,27 +301,32 @@ software:
   fecha: 11/2026
   url: https://pypi.org/project/periodic-report-kit/
   repositorio: https://github.com/arielgiamportone/periodic-report-kit
+  titulo_traducido: 'periodic-report-kit: declarative, branded periodic reports to Word/PDF/PPTX'
 material_docente:
 - repo: curso-dl-bayesiano-pesquerias
   titulo: 'Curso: Deep Learning y Redes Bayesianas para Sostenibilidad Pesquera'
   año: 2026
   org: PesquerosEnIA
   url: https://github.com/PesquerosEnIA/curso-dl-bayesiano-pesquerias
+  titulo_traducido: 'Course: Deep Learning and Bayesian Networks for Fisheries Sustainability'
 - repo: ML_DL_FisheriesEngineers
   titulo: 'Curso: Machine Learning & Deep Learning para Ingeniería Pesquera'
   año: 2026
   org: PesquerosEnIA
   url: https://github.com/PesquerosEnIA/ML_DL_FisheriesEngineers
+  titulo_traducido: 'Course: Machine Learning & Deep Learning for Fisheries Engineering'
 - repo: curso_alfabetizacion_CONIPE25
   titulo: Material didáctico del curso de alfabetización en datos e IA — CONIPE 2025 (Puerto Madryn)
   año: 2025
   periodo: 2025–2026
   org: PesquerosEnIA
   url: https://github.com/PesquerosEnIA/curso_alfabetizacion_CONIPE25
+  titulo_traducido: Teaching materials for the data and AI literacy course, CONIPE 2025 (Puerto Madryn)
 - repo: curso-ia-produccion-pesquera
   titulo: Curso IA Aplicada a la Producción Pesquera — UTN FRCh (en activo)
   año: 2026
   org: PesquerosEnIA
+  titulo_traducido: Course on AI Applied to Fisheries Production, UTN FRCh (ongoing)
 otras_actividades:
 - evento: 'Conversatorio Académico: Desafíos y Oportunidades del Sistema Portuario Argentino'
   titulo: 'Conversatorio Académico: Desafíos y Oportunidades del Sistema Portuario Argentino'
@@ -311,7 +346,7 @@ otras_actividades:
   tipo: Evento tecnológico
   rol: Participante
 reconocimientos:
-- 2023 — Employment certificate with an outstanding rating for commitment and work ethic, Berghaus Rothorn Kulm (Switzerland)
+- 2023 — Employment reference with an outstanding rating for commitment and work ethic, Berghaus Rothorn Kulm (Switzerland)
 - 2017 — Recognition for a talk at Engineering Week, UTN Río Grande
 - 2014 — Technological Development award (collective, national), Center of Fishing and Coastal Shipping Masters and Officers,
   “in recognition of research and development in navigation safety” (VITO GNU/Linux, Antarctic navigation aids)

@@ -1,0 +1,249 @@
+# lenguajes
+"Python":
+  nombre: "Python"
+  contexto: "Pandas, NumPy, Scikit-Learn, TensorFlow, automation, ETL"
+"SQL":
+  nombre: "SQL"
+  contexto: "MySQL, PostgreSQL, complex queries, optimization"
+"R":
+  nombre: "R"
+  contexto: "Statistical analysis, visualization"
+"C++":
+  nombre: "C++"
+  contexto: "Embedded applications, IoT"
+"Java":
+  nombre: "Java"
+  contexto: "Basic knowledge"
+# ml_data_science
+"Machine Learning":
+  nombre: "Machine Learning"
+"Deep Learning":
+  nombre: "Deep Learning"
+"Pandas":
+  nombre: "Pandas"
+"NumPy":
+  nombre: "NumPy"
+"Scikit-Learn":
+  nombre: "Scikit-Learn"
+"TensorFlow / Keras":
+  nombre: "TensorFlow / Keras"
+"Data Mining":
+  nombre: "Data Mining"
+"Predictive Analytics":
+  nombre: "Predictive Analytics"
+"ETL":
+  nombre: "ETL"
+"Feature Engineering":
+  nombre: "Feature Engineering"
+"Statistical Analysis":
+  nombre: "Statistical Analysis"
+"CRISP-DM":
+  nombre: "CRISP-DM"
+"PyTorch":
+  nombre: "PyTorch"
+  contexto: "fisheries-sustainability-mlops, Bayesian DL course, cfp-audit-intelligence [estimated level]"
+"Redes bayesianas (pgmpy) e inferencia causal":
+  nombre: "Bayesian networks (pgmpy) and causal inference"
+  contexto: "fisheries-sustainability-mlops; 6-module course with 25 notebooks [estimated level]"
+"MLOps: MLflow, Optuna, AWS ECS/ECR":
+  nombre: "MLOps: MLflow, Optuna, AWS ECS/ECR"
+  contexto: "fisheries-sustainability-mlops [estimated level]"
+"Web scraping (requests, BeautifulSoup)":
+  nombre: "Web scraping (requests, BeautifulSoup)"
+  contexto: "personal repositories, 2023-2025"
+# visualizacion
+"Power BI":
+  nombre: "Power BI"
+"Tableau":
+  nombre: "Tableau"
+"Matplotlib / Seaborn":
+  nombre: "Matplotlib / Seaborn"
+"Streamlit":
+  nombre: "Streamlit"
+"Data Storytelling":
+  nombre: "Data Storytelling"
+"Plotly":
+  nombre: "Plotly"
+  contexto: "6 repositories (trawlkit, IO, cfp-audit-intelligence…)"
+# infraestructura
+"Git":
+  nombre: "Git"
+"Docker":
+  nombre: "Docker"
+"AWS":
+  nombre: "AWS"
+"Azure":
+  nombre: "Azure"
+"Google Colab":
+  nombre: "Google Colab"
+"PostgreSQL":
+  nombre: "PostgreSQL"
+"MySQL":
+  nombre: "MySQL"
+# gestion_proyectos
+"Agile / Scrum":
+  nombre: "Agile / Scrum"
+"Kanban / Scrumban":
+  nombre: "Kanban / Scrumban"
+"Trello":
+  nombre: "Trello"
+"Jira":
+  nombre: "Jira"
+"MS Project":
+  nombre: "MS Project"
+"LEAN Six Sigma":
+  nombre: "LEAN Six Sigma"
+"Gestión de presupuestos":
+  nombre: "Budget management"
+"Gestión de stakeholders":
+  nombre: "Stakeholder management"
+"Gestión de riesgos":
+  nombre: "Risk management"
+"Team Management":
+  nombre: "Team Management"
+"MS 365":
+  nombre: "MS 365"
+# iot_ciencias
+"IoT / Sensores":
+  nombre: "IoT / Sensors"
+"GIS":
+  nombre: "GIS"
+"MATLAB":
+  nombre: "MATLAB"
+"SolidWorks":
+  nombre: "SolidWorks"
+"AutoCAD / SketchUp":
+  nombre: "AutoCAD / SketchUp"
+  contexto: "drawings of facilities, RAS, ports and fishing gear [estimated level]"
+"Taller: carpintería, herrería, electricidad, refrigeración y mecánica":
+  nombre: "Workshop skills: carpentry, metalwork, electrical, refrigeration and mechanics"
+  contexto: "building construction, oceanographic equipment, RAS and cold rooms; a foundation for hardware and IoT work"
+"Microcontroladores ESP32 / Arduino":
+  nombre: "ESP32 / Arduino microcontrollers"
+  contexto: "KIPPA ROV, gas quantifier, IoT prototypes at Mainly Labs"
+# desarrollo_software
+"FastAPI":
+  nombre: "FastAPI"
+  contexto: "INTERDATA, case studies; REST APIs, Jinja2/HTMX, auth, CSRF"
+"SQLAlchemy / Alembic":
+  nombre: "SQLAlchemy / Alembic"
+  contexto: "Models, migrations, schema-per-tenant multi-tenancy, SQLite and PostgreSQL"
+"Pydantic":
+  nombre: "Pydantic"
+"pytest / hypothesis":
+  nombre: "pytest / hypothesis"
+  contexto: "544 in INTERVAL Python"
+"Jinja2 / HTMX":
+  nombre: "Jinja2 / HTMX"
+"Tkinter / PySide6 (escritorio)":
+  nombre: "Tkinter / PySide6 (desktop)"
+"PyInstaller / Inno Setup (empaquetado Windows)":
+  nombre: "PyInstaller / Inno Setup (Windows packaging)"
+"Flask / Django":
+  nombre: "Flask / Django"
+"JavaScript / HTML / CSS":
+  nombre: "JavaScript / HTML / CSS"
+  contexto: "Static dashboards, Chart.js, Leaflet, Node.js for functions"
+"VBA / PowerShell":
+  nombre: "VBA / PowerShell"
+"uv / ruff / pre-commit":
+  nombre: "uv / ruff / pre-commit"
+"Empaquetado y publicación open source (PyPI, hatchling, semver, Zenodo DOI, CITATION.cff)":
+  nombre: "Open-source packaging and publishing (PyPI, hatchling, semver, Zenodo DOI, CITATION.cff)"
+  contexto: "5 packages on PyPI: trawlkit, paradoxdb, asset-identity-gs1, catastro-enrich, periodic-report-kit"
+"Generación de documentos (python-docx, python-pptx, reportlab, xhtml2pdf, pypdf)":
+  nombre: "Document generation (python-docx, python-pptx, reportlab, xhtml2pdf, pypdf)"
+  contexto: "periodic-report-kit, AENA reports, IT department"
+"Jupyter y LaTeX (material docente y técnico)":
+  nombre: "Jupyter and LaTeX (teaching and technical material)"
+  contexto: "PesquerosEnIA courses, 170-page CONIPE manual, PID preprint"
+"Sitios estáticos (Hugo, GitHub Pages)":
+  nombre: "Static sites (Hugo, GitHub Pages)"
+  contexto: "personal portfolio, qa3ds.github.io, dashboards on GitHub Pages"
+"TypeScript / React Native / Expo (básico)":
+  nombre: "TypeScript / React Native / Expo (basic)"
+  contexto: "aura-farm-ar, minor project"
+"Linux / GNU (administración, distribución propia VITO)":
+  nombre: "Linux / GNU (administration, own distribution VITO)"
+  contexto: "VITO GNU/Linux (2013-2014), FLISoL, client servers"
+"BPMN (modelado de procesos)":
+  nombre: "BPMN (process modeling)"
+  contexto: "digital transition at Intervalor (2025 CV)"
+"Moodle (aula virtual)":
+  nombre: "Moodle (virtual classroom)"
+  contexto: "hybrid virtual classroom for Fishing Ports, UTN FRTDF"
+# ia_aplicada
+"LLM APIs (OpenAI, Anthropic, Gemini)":
+  nombre: "LLM APIs (OpenAI, Anthropic, Gemini)"
+  contexto: "Structured extraction, valuation, land-registry enrichment, tender document analysis"
+"Ollama / modelos locales (deepseek-ocr, Llama, Qwen)":
+  nombre: "Ollama / local models (deepseek-ocr, Llama, Qwen)"
+"RAG / embeddings / ChromaDB":
+  nombre: "RAG / embeddings / ChromaDB"
+  contexto: "LicDATAhunter, cfp-audit-intelligence"
+"OCR (EasyOCR, Tesseract, Google Cloud Vision)":
+  nombre: "OCR (EasyOCR, Tesseract, Google Cloud Vision)"
+  contexto: "industrial nameplates"
+"OpenCV / YOLO (visión por computadora)":
+  nombre: "OpenCV / YOLO (computer vision)"
+"Desarrollo asistido por agentes (Claude Code, Cursor, Copilot; AGENTS.md, MCP)":
+  nombre: "Agent-assisted development (Claude Code, Cursor, Copilot; AGENTS.md, MCP)"
+# cloud_m365
+"Azure Static Web Apps / Azure Functions":
+  nombre: "Azure Static Web Apps / Azure Functions"
+"Microsoft Entra ID (roles, SSO)":
+  nombre: "Microsoft Entra ID (roles, SSO)"
+"SharePoint / Graph API / OneDrive":
+  nombre: "SharePoint / Graph API / OneDrive"
+"Power Automate / Power Apps / Power BI":
+  nombre: "Power Automate / Power Apps / Power BI"
+"GitHub Actions / GitHub Projects":
+  nombre: "GitHub Actions / GitHub Projects"
+"Docker / Docker Compose":
+  nombre: "Docker / Docker Compose"
+"Tailscale / despliegue on-premise en cliente":
+  nombre: "Tailscale / on-premises deployment at client sites"
+"Supabase / Streamlit Cloud":
+  nombre: "Supabase / Streamlit Cloud"
+# seguridad_cumplimiento
+"ENS (RD 311/2022) — diseño de programa de certificación":
+  nombre: "ENS, Spain's National Security Framework (RD 311/2022): certification program design"
+"ISO/IEC 27001:2022 y RGPD (encargo del tratamiento)":
+  nombre: "ISO/IEC 27001:2022 and GDPR (data processing agreements)"
+"Autenticación y auditoría (MFA TOTP, JWT RS256, CSRF, hash encadenado, break-glass)":
+  nombre: "Authentication and auditing (TOTP MFA, JWT RS256, CSRF, hash chaining, break-glass)"
+"Gestión de secretos y datos de cliente fuera del repo":
+  nombre: "Secrets management and keeping client data out of the repository"
+# datos_legacy_contabilidad
+"Migración de sistemas legacy (Delphi/Paradox/BDE → Python/SQL)":
+  nombre: "Legacy system migration (Delphi/Paradox/BDE → Python/SQL)"
+  contexto: "pypxlib, numerical parity to the cent"
+"Contabilidad de activos: PGC 2007 / PGC PYMES, PGCP, ICAL, RBEL, amortización":
+  nombre: "Fixed-asset accounting: Spanish PGC 2007 / PGC PYMES, PGCP, ICAL, RBEL, depreciation"
+"Catastro, registro e interoperabilidad (DGC, forales, CartoCiudad, geocoding)":
+  nombre: "Cadastre, land registry and interoperability (DGC, regional foral cadastres, CartoCiudad, geocoding)"
+"SQLite FTS5 / PostgreSQL avanzado":
+  nombre: "SQLite FTS5 / advanced PostgreSQL"
+"Documentación de arquitectura (ADR, CHANGELOG, runbooks)":
+  nombre: "Architecture documentation (ADR, CHANGELOG, runbooks)"
+"Estándares GS1 y etiquetado (GIAI, EPC, Digital Link, Code128, ZPL/RFID)":
+  nombre: "GS1 standards and labeling (GIAI, EPC, Digital Link, Code128, ZPL/RFID)"
+  contexto: "asset-identity-gs1"
+"Geoespacial en Python (pyproj, geopandas, folium; UTM↔WGS84, WFS)":
+  nombre: "Geospatial Python (pyproj, geopandas, folium; UTM↔WGS84, WFS)"
+  contexto: "catastro-enrich, fisheries notebooks"
+# blandas
+"Liderazgo y trabajo en equipo":
+  nombre: "Leadership and teamwork"
+"Comunicación efectiva":
+  nombre: "Effective communication"
+"Resolución de problemas":
+  nombre: "Problem solving"
+"Adaptabilidad":
+  nombre: "Adaptability"
+"Pensamiento analítico":
+  nombre: "Analytical thinking"
+"Gestión de equipos multiculturales":
+  nombre: "Multicultural team management"
+"Comunicación técnica (papers, presentaciones)":
+  nombre: "Technical communication (papers, presentations)"
