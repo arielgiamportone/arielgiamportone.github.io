@@ -1,0 +1,16 @@
+{{- /* Imagen de un proyecto (data/portadas.yaml). Recibe dict "p" (proyecto) y "clase". */ -}}
+{{- $p := .p -}}
+{{- with index site.Data.portadas $p.id -}}
+  {{- $color := printf "var(--c-%s)" (index ($p.perfiles | default (slice "software")) 0) -}}
+  <figure class="{{ $.clase }} portada--{{ .tipo }}" style="--c: {{ $color | safeCSS }}">
+    {{- if eq .tipo "ilustracion" -}}
+      {{- partial (printf "portadas/%s.html" $p.id) . -}}
+    {{- else -}}
+      {{- $img := resources.Get (printf "portadas/%s" .archivo) -}}
+      {{- $pq := $img.Resize "720x webp q82" -}}{{- $gr := $img.Resize "1280x webp q84" -}}
+      <img src="{{ $pq.RelPermalink }}" srcset="{{ $pq.RelPermalink }} 720w, {{ $gr.RelPermalink }} 1280w" sizes="(max-width: 760px) 100vw, 420px"
+        width="{{ $pq.Width }}" height="{{ $pq.Height }}" alt="{{ index .alt site.Language.Lang }}" loading="lazy" decoding="async"{{ with .pos }} style="object-position: {{ . }}"{{ end }}>
+      {{- if eq .tipo "ia" }}<figcaption>{{ i18n "ilustracion_ia" }}</figcaption>{{ end -}}
+    {{- end -}}
+  </figure>
+{{- end -}}

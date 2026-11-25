@@ -35,3 +35,16 @@ La cinta «Donde he trabajado» de la portada muestra los logos de organizacione
 solo identifican la relación laboral o académica; son marcas de sus dueños y no implican respaldo.
 Retoques: el texto blanco del logo de Intervalor Data se pasó a gris para que se lea en fondo claro,
 y del logo del Consejo Federal de Inversiones se recortó el sello conmemorativo de «65 años».
+
+## Imágenes de las tarjetas y fichas de proyecto
+
+Definidas en `data/portadas.yaml`, con tres orígenes:
+
+- **Material real** del propio proyecto (`assets/portadas/`): recortes de capturas o diagramas propios.
+- **Portadas por código** (`layouts/partials/portadas/`, generadas con `scripts/gen_portadas.py`): dibujo propio.
+  Las de KIPPA, VITO, UTNAA y el PID son provisionales hasta que se suban las fotos reales.
+- **Ilustraciones generadas con IA** (`assets/portadas/`, tipo `ia`): creadas con la cuenta del autor en
+  ElevenLabs (modelo gpt-image-2.5), con prompts que piden un estilo ilustrado y no fotográfico, sin personas
+  ni texto. Cada una lleva en la propia imagen la nota visible «Ilustración generada con IA», por transparencia
+  (en línea con el art. 50 del Reglamento de IA). Se usan solo para escenas de mar y pesca que no representan
+  trabajo propio; nunca para mostrar un laboratorio, un equipo o un resultado que no existe.

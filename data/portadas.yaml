@@ -1,0 +1,64 @@
+# Imagen de cada tarjeta y ficha de proyecto (por id de data/<lang>/proyectos.yaml).
+#   tipo: real        material del propio proyecto (assets/portadas/<archivo>)
+#   tipo: ia          ilustración generada con IA; lleva la nota visible «Ilustración generada con IA»
+#   tipo: ilustracion portada dibujada por código (layouts/partials/portadas/<id>.html, scripts/gen_portadas.py)
+# Sin entrada, la tarjeta va sin imagen. pos = object-position del recorte (opcional).
+trawlkit:
+  tipo: real
+  archivo: trawlkit.webp
+  alt: { es: "Simulación 3D de una red de arrastre en la app de trawlkit", en: "3D simulation of a trawl net in the trawlkit app" }
+fisheries_mlops:
+  tipo: real
+  archivo: fisheries-bnn.webp
+  pos: "50% 40%"
+  alt: { es: "Diagrama de la red neuronal bayesiana del proyecto", en: "Diagram of the project's Bayesian neural network" }
+pesqueros_en_ia_cursos:
+  tipo: ia
+  archivo: pesqueros.webp
+  alt: { es: "Ilustración de un pesquero con su rastro AIS y datos sobre el mar", en: "Illustration of a fishing vessel with its AIS track and data over the sea" }
+apigfw:
+  tipo: ia
+  archivo: gfw.webp
+  pos: "40% 50%"
+  alt: { es: "Ilustración nocturna del Atlántico Sur con la flota pesquera como puntos de luz", en: "Night illustration of the South Atlantic with the fishing fleet as points of light" }
+cfp_audit_intelligence:
+  tipo: ia
+  archivo: cfp.webp
+  pos: "60% 50%"
+  alt: { es: "Ilustración de un cardumen de merluza bajo una balanza entre ciencia y cuotas", en: "Illustration of a school of hake beneath a scale weighing science against quotas" }
+cvar_centolla_bases_1:
+  tipo: ia
+  archivo: centolla.webp
+  pos: "65% 50%"
+  alt: { es: "Ilustración de una centolla en el fondo del Canal Beagle", en: "Illustration of a southern king crab on the Beagle Channel seabed" }
+cvar_centolla_limitaciones:
+  tipo: ia
+  archivo: centolla.webp
+  pos: "65% 50%"
+  alt: { es: "Ilustración de una centolla en el fondo del Canal Beagle", en: "Illustration of a southern king crab on the Beagle Channel seabed" }
+cvar_centolla_ras:
+  tipo: ia
+  archivo: ras.webp
+  pos: "70% 50%"
+  alt: { es: "Ilustración de larvas y juveniles de centolla en bolsas de malla suspendidas", en: "Illustration of southern king crab larvae and juveniles in suspended mesh bags" }
+cvar_sinergias:
+  tipo: ia
+  archivo: sinergias.webp
+  alt: { es: "Ilustración del Canal Beagle con pesca, acuicultura y turismo", en: "Illustration of the Beagle Channel with fishing, aquaculture and tourism" }
+cvar_renovables:
+  tipo: ia
+  archivo: renovables.webp
+  pos: "65% 50%"
+  alt: { es: "Ilustración de la costa fueguina con un aerogenerador y paneles solares", en: "Illustration of the Tierra del Fuego coast with a wind turbine and solar panels" }
+catastro_enrichment_es: { tipo: ilustracion }
+asset_identity_gs1: { tipo: ilustracion }
+paradox_db_py: { tipo: ilustracion }
+periodic_report_kit: { tipo: ilustracion }
+casos_estudio_intervalor: { tipo: ilustracion }
+transcriptor_placas: { tipo: ilustracion }
+investigacion_operativa_ml: { tipo: ilustracion }
+# Provisionales hasta que lleguen las fotos reales:
+kippa_rov: { tipo: ilustracion }
+vito_gnu_linux: { tipo: ilustracion }
+utn_antartida_argentina: { tipo: ilustracion }
+pid_liofilizados: { tipo: ilustracion }

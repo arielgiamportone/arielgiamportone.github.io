@@ -16,6 +16,8 @@
     </div>
   </header>
 
+  {{ with $p.id }}<div class="contenedor contenedor--estrecho">{{ partial "portada-proyecto.html" (dict "p" $p "clase" "ficha__portada") }}</div>{{ end }}
+
   {{ with .Params.indicadores }}
   <section class="bloque"><div class="contenedor contenedor--estrecho">
     <ul class="indicadores">{{ range . }}<li><strong>{{ .v }}</strong><span>{{ .e }}</span></li>{{ end }}</ul>

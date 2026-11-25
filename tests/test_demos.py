@@ -150,3 +150,17 @@ def test_portada_teaser_y_cintas():
             for campo in ("et", "paso", "titulo", "linea", "v", "e"):
                 assert i18n.get(f"teaser_{p}_{campo}"), (lang, p, campo)
 
+
+def test_portadas_de_proyecto():
+    # Cada entrada de data/portadas.yaml apunta a un proyecto que existe y a su imagen o partial.
+    import yaml
+    portadas = yaml.safe_load((RAIZ / "data/portadas.yaml").read_text(encoding="utf-8"))
+    ids = {p["id"] for p in yaml.safe_load((RAIZ / "data/es/proyectos.yaml").read_text(encoding="utf-8"))}
+    for pid, v in portadas.items():
+        assert pid in ids, pid
+        if v["tipo"] == "ilustracion":
+            assert (RAIZ / f"layouts/partials/portadas/{pid}.html").is_file(), pid
+        else:
+            assert (RAIZ / "assets/portadas" / v["archivo"]).is_file(), pid
+            assert v["alt"]["es"] and v["alt"]["en"], pid
+

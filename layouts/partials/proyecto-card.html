@@ -4,6 +4,7 @@
 {{- range sort (where site.RegularPages "Section" "proyectos") "Weight" }}{{ if eq .Params.proyecto $p.id }}{{ $fichas = $fichas | append . }}{{ end }}{{ end -}}
 {{- $ficha := "" -}}{{- with $fichas }}{{ $ficha = (index . 0).RelPermalink }}{{ end -}}
 <article class="tarjeta proyecto{{ if $ficha }} tarjeta--con-ficha{{ end }}" data-perfiles="{{ delimit ($p.perfiles | default slice) " " }}" data-tipo="{{ $grupo }}">
+  {{ partial "portada-proyecto.html" (dict "p" $p "clase" "tarjeta__portada") }}
   <p class="tarjeta__meta"><span class="etiqueta etiqueta--{{ $grupo }}">{{ i18n (printf "tipo_%s" $grupo) }}</span> <span>{{ partial "fechas.html" ($p.fechas | default "") }}</span></p>
   <h3 class="tarjeta__titulo">{{ if $ficha }}<a class="tarjeta__enlace" href="{{ $ficha }}">{{ $p.nombre }}</a>{{ else }}{{ $p.nombre }}{{ end }}</h3>
   {{ with $p.organizacion }}<p class="tarjeta__org">{{ . }}</p>{{ end }}
