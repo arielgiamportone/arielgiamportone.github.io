@@ -288,6 +288,29 @@
     curso de deep learning y redes bayesianas para pesquerías (6 módulos, 25 notebooks, PyTorch y pgmpy) y el curso de extensión
     universitaria «IA aplicada a la producción pesquera» (UTN FRCh, 2026-2027), con notebooks en tres niveles y casos reales:
     AIS/PSMA, VMS y concentración de renta.'
+- id: serie_dt_algp_2026
+  nombre: Serie DT-ALGP-2026 — Documentos de Trabajo sobre Gobernanza Pesquera y Acuícola
+  organizacion: UTN FRTDF / Pesqueros en IA
+  tipo: proyecto_investigacion
+  rol: Autor
+  fechas: 04/2026 – 11/2026
+  descripcion: 'Diez documentos de trabajo de acceso abierto (CC BY 4.0) que analizan con datos públicos la gobernanza de
+    la pesca y la acuicultura en Argentina y Tierra del Fuego: el sistema pesquero-científico, la ley acuícola fueguina, decisiones
+    del Consejo Federal Pesquero, el informe SOFIA 2026 de la FAO, la dependencia tecnológica naval y la centolla, de la captura
+    biológicamente aceptable a la cuota.'
+  metricas:
+  - 10 documentos entre 04/2026 y 11/2026
+  - 8 con DOI en ResearchGate (faltan DT-004 y DT-010)
+  - Licencia CC BY 4.0
+  - Difundidos también en LinkedIn
+  web: https://www.researchgate.net/profile/Ariel-Lujan-Giamportone
+  inicio: 2026-04
+  fin: 2026-11
+  actual: false
+  perfiles:
+  - economia-azul
+  - sector-publico
+  orden: 10
 - id: apigfw
   nombre: Análisis pesquero con la API de Global Fishing Watch
   organizacion: Personal · material docente UTN
@@ -307,7 +330,7 @@
   perfiles:
   - economia-azul
   - ia
-  orden: 10
+  orden: 11
 - id: casos_estudio_intervalor
   nombre: Casos de estudio clean-room
   organizacion: Personal
@@ -325,7 +348,7 @@
   perfiles:
   - software
   - sector-publico
-  orden: 11
+  orden: 12
 - id: transcriptor_placas
   nombre: Transcriptor de Placas Industriales Asistido
   organizacion: Intervalor Data · repositorio público
@@ -352,7 +375,7 @@
   perfiles:
   - software
   - ia
-  orden: 12
+  orden: 13
 - id: pid_liofilizados
   nombre: PID PP9884 — Liofilización de alimentos de producción local en Tierra del Fuego
   organizacion: UTN FRTDF · Grupo QA3DS
@@ -369,7 +392,7 @@
   actual: false
   perfiles:
   - economia-azul
-  orden: 13
+  orden: 14
 - id: investigacion_operativa_ml
   nombre: Simplex vs ML en Investigación Operativa
   organizacion: Personal
@@ -391,7 +414,7 @@
   actual: false
   perfiles:
   - ia
-  orden: 14
+  orden: 15
 - id: utn_antartida_argentina
   nombre: UTN Antártida Argentina (UTNAA) — Grupo de Desarrollo Logístico
   organizacion: UTN Facultad Regional Tierra del Fuego
@@ -415,7 +438,7 @@
   perfiles:
   - economia-azul
   - sector-publico
-  orden: 15
+  orden: 16
 - id: vito_gnu_linux
   nombre: VITO GNU/Linux — distribución de navegación
   organizacion: Grupo de Tecnología Marítima UTN / UVI-UTN
@@ -431,7 +454,7 @@
   perfiles:
   - economia-azul
   - software
-  orden: 16
+  orden: 17
 - id: aura_farm_ar
   nombre: Aura Farm AR
   organizacion: Personal
@@ -452,7 +475,7 @@
   actual: false
   perfiles:
   - software
-  orden: 17
+  orden: 18
 - id: cvar_sinergias
   nombre: Sinergias y conflictos entre las actividades económicas y los socioecosistemas de Tierra del Fuego
   organizacion: CONICET-CADIC

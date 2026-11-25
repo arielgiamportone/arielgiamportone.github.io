@@ -44,6 +44,24 @@
     {{ .Content }}
   </div></section>
 
+  {{ with .Params.serie_publicaciones }}
+  {{ $patron := . }}
+  {{ $pub := partial "datos.html" "publicaciones" }}
+  <section class="bloque"><div class="contenedor contenedor--estrecho">
+    <h2>{{ i18n "serie_documentos" }}</h2>
+    <ol class="publicaciones serie">
+      {{ range sort (where $pub.documentos_de_trabajo "revista" "like" $patron) "titulo" }}
+        <li>
+          <span class="pub__titulo">{{ with .url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}{{ .titulo }}{{ with .url }}</a>{{ end }}</span>
+          {{ with .titulo_traducido }}<span class="tenue">[{{ . }}]</span>{{ end }}
+          <span class="tenue">· {{ with .fecha }}{{ . }}{{ else }}{{ .año }}{{ end }}</span>
+          {{ with .doi }}· <a href="https://doi.org/{{ . }}" target="_blank" rel="noopener">doi:{{ . }}</a>{{ else }}· <span class="tenue">{{ i18n "doi_pendiente" }}</span>{{ end }}
+        </li>
+      {{ end }}
+    </ol>
+  </div></section>
+  {{ end }}
+
   {{ with .Params.diagramas }}
   <section class="bloque"><div class="contenedor contenedor--estrecho">
     {{ range . }}

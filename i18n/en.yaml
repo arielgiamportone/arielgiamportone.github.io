@@ -61,6 +61,7 @@ skill_seguridad_cumplimiento: "Security and compliance"
 skill_datos_legacy_contabilidad: "Legacy data and accounting"
 skill_blandas: "Soft skills"
 ver_ficha: "Case study and demo"
+ver_ficha_sola: "Case study"
 
 abrir_documento: "Open the document in a new tab"
 cv_descargar: "Download CV as PDF"
@@ -107,3 +108,5 @@ cintas_org: "Where I've worked"
 cintas_tec: "What I work with"
 
 ilustracion_ia: "AI-generated illustration"
+serie_documentos: "Papers in the series"
+doi_pendiente: "DOI pending"

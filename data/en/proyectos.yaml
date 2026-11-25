@@ -277,6 +277,29 @@
     and Bayesian networks course for fisheries (6 modules, 25 notebooks, PyTorch and pgmpy) and the university extension course
     “Applied AI for Fisheries Production” (UTN FRCh, 2026-2027), with notebooks at three levels and real cases: AIS/PSMA,
     VMS and rent concentration.'
+- id: serie_dt_algp_2026
+  nombre: 'DT-ALGP-2026 series: Working Papers on Fisheries and Aquaculture Governance'
+  organizacion: UTN FRTDF / Pesqueros en IA
+  tipo: proyecto_investigacion
+  rol: Author
+  fechas: 04/2026 – 11/2026
+  descripcion: 'Ten open-access working papers (CC BY 4.0) that use public data to analyze the governance of fisheries and
+    aquaculture in Argentina and Tierra del Fuego: the fisheries-science system, Tierra del Fuego''s aquaculture law, decisions
+    of the Federal Fisheries Council, FAO''s SOFIA 2026 report, naval technology dependence, and southern king crab from the
+    allowable biological catch to the quota.'
+  metricas:
+  - 10 documentos entre 04/2026 y 11/2026
+  - 8 con DOI en ResearchGate (faltan DT-004 y DT-010)
+  - Licencia CC BY 4.0
+  - Difundidos también en LinkedIn
+  web: https://www.researchgate.net/profile/Ariel-Lujan-Giamportone
+  inicio: 2026-04
+  fin: 2026-11
+  actual: false
+  perfiles:
+  - economia-azul
+  - sector-publico
+  orden: 10
 - id: apigfw
   nombre: Fisheries analysis with the Global Fishing Watch API
   organizacion: Personal · UTN teaching material
@@ -296,7 +319,7 @@
   perfiles:
   - economia-azul
   - ia
-  orden: 10
+  orden: 11
 - id: casos_estudio_intervalor
   nombre: Clean-room case studies
   organizacion: Personal
@@ -314,7 +337,7 @@
   perfiles:
   - software
   - sector-publico
-  orden: 11
+  orden: 12
 - id: transcriptor_placas
   nombre: Assisted Industrial Nameplate Transcriber
   organizacion: Intervalor Data · public repository
@@ -341,7 +364,7 @@
   perfiles:
   - software
   - ia
-  orden: 12
+  orden: 13
 - id: pid_liofilizados
   nombre: Research project PP9884 — Freeze-drying of locally produced food in Tierra del Fuego
   organizacion: UTN Tierra del Fuego · QA3DS group
@@ -358,7 +381,7 @@
   actual: false
   perfiles:
   - economia-azul
-  orden: 13
+  orden: 14
 - id: investigacion_operativa_ml
   nombre: Simplex vs ML in operations research
   organizacion: Personal
@@ -380,7 +403,7 @@
   actual: false
   perfiles:
   - ia
-  orden: 14
+  orden: 15
 - id: utn_antartida_argentina
   nombre: UTN Antártida Argentina (UTNAA) — Logistics Development Group
   organizacion: UTN Tierra del Fuego
@@ -403,7 +426,7 @@
   perfiles:
   - economia-azul
   - sector-publico
-  orden: 15
+  orden: 16
 - id: vito_gnu_linux
   nombre: VITO GNU/Linux — navigation distribution
   organizacion: UTN Maritime Technology Group
@@ -418,7 +441,7 @@
   perfiles:
   - economia-azul
   - software
-  orden: 16
+  orden: 17
 - id: aura_farm_ar
   nombre: Aura Farm AR
   organizacion: Personal
@@ -439,7 +462,7 @@
   actual: false
   perfiles:
   - software
-  orden: 17
+  orden: 18
 - id: cvar_sinergias
   nombre: Synergies and conflicts between economic activities and the social-ecological systems of Tierra del Fuego
   organizacion: CONICET-CADIC

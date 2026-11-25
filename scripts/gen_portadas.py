@@ -293,10 +293,27 @@ def liofilizacion():
     return svg("".join(o))
 
 
+def serie_documentos():
+    random.seed(23)
+    o = [rejilla_suave()]
+    olas = " ".join(f"M0 {y} " + " ".join(f"Q{x + 50} {y - 14} {x + 100} {y} T{x + 200} {y}" for x in range(0, W, 200)) for y in (700, 760, 820))
+    o.append(f'<path class="pt-linea" stroke-opacity=".3" stroke-width="3" d="{olas}"/>')
+    for i in range(10):
+        c, r = i % 5, i // 5
+        x, y = 260 + c * 230, 130 + r * 280
+        o.append(f'<g transform="rotate({random.uniform(-4, 4):.1f} {x + 90} {y + 120})"><rect class="pt-claro pt-linea" stroke-width="3" x="{x}" y="{y}" width="180" height="240" rx="12"/>'
+                 f'<rect class="pt-relleno" fill-opacity="{.45 + (i % 3) * .2:.2f}" x="{x}" y="{y}" width="180" height="46" rx="12"/>'
+                 f'{lineas_texto(x + 22, y + 72, [130, 110, 136, 90], 9, 22)}'
+                 + "".join(f'<rect class="pt-relleno" fill-opacity=".5" x="{x + 26 + k * 28}" y="{y + 216 - hh}" width="18" height="{hh}" rx="3"/>' for k, hh in enumerate(random.sample([20, 34, 46, 28, 52], 4)))
+                 + '</g>')
+    o.append('<g transform="translate(1180 520)"><circle class="pt-claro pt-linea" stroke-width="10" r="92" fill-opacity=".6"/><path class="pt-linea" stroke-width="22" stroke-linecap="round" d="M66 66 L150 150"/></g>')
+    return svg("".join(o))
+
+
 PORTADAS = {
     "catastro_enrichment_es": catastro, "asset_identity_gs1": gs1, "paradox_db_py": paradox,
     "periodic_report_kit": informes, "casos_estudio_intervalor": casos, "transcriptor_placas": placas,
-    "investigacion_operativa_ml": simplex,
+    "investigacion_operativa_ml": simplex, "serie_dt_algp_2026": serie_documentos,
     # provisionales, hasta las fotos
     "kippa_rov": rov, "vito_gnu_linux": navegacion, "utn_antartida_argentina": puerto, "pid_liofilizados": liofilizacion,
 }

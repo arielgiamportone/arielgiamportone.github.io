@@ -61,6 +61,7 @@ skill_seguridad_cumplimiento: "Seguridad y cumplimiento"
 skill_datos_legacy_contabilidad: "Datos legacy y contabilidad"
 skill_blandas: "Habilidades transversales"
 ver_ficha: "Ver ficha y demo"
+ver_ficha_sola: "Ver ficha"
 
 abrir_documento: "Abrir el documento en otra pestaña"
 cv_descargar: "Descargar CV en PDF"
@@ -107,3 +108,5 @@ cintas_org: "Donde he trabajado"
 cintas_tec: "Con qué trabajo"
 
 ilustracion_ia: "Ilustración generada con IA"
+serie_documentos: "Documentos de la serie"
+doi_pendiente: "DOI pendiente"

@@ -57,6 +57,7 @@ periodic_report_kit: { tipo: ilustracion }
 casos_estudio_intervalor: { tipo: ilustracion }
 transcriptor_placas: { tipo: ilustracion }
 investigacion_operativa_ml: { tipo: ilustracion }
+serie_dt_algp_2026: { tipo: ilustracion }
 # Provisionales hasta que lleguen las fotos reales:
 kippa_rov: { tipo: ilustracion }
 vito_gnu_linux: { tipo: ilustracion }

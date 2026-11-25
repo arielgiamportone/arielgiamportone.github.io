@@ -14,7 +14,7 @@
   {{ end }}
   <p class="tarjeta__enlaces">
     {{ if gt (len $fichas) 1 }}{{ range $fichas }}<a href="{{ .RelPermalink }}">{{ .Title }} →</a>{{ end }}
-    {{ else }}{{ with $ficha }}<a href="{{ . }}">{{ i18n "ver_ficha" }} →</a>{{ end }}{{ end }}
+    {{ else }}{{ with $ficha }}<a href="{{ . }}">{{ i18n (cond (isset (index $fichas 0).Params "demo") "ver_ficha" "ver_ficha_sola") }} →</a>{{ end }}{{ end }}
     {{ with $p.repo }}{{ if not (strings.Contains . " ") }}<a href="{{ . }}" target="_blank" rel="noopener">{{ i18n "repositorio" }} ↗</a>{{ end }}{{ end }}
     {{ with $p.pypi }}<a href="{{ . }}" target="_blank" rel="noopener">{{ i18n "pypi" }} ↗</a>{{ end }}
     {{ with $p.web }}<a href="{{ . }}" target="_blank" rel="noopener">{{ i18n "web" }} ↗</a>{{ end }}
