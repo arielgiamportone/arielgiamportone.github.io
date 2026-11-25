@@ -143,7 +143,7 @@ def test_portada_teaser_y_cintas():
     for o in orgs:
         assert (RAIZ / "static/logos" / o["logo"]).is_file(), o["logo"]
     tecs = yaml.safe_load((RAIZ / "data/tecnologias.yaml").read_text(encoding="utf-8"))
-    assert len(tecs) >= 20 and all(t["trazo"].startswith("M") for t in tecs)
+    assert len(tecs) >= 20 and all(t["trazo"][:1] in "Mm" for t in tecs)
     for lang in ("es", "en"):
         i18n = yaml.safe_load((RAIZ / f"i18n/{lang}.yaml").read_text(encoding="utf-8"))
         for p in ("economia_azul", "software", "ia", "sector_publico"):
