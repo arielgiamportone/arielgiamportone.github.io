@@ -3,22 +3,30 @@
 {{ $perfiles := partial "datos.html" "perfiles" }}
 {{ $proyectos := partial "datos.html" "proyectos" }}
 {{ $exp := partial "datos.html" "experiencia" }}
-<section class="heroe">
+<div class="banda" data-banda>
+{{ partial "banner-fondo.html" . }}
+<section class="heroe heroe--portada">
   <div class="contenedor heroe__fila">
     <div class="heroe__texto">
       <p class="heroe__hola">{{ i18n "hola" }}</p>
       <h1 class="heroe__nombre">Ariel Luján Giamportone</h1>
-      <p class="heroe__titular" data-texto-general="{{ cond (eq site.Language.Lang "en") $c.titular_en $c.titular }}">{{ cond (eq site.Language.Lang "en") $c.titular_en $c.titular }}</p>
       {{ range $perfiles }}<template data-titular="{{ .slug }}">{{ .titulo }}</template><template data-resumen="{{ .slug }}">{{ .resumen }}</template>{{ end }}
-      <p class="heroe__resumen" data-resumen-activo>{{ site.Params.description }}</p>
+      <div class="relato" aria-live="polite">
+        <p class="relato__paso" data-relato-paso>{{ i18n "teaser_final_paso" }}</p>
+        <p class="heroe__titular" data-texto-general="{{ i18n "teaser_final_titulo" }}">{{ i18n "teaser_final_titulo" }}</p>
+        <p class="heroe__resumen" data-resumen-activo>{{ site.Params.description }}</p>
+        <span class="relato__cifra" data-relato-cifra hidden><b></b><span></span></span>
+      </div>
+      <div class="progreso" aria-hidden="true">{{ range slice "economia-azul" "software" "ia" "sector-publico" }}<span style="--c: var(--c-{{ . }})"><i></i></span>{{ end }}</div>
+      <p class="relato__acciones"><button class="relato__repetir" type="button" data-teaser-repetir hidden>{{ i18n "teaser_repetir" }}</button> <span class="tenue" data-teaser-pista hidden>{{ i18n "teaser_pista" }}</span></p>
       {{ partial "redes.html" . }}
     </div>
-    {{ with resources.Get "images/me.png" }}
-      {{ $img := .Fill "480x480 Center webp q82" }}
-      <img class="heroe__foto" src="{{ $img.RelPermalink }}" width="240" height="240" alt="Ariel Luján Giamportone" fetchpriority="high">
-    {{ end }}
+    {{ partial "teaser.html" . }}
   </div>
 </section>
+</div>
+
+{{ partial "cintas.html" . }}
 
 <section class="bloque bloque--lentes">
   <div class="contenedor">

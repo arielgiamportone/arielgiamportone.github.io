@@ -1,0 +1,18 @@
+{{- /* Dos cintas en movimiento bajo la cabecera: organizaciones y tecnologías.
+  La segunda copia de cada fila solo sirve para que el bucle no tenga cortes (aria-hidden). */ -}}
+{{- $org := "" -}}
+{{- range site.Data.organizaciones -}}
+  {{- $org = printf `%s<li class="logo%s"><img src="%s" alt="%s" height="40" loading="lazy" decoding="async"><span>%s</span></li>` $org (cond (eq .placa true) " logo--placa" "") (printf "logos/%s" .logo | relURL) .nombre .nombre -}}
+{{- end -}}
+{{- $tec := "" -}}
+{{- range site.Data.tecnologias -}}
+  {{- $tec = printf `%s<li class="tec" style="--marca: %s"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="%s"/></svg><span>%s</span></li>` $tec .color .trazo .titulo -}}
+{{- end -}}
+<section class="cintas" data-cintas aria-label="{{ i18n "cintas_aria" }}">
+  <div class="contenedor">
+    <p class="cintas__titulo">{{ i18n "cintas_org" }}</p>
+    <div class="cinta"><ul class="cinta__pista">{{ $org | safeHTML }}</ul><ul class="cinta__pista" aria-hidden="true">{{ $org | safeHTML }}</ul></div>
+    <p class="cintas__titulo">{{ i18n "cintas_tec" }}</p>
+    <div class="cinta cinta--inversa"><ul class="cinta__pista">{{ $tec | safeHTML }}</ul><ul class="cinta__pista" aria-hidden="true">{{ $tec | safeHTML }}</ul></div>
+  </div>
+</section>

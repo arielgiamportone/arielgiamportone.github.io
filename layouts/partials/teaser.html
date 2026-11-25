@@ -1,0 +1,49 @@
+{{- /* Escena del teaser de la portada: cuatro perfiles alrededor de la foto, unidos al centro.
+  Se sirve en su estado final (legible sin JS); assets/js/teaser.js la anima la primera vez
+  de cada sesión. Cada nodo activa la lente de su perfil. */ -}}
+{{- $pasos := slice
+  (dict "id" "economia-azul" "x" 70 "y" 260 "ly" 338)
+  (dict "id" "software" "x" 260 "y" 70 "ly" 8)
+  (dict "id" "ia" "x" 450 "y" 260 "ly" 338)
+  (dict "id" "sector-publico" "x" 260 "y" 450 "ly" 528) -}}
+{{- $iconos := dict
+  "economia-azul" `<path d="M3 15h18l-2.6 4.5H5.6z"/><path d="M12 3.5V15"/><path d="M12 4.5l6.5 8H12"/><path d="M12 7l-4.5 5.5H12"/>`
+  "software" `<path d="M8 6.5L2.5 12 8 17.5"/><path d="M16 6.5l5.5 5.5-5.5 5.5"/><path d="M14 4.5l-4 15"/>`
+  "ia" `<circle cx="5" cy="6" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="19" cy="18" r="2"/><path d="M6.7 7.1l3.6 3.8M6.7 16.9l3.6-3.8M13.7 10.9l3.6-3.8M13.7 13.1l3.6 3.8"/>`
+  "sector-publico" `<path d="M3 9.5L12 4l9 5.5"/><path d="M5 11v7M9.6 11v7M14.4 11v7M19 11v7"/><path d="M3 20.5h18"/>` -}}
+{{- $foto := (resources.Get "images/me.png").Fill "320x320 Center webp q82" -}}
+<div class="escena" data-teaser>
+  <svg class="escena__svg" viewBox="0 -14 520 562" role="group" aria-label="{{ i18n "teaser_titulo_svg" }}">
+    <defs>
+      <clipPath id="escena-recorte"><circle cx="260" cy="260" r="78"/></clipPath>
+      <linearGradient id="escena-borde" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" style="stop-color: var(--c-software)"/><stop offset=".33" style="stop-color: var(--c-ia)"/>
+        <stop offset=".66" style="stop-color: var(--c-sector-publico)"/><stop offset="1" style="stop-color: var(--c-economia-azul)"/>
+      </linearGradient>
+    </defs>
+    <circle class="escena__anillo" cx="260" cy="260" r="190"/>
+    <path class="escena__ruta" d="M70 260 A190 190 0 0 1 260 70 A190 190 0 0 1 450 260 A190 190 0 0 1 260 450" fill="none" stroke="none"/>
+    <g class="escena__radios">
+      {{- range $pasos }}
+        {{- $k := div 46.0 190.0 }}{{ $k2 := div 84.0 190.0 }}
+        <line class="escena__radio" style="stroke: var(--c-{{ .id }})"
+          x1="{{ add .x (mul (sub 260 .x) $k) }}" y1="{{ add .y (mul (sub 260 .y) $k) }}"
+          x2="{{ add 260 (mul (sub .x 260) $k2) }}" y2="{{ add 260 (mul (sub .y 260) $k2) }}"/>
+      {{- end }}
+    </g>
+    <image href="{{ $foto.RelPermalink }}" x="182" y="182" width="156" height="156" clip-path="url(#escena-recorte)" preserveAspectRatio="xMidYMid slice"><title>{{ site.Params.autor }}</title></image>
+    <circle class="escena__foto-borde" cx="260" cy="260" r="81"/>
+    <g class="escena__olas" aria-hidden="true"><path d="M14 300 q10 -6 20 0 t20 0"/><path d="M86 300 q10 -6 20 0 t20 0"/></g>
+    {{- range $pasos }}
+    <g class="nodo nodo--hecho" data-nodo="{{ .id }}" style="--c: var(--c-{{ .id }})" role="button" tabindex="0" aria-label="{{ i18n (printf "teaser_%s_et" (replace .id "-" "_")) }}">
+      <circle class="nodo__pulso" cx="{{ .x }}" cy="{{ .y }}" r="46"/>
+      <circle class="nodo__fondo" cx="{{ .x }}" cy="{{ .y }}" r="46"/>
+      <g class="nodo__icono" transform="translate({{ sub .x 18 }} {{ sub .y 18 }}) scale(1.5)">{{ index $iconos .id | safeHTML }}</g>
+      <text class="nodo__etiqueta" x="{{ .x }}" y="{{ .ly }}" text-anchor="middle">{{ i18n (printf "teaser_%s_et" (replace .id "-" "_")) }}</text>
+    </g>
+    {{- end }}
+    <circle class="escena__paquete" r="7" opacity="0"/>
+  </svg>
+  {{- /* Textos de cada paso, para el JS. */ -}}
+  <script type="application/json" data-teaser-pasos>{{ $l := slice }}{{ range $pasos }}{{ $p := replace .id "-" "_" }}{{ $l = $l | append (dict "id" .id "paso" (i18n (printf "teaser_%s_paso" $p)) "titulo" (i18n (printf "teaser_%s_titulo" $p)) "linea" (i18n (printf "teaser_%s_linea" $p)) "v" (i18n (printf "teaser_%s_v" $p)) "e" (i18n (printf "teaser_%s_e" $p))) }}{{ end }}{{ $l | jsonify | safeJS }}</script>
+</div>

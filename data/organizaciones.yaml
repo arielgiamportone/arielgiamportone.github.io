@@ -1,0 +1,19 @@
+# Cinta «Donde he trabajado» de la portada. Logos en static/logos/, tomados de la web oficial
+# de cada organización (marcas de sus dueños; ver docs/TERCEROS.md).
+# placa: true si el logo es un cuadrado con fondo propio (en tema oscuro no se pasa a silueta).
+- nombre: "Intervalor Data"
+  logo: intervalor.webp
+- nombre: "UTN · Tierra del Fuego"
+  logo: utn.webp
+- nombre: "CONICET"
+  logo: conicet.webp
+- nombre: "CADIC"
+  logo: cadic.webp
+- nombre: "Mainly Labs"
+  logo: mainly.svg
+  placa: true
+- nombre: "Pesqueros en IA"
+  logo: pesqueros.webp
+  placa: true
+- nombre: "Consejo Federal de Inversiones"
+  logo: cfi.svg

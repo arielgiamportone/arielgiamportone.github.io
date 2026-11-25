@@ -131,3 +131,22 @@ def test_cv_pdf_por_perfil():
         for idioma in ("es", "en"):
             pdf = RAIZ / f"static/cv/Ariel_Giamportone_CV_{perfil}_{idioma}.pdf"
             assert pdf.read_bytes()[:5] == b"%PDF-", pdf.name
+
+
+def test_portada_teaser_y_cintas():
+    # Las piezas de la portada existen y cada logo de la cinta tiene su archivo.
+    import yaml
+    for f in ("layouts/partials/teaser.html", "layouts/partials/banner-fondo.html",
+              "layouts/partials/cintas.html", "assets/js/teaser.js"):
+        assert (RAIZ / f).is_file(), f
+    orgs = yaml.safe_load((RAIZ / "data/organizaciones.yaml").read_text(encoding="utf-8"))
+    for o in orgs:
+        assert (RAIZ / "static/logos" / o["logo"]).is_file(), o["logo"]
+    tecs = yaml.safe_load((RAIZ / "data/tecnologias.yaml").read_text(encoding="utf-8"))
+    assert len(tecs) >= 20 and all(t["trazo"].startswith("M") for t in tecs)
+    for lang in ("es", "en"):
+        i18n = yaml.safe_load((RAIZ / f"i18n/{lang}.yaml").read_text(encoding="utf-8"))
+        for p in ("economia_azul", "software", "ia", "sector_publico"):
+            for campo in ("et", "paso", "titulo", "linea", "v", "e"):
+                assert i18n.get(f"teaser_{p}_{campo}"), (lang, p, campo)
+

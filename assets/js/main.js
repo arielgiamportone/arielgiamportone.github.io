@@ -1,6 +1,8 @@
 // Comportamiento del portfolio: modo claro/oscuro y lentes de perfil.
 // Sin dependencias. Si el JS no carga, todo el contenido sigue visible.
 
+import { iniciarTeaser } from './teaser.js';
+
 const raiz = document.documentElement;
 
 // ---------------------------------------------------------------- tema
@@ -72,6 +74,7 @@ function aplicar() {
   const url = new URL(location.href);
   if (lente) url.searchParams.set('perfil', lente); else url.searchParams.delete('perfil');
   history.replaceState(null, '', url);
+  document.dispatchEvent(new CustomEvent('lente', { detail: lente }));
 }
 
 filtrables.forEach(c => [...c.children].forEach((el, i) => { el.dataset.orden = i; }));
@@ -81,3 +84,4 @@ botonesTipo.forEach(b => b.addEventListener('click', () => { tipo = b.dataset.ti
 const inicial = new URLSearchParams(location.search).get('perfil') || '';
 if (botonesLente.some(b => b.dataset.lente === inicial)) lente = inicial;
 if (filtrables.length || botonesLente.length) aplicar();
+iniciarTeaser();
