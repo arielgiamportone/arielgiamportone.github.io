@@ -284,10 +284,10 @@
   - economia-azul
   - ia
   orden: 9
-  descripcion: 'Cursos abiertos de la comunidad: manual de alfabetización en datos e IA de más de 200 páginas (CONIPE 2025,
-    GPL-3.0), curso de deep learning y redes bayesianas para pesquerías (6 módulos, 25 notebooks, PyTorch y pgmpy) y el curso
-    de extensión universitaria «IA aplicada a la producción pesquera» (UTN FRCh, 2026-2027), con notebooks en tres niveles
-    y casos reales: AIS/PSMA, VMS y concentración de renta.'
+  descripcion: 'Cursos abiertos de la comunidad: manual de alfabetización en datos e IA de 170 páginas (CONIPE 2025, GPL-3.0),
+    curso de deep learning y redes bayesianas para pesquerías (6 módulos, 25 notebooks, PyTorch y pgmpy) y el curso de extensión
+    universitaria «IA aplicada a la producción pesquera» (UTN FRCh, 2026-2027), con notebooks en tres niveles y casos reales:
+    AIS/PSMA, VMS y concentración de renta.'
 - id: apigfw
   nombre: Análisis pesquero con la API de Global Fishing Watch
   organizacion: Personal · material docente UTN
