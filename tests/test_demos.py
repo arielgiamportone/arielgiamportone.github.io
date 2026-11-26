@@ -134,6 +134,14 @@ def test_cv_pdf_por_perfil():
     assert (RAIZ / "static/cv/Ariel_Giamportone_CV_CyT_es.pdf").read_bytes()[:5] == b"%PDF-"
 
 
+def test_cv_al_dia():
+    # Regla de actualización: si cambian los datos o las plantillas de los CV, hay que regenerar los PDF
+    # con scripts/actualizar_cv.sh (que guarda la huella nueva en static/cv/huella.txt).
+    import subprocess, sys
+    r = subprocess.run([sys.executable, str(RAIZ / "scripts/huella_cv.py"), "--check"], capture_output=True, text=True)
+    assert r.returncode == 0, r.stderr
+
+
 def test_cv_cyt_cubre_toda_la_experiencia():
     # Cada experiencia publicada va en una sola sección del CV de CyT (si se añade una, hay que ubicarla).
     import yaml

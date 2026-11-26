@@ -1,12 +1,14 @@
 # Datos del portfolio
 
-Los datos de la web (`data/es/*.yaml` y `data/en/*.yaml`) **se generan**, no se escriben a mano. La fuente única es la base de conocimiento privada `cv-perfil-profesional` (`base/` y `perfiles/`).
+Los datos de la web (`data/es/*.yaml`, `data/en/*.yaml` y `data/it/*.yaml`, este último solo para los CV en italiano) **se generan**, no se escriben a mano. La fuente única es la base de conocimiento privada `cv-perfil-profesional` (`base/` y `perfiles/`).
 
 ```bash
 python3 scripts/sync_base.py --base ../cv-perfil-profesional   # regenera data/es/
 python3 scripts/lint_data.py                                   # comprueba que no se cuela nada privado
 python3 -m pytest -q tests
 ```
+
+Después de cualquier cambio en la base, `scripts/actualizar_cv.sh ../cv-perfil-profesional` hace todo lo anterior y además regenera los 13 CV en PDF (`cv_pdf.cjs`) y su huella (`huella_cv.py`). Ver la regla de actualización en el [README](../README.md#regla-de-actualización).
 
 Qué se publica lo decide `scripts/publicacion.yaml`:
 
