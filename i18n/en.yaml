@@ -83,7 +83,7 @@ doi_pendiente: "DOI pending"
 # Home: career as a git history
 ramas_aria: "Career as a git history: one branch per profile, with its milestones and merges"
 ramas_head: "my career, commit by commit"
-ramas_final: "four branches, one story"
+ramas_final: "five branches, one story"
 ramas_hoy: "today"
 ramas_pista: "Hover over a commit · click a branch to see that profile"
 ramas_repetir: "↻ Play again"

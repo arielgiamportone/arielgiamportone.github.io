@@ -450,11 +450,11 @@ a.tarjeta { color: inherit; text-decoration: none; }
 .heroe__acciones { margin: 1.1rem 0 .4rem; }
 
 /* ------------------------------------------------- portada: ramas, fondo y cintas */
-:root { --c-main: #334155; --banner-op: .14; --logo-filtro: grayscale(1); --logo-op: .7; --logo-filtro-hover: none; }
+:root { --c-main: #334155; --c-academia: #d97706; --banner-op: .14; --logo-filtro: grayscale(1); --logo-op: .7; --logo-filtro-hover: none; }
 @media (prefers-color-scheme: dark) {
-  :root[data-tema="auto"] { --c-main: #cbd5e1; --banner-op: .1; --logo-filtro: grayscale(1) brightness(0) invert(1); --logo-op: .6; --logo-filtro-hover: grayscale(1) brightness(0) invert(1); }
+  :root[data-tema="auto"] { --c-main: #cbd5e1; --c-academia: #fbbf24; --banner-op: .1; --logo-filtro: grayscale(1) brightness(0) invert(1); --logo-op: .6; --logo-filtro-hover: grayscale(1) brightness(0) invert(1); }
 }
-:root[data-tema="oscuro"] { --c-main: #cbd5e1; --banner-op: .1; --logo-filtro: grayscale(1) brightness(0) invert(1); --logo-op: .6; --logo-filtro-hover: grayscale(1) brightness(0) invert(1); }
+:root[data-tema="oscuro"] { --c-main: #cbd5e1; --c-academia: #fbbf24; --banner-op: .1; --logo-filtro: grayscale(1) brightness(0) invert(1); --logo-op: .6; --logo-filtro-hover: grayscale(1) brightness(0) invert(1); }
 
 .banda { position: relative; overflow: hidden; background: radial-gradient(1200px 400px at 85% -10%, color-mix(in srgb, var(--acento) 16%, transparent), transparent 70%); }
 .banda .heroe { position: relative; z-index: 1; background: none; }

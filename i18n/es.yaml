@@ -83,7 +83,7 @@ doi_pendiente: "DOI pendiente"
 # Portada: la carrera como historial de git
 ramas_aria: "Trayectoria como un historial de git: una rama por perfil, con sus hitos y cruces"
 ramas_head: "mi carrera, commit a commit"
-ramas_final: "cuatro ramas, una misma historia"
+ramas_final: "cinco ramas, una misma historia"
 ramas_hoy: "hoy"
 ramas_pista: "Pasa el ratón por un commit · pulsa una rama para ver ese perfil"
 ramas_repetir: "↻ Ver de nuevo"

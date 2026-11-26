@@ -9,8 +9,8 @@
   {{- $commits = $commits | append (dict "a" .anio "r" .rama "t" (cond $en .en .es) "h" (.hito | default false) "u" $url) -}}
 {{- end -}}
 {{- $nombres := cond $en
-  (dict "main" "main" "economia-azul" "blue-economy" "sector-publico" "public-sector" "software" "software" "ia" "ai-and-data")
-  (dict "main" "main" "economia-azul" "economía-azul" "sector-publico" "sector-público" "software" "software" "ia" "ia-y-datos") -}}
+  (dict "main" "main" "academia" "teaching-and-science" "economia-azul" "blue-economy" "sector-publico" "public-sector" "software" "software" "ia" "ai-and-data")
+  (dict "main" "main" "academia" "docencia-y-ciencia" "economia-azul" "economía-azul" "sector-publico" "sector-público" "software" "software" "ia" "ia-y-datos") -}}
 {{- $datos := dict "commits" $commits "ramas" site.Data.ramas.ramas "merges" site.Data.ramas.merges "nombres" $nombres
   "foto" ((resources.Get "images/me.png").Fill "160x160 Center webp q82").RelPermalink
   "txt" (dict "head" (i18n "ramas_head") "final" (i18n "ramas_final") "hoy" (i18n "ramas_hoy") "aria" (i18n "ramas_aria")) -}}

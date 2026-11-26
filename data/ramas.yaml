@@ -5,11 +5,14 @@
 #   anio: año decimal (2015.4 ≈ mayo de 2015) · rama: main o un perfil · hito: con rótulo en la consola y en móvil
 #   proyecto: id de data/<lang>/proyectos.yaml; si tiene ficha, el commit enlaza a ella
 ramas:   # rama, año en que nace, rama de la que sale
+  - { id: academia, nace: 2008.2, origen: main }
   - { id: economia-azul, nace: 2007.0, origen: main }
   - { id: software, nace: 2012.2, origen: main }
   - { id: sector-publico, nace: 2012.6, origen: economia-azul }
   - { id: ia, nace: 2017.5, origen: economia-azul }
 merges:  # cruces entre perfiles: año, desde, hacia
+  - { anio: 2019.3, desde: economia-azul, hacia: academia }
+  - { anio: 2026.65, desde: ia, hacia: academia }
   - { anio: 2015.0, desde: economia-azul, hacia: software }
   - { anio: 2020.5, desde: economia-azul, hacia: sector-publico }
   - { anio: 2025.3, desde: ia, hacia: economia-azul }
@@ -27,8 +30,11 @@ commits:
   - { anio: 2024.5, rama: main, hito: true, es: "MBA en Logística y Operaciones", en: "MBA in Logistics and Operations" }
   - { anio: 2026.6, rama: main, hito: true, es: "Máster en Desarrollo con IA", en: "Master's in AI Development" }
   # economía azul
-  - { anio: 2007.0, rama: economia-azul, hito: true, es: "Campañas oceanográficas y antárticas", en: "Oceanographic and Antarctic cruises" }
-  - { anio: 2009.5, rama: economia-azul, es: "Informe: fauna bentónica e isótopos", en: "Report: benthic fauna and isotopes" }
+  - { anio: 2007.0, rama: economia-azul, hito: true, es: "Primeras campañas científicas a bordo", en: "First scientific cruises on board" }
+  - { anio: 2008.5, rama: economia-azul, es: "Construcción de una red de pesca para el CONICET", en: "Built a fishing net for CONICET" }
+  - { anio: 2009.4, rama: economia-azul, es: "Informe: fauna bentónica e isótopos", en: "Report: benthic fauna and isotopes" }
+  - { anio: 2009.9, rama: economia-azul, hito: true, es: "Campaña oceanográfica CONCACEN · artes de pesca", en: "CONCACEN oceanographic survey · fishing gear" }
+  - { anio: 2010.95, rama: economia-azul, hito: true, es: "Campaña Antártica de Verano 2010-11 · pasante", en: "Antarctic Summer Campaign 2010-11 · intern" }
   - { anio: 2011.5, rama: economia-azul, es: "Congreso COLACMAR: densidad energética de peces", en: "COLACMAR conference: fish energy density" }
   - { anio: 2012.4, rama: economia-azul, hito: true, es: "Investigación en CADIC-CONICET", en: "Research at CADIC-CONICET" }
   - { anio: 2013.9, rama: economia-azul, es: "Proyectos sobre la centolla", en: "Southern king crab projects", proyecto: cvar_centolla_bases_1 }
@@ -36,13 +42,12 @@ commits:
   - { anio: 2015.8, rama: economia-azul, es: "Trampas para la pesca artesanal · Clúster", en: "Traps for artisanal fishing · Cluster" }
   - { anio: 2016.8, rama: economia-azul, es: "Sinergias y conflictos de la costa fueguina", en: "Synergies and conflicts on the Fuegian coast", proyecto: cvar_sinergias }
   - { anio: 2018.3, rama: economia-azul, es: "Artículo en Aquaculture: cultivo de centolla", en: "Aquaculture paper: king crab culture" }
-  - { anio: 2019.3, rama: economia-azul, es: "Profesor de Puertos Pesqueros · UTN", en: "Professor of Fishing Ports · UTN" }
+  - { anio: 2020.0, rama: economia-azul, es: "Miembro de AIIPyC · puertos y costas", en: "AIIPyC member · ports and coasts" }
   - { anio: 2021.1, rama: economia-azul, es: "Colegio de Ingenieros de Tierra del Fuego", en: "Tierra del Fuego Association of Engineers" }
   - { anio: 2022.1, rama: economia-azul, hito: true, es: "Director del grupo de I+D QA3DS", en: "Director of the QA3DS R&D group" }
   - { anio: 2023.3, rama: economia-azul, es: "PID Liofilización · director", en: "Freeze-drying R&D project · director", proyecto: pid_liofilizados }
   - { anio: 2024.2, rama: economia-azul, es: "Preprints: redes de arrastre y selectividad", en: "Preprints: trawl nets and selectivity" }
   - { anio: 2025.3, rama: economia-azul, hito: true, es: "merge: Pesqueros en IA", en: "merge: Pesqueros en IA", proyecto: pesqueros_en_ia_cursos }
-  - { anio: 2026.65, rama: economia-azul, es: "Curso «IA aplicada a la producción pesquera»", en: "Course: AI applied to fish production" }
   # software
   - { anio: 2012.2, rama: software, hito: true, es: "VITO GNU/Linux · navegación", en: "VITO GNU/Linux · navigation", proyecto: vito_gnu_linux }
   - { anio: 2015.0, rama: software, hito: true, es: "merge: KIPPA I · ROV con hardware libre", en: "merge: KIPPA I · open-hardware ROV", proyecto: kippa_rov }
@@ -73,3 +78,18 @@ commits:
   - { anio: 2025.2, rama: ia, es: "Investigador en datos e IA · Mainly Labs", en: "Data and AI researcher · Mainly Labs" }
   - { anio: 2025.8, rama: ia, hito: true, es: "merge: cfp-audit-intelligence", en: "merge: cfp-audit-intelligence", proyecto: cfp_audit_intelligence }
   - { anio: 2026.1, rama: ia, es: "fisheries-mlops y deep learning bayesiano", en: "fisheries-mlops and Bayesian deep learning", proyecto: fisheries_mlops }
+  # docencia, ciencia y divulgación
+  - { anio: 2008.2, rama: academia, hito: true, es: "Ayudante de Recursos Pesqueros I · UTN (2008-11)", en: "Teaching assistant, Fisheries Resources I · UTN" }
+  - { anio: 2008.8, rama: academia, es: "Semanas Nacionales de la Ciencia (2008-12)", en: "National Science Weeks (2008-12)" }
+  - { anio: 2010.4, rama: academia, es: "Disertante · Taller de Operatoria Marítima antártico", en: "Speaker · Antarctic Maritime Operations Workshop" }
+  - { anio: 2013.5, rama: academia, es: "Disertante · Taller de Operatoria Marítima", en: "Speaker · Maritime Operations Workshop" }
+  - { anio: 2015.6, rama: academia, es: "Organizador de taller y expositor en Ciencias del Mar", en: "Workshop organizer and marine science speaker" }
+  - { anio: 2017.3, rama: academia, es: "Ayudante de Análisis Matemático II · UTN", en: "Teaching assistant, Calculus II · UTN" }
+  - { anio: 2018.3, rama: academia, hito: true, es: "Profesor adjunto de Máquinas Térmicas · UTN", en: "Associate professor, Thermal Machines · UTN" }
+  - { anio: 2019.3, rama: academia, hito: true, es: "merge: profesor de Puertos Pesqueros · UTN", en: "merge: professor of Fishing Ports · UTN" }
+  - { anio: 2020.6, rama: academia, es: "Expositor · Expo Ingeniería UTN", en: "Presenter · UTN Engineering Expo" }
+  - { anio: 2022.3, rama: academia, es: "Formé a 4 investigadores y 7 alumnos · QA3DS", en: "Trained 4 researchers and 7 students · QA3DS" }
+  - { anio: 2023.4, rama: academia, es: "Profesor invitado y docente-investigador · UTN", en: "Visiting professor and lecturer-researcher · UTN" }
+  - { anio: 2024.3, rama: academia, es: "Dirección de 3 becarios de I+D", en: "Supervised 3 R&D scholarship students" }
+  - { anio: 2025.65, rama: academia, es: "Curso y ponencias · CONIPE 2025", en: "Course and talks · CONIPE 2025" }
+  - { anio: 2026.65, rama: academia, hito: true, es: "merge: curso «IA aplicada a la producción pesquera»", en: "merge: course on AI for fish production" }

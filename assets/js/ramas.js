@@ -8,7 +8,7 @@
 // - Con «reducir movimiento» se dibuja directamente el estado final.
 
 const NS = 'http://www.w3.org/2000/svg';
-const CARRILES = ['main', 'economia-azul', 'sector-publico', 'software', 'ia'];
+const CARRILES = ['main', 'academia', 'economia-azul', 'sector-publico', 'software', 'ia'];
 const AÑO0 = 2005.6, HEAD = 2027.0;
 const TRAMOS = [[2005.6, 0], [2018, 0.44], [2023, 0.67], [2027.0, 1]]; // los años recientes se estiran un poco
 
@@ -46,13 +46,13 @@ export function iniciarRamas() {
   // ------------------------------------------------------------ geometría
   function geometria(vert) {
     if (!vert) {
-      const T0 = 40, T1 = 980, carril = { main: 50, 'economia-azul': 130, 'sector-publico': 205, software: 280, ia: 355 };
+      const T0 = 40, T1 = 980, carril = { main: 44, academia: 107, 'economia-azul': 170, 'sector-publico': 233, software: 296, ia: 359 };
       return { vert, vb: '0 0 1180 430', t: (a) => T0 + tiempo(a) * (T1 - T0), c: (r) => carril[r],
-        p: (t, c) => [t, c], av: [1092, 205], avR: 34, ticks: [2006, 2008, 2010, 2012, 2014, 2016, 2018, 2020, 2022, 2024, 2025, 2026, 2027] };
+        p: (t, c) => [t, c], av: [1092, 202], avR: 34, ticks: [2006, 2008, 2010, 2012, 2014, 2016, 2018, 2020, 2022, 2024, 2025, 2026, 2027] };
     }
-    const T0 = 40, T1 = 760, carril = { main: 22, 'economia-azul': 48, 'sector-publico': 74, software: 100, ia: 126 };
-    return { vert, vb: '0 0 390 880', t: (a) => T0 + tiempo(a) * (T1 - T0), c: (r) => carril[r],
-      p: (t, c) => [c, t], av: [74, 832], avR: 28, ticks: [2006, 2012, 2018, 2024, 2026] };
+    const T0 = 40, T1 = 820, carril = { main: 20, academia: 44, 'economia-azul': 68, 'sector-publico': 92, software: 116, ia: 140 };
+    return { vert, vb: '0 0 390 940', t: (a) => T0 + tiempo(a) * (T1 - T0), c: (r) => carril[r],
+      p: (t, c) => [c, t], av: [80, 892], avR: 28, ticks: [2006, 2012, 2018, 2024, 2026] };
   }
 
   // ------------------------------------------------------------ dibujo
@@ -76,7 +76,7 @@ export function iniciarRamas() {
         el('line', { x1: t, x2: t, y1: 20, y2: 390 }, eje);
         el('text', { x: t, y: 412, 'text-anchor': 'middle' }, eje).textContent = a === 2027 ? datos.txt.hoy : a;
       } else {
-        el('line', { x1: 8, x2: 140, y1: t, y2: t }, eje);
+        el('line', { x1: 8, x2: 152, y1: t, y2: t }, eje);
       }
     });
 
@@ -123,10 +123,10 @@ export function iniciarRamas() {
         const y = Math.max(+punto.getAttribute('cy'), ultimo + 30);
         ultimo = y;
         const g = el('g', { class: 'ramas__rotulo' }, svg);
-        el('path', { d: `M${+punto.getAttribute('cx') + 9} ${punto.getAttribute('cy')} C150 ${punto.getAttribute('cy')} 150 ${y} 160 ${y}`, style: `stroke: ${col(c.r)}` }, g);
-        const t = el('text', { x: 166, y: y + 4 }, g);
+        el('path', { d: `M${+punto.getAttribute('cx') + 9} ${punto.getAttribute('cy')} C164 ${punto.getAttribute('cy')} 164 ${y} 172 ${y}`, style: `stroke: ${col(c.r)}` }, g);
+        const t = el('text', { x: 178, y: y + 4 }, g);
         el('tspan', { class: 'ramas__anio' }, t).textContent = `${Math.floor(c.a)} `;
-        el('tspan', {}, t).textContent = c.t.length > 34 ? `${c.t.slice(0, 33)}…` : c.t;
+        el('tspan', {}, t).textContent = c.t.length > 28 ? `${c.t.slice(0, 27)}…` : c.t;
         rotulos.push({ g, a: c.a });
       });
     }
@@ -232,7 +232,11 @@ export function iniciarRamas() {
   // ------------------------------------------------------------ lentes
   function elegir(r) {
     const destino = r === 'main' || r === lente ? '' : r;
-    document.querySelector(`.lente[data-lente="${destino}"]`)?.click();
+    const boton = document.querySelector(`.lente[data-lente="${destino}"]`);
+    if (boton && destino !== '') { boton.click(); return; }
+    // ramas sin lente (docencia y ciencia) o volver a main: se resaltan aquí sin cambiar de perfil
+    if (document.querySelector('.lente[aria-pressed="true"]')?.dataset.lente) document.querySelector('.lente[data-lente=""]')?.click();
+    lente = destino; aplicarLente(); consolaLente();
   }
   function aplicarLente() {
     if (!partes) return;
