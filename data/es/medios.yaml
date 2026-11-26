@@ -1,0 +1,115 @@
+# GENERADO por scripts/sync_base.py desde la base de conocimiento. No editar a mano.
+- id: eldiariotdf_cadena_2026
+  fecha: '2026-07-29'
+  medio: El Diario de Tierra del Fuego (también Radio Universidad 93.5)
+  tipo: entrevista
+  titulo: 'Lo único argentino en toda la cadena es el pez: el fuerte diagnóstico de un ingeniero fueguino sobre la pesca'
+  url: https://eldiariotdf.com.ar/blog/lo-unico-argentino-en-toda-la-cadena-es-el-pez-el-fuerte-diagnostico
+  url_alternativa: https://www.radiouniversidad.com.ar/lo-unico-argentino-en-toda-la-cadena-es-el-pez-el-fuerte-diagnostico-de-un-ingeniero-fueguino-sobre-la-pesca-nacional/
+  tema: Modelo pesquero y valor agregado
+  resumen: Entrevista sobre el modelo extractivo de Tierra del Fuego, la dependencia tecnológica y el valor agregado que la
+    provincia pierde.
+- id: argenports_pesantar_2026
+  fecha: '2026-07-25'
+  medio: ArgenPorts
+  tipo: nota
+  titulo: 'Buque Pesantar I: un análisis plantea la dependencia tecnológica en la pesquería más valiosa del Mar Argentino'
+  url: https://argenports.com/nota/buque-pesantar-i-un-analisis-plantea-la-dependencia-tecnologica-en-la-pesqueria-mas-valiosa-del-mar-argentino/
+  tema: Dependencia tecnológica naval (DT-ALGP-2026-009)
+  resumen: 'Nota sobre su documento técnico: quién construye los buques, quién investiga el recurso y cómo se reparte la cuota
+    de merluza negra.'
+- id: provincia23_acuicultura_2026
+  fecha: '2026-06-24'
+  medio: Provincia 23 (también Del Fuego Noticias)
+  tipo: nota
+  titulo: El ingeniero pesquero Ariel Giamportone cuestionó la falta de precisiones en los proyectos acuícolas que impulsa
+    la Provincia
+  url: https://www.provincia23.com.ar/2026/06/24/el-ingeniero-pesquero-ariel-giamportone-cuestiono-la-falta-de-precisiones-en-los-proyectos-acuicolas-que-impulsa-la-provincia/
+  url_alternativa: https://delfuegonoticias.com.ar/noticias/el-ingeniero-pesquero-ariel-giamportone-cuestiono-la-falta-de-precisiones-en-los-proyectos-acuicolas-que-impulsa-la-provincia/
+  tema: Acuicultura en Tierra del Fuego
+  resumen: 'Análisis conjunto de tres anuncios oficiales sobre proyectos acuícolas: escalas de producción, empleo real y aspectos
+    que no se explicaron.'
+- id: radiouniversidad_plan2050_2026
+  fecha: '2026'
+  medio: Radio Universidad 93.5 (Ushuaia)
+  tipo: nota
+  titulo: Tierra del Fuego y el desafío de construir una política pesquera a 25 años
+  url: https://www.radiouniversidad.com.ar/tierra-del-fuego-y-el-desafio-de-construir-una-politica-pesquera-a-25-anos/
+  tema: Plan Estratégico Pesquero TDF 2050 (DT-ALGP-2026-005)
+  resumen: Presentación del documento técnico que propone pensar la pesca fueguina hacia 2050, con referencias a Islandia,
+    Noruega, Nueva Zelanda, Alaska y las Islas Feroe.
+- id: radiouniversidad_curso_ia_2026
+  fecha: '2026'
+  medio: Radio Universidad 93.5 (programa «La Mañana de la Tecno»)
+  tipo: entrevista
+  titulo: La UTN abre la inscripción para una capacitación nacional sobre inteligencia artificial aplicada a la producción
+    pesquera
+  url: https://www.radiouniversidad.com.ar/la-utn-abre-la-inscripcion-para-una-capacitacion-nacional-sobre-inteligencia-artificial-aplicada-a-la-produccion-pesquera/
+  tema: Curso de IA aplicada a la producción pesquera (UTN FRCh)
+  resumen: 'Entrevista radial sobre el curso nacional de IA aplicada a la producción pesquera: cómo nació y por qué la IA
+    potencia a los profesionales en lugar de reemplazarlos.'
+- id: utnfrch_conipe_2025
+  fecha: '2025-08-29'
+  medio: UTN Facultad Regional Chubut
+  tipo: cobertura
+  titulo: El IV Congreso Nacional de Ingeniería Pesquera finalizó con tres jornadas de debate y construcción colectiva
+  url: https://www.frch.utn.edu.ar/el-iv-congreso-nacional-de-ingenieria-pesquera-finalizo-con-tres-jornadas-de-debate-y-construccion-colectiva/
+  tema: Transformación digital en la ingeniería pesquera
+  resumen: Crónica del congreso, que se abrió con su conferencia sobre los desafíos y oportunidades de la transformación digital
+    en el sector pesquero.
+- id: pescare_conipe_2025
+  fecha: '2025-08-28'
+  medio: Pescare
+  tipo: cobertura
+  titulo: Comenzó el IV Congreso Nacional de Ingeniería Pesquera en la UTN Chubut
+  url: https://pescare.com.ar/comenzo-el-iv-congreso-nacional-de-ingenieria-pesquera-en-la-utn-chubut/
+  tema: Transformación digital en la ingeniería pesquera
+  resumen: Dio la primera conferencia magistral del CONIPE 2025, «La ola de la transformación digital en la Ingeniería Pesquera»,
+    sobre ciencia de datos e inteligencia artificial en el sector.
+- id: gobtdf_cit_2021
+  fecha: '2021-09-22'
+  medio: Gobierno de Tierra del Fuego
+  tipo: cobertura
+  titulo: CIT Tierra del Fuego reinicia sus actividades presenciales en la sede de la UNTDF Río Grande
+  url: https://www.tierradelfuego.gob.ar/blog/2021/09/22/cit-tierra-del-fuego-reinicia-sus-actividades-presenciales-en-la-sede-de-la-untdf-rio-grande/
+  tema: Gestión de ciencia y tecnología
+  resumen: Reunión sobre oportunidades de investigación y transferencia en la provincia, en la que participó como director
+    provincial de Vinculación en Ciencia y Tecnología.
+- id: contratapa_colegio_ingenieros_2021
+  fecha: '2021'
+  medio: La Contratapa TDF
+  tipo: cobertura
+  titulo: Gobierno y el Colegio de Ingenieros rubricaron un acuerdo para formar profesionales vinculados a la pesca
+  url: https://lacontratapatdf.com/nota/14571/gobierno-y-el-colegio-de-ingenieros-rubricaron-un-acuerdo-para-formar-profesionales-vinculados-a-la-pesca/
+  tema: Formación de profesionales de la pesca
+  resumen: Firma de un acuerdo entre el Gobierno de Tierra del Fuego y el Colegio de Ingenieros para formar profesionales
+    vinculados a la pesca, con su participación como director provincial de Vinculación en Ciencia y Tecnología.
+- id: cadic_profesional_apoyo_2016
+  fecha: '2016-03-17'
+  medio: CADIC-CONICET (sitio institucional)
+  tipo: entrevista
+  titulo: 'La tarea del Profesional de Apoyo en el CADIC: una experiencia en el Laboratorio de Biología de Crustáceos'
+  url: https://cadic.conicet.gov.ar/la-tarea-del-profesional-de-apoyo-en-el-cadic-una-experiencia-en-el-laboratorio-de-biologia-de-crustaceos/
+  tema: Ciencia y apoyo técnico en el CADIC
+  resumen: 'Entrevista institucional sobre su rol como profesional de apoyo del Laboratorio de Biología de Crustáceos: asistencia
+    a becarios e investigadores, campo y laboratorio.'
+- id: elmensajero_vito_2014
+  fecha: '2014-07-09'
+  medio: El Mensajero Diario
+  tipo: nota
+  titulo: Desarrollan un software para la navegación de la Antártida
+  url: https://www.elmensajerodiario.com.ar/contenidos/desarrollan-software-navegacin-antrtida_52059/
+  tema: VITO GNU/Linux
+  proyecto: vito_gnu_linux
+  resumen: Presentación de VITO, la distribución de navegación desarrollada por estudiantes de Ingeniería Pesquera de la UTN
+    Ushuaia para la navegación turística antártica, a partir de una necesidad concreta del sector.
+- id: latdf_reconocimiento_2014
+  fecha: 2014-07
+  medio: Portal La TDF
+  tipo: reconocimiento
+  titulo: Nación reconoció a Estudiantes Fueguinos que desarrollaron un Software de Navegación Polar
+  url: https://www.latdf.com.ar/2014/07/nacion-reconocio-estudiantes-fueguinos.html
+  tema: VITO GNU/Linux
+  proyecto: vito_gnu_linux
+  resumen: Reconocimiento nacional al Grupo de Tecnología Marítima TDF (UTN Ushuaia) por su aporte al desarrollo marítimo
+    y a la seguridad de los trabajadores embarcados.

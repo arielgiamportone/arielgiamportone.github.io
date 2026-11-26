@@ -1,0 +1,37 @@
+# Media coverage: English summary and translated headline (the original headline is kept as titulo).
+elmensajero_vito_2014:
+  titulo_traducido: "Software developed for navigation in Antarctica"
+  resumen: "Presentation of VITO, the navigation distribution built by UTN Ushuaia fisheries engineering students for Antarctic tourist navigation, born from a concrete need of the industry."
+latdf_reconocimiento_2014:
+  titulo_traducido: "National government recognises Tierra del Fuego students who developed polar navigation software"
+  resumen: "National recognition of the Tierra del Fuego Maritime Technology Group (UTN Ushuaia) for its contribution to maritime development and the safety of seafarers."
+cadic_profesional_apoyo_2016:
+  titulo_traducido: "The work of a support professional at CADIC: an experience in the Crustacean Biology Laboratory"
+  resumen: "Institutional interview about his role as a support professional in the Crustacean Biology Laboratory: assisting fellows and researchers, fieldwork and lab work."
+contratapa_colegio_ingenieros_2021:
+  titulo_traducido: "Government and the Association of Engineers sign an agreement to train fisheries professionals"
+  resumen: "Agreement between the Tierra del Fuego government and the Association of Engineers to train fisheries professionals, with his participation as Provincial Director of Science and Technology Liaison."
+gobtdf_cit_2021:
+  titulo_traducido: "CIT Tierra del Fuego resumes on-site activities at the UNTDF Río Grande campus"
+  resumen: "Meeting on research and technology-transfer opportunities in the province, attended as Provincial Director of Science and Technology Liaison."
+pescare_conipe_2025:
+  titulo_traducido: "The 4th National Fisheries Engineering Congress opens at UTN Chubut"
+  resumen: "He gave the opening keynote of CONIPE 2025, “The wave of digital transformation in Fisheries Engineering”, on data science and artificial intelligence in the sector."
+utnfrch_conipe_2025:
+  titulo_traducido: "The 4th National Fisheries Engineering Congress closes after three days of debate and joint work"
+  resumen: "Report on the congress, which opened with his keynote on the challenges and opportunities of digital transformation in fisheries."
+radiouniversidad_plan2050_2026:
+  titulo_traducido: "Tierra del Fuego and the challenge of building a 25-year fisheries policy"
+  resumen: "Presentation of the technical paper that proposes a vision for Tierra del Fuego's fisheries to 2050, with references to Iceland, Norway, New Zealand, Alaska and the Faroe Islands."
+provincia23_acuicultura_2026:
+  titulo_traducido: "Fisheries engineer Ariel Giamportone questions the lack of detail in the province's aquaculture projects"
+  resumen: "Joint analysis of three official announcements on aquaculture projects: production scales, real employment and points left unexplained."
+argenports_pesantar_2026:
+  titulo_traducido: "Pesantar I vessel: an analysis points to technological dependence in the Argentine Sea's most valuable fishery"
+  resumen: "Story on his technical paper: who builds the vessels, who researches the resource and how the Patagonian toothfish quota is shared."
+eldiariotdf_cadena_2026:
+  titulo_traducido: "“The only Argentine thing in the whole chain is the fish”: a Tierra del Fuego engineer's blunt diagnosis of fisheries"
+  resumen: "Interview on Tierra del Fuego's extractive model, technological dependence and the added value the province loses."
+radiouniversidad_curso_ia_2026:
+  titulo_traducido: "UTN opens enrolment for a national course on artificial intelligence applied to fish production"
+  resumen: "Radio interview about the national course on AI applied to fish production: how it started and why AI empowers professionals instead of replacing them."

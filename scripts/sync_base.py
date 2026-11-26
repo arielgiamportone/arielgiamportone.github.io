@@ -239,6 +239,21 @@ def publicaciones(base: Path) -> dict:
     return salida
 
 
+def medios(base: Path) -> list[dict]:
+    """Apariciones en medios (base/medios.md), de la más reciente a la más antigua."""
+    ruta = base / "base" / "medios.md"
+    if not ruta.exists():
+        return []
+    salida = []
+    for i, m in enumerate(leer_frontmatter(ruta).get("medios", [])):
+        item = limpiar(m, f"medios[{i}]")
+        if item and all(item.get(k) for k in ("id", "fecha", "medio", "titulo", "url")):
+            salida.append(item)
+        else:
+            aviso(f"Medio descartado por faltar datos o estar sin validar: medios[{i}]")
+    return sorted(salida, key=lambda x: str(x["fecha"]), reverse=True)
+
+
 def formacion(base: Path) -> dict:
     datos = leer_frontmatter(base / "base" / "educacion.md")["educacion"]
     salida = {}
@@ -325,6 +340,8 @@ def aplicar_textos(ficheros: dict, textos: dict, lang: str, exigir: bool) -> dic
             aviso(f"[{lang}] rol sin traducir: proyectos {item.get('id')} {item['rol']!r}")
     por_id("perfiles.yaml", "slug", ["resumen"])
     por_id("idiomas.yaml", "idioma", ["nivel"])
+    if lang != "it":
+        por_id("medios.yaml", "id", ["resumen"])
 
     pub = textos.get("publicaciones", {})
     if "reconocimientos" in pub:
@@ -422,6 +439,7 @@ def main() -> int:
         "skills.yaml": skills(args.base),
         "idiomas.yaml": idiomas(args.base),
         "perfiles.yaml": perfiles(args.base),
+        "medios.yaml": medios(args.base),
     }
 
     por_idioma = {

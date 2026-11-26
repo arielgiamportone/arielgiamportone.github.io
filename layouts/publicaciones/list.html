@@ -32,6 +32,21 @@
       </ol>
     {{ end }}
   {{ end }}
+  {{ with partial "datos.html" "medios" }}
+    <h2 id="medios">{{ i18n "medios" }} <span class="tenue">({{ len . }})</span></h2>
+    <p class="tenue">{{ i18n "medios_intro" }}</p>
+    <ol class="publicaciones medios">
+      {{ range . }}
+        <li>
+          <span class="etiqueta">{{ i18n (printf "medio_%s" .tipo) }}</span>
+          <strong>{{ index (split .medio " (") 0 }}</strong> <span class="tenue">· {{ .fecha }}</span><br>
+          <span class="pub__titulo"><a href="{{ .url }}" target="_blank" rel="noopener">{{ .titulo }}</a></span>{{ with .titulo_traducido }} <span class="tenue">[{{ . }}]</span>{{ end }}
+          {{ with .url_alternativa }}<span class="tenue">· <a href="{{ . }}" target="_blank" rel="noopener">{{ i18n "medios_tambien" }}</a></span>{{ end }}
+          {{ with .resumen }}<p class="pub__resumen">{{ . }}</p>{{ end }}
+        </li>
+      {{ end }}
+    </ol>
+  {{ end }}
   {{ with $pub.reconocimientos }}
     <h2>{{ i18n "reconocimientos" }}</h2>
     <ul class="publicaciones">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>

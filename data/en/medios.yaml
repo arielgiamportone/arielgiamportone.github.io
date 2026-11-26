@@ -1,0 +1,128 @@
+# GENERADO por scripts/sync_base.py desde la base de conocimiento. No editar a mano.
+- id: eldiariotdf_cadena_2026
+  fecha: '2026-07-29'
+  medio: El Diario de Tierra del Fuego (también Radio Universidad 93.5)
+  tipo: entrevista
+  titulo: 'Lo único argentino en toda la cadena es el pez: el fuerte diagnóstico de un ingeniero fueguino sobre la pesca'
+  url: https://eldiariotdf.com.ar/blog/lo-unico-argentino-en-toda-la-cadena-es-el-pez-el-fuerte-diagnostico
+  url_alternativa: https://www.radiouniversidad.com.ar/lo-unico-argentino-en-toda-la-cadena-es-el-pez-el-fuerte-diagnostico-de-un-ingeniero-fueguino-sobre-la-pesca-nacional/
+  tema: Modelo pesquero y valor agregado
+  resumen: Interview on Tierra del Fuego's extractive model, technological dependence and the added value the province loses.
+  titulo_traducido: '“The only Argentine thing in the whole chain is the fish”: a Tierra del Fuego engineer''s blunt diagnosis
+    of fisheries'
+- id: argenports_pesantar_2026
+  fecha: '2026-07-25'
+  medio: ArgenPorts
+  tipo: nota
+  titulo: 'Buque Pesantar I: un análisis plantea la dependencia tecnológica en la pesquería más valiosa del Mar Argentino'
+  url: https://argenports.com/nota/buque-pesantar-i-un-analisis-plantea-la-dependencia-tecnologica-en-la-pesqueria-mas-valiosa-del-mar-argentino/
+  tema: Dependencia tecnológica naval (DT-ALGP-2026-009)
+  resumen: 'Story on his technical paper: who builds the vessels, who researches the resource and how the Patagonian toothfish
+    quota is shared.'
+  titulo_traducido: 'Pesantar I vessel: an analysis points to technological dependence in the Argentine Sea''s most valuable
+    fishery'
+- id: provincia23_acuicultura_2026
+  fecha: '2026-06-24'
+  medio: Provincia 23 (también Del Fuego Noticias)
+  tipo: nota
+  titulo: El ingeniero pesquero Ariel Giamportone cuestionó la falta de precisiones en los proyectos acuícolas que impulsa
+    la Provincia
+  url: https://www.provincia23.com.ar/2026/06/24/el-ingeniero-pesquero-ariel-giamportone-cuestiono-la-falta-de-precisiones-en-los-proyectos-acuicolas-que-impulsa-la-provincia/
+  url_alternativa: https://delfuegonoticias.com.ar/noticias/el-ingeniero-pesquero-ariel-giamportone-cuestiono-la-falta-de-precisiones-en-los-proyectos-acuicolas-que-impulsa-la-provincia/
+  tema: Acuicultura en Tierra del Fuego
+  resumen: 'Joint analysis of three official announcements on aquaculture projects: production scales, real employment and
+    points left unexplained.'
+  titulo_traducido: Fisheries engineer Ariel Giamportone questions the lack of detail in the province's aquaculture projects
+- id: radiouniversidad_plan2050_2026
+  fecha: '2026'
+  medio: Radio Universidad 93.5 (Ushuaia)
+  tipo: nota
+  titulo: Tierra del Fuego y el desafío de construir una política pesquera a 25 años
+  url: https://www.radiouniversidad.com.ar/tierra-del-fuego-y-el-desafio-de-construir-una-politica-pesquera-a-25-anos/
+  tema: Plan Estratégico Pesquero TDF 2050 (DT-ALGP-2026-005)
+  resumen: Presentation of the technical paper that proposes a vision for Tierra del Fuego's fisheries to 2050, with references
+    to Iceland, Norway, New Zealand, Alaska and the Faroe Islands.
+  titulo_traducido: Tierra del Fuego and the challenge of building a 25-year fisheries policy
+- id: radiouniversidad_curso_ia_2026
+  fecha: '2026'
+  medio: Radio Universidad 93.5 (programa «La Mañana de la Tecno»)
+  tipo: entrevista
+  titulo: La UTN abre la inscripción para una capacitación nacional sobre inteligencia artificial aplicada a la producción
+    pesquera
+  url: https://www.radiouniversidad.com.ar/la-utn-abre-la-inscripcion-para-una-capacitacion-nacional-sobre-inteligencia-artificial-aplicada-a-la-produccion-pesquera/
+  tema: Curso de IA aplicada a la producción pesquera (UTN FRCh)
+  resumen: 'Radio interview about the national course on AI applied to fish production: how it started and why AI empowers
+    professionals instead of replacing them.'
+  titulo_traducido: UTN opens enrolment for a national course on artificial intelligence applied to fish production
+- id: utnfrch_conipe_2025
+  fecha: '2025-08-29'
+  medio: UTN Facultad Regional Chubut
+  tipo: cobertura
+  titulo: El IV Congreso Nacional de Ingeniería Pesquera finalizó con tres jornadas de debate y construcción colectiva
+  url: https://www.frch.utn.edu.ar/el-iv-congreso-nacional-de-ingenieria-pesquera-finalizo-con-tres-jornadas-de-debate-y-construccion-colectiva/
+  tema: Transformación digital en la ingeniería pesquera
+  resumen: Report on the congress, which opened with his keynote on the challenges and opportunities of digital transformation
+    in fisheries.
+  titulo_traducido: The 4th National Fisheries Engineering Congress closes after three days of debate and joint work
+- id: pescare_conipe_2025
+  fecha: '2025-08-28'
+  medio: Pescare
+  tipo: cobertura
+  titulo: Comenzó el IV Congreso Nacional de Ingeniería Pesquera en la UTN Chubut
+  url: https://pescare.com.ar/comenzo-el-iv-congreso-nacional-de-ingenieria-pesquera-en-la-utn-chubut/
+  tema: Transformación digital en la ingeniería pesquera
+  resumen: He gave the opening keynote of CONIPE 2025, “The wave of digital transformation in Fisheries Engineering”, on data
+    science and artificial intelligence in the sector.
+  titulo_traducido: The 4th National Fisheries Engineering Congress opens at UTN Chubut
+- id: gobtdf_cit_2021
+  fecha: '2021-09-22'
+  medio: Gobierno de Tierra del Fuego
+  tipo: cobertura
+  titulo: CIT Tierra del Fuego reinicia sus actividades presenciales en la sede de la UNTDF Río Grande
+  url: https://www.tierradelfuego.gob.ar/blog/2021/09/22/cit-tierra-del-fuego-reinicia-sus-actividades-presenciales-en-la-sede-de-la-untdf-rio-grande/
+  tema: Gestión de ciencia y tecnología
+  resumen: Meeting on research and technology-transfer opportunities in the province, attended as Provincial Director of Science
+    and Technology Liaison.
+  titulo_traducido: CIT Tierra del Fuego resumes on-site activities at the UNTDF Río Grande campus
+- id: contratapa_colegio_ingenieros_2021
+  fecha: '2021'
+  medio: La Contratapa TDF
+  tipo: cobertura
+  titulo: Gobierno y el Colegio de Ingenieros rubricaron un acuerdo para formar profesionales vinculados a la pesca
+  url: https://lacontratapatdf.com/nota/14571/gobierno-y-el-colegio-de-ingenieros-rubricaron-un-acuerdo-para-formar-profesionales-vinculados-a-la-pesca/
+  tema: Formación de profesionales de la pesca
+  resumen: Agreement between the Tierra del Fuego government and the Association of Engineers to train fisheries professionals,
+    with his participation as Provincial Director of Science and Technology Liaison.
+  titulo_traducido: Government and the Association of Engineers sign an agreement to train fisheries professionals
+- id: cadic_profesional_apoyo_2016
+  fecha: '2016-03-17'
+  medio: CADIC-CONICET (sitio institucional)
+  tipo: entrevista
+  titulo: 'La tarea del Profesional de Apoyo en el CADIC: una experiencia en el Laboratorio de Biología de Crustáceos'
+  url: https://cadic.conicet.gov.ar/la-tarea-del-profesional-de-apoyo-en-el-cadic-una-experiencia-en-el-laboratorio-de-biologia-de-crustaceos/
+  tema: Ciencia y apoyo técnico en el CADIC
+  resumen: 'Institutional interview about his role as a support professional in the Crustacean Biology Laboratory: assisting
+    fellows and researchers, fieldwork and lab work.'
+  titulo_traducido: 'The work of a support professional at CADIC: an experience in the Crustacean Biology Laboratory'
+- id: elmensajero_vito_2014
+  fecha: '2014-07-09'
+  medio: El Mensajero Diario
+  tipo: nota
+  titulo: Desarrollan un software para la navegación de la Antártida
+  url: https://www.elmensajerodiario.com.ar/contenidos/desarrollan-software-navegacin-antrtida_52059/
+  tema: VITO GNU/Linux
+  proyecto: vito_gnu_linux
+  resumen: Presentation of VITO, the navigation distribution built by UTN Ushuaia fisheries engineering students for Antarctic
+    tourist navigation, born from a concrete need of the industry.
+  titulo_traducido: Software developed for navigation in Antarctica
+- id: latdf_reconocimiento_2014
+  fecha: 2014-07
+  medio: Portal La TDF
+  tipo: reconocimiento
+  titulo: Nación reconoció a Estudiantes Fueguinos que desarrollaron un Software de Navegación Polar
+  url: https://www.latdf.com.ar/2014/07/nacion-reconocio-estudiantes-fueguinos.html
+  tema: VITO GNU/Linux
+  proyecto: vito_gnu_linux
+  resumen: National recognition of the Tierra del Fuego Maritime Technology Group (UTN Ushuaia) for its contribution to maritime
+    development and the safety of seafarers.
+  titulo_traducido: National government recognises Tierra del Fuego students who developed polar navigation software

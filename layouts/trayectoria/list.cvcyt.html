@@ -128,6 +128,9 @@
 {{ with $form.actividades_docencia_divulgacion }}<h3>Cursos, conferencias y jornadas</h3><ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
 {{ with $pub.otras_actividades }}<h3>Otras actividades</h3><ul>{{ range . }}<li>{{ .titulo }}{{ with .rol }} — {{ . }}{{ end }}{{ with .años }} ({{ . }}){{ end }}{{ with .año }} ({{ . }}){{ end }}</li>{{ end }}</ul>{{ end }}
 
+{{ with site.Data.es.medios }}<h3>Apariciones en medios</h3>
+<ul>{{ range . }}<li>{{ .titulo }}. <i>{{ index (split .medio " (") 0 }}</i>, {{ .fecha }}. {{ replace .url "https://" "" | truncate 90 }}</li>{{ end }}</ul>{{ end }}
+
 <h2>9. Premios y distinciones</h2>
 <ul>{{ range $pub.reconocimientos }}<li>{{ . }}</li>{{ end }}</ul>
 
