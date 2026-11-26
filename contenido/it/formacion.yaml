@@ -1,0 +1,19 @@
+# Titoli di studio (chiave: titolo esatto della base in spagnolo).
+"Ingeniero Pesquero":
+  titulo: "Ingegnere della Pesca"
+  institucion: "Università Tecnologica Nazionale (UTN)"
+"Técnico Universitario Pesquero":
+  titulo: "Tecnico universitario della pesca"
+  institucion: "Università Tecnologica Nazionale (UTN), Facoltà Regionale di Río Grande (sede di Ushuaia)"
+"Máster título propio MBA en Dirección Logística y de Operaciones (COO)":
+  titulo: "MBA in Direzione della Logistica e delle Operazioni (COO), master universitario proprio"
+"Máster en Desarrollo con IA":
+  titulo: "Master in Sviluppo con IA"
+"Data Analytics — Ciencias de la Computación":
+  titulo: "Data Analytics — Informatica"
+"Diplomatura en Gestión del Medio Ambiente":
+  titulo: "Diploma in Gestione Ambientale"
+  institucion: "UTN, Facoltà Regionale di Resistencia (Chaco)"
+"Diplomatura en Gestión Integral de la Calidad":
+  titulo: "Diploma in Gestione Integrata della Qualità"
+  institucion: "UTN, Facoltà Regionale di Resistencia (Chaco)"

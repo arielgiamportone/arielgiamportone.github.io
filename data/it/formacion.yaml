@@ -1,0 +1,168 @@
+# GENERADO por scripts/sync_base.py desde la base de conocimiento. No editar a mano.
+titulos:
+- institucion: Università Tecnologica Nazionale (UTN)
+  titulo: Ingegnere della Pesca
+  nivel: Grado universitario
+  fechas: 2006 – 2016
+  detalle_fechas: Plan completado el 24/10/2016; título expedido el 16/03/2017 por la UTN Facultad Regional Río Grande (Res.
+    CS 427/2017, promedio 7,91). Constancia de egreso de la FR Tierra del Fuego (29/04/2026) y legalización del Ministerio
+    de Capital Humano (22/05/2026)
+  ubicacion: Ushuaia, Argentina
+- institucion: Università Tecnologica Nazionale (UTN), Facoltà Regionale di Río Grande (sede di Ushuaia)
+  titulo: Tecnico universitario della pesca
+  nivel: Pregrado universitario (título intermedio de Ingeniería Pesquera, Plan 97)
+  fechas: 2006 – 2014
+posgrado_especializacion:
+- institucion: TECH Universidad Tecnológica
+  titulo: MBA in Direzione della Logistica e delle Operazioni (COO), master universitario proprio
+  nivel: Máster propio (1.500 h, 60 ECTS)
+  fechas: 01/2020 – 06/2024
+  detalle_fechas: Iniciado en 02/2020, suspendido y retomado; completado en la edición 21/06/2023 – 22/06/2024 (constancia
+    05/08/2024). Confirmado por Ariel 2026-11-21
+- institucion: The BIG school
+  titulo: Master in Sviluppo con IA
+  nivel: Máster propio (no oficial)
+  fechas: 04/2026 – 08/2026
+  estado: Completado y aprobado. TFM entregado 22/08/2026, aprobado 27/09/2026; certificado digital emitido 24/09/2026 (Certifier/credsverse)
+  certificado: https://credsverse.com/credentials/411e8c2b-3658-4c12-84f5-75e526d239dd
+  titulo_universitario: 'Universidad Isabel I: «Experto Universitario en Desarrollo con Inteligencia Artificial», 16 ECTS.
+    Pagado 28/09/2026, datos completados 10/2026; en trámite (expedición ~3 meses según BIG school, 29/10/2026). Al 21/11/2026
+    no recibido'
+- institucion: Upgrade Hub
+  titulo: Data Analytics — Informatica
+  nivel: Bootcamp / Formación intensiva (350 h)
+  fechas: 11/2023 – 02/2024
+  detalle_fechas: Diploma emitido en Madrid el 19/02/2024
+- institucion: UTN, Facoltà Regionale di Resistencia (Chaco)
+  titulo: Diploma in Gestione Ambientale
+  nivel: Diploma de especialización (120 h, Res. 269/2019)
+  fechas: '2020'
+  detalle_fechas: Certificado del 08/07/2020
+- institucion: UTN, Facoltà Regionale di Resistencia (Chaco)
+  titulo: Diploma in Gestione Integrata della Qualità
+  nivel: Diploma de especialización (160 h, Res. 182/2019)
+  fechas: '2019'
+  detalle_fechas: Certificado del 28/08/2019
+certificaciones:
+- nombre: Generative AI Fundamentals
+  entidad: Microsoft / LinkedIn Learning
+  año: 2024
+  categoria: IA y Datos
+- nombre: Aumenta tu productividad con Microsoft Bing Chat
+  entidad: Microsoft / LinkedIn
+  año: 2024
+  categoria: IA y Productividad
+- nombre: Descubre Microsoft 365 Copilot
+  entidad: Microsoft
+  año: 2024
+  categoria: IA y Productividad
+- nombre: Ética en la era de la inteligencia artificial generativa
+  entidad: LinkedIn Learning
+  año: 2024
+  categoria: IA y Ética
+- nombre: Inteligencia artificial más allá de la ingeniería
+  entidad: LinkedIn Learning
+  año: 2024
+  categoria: IA y Datos
+- nombre: Python Advanced
+  entidad: Programming Hub
+  año: 2024
+  categoria: Programación
+- nombre: Machine Learning
+  entidad: Programming Hub
+  año: 2024
+  categoria: IA y Datos
+- nombre: Data Science
+  entidad: Programming Hub
+  año: 2023
+  categoria: IA y Datos
+- nombre: SQL
+  entidad: Programming Hub
+  año: 2023
+  categoria: Bases de datos
+- nombre: CSS Certification Course
+  entidad: Programming Hub
+  año: 2023
+  categoria: Programación Web
+- nombre: Git (Certificate of Excellence)
+  entidad: Programming Hub
+  año: 2023
+  categoria: Programación
+- nombre: ERP Systems
+  entidad: Programming Hub
+  año: 2024
+  categoria: Sistemas de gestión
+- nombre: Taller de Visualización de Datos en el Portal del Sistema Nacional de Datos del Mar (16 h)
+  entidad: MINCYT
+  año: 2014
+  categoria: Datos del mar
+- nombre: Formación básica STCW'95 para gente de mar (supervivencia, lucha contra incendios, seguridad personal y primeros
+    auxilios)
+  entidad: Armada Argentina — Escuela Nacional de Pesca
+  año: 2008
+  categoria: Formación marítima
+- nombre: Ordenamiento pesquero con enfoque ecosistémico (etapa 1)
+  entidad: FAO / Cooperación Española
+  año: 2020
+  categoria: Pesca y acuicultura
+- nombre: Sistemas de recirculación de agua en acuicultura — curso de posgrado (40 h, asistencia)
+  entidad: UTN Facultad Regional Chubut, dictado en CENPAT-CONICET con la Cooperación Chilena (AGCID)
+  año: 2015
+  categoria: Acuicultura
+- nombre: 'La investigación: del proyecto científico a la utilización social de la ciencia en el área pesquera (20 h, aprobado)'
+  entidad: UTN FR Río Grande / FLACSO / Consejo Federal Pesquero
+  año: 2011
+  categoria: Pesca y acuicultura
+- nombre: Seminario Política Pesquera Común de la UE (Res. 241/2014)
+  entidad: UTN FR Río Grande
+  año: 2014
+  categoria: Pesca y acuicultura
+- nombre: Curso inicial de seguridad aeroportuaria (AVSEC) y AVSAF Peatones
+  entidad: Campus Virtual AENA (contenidos AESA)
+  año: 2024
+  categoria: Seguridad aeroportuaria
+- nombre: Curso virtual de Innovación Abierta (16 h)
+  entidad: Ministerio de Desarrollo Productivo (Argentina)
+  año: 2020
+  categoria: Innovación
+- nombre: Desarrollo Portuario-Logístico-Tecnológico «Smart Ports»
+  entidad: CEDPLA (AIIPyC)
+  año: 2019
+  categoria: Puertos y logística
+- nombre: Curso de Proyectos Solares (12 h)
+  entidad: Colectando Sol (Ushuaia)
+  año: 2018
+  categoria: Renovables
+- nombre: Buenas Prácticas de Manufactura BPM/GMP (30 h)
+  entidad: UTN FRRe
+  año: 2018
+  categoria: Calidad y procesos
+- nombre: Cursos, seminarios y jornadas de formación pesquera y marítima (2007-2012)
+  entidad: UTN FR Río Grande, Escuela Nacional de Pesca, Centro de Patrones y Honorable Cámara de Diputados de la Nación
+  año: 2007
+  categoria: Pesca y acuicultura
+  detalle: Aspectos metodológicos para la gestión sustentable de la pesca (06/2007, 10 h); seminario «Pensando desde el Mar»
+    (11/2007, 10 h); seguridad de los alimentos de origen marino (03/2008, 8 h); jornadas de navegación de cabotaje en el
+    canal Beagle (11/2009); 2.ª Jornada de políticas estratégicas sobre el Atlántico Sur (06/2010); Jornada de intereses marítimos
+    (05/2012)
+- nombre: Curso de Géneros y Diversidad (Ley Micaela)
+  entidad: UTN (Res. 1150/2022)
+  año: 2022
+  categoria: Formación institucional
+actividades_docencia_divulgacion:
+- Docente del curso precongreso «Alfabetización en ciencia de datos e IA orientado a la pesca, la acuicultura y las ciencias
+  del mar», UTN FR Chubut / CONIPE, 19-29/08/2025
+- Expositor y revisor en el IV Congreso Nacional de Ingeniería Pesquera (CONIPE 2025), UTN FR Chubut, 27-29/08/2025; mesas
+  redondas del 27 y 28/08/2025
+- Expositor en el conversatorio «Desafíos y oportunidades del sistema portuario argentino», Universidad Nacional de Luján,
+  25/11/2020
+- Expositor de proyecto en la Expo Ingeniería UTN 2020 (18-20/08/2020)
+- Expositor/disertante en la Semana de la Ingeniería UTN 2017 y 2018
+- Disertante en los Talleres de Operatoria Marítima (2010 y 2012 antárticos, 2013, 2016) y organizador del IV Taller (2015)
+- Disertante en el 1.er Taller de Operatoria Marítima Antártica (UTN FR Río Grande, 24-25/06/2010) con el «Proyecto de Optimización
+  de Software y Cartografía Antártica»
+- Coimpulsor de un grupo de trabajo sobre seguridad náutica y condiciones de los trabajadores marítimos (nota al Consejo Directivo
+  de la UTN FR Tierra del Fuego, 14/06/2018)
+- Expositor en las IX Jornadas Nacionales de Ciencias del Mar, Ushuaia, 09/2015
+- Presentador de actividades de divulgación en las Semanas Nacionales de la Ciencia y la Tecnología (6.ª a 10.ª, 2008-2012)
+- Ayudante ad honorem de Recursos Pesqueros I, UTN FR Río Grande (2008, 2010, 2011)

@@ -1,0 +1,518 @@
+# GENERADO por scripts/sync_base.py desde la base de conocimiento. No editar a mano.
+- id: trawlkit
+  nombre: trawlkit · Trawl Design Lab
+  organizacion: Personal
+  tipo: software_open_source
+  rol: Autor único
+  fechas: 2024 – Presente
+  estado: PyPI 1.2.0 · Zenodo DOI 10.5281/zenodo.23959629 (2026-11-04)
+  descripcion: 'Motore di calcolo per la progettazione e il dimensionamento delle reti a strascico: un''evoluzione del modello
+    in foglio di calcolo FAO A-3 per pescherecci da 150-180 CV nel Canale di Beagle, ricostruito come software riproducibile
+    e testato.'
+  stack:
+  - Python
+  - FastAPI
+  - Pydantic
+  - SQLAlchemy
+  - SciPy
+  - Plotly
+  - Docker
+  - pytest
+  - hatchling
+  - PyPI
+  - Zenodo
+  - CITATION.cff
+  repo: https://github.com/arielgiamportone/trawl-design-lab
+  inicio: '2024'
+  actual: true
+  perfiles:
+  - economia-azul
+  - software
+  orden: 1
+- id: cfp_audit_intelligence
+  nombre: cfp-audit-intelligence
+  organizacion: Personal (TFM del Máster en Desarrollo con IA, The BIG school, aprobado 27/09/2026)
+  tipo: software_open_source
+  rol: Autor único
+  fechas: 11/2025 – 08/2026
+  estado: App desplegada en Streamlit Cloud
+  descripcion: 'Piattaforma RAG multi-LLM (OpenAI, Anthropic) per l''audit dei verbali del Consiglio Federale della Pesca
+    argentino: FastAPI, Streamlit, ChromaDB, dati aperti e IA responsabile.'
+  stack:
+  - Python
+  - FastAPI
+  - Streamlit
+  - ChromaDB
+  - OpenAI
+  - Anthropic
+  - sentence-transformers
+  - SHAP
+  - SQLAlchemy
+  - PyTorch
+  - Plotly
+  - Docker Compose
+  repo: https://github.com/arielgiamportone/cfp-audit-intelligence
+  inicio: 2025-11
+  fin: 2026-08
+  actual: false
+  perfiles:
+  - software
+  - economia-azul
+  - ia
+  orden: 2
+- id: fisheries_mlops
+  nombre: fisheries-sustainability-mlops
+  organizacion: Personal
+  tipo: software_open_source
+  rol: Autor único
+  fechas: 02/2026
+  descripcion: MLOps end to end con deep learning e reti bayesiane per la sostenibilità della pesca.
+  stack:
+  - Python
+  - PyTorch
+  - pgmpy
+  - MLflow
+  - Optuna
+  - FastAPI
+  - NetworkX
+  - Docker
+  - AWS ECS/ECR
+  repo: https://github.com/arielgiamportone/fisheries-sustainability-mlops
+  inicio: 2026-02
+  fin: 2026-02
+  actual: false
+  perfiles:
+  - economia-azul
+  - ia
+  orden: 3
+- id: asset_identity_gs1
+  nombre: asset-identity-gs1
+  organizacion: Personal · patrones desarrollados en Intervalor Data, publicados con autorización
+  tipo: software_open_source
+  rol: Autor (especificación, implementación clean-room y revisión)
+  fechas: 11/2026
+  estado: Público desde 2026-11-17 · release v0.1.0 · PyPI asset-identity-gs1 0.1.0 · MIT · CI verde (Python 3.11 y 3.12)
+  descripcion: 'Identità fisica dei beni inventariati con gli standard GS1: ogni bene ha un''unica identità in quattro forme
+    equivalenti (GIAI canonico AI 8004, alias leggibile con carattere di controllo mod-43 per Code128, EPC GIAI-96 per RFID
+    UHF e GS1 Digital Link per QR). Unicità globale multi-tenant per costruzione. Caso di studio clean-room.'
+  metricas:
+  - 148 tests
+  - 31 decisiones de diseño documentadas + 2 correcciones de la fase 3
+  - README bilingüe en formato caso de estudio
+  stack:
+  - Python 3.11+
+  - reportlab
+  - pytest
+  - ruff
+  - GitHub Actions
+  - gitleaks
+  - SQLite
+  repo: https://github.com/arielgiamportone/asset-identity-gs1
+  release: https://github.com/arielgiamportone/asset-identity-gs1/releases/tag/v0.1.0
+  pypi: https://pypi.org/project/asset-identity-gs1/
+  inicio: 2026-11
+  fin: 2026-11
+  actual: false
+  perfiles:
+  - sector-publico
+  - software
+  orden: 4
+- id: catastro_enrichment_es
+  nombre: catastro-enrichment-es
+  organizacion: Personal · patrones desarrollados en Intervalor Data, publicados con autorización
+  tipo: software_open_source
+  rol: Autor (especificación, implementación clean-room y revisión)
+  fechas: 11/2026
+  estado: Público desde 2026-11-18 · release v0.1.0 · PyPI catastro-enrich 0.1.0 (2026-11-19) · MIT · CI verde (Python 3.11
+    y 3.12)
+  descripcion: Arricchimento di inventari immobiliari con i cinque catasti spagnoli (la DGC nazionale e quelli di Álava, Bizkaia,
+    Gipuzkoa e Navarra) dietro un'unica interfaccia instradata per codice comunale; geocodifica Nominatim di riserva, ortofoto
+    PNOA e immagini Mapillary con attribuzione. Caso di studio clean-room.
+  metricas:
+  - 139 tests sin red (toda respuesta de servicio es sintética), cobertura 97 %
+  - round-trip UTM-WGS84 < 1e-6° en los husos 28-31
+  - README bilingüe en formato caso de estudio
+  stack:
+  - Python 3.11+
+  - pyproj
+  - urllib
+  - sqlite3
+  - pytest
+  - ruff
+  - GitHub Actions
+  - gitleaks
+  repo: https://github.com/arielgiamportone/catastro-enrichment-es
+  release: https://github.com/arielgiamportone/catastro-enrichment-es/releases/tag/v0.1.0
+  pypi: https://pypi.org/project/catastro-enrich/
+  inicio: 2026-11
+  fin: 2026-11
+  actual: false
+  perfiles:
+  - sector-publico
+  - ia
+  - software
+  orden: 5
+- id: kippa_rov
+  nombre: KIPPA I — ROV con hardware e software aperti
+  organizacion: UTN FRTDF (tesis de grado)
+  tipo: desarrollo_tecnologico
+  rol: Autor
+  fechas: 2015 – 2016
+  descripcion: Veicolo subacqueo filoguidato costruito interamente con hardware e software aperti e materiali reperibili localmente,
+    per ispezionare scafi, attrezzi, eliche e timoni dei piccoli pescherecci. Presentato al IX Congresso Nazionale di Scienze
+    del Mare (2015).
+  inicio: '2015'
+  fin: '2016'
+  actual: false
+  perfiles:
+  - economia-azul
+  - software
+  orden: 6
+- id: paradox_db_py
+  nombre: paradox-db-py
+  organizacion: Personal · patrones desarrollados en Intervalor Data, publicados con autorización
+  tipo: software_open_source
+  rol: Autor (especificación, implementación clean-room y revisión)
+  fechas: 11/2026
+  estado: Público desde 2026-11-15 · release v0.1.0 · PyPI paradoxdb 0.1.0 · MIT · CI verde (Python 3.11 y 3.12)
+  descripcion: Lettore e scrittore in Python puro di tabelle Paradox (.DB dati, .MB memo/BLOB, .PX indice primario), versioni
+    da 3.0 a 7, senza dipendenze native né copyleft. Stato esplicito per cella (OK / NULL / INVALID) con i byte grezzi, codepage
+    per tabella e indice primario ricostruito e verificato. Caso di studio clean-room.
+  metricas:
+  - 104 tests (Hypothesis para ida y vuelta de enteros, dobles y BCD)
+  - '50 000 filas sintéticas: lectura 1,3 s, escritura .DB+.PX 0,09 s'
+  - README bilingüe en formato caso de estudio; 21 decisiones de diseño documentadas
+  stack:
+  - Python 3.11+
+  - pytest
+  - Hypothesis
+  - ruff
+  - GitHub Actions
+  - gitleaks
+  - hatchling
+  repo: https://github.com/arielgiamportone/paradox-db-py
+  release: https://github.com/arielgiamportone/paradox-db-py/releases/tag/v0.1.0
+  pypi: https://pypi.org/project/paradoxdb/
+  inicio: 2026-11
+  fin: 2026-11
+  actual: false
+  perfiles:
+  - software
+  - sector-publico
+  orden: 7
+- id: periodic_report_kit
+  nombre: periodic-report-kit
+  organizacion: Personal · patrones desarrollados en Intervalor Data, publicados con autorización
+  tipo: software_open_source
+  rol: Autor (especificación, implementación clean-room y revisión)
+  fechas: 11/2026
+  estado: Público desde 2026-11-20 · release v0.1.0 · PyPI periodic-report-kit 0.1.0 · MIT · CI verde (Python 3.11 y 3.12)
+  descripcion: 'Report periodici dichiarativi: input tabellare con regole di dominio (le righe sconosciute vanno in quarantena)
+    e output Word, PDF e PPTX con il marchio aziendale. Copertina a vivo fuori numerazione, vero sommario di Word, catalogo
+    YAML di sezioni e grafici condizionali. Caso di studio clean-room.'
+  metricas:
+  - 72 tests
+  - 20 casos de prueba de la spec cubiertos
+  - README bilingüe en formato caso de estudio
+  stack:
+  - Python 3.11+
+  - pandas
+  - matplotlib
+  - python-docx
+  - python-pptx
+  - xhtml2pdf
+  - pypdf
+  - Pillow
+  - PyYAML
+  - typer
+  - pytest
+  - ruff
+  - GitHub Actions
+  - gitleaks
+  repo: https://github.com/arielgiamportone/periodic-report-kit
+  release: https://github.com/arielgiamportone/periodic-report-kit/releases/tag/v0.1.0
+  pypi: https://pypi.org/project/periodic-report-kit/
+  inicio: 2026-11
+  fin: 2026-11
+  actual: false
+  perfiles:
+  - software
+  - ia
+  - sector-publico
+  orden: 8
+- id: pesqueros_en_ia_cursos
+  nombre: PesquerosEnIA — cursos open source
+  organizacion: Pesqueros en IA (fundador)
+  tipo: educativo_open_source
+  rol: Fundador, autor principal y docente
+  fechas: 05/2025 – Presente
+  metricas:
+  - 4 repos, ~141 commits propios
+  - 20 notebooks ejecutables en Colab en el curso UTN FRCh
+  - 'Alumnos: CONIPE 2025 unos 15; curso UTN FRCh primera cohorte de 70 (dato de Ariel, 2026-11-09)'
+  stack:
+  - Python
+  - Jupyter
+  - Colab
+  - scikit-learn
+  - PyTorch
+  - TensorFlow
+  - pgmpy
+  - LaTeX
+  - HTML
+  repo: https://github.com/PesquerosEnIA
+  web: https://sites.google.com/view/pesquerosenia
+  inicio: 2025-05
+  actual: true
+  perfiles:
+  - economia-azul
+  - ia
+  orden: 9
+- id: serie_dt_algp_2026
+  nombre: 'Serie DT-ALGP-2026: Documenti di lavoro sulla governance della pesca e dell''acquacoltura'
+  organizacion: UTN FRTDF / Pesqueros en IA
+  tipo: proyecto_investigacion
+  rol: Autor
+  fechas: 04/2026 – 11/2026
+  descripcion: 'Dieci documenti di lavoro ad accesso aperto (CC BY 4.0) che analizzano con dati pubblici la governance della
+    pesca e dell''acquacoltura in Argentina e in Terra del Fuoco: il sistema scientifico della pesca, la legge sull''acquacoltura,
+    le decisioni del Consiglio Federale della Pesca, il rapporto SOFIA 2026 della FAO e un piano strategico al 2050.'
+  metricas:
+  - 10 documentos entre 04/2026 y 11/2026
+  - 9 con DOI en ResearchGate (DT-010 sin DOI)
+  - Licencia CC BY 4.0
+  - Difundidos también en LinkedIn
+  web: https://www.researchgate.net/profile/Ariel-Lujan-Giamportone
+  inicio: 2026-04
+  fin: 2026-11
+  actual: false
+  perfiles:
+  - economia-azul
+  - sector-publico
+  orden: 10
+- id: apigfw
+  nombre: Análisis pesquero con la API de Global Fishing Watch
+  organizacion: Personal (material docente UTN)
+  tipo: software_open_source
+  rol: Autor único
+  fechas: 11/2025
+  descripcion: Notebook y cliente de ejemplo de la API de Global Fishing Watch para analizar la pesca argentina.
+  stack:
+  - Python
+  - pandas
+  - requests
+  - Jupyter
+  repo: https://github.com/arielgiamportone/APIGFW
+  inicio: 2025-11
+  fin: 2025-11
+  actual: false
+  perfiles:
+  - economia-azul
+  - ia
+  orden: 11
+- id: casos_estudio_intervalor
+  nombre: Casi di studio clean-room
+  organizacion: Personal
+  tipo: software_open_source
+  rol: Autor
+  fechas: 10/2026
+  descripcion: multi-tenant-asset-register (registro dei beni multi-tenant, migrazione riconciliata al centesimo, motore di
+    ammortamento spiegabile), field-inspections-dashboard (pipeline incrementale su un'API di terzi, cruscotto statico con
+    build per ruolo, Azure SWA + Entra ID) e inspection-photo-archiver (archiviatore 24/7 con registro non distruttivo). Nessun
+    codice né dato di clienti.
+  repo: https://github.com/arielgiamportone/multi-tenant-asset-register · field-inspections-dashboard · inspection-photo-archiver
+  inicio: 2026-10
+  fin: 2026-10
+  actual: false
+  perfiles:
+  - software
+  - sector-publico
+  orden: 12
+- id: transcriptor_placas
+  nombre: Transcriptor de Placas Industriales Asistido
+  organizacion: Intervalor Data (repo público en cuenta personal)
+  tipo: producto_software
+  rol: Autor
+  fechas: 12/2025 – 06/2026
+  estado: V1 production ready
+  descripcion: 'App Streamlit de transcripción asistida por IA para placas técnicas de motores: OCR local (EasyOCR) o GPT-4o-mini
+    por imagen, consolidación por activo, checkpoints, validación humana fila a fila y exportación Excel.'
+  stack:
+  - Python
+  - Streamlit
+  - EasyOCR
+  - torch
+  - OpenCV
+  - openai
+  - anthropic
+  - google-generativeai
+  - Docker
+  repo: https://github.com/arielgiamportone/transcriptor-placas-asistido (público) · espejo en Intervalor-Data
+  inicio: 2025-12
+  fin: 2026-06
+  actual: false
+  perfiles:
+  - software
+  - ia
+  orden: 13
+- id: pid_liofilizados
+  nombre: PID PP9884 — Liofilización de alimentos de producción local en Tierra del Fuego
+  organizacion: UTN FRTDF · Grupo QA3DS
+  tipo: proyecto_investigacion
+  rol: Director
+  fechas: 04/2023 – 03/2026
+  codigo: PAPPTF0009884
+  descripcion: Protocolos reproducibles de liofilización para productores regionales; matriz ruibarbo, 261 observaciones válidas
+    (3 pretratamientos × 10 tiempos). Equipo de 6 docentes y 7 alumnos (4 becas BINID). Web qa3ds.github.io con animación
+    del proceso; preprint en preparación.
+  repo: https://github.com/QA3DS/PID-Liofilizados · https://qa3ds.github.io
+  inicio: 2023-04
+  fin: 2026-03
+  actual: false
+  perfiles:
+  - economia-azul
+  orden: 14
+- id: investigacion_operativa_ml
+  nombre: Simplex vs ML en Investigación Operativa
+  organizacion: Personal
+  tipo: software_open_source
+  rol: Autor único
+  fechas: 08/2025
+  descripcion: 'Material docente del curso CONIPE 2025 sobre la evolución de la investigación operativa, con un caso de flota
+    pesquera y datos sintéticos. Separa tres preguntas: decidir con programación lineal (plan óptimo, recurso que limita,
+    precios sombra), predecir con ML frente a líneas base y al techo de la fórmula, y predecir y luego optimizar (de 91 %
+    a 99,8 % del óptimo). App Streamlit, presentación y 9 tests en CI.'
+  stack:
+  - Python
+  - Streamlit
+  - Plotly
+  - SciPy
+  repo: https://github.com/arielgiamportone/Investigacion_Operativa
+  inicio: 2025-08
+  fin: 2025-08
+  actual: false
+  perfiles:
+  - ia
+  orden: 15
+- id: utn_antartida_argentina
+  nombre: UTN Antártida Argentina (UTNAA) — Grupo de Desarrollo Logístico
+  organizacion: UTN Facultad Regional Tierra del Fuego
+  tipo: desarrollo_tecnologico
+  rol: Cofundador y coordinador
+  fechas: 2020 – 2022
+  descripcion: 'Grupo de desarrollo logístico de Ingeniería Pesquera (UTN FRTDF, Ushuaia) para vincular la universidad con
+    los sectores portuario, marítimo y pesquero. Continúa el trabajo del Grupo de Tecnología Marítima Tierra del Fuego, su
+    precursor (cartografía digital antártica, VITO GNU/Linux, KIPPA, dragas para COPLA, estudio del proyecto de ley de Marina
+    Mercante de 2014). Desde 2020: acuerdo de colaboración UTN FRTDF – Asociación Internacional de Profesionales de Puertos
+    y Costas (AIPPyC, firmado en 09/2020) para un sistema de Short Sea Shipping regional, con un seminario de Short Sea y
+    River Shipping y un curso de desarrollo estratégico del litoral marítimo previstos para 2021; investigación de mercado
+    de la Región 8 Patagonia Sur para el Plan Estratégico del Sistema Portuario Argentino (10/2020); proyecto de desarrollo
+    logístico-portuario para Río Grande; webinar abierto «Desarrollando capacidades para el Decenio de Ciencias del Mar 2021-2030»
+    con el presidente de la Comisión Oceanográfica Intergubernamental de la UNESCO (05/10/2020, organizado con la UTN FRTDF);
+    conversatorio académico anual sobre el sistema portuario. Web cedeslogtdf.com.ar (caída), página de LinkedIn (company/grupo-de-desarrollo-logístico-utn-antártida-argentina),
+    Facebook (UTNAATDF) y canal de YouTube.'
+  inicio: '2020'
+  fin: '2022'
+  actual: false
+  perfiles:
+  - economia-azul
+  - sector-publico
+  orden: 16
+- id: vito_gnu_linux
+  nombre: VITO GNU/Linux — distribución de navegación
+  organizacion: Grupo de Tecnología Marítima UTN / UVI-UTN
+  tipo: desarrollo_tecnologico
+  rol: Desarrollador
+  fechas: 2012 – 2015
+  descripcion: Fork de Debian estable dedicado a la navegación, implementado en buques de turismo antártico (Buque Ushuaia,
+    Antarpply). Reconocido de interés municipal, provincial y nacional; premio del Centro de Patrones y Oficiales Fluviales
+    de Pesca y Cabotaje Marítimo (10/2014).
+  inicio: '2012'
+  fin: '2015'
+  actual: false
+  perfiles:
+  - economia-azul
+  - software
+  orden: 17
+- id: aura_farm_ar
+  nombre: Aura Farm AR
+  organizacion: Personal
+  tipo: software_open_source
+  rol: Autor (desarrollo asistido por agente, un día)
+  fechas: 08/2026
+  descripcion: 'App móvil de gamificación con realidad aumentada sobre la cámara frontal: misiones, duelos, CI y tests. Proyecto
+    menor.'
+  stack:
+  - TypeScript
+  - React Native
+  - Expo
+  - Jest
+  - GitHub Actions
+  repo: https://github.com/arielgiamportone/aura-farm-ar
+  inicio: 2026-08
+  fin: 2026-08
+  actual: false
+  perfiles:
+  - software
+  orden: 18
+- id: cvar_sinergias
+  nombre: Sinergias y conflictos entre las actividades económicas y los socioecosistemas de Tierra del Fuego
+  organizacion: CONICET-CADIC
+  tipo: proyecto_investigacion
+  rol: Personal técnico de apoyo
+  fechas: 11/2016 – 11/2021
+  inicio: 2016-11
+  fin: 2021-11
+  actual: false
+  perfiles:
+  - economia-azul
+  orden: 999
+- id: cvar_centolla_ras
+  nombre: Desarrollo a escala piloto de la ingeniería del cultivo masivo de larvas de centolla (Lithodes santolla) en RAS
+    para repoblamiento
+  organizacion: CONICET-CADIC
+  tipo: proyecto_investigacion
+  rol: Personal técnico de apoyo
+  fechas: 05/2015 – 12/2019
+  inicio: 2015-05
+  fin: 2019-12
+  actual: false
+  perfiles:
+  - economia-azul
+  orden: 999
+- id: cvar_renovables
+  nombre: Desarrollo de sistemas híbridos para la provisión sustentable de electricidad y calor empleando energías renovables
+  organizacion: UTN FRTDF
+  tipo: proyecto_investigacion
+  rol: Becario de I+D
+  fechas: 04/2016 – 03/2019
+  inicio: 2016-04
+  fin: 2019-03
+  actual: false
+  perfiles:
+  - economia-azul
+  orden: 999
+- id: cvar_centolla_limitaciones
+  nombre: Limitaciones a la producción de nuevos individuos de las pesquerías de centolla en la Argentina
+  organizacion: CONICET-CADIC
+  tipo: proyecto_investigacion
+  rol: Personal técnico de apoyo
+  fechas: 11/2013 – 02/2017
+  inicio: 2013-11
+  fin: 2017-02
+  actual: false
+  perfiles:
+  - economia-azul
+  orden: 999
+- id: cvar_centolla_bases_1
+  nombre: 'Bases para el mejoramiento de la pesquería de centolla: estrategias biológicas para su recuperación y comercialización'
+  organizacion: CONICET-CADIC
+  tipo: proyecto_investigacion
+  rol: Personal técnico de apoyo
+  fechas: 11/2013 – 10/2016 y 05/2014 – 04/2017 (dos proyectos)
+  inicio: 2013-11
+  fin: 2016-10
+  actual: false
+  perfiles:
+  - economia-azul
+  orden: 999

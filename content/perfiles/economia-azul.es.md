@@ -1,5 +1,5 @@
 ---
-outputs: ["html", "cv"]
+outputs: ["html", "cv", "cvit"]
 lente: "economia-azul"
 translationKey: "perfil-economia-azul"
 url: "/perfiles/economia-azul/"

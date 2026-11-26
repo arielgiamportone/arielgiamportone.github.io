@@ -1,7 +1,13 @@
-{{- /* "03/2021 – Presente" → "mar. 2021 – Actualidad" en el idioma actual */ -}}
+{{- /* "03/2021 – Presente" → "03/2021 – Actualidad" en el idioma actual.
+       Acepta la cadena o (dict "f" cadena "lang" "it") para forzar el idioma (CV en italiano). */ -}}
 {{- $f := . -}}
-{{- $f = replaceRE `(?i)presente|actualidad` (i18n "presente") $f -}}
-{{- if eq site.Language.Lang "en" -}}
+{{- $lang := site.Language.Lang -}}
+{{- if reflect.IsMap . }}{{ $f = .f }}{{ $lang = .lang }}{{ end -}}
+{{- $presente := index (index site.Data.cv.textos $lang) "presente" -}}
+{{- $f = replaceRE `(?i)presente|actualidad` $presente $f -}}
+{{- if eq $lang "en" -}}
 {{- $f = replace $f " y " " and " | replaceRE `\(dos proyectos\)` "(two projects)" -}}
+{{- else if eq $lang "it" -}}
+{{- $f = replace $f " y " " e " | replaceRE `\(dos proyectos\)` "(due progetti)" -}}
 {{- end -}}
 {{- return $f -}}

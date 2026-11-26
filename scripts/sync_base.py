@@ -373,6 +373,28 @@ def aplicar_textos(ficheros: dict, textos: dict, lang: str, exigir: bool) -> dic
     return {k: limpiar(v, f"{lang}:{k}") for k, v in salida.items()}
 
 
+def comprobar_cv_it(es: dict, it: dict) -> None:
+    """Avisa si algo que aparece en un CV en italiano sigue en español (misma selección que el CV)."""
+    cv = yaml.safe_load((RAIZ / "data" / "cv.yaml").read_text(encoding="utf-8"))
+    for slug, cats in cv["categorias"].items():
+        exp_es = [x for x in es["experiencia.yaml"] if slug in (x.get("perfiles") or [])][: cv["max_experiencias"]]
+        exp_it = {x["id"]: x for x in it["experiencia.yaml"]}
+        for x in exp_es:
+            if exp_it[x["id"]].get("rol") == x.get("rol"):
+                aviso(f"[it] CV {slug}: experiencia sin traducir {x['id']}")
+        n = len(exp_es)
+        np_ = 8 if n < 3 else (6 if n < 5 else 5)
+        if slug in cv["perfiles_con_publicaciones"]:
+            np_ -= len(es["publicaciones.yaml"]["papers_peer_reviewed"]) - 1
+        proy_it = {x["id"]: x for x in it["proyectos.yaml"]}
+        for x in [p for p in es["proyectos.yaml"] if slug in (p.get("perfiles") or [])][:np_]:
+            if proy_it[x["id"]].get("descripcion") == x.get("descripcion"):
+                aviso(f"[it] CV {slug}: proyecto sin traducir {x['id']}")
+    for a, b in zip(es["perfiles.yaml"], it["perfiles.yaml"]):
+        if a.get("resumen") == b.get("resumen"):
+            aviso(f"[it] perfil sin traducir {a['slug']}")
+
+
 # ------------------------------------------------------------------ salida
 
 def volcar(datos) -> str:
@@ -401,7 +423,10 @@ def main() -> int:
     por_idioma = {
         "es": aplicar_textos(ficheros, cargar_textos("es"), "es", exigir=False),
         "en": aplicar_textos(ficheros, cargar_textos("en"), "en", exigir=True),
+        # Italiano: solo los textos que aparecen en los CV por perfil (no hay web en italiano).
+        "it": aplicar_textos(ficheros, cargar_textos("it"), "it", exigir=False),
     }
+    comprobar_cv_it(por_idioma["es"], por_idioma["it"])
 
     cambios = []
     for lang, datos_lang in por_idioma.items():

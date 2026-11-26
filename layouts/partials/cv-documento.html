@@ -1,0 +1,116 @@
+{{- /* CV imprimible (A4) de un perfil en el idioma pedido. Uso: partial "cv-documento.html" (dict "pagina" . "lang" "it") */ -}}
+{{- $pag := .pagina -}}
+{{- $lang := .lang -}}
+{{- $slug := $pag.Params.lente -}}
+{{- $cfg := site.Data.cv -}}
+{{- $t := index $cfg.textos $lang -}}
+{{- $d := dict -}}
+{{- range $fich := slice "perfiles" "contacto" "experiencia" "proyectos" "skills" "formacion" "publicaciones" "idiomas" -}}
+  {{- $v := index site.Data.es $fich -}}
+  {{- with index site.Data $lang }}{{ with index . $fich }}{{ $v = . }}{{ end }}{{ end -}}
+  {{- $d = merge $d (dict $fich $v) -}}
+{{- end -}}
+{{- $p := index (where $d.perfiles "slug" $slug) 0 -}}
+{{- $c := $d.contacto -}}
+{{- $exp := where $d.experiencia "perfiles" "intersect" (slice $slug) -}}
+{{- $proy := where $d.proyectos "perfiles" "intersect" (slice $slug) -}}
+{{- $sk := $d.skills -}}
+{{- $form := $d.formacion -}}
+{{- $pubs := $d.publicaciones -}}
+{{- $cats := $cfg.categorias -}}
+{{- $conPubs := in $cfg.perfiles_con_publicaciones $slug -}}
+<!doctype html>
+<html lang="{{ $lang }}">
+<head>
+<meta charset="utf-8">
+<title>{{ $c.nombre }} — CV · {{ $p.titulo }}</title>
+<meta name="robots" content="noindex">
+<style>
+  @page { size: A4; margin: 13mm 12mm 13mm 12mm; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Inter", "Segoe UI", system-ui, sans-serif; font-size: 9.2pt; line-height: 1.38; color: #1e293b; }
+  .cv { display: grid; grid-template-columns: 58mm 1fr; gap: 7mm; }
+  h1 { font-size: 21pt; margin: 0; letter-spacing: -.01em; color: #0f172a; }
+  .titulo { font-size: 11.5pt; font-weight: 650; color: {{ $p.color }}; margin: 1mm 0 3mm; }
+  h2 { font-size: 9.5pt; text-transform: uppercase; letter-spacing: .08em; color: {{ $p.color }}; margin: 5mm 0 2mm; padding-bottom: 1mm; border-bottom: 1.2pt solid {{ $p.color }}; }
+  aside h2:first-child, main > h2:first-of-type { margin-top: 0; }
+  p { margin: 0 0 2mm; }
+  ul { margin: 0; padding-left: 4mm; }
+  li { margin: 0 0 .8mm; }
+  a { color: inherit; text-decoration: none; }
+  aside { font-size: 8.6pt; }
+  aside ul { list-style: none; padding: 0; }
+  .franja { height: 2mm; background: {{ $p.color }}; margin: 0 0 5mm; border-radius: 1mm; }
+  .exp { margin-bottom: 3mm; break-inside: avoid; }
+  .exp__cab { display: flex; justify-content: space-between; gap: 3mm; }
+  .exp__rol { font-weight: 700; color: #0f172a; }
+  .exp__fecha { white-space: nowrap; color: #64748b; font-size: 8.4pt; }
+  .exp__emp { color: #475569; margin-bottom: .8mm; }
+  .proy { margin-bottom: 1.8mm; break-inside: avoid; }
+  .proy b { color: #0f172a; }
+  .tenue { color: #64748b; }
+  .chips { display: flex; flex-wrap: wrap; gap: 1mm; list-style: none; padding: 0; }
+  .chips li { border: .6pt solid #cbd5e1; border-radius: 1.5mm; padding: .3mm 1.5mm; font-size: 8pt; margin: 0; }
+  .pie { margin-top: 4mm; font-size: 8pt; color: #64748b; }
+</style>
+</head>
+<body>
+<div class="franja"></div>
+<div class="cv">
+<aside>
+  <h2>{{ $t.contacto }}</h2>
+  <ul>
+    <li>{{ $c.email }}</li>
+    <li>{{ $c.ubicacion }}</li>
+    <li>{{ $c.ciudadania }}</li>
+    <li>{{ replace site.BaseURL "https://" "" | strings.TrimSuffix "/" }}</li>
+    {{ with $c.redes.linkedin }}<li>{{ replace . "https://www." "" | strings.TrimSuffix "/" }}</li>{{ end }}
+    {{ with $c.redes.github }}<li>{{ replace . "https://" "" }}</li>{{ end }}
+    {{ with $c.redes.orcid }}<li>ORCID {{ replace . "https://orcid.org/" "" }}</li>{{ end }}
+  </ul>
+
+  <h2>{{ $t.formacion }}</h2>
+  <ul>
+    {{ range $form.titulos }}<li><b>{{ .titulo }}</b><br><span class="tenue">{{ .institucion }} · {{ .fechas }}</span></li>{{ end }}
+    {{ range $form.posgrado_especializacion }}<li><b>{{ .titulo }}</b><br><span class="tenue">{{ .institucion }}{{ with .fechas }} · {{ . }}{{ end }}</span></li>{{ end }}
+  </ul>
+
+  <h2>{{ $t.idiomas }}</h2>
+  <ul>{{ range $d.idiomas }}<li>{{ .idioma }} — {{ .nivel }}{{ with .codigo }} ({{ . }}){{ end }}</li>{{ end }}</ul>
+
+  <h2>{{ $t.competencias }}</h2>
+  <ul class="chips">
+    {{ range index $cats $slug }}{{ range first 3 (index $sk .) }}<li>{{ .nombre }}</li>{{ end }}{{ end }}
+  </ul>
+</aside>
+
+<main>
+  <h1>{{ $c.nombre }}</h1>
+  <p class="titulo">{{ $p.titulo }}</p>
+  <p>{{ $p.resumen }}</p>
+
+  <h2>{{ $t.experiencia }}</h2>
+  {{ range first $cfg.max_experiencias $exp }}
+  <div class="exp">
+    <div class="exp__cab"><span class="exp__rol">{{ .rol }}</span><span class="exp__fecha">{{ partial "fechas.html" (dict "f" .fechas "lang" $lang) }}</span></div>
+    <div class="exp__emp">{{ .empresa }}{{ with .ubicacion }} · {{ . }}{{ end }}</div>
+    {{ with .logros }}<ul>{{ range first 3 . }}<li>{{ . }}</li>{{ end }}</ul>{{ else }}{{ with .descripcion }}<p>{{ . }}</p>{{ end }}{{ end }}
+  </div>
+  {{ end }}
+
+  <h2>{{ $t.proyectos }}</h2>
+  {{ $nexp := len (first $cfg.max_experiencias $exp) }}{{ $np := cond (lt $nexp 3) 8 (cond (lt $nexp 5) 6 5) }}{{ if $conPubs }}{{ $np = sub $np (sub (len $pubs.papers_peer_reviewed) 1) }}{{ end }}
+  {{ range first $np $proy }}
+  <div class="proy"><b>{{ .nombre }}</b>{{ with .fechas }} <span class="tenue">· {{ partial "fechas.html" (dict "f" . "lang" $lang) }}</span>{{ end }}<br>{{ .descripcion | truncate 230 }}</div>
+  {{ end }}
+
+  {{ if $conPubs }}{{ with $pubs.papers_peer_reviewed }}
+  <h2>{{ $t.publicaciones }}</h2>
+  <ul>{{ range . }}<li>{{ .autores }} ({{ .año }}). {{ .titulo }}. <i>{{ .revista }}</i>{{ with .volumen }} {{ . }}{{ end }}{{ with .paginas }}, {{ . }}{{ end }}. doi:{{ .doi }}</li>{{ end }}</ul>
+  {{ end }}{{ end }}
+
+  <p class="pie">{{ $t.mas }} {{ $pag.Permalink }}</p>
+</main>
+</div>
+</body>
+</html>

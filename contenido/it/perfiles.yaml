@@ -1,0 +1,13 @@
+# Profili: titolo e sintesi del CV in italiano.
+ia:
+  titulo: "Data Scientist / Specialista in IA"
+  resumen: "Ingegnere e data scientist con oltre 10 anni di esperienza nell'applicazione di analisi dei dati, machine learning e IoT in R&S, industria e consulenza. Sviluppo modelli predittivi, pipeline di dati automatizzate e soluzioni di IA applicata. Formazione nella ricerca scientifica, con pubblicazioni su riviste con revisione paritaria, e in contesti aziendali con impatto misurabile (modelli di ML per la riconciliazione fisico-contabile dei beni, automazione delle analisi). Oggi mi concentro su strategia dei dati e trasformazione digitale."
+software:
+  titulo: "Ingegnere di IA e Software · Prodotti e piattaforme di dati"
+  resumen: "Ingegnere del software e dell'IA applicata che sviluppa prodotti di dati completi: backend in Python (FastAPI, SQLAlchemy, PostgreSQL/SQLite), interfacce web (Jinja2/HTMX, Streamlit) e desktop (Tkinter, PySide6, PyInstaller), integrazione di LLM, OCR e visione artificiale, rilascio su Azure e Microsoft 365 e conformità ENS/GDPR. In Intervalor Data ho avviato INTERDATA (un SaaS per la gestione delle immobilizzazioni) e messo in produzione un cruscotto per AENA con Entra ID. Lavoro con sviluppo assistito da agenti (Claude Code) e documento ogni repository per persone e agenti (AGENTS.md, ADR, CHANGELOG)."
+sector-publico:
+  titulo: "Data Engineer · GovTech e settore pubblico"
+  resumen: "Data engineer con risultati reali e verificabili nel settore pubblico spagnolo: una piattaforma ETL per l'inventario patrimoniale comunale di San Bartolomé de Tirajana, audit tecnici di inventario per EUIPO e AENA e un registro dei beni multi-tenant con riconciliazione contabile. In precedenza Direttore provinciale di Scienza e Tecnologia (governo della Terra del Fuoco) e membro del consiglio direttivo di un centro di ricerca del CONICET. Formazione in qualità (ISO 9001, Lean Six Sigma), gestione ambientale (ISO 14001) e MBA in operations. Python, SQL, Power BI, FastAPI, Azure e Power Platform."
+economia-azul:
+  titulo: "Ingegnere di IA applicata · Economia blu e tecnologia marina"
+  resumen: "Ingegnere della pesca (UTN) e ingegnere di IA applicata, con 7 anni al CONICET-CADIC (acquacoltura, oceanografia, campagne in Patagonia e in Antartide) e pubblicazioni su Aquaculture e Anthropocene. Unisco le scienze del mare a Python, deep learning, reti bayesiane, MLOps e IoT (ROV KIPPA I, sensori Arduino/ESP8266). Fondatore della comunità PesquerosEnIA e docente-ricercatore in Ingegneria della Pesca. Profilo adatto a economia blu, acquacoltura di precisione, monitoraggio ambientale e consorzi Horizon Europe."

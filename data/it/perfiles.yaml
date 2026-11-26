@@ -1,0 +1,93 @@
+# GENERADO por scripts/sync_base.py desde la base de conocimiento. No editar a mano.
+- slug: ia
+  clave: data_scientist_ai
+  color: '#7c3aed'
+  titulo_corto: IA y ciencia de datos
+  titulo: Data Scientist / Specialista in IA
+  resumen: Ingegnere e data scientist con oltre 10 anni di esperienza nell'applicazione di analisi dei dati, machine learning
+    e IoT in R&S, industria e consulenza. Sviluppo modelli predittivi, pipeline di dati automatizzate e soluzioni di IA applicata.
+    Formazione nella ricerca scientifica, con pubblicazioni su riviste con revisione paritaria, e in contesti aziendali con
+    impatto misurabile (modelli di ML per la riconciliazione fisico-contabile dei beni, automazione delle analisi). Oggi mi
+    concentro su strategia dei dati e trasformazione digitale.
+  keywords:
+  - Machine Learning
+  - Deep Learning
+  - Python
+  - TensorFlow
+  - Scikit-Learn
+  - SQL
+  - Data Pipeline
+  - MLOps
+  - NLP
+  - Computer Vision
+  - Power BI
+  - Tableau
+- slug: software
+  clave: ai_software_engineer
+  color: '#2563eb'
+  titulo_corto: Software con IA
+  titulo: Ingegnere di IA e Software · Prodotti e piattaforme di dati
+  resumen: 'Ingegnere del software e dell''IA applicata che sviluppa prodotti di dati completi: backend in Python (FastAPI,
+    SQLAlchemy, PostgreSQL/SQLite), interfacce web (Jinja2/HTMX, Streamlit) e desktop (Tkinter, PySide6, PyInstaller), integrazione
+    di LLM, OCR e visione artificiale, rilascio su Azure e Microsoft 365 e conformità ENS/GDPR. In Intervalor Data ho avviato
+    INTERDATA (un SaaS per la gestione delle immobilizzazioni) e messo in produzione un cruscotto per AENA con Entra ID. Lavoro
+    con sviluppo assistito da agenti (Claude Code) e documento ogni repository per persone e agenti (AGENTS.md, ADR, CHANGELOG).'
+  keywords:
+  - AI Engineer
+  - Software Engineer
+  - Python
+  - FastAPI
+  - SQLAlchemy
+  - PostgreSQL
+  - SaaS
+  - Multi-tenant
+  - LLM
+  - RAG
+  - OCR
+  - OpenAI
+- slug: sector-publico
+  clave: govtech_data_engineer
+  color: '#059669'
+  titulo_corto: Datos para el sector público
+  titulo: Data Engineer · GovTech e settore pubblico
+  resumen: 'Data engineer con risultati reali e verificabili nel settore pubblico spagnolo: una piattaforma ETL per l''inventario
+    patrimoniale comunale di San Bartolomé de Tirajana, audit tecnici di inventario per EUIPO e AENA e un registro dei beni
+    multi-tenant con riconciliazione contabile. In precedenza Direttore provinciale di Scienza e Tecnologia (governo della
+    Terra del Fuoco) e membro del consiglio direttivo di un centro di ricerca del CONICET. Formazione in qualità (ISO 9001,
+    Lean Six Sigma), gestione ambientale (ISO 14001) e MBA in operations. Python, SQL, Power BI, FastAPI, Azure e Power Platform.'
+  keywords:
+  - Data Engineer
+  - ETL
+  - Sector Público
+  - Administración Pública
+  - GovTech
+  - Gobierno Digital
+  - Inventario Municipal
+  - Gestión Patrimonial
+  - Open Data
+  - Interoperabilidad
+  - Smart City
+  - Licitación
+- slug: economia-azul
+  clave: blue_economy_marine
+  color: '#0891b2'
+  titulo_corto: Economía azul y pesca
+  titulo: Ingegnere di IA applicata · Economia blu e tecnologia marina
+  resumen: Ingegnere della pesca (UTN) e ingegnere di IA applicata, con 7 anni al CONICET-CADIC (acquacoltura, oceanografia,
+    campagne in Patagonia e in Antartide) e pubblicazioni su Aquaculture e Anthropocene. Unisco le scienze del mare a Python,
+    deep learning, reti bayesiane, MLOps e IoT (ROV KIPPA I, sensori Arduino/ESP8266). Fondatore della comunità PesquerosEnIA
+    e docente-ricercatore in Ingegneria della Pesca. Profilo adatto a economia blu, acquacoltura di precisione, monitoraggio
+    ambientale e consorzi Horizon Europe.
+  keywords:
+  - Aquaculture
+  - Fisheries
+  - Marine
+  - Oceanography
+  - Blue Economy
+  - Sustainability
+  - Biodiversity
+  - Ecological Modeling
+  - Remote Sensing
+  - IoT Sensors
+  - RAS
+  - Deep Learning

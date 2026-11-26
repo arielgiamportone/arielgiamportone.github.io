@@ -1,0 +1,12 @@
+# Configuración de los CV por perfil (layouts/partials/cv-documento.html y scripts/sync_base.py).
+max_experiencias: 5
+perfiles_con_publicaciones: [ia, economia-azul]
+categorias:
+  ia: [ml_data_science, ia_aplicada, lenguajes, visualizacion]
+  software: [desarrollo_software, ia_aplicada, lenguajes, cloud_m365]
+  sector-publico: [datos_legacy_contabilidad, seguridad_cumplimiento, cloud_m365, gestion_proyectos]
+  economia-azul: [iot_ciencias, ml_data_science, gestion_proyectos, lenguajes]
+textos:
+  es: { contacto: "Contacto", idiomas: "Idiomas", formacion: "Formación", competencias: "Competencias", publicaciones: "Publicaciones con referato", proyectos: "Proyectos seleccionados", experiencia: "Experiencia", mas: "Proyectos con demos, publicaciones y trayectoria completa en", presente: "Actualidad" }
+  en: { contacto: "Contact", idiomas: "Languages", formacion: "Education", competencias: "Skills", publicaciones: "Peer-reviewed publications", proyectos: "Selected projects", experiencia: "Experience", mas: "Projects with demos, publications and full experience at", presente: "Present" }
+  it: { contacto: "Contatti", idiomas: "Lingue", formacion: "Formazione", competencias: "Competenze", publicaciones: "Pubblicazioni con revisione paritaria", proyectos: "Progetti selezionati", experiencia: "Esperienza", mas: "Progetti con demo, pubblicazioni e percorso completo su", presente: "In corso" }

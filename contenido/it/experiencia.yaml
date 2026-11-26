@@ -1,0 +1,88 @@
+# Traduzione italiana dei testi usati nei CV per profilo (solo i campi che compaiono nel CV).
+pesqueros_en_ia:
+  rol: "Fondatore e responsabile della comunità"
+  empresa: "Pesqueros en IA"
+  ubicacion: "Argentina / internazionale (comunità online)"
+  descripcion: "Fondatore di una comunità di ingegneri della pesca che esplora le applicazioni dell'IA e della data science nel settore ittico. Materiali didattici aperti e progetti open source."
+  logros:
+    - "Fondatore e responsabile della comunità PesquerosEnIA (github.com/PesquerosEnIA)"
+    - "Ho sviluppato il corso di Machine Learning e Deep Learning per l'Ingegneria della Pesca (Jupyter, open source)"
+    - "Ho tenuto il corso pre-congressuale di alfabetizzazione su dati e IA al CONIPE 2025, Puerto Madryn"
+intervalor_estrategia:
+  rol: "Dati, IA e Prodotto · Dipartimento di Tecnologia (IT e Innovazione)"
+  empresa: "Intervalor Data"
+  ubicacion: "Madrid e Barcellona, Spagna (ibrido)"
+  descripcion: "Responsabile di Dati, IA e Prodotto nel Dipartimento di Tecnologia di Intervalor Data (Intervalor Consulting Group, S.A.). Sviluppo prodotti di dati end to end: architettura, backend, interfaccia, IA applicata, rilascio, conformità e documentazione."
+  logros:
+    - "Ho progettato e sviluppato INTERDATA, un SaaS per la gestione delle immobilizzazioni aziendali: uno schema per tenant, MFA, registro di audit con hash concatenato, certificati PDF verificabili tramite QR e un motore di ammortamento che coincide al centesimo con il sistema legacy"
+    - "Ho messo in produzione il cruscotto dei controlli commerciali per AENA nell'aeroporto di Madrid-Barajas (Azure Static Web Apps + Entra ID, pipeline incrementale su un'API di terzi, SLA del 99,95%) e ne ho automatizzato i report mensili e annuali (121 test)"
+    - "Ho modernizzato in Python un sistema di gestione delle immobilizzazioni degli anni '90 (Delphi/Paradox) con parità numerica al centesimo (544 test, 99,97% delle righe migrate)"
+utn_docencia_actual:
+  rol: "Professore invitato (ad honorem) / Docente-ricercatore"
+  empresa: "Università Tecnologica Nazionale (UTN) - Terra del Fuoco"
+  ubicacion: "Ushuaia, Argentina (da remoto)"
+  descripcion: "Docente-ricercatore nel corso di laurea in Ingegneria della Pesca. Guida di progetti di R&S&I per il settore della pesca e dell'acquacoltura."
+  logros:
+    - "Guida di progetti di R&S&I sui problemi del settore ittico provinciale, regionale e nazionale"
+    - "Professore aggregato (ad honorem, con delibera, come docente-ricercatore) di Navi da Pesca I, 2023-2025"
+    - "Direttore del progetto di ricerca PAPPTF0009884 (liofilizzazione di alimenti), 04/2023 – 03/2026 con proroga"
+quimica_aplicada:
+  rol: "Direttore di R&S e project manager"
+  empresa: "Chimica Applicata all'Ambiente, agli Alimenti e allo Sviluppo Sostenibile (QA3DS)"
+  ubicacion: "Argentina"
+  descripcion: "Direttore del gruppo di R&S&I QA3DS (UTN Terra del Fuoco, Ushuaia e Río Grande). Gestione del gruppo e guida di un team multidisciplinare di ricerca, sviluppo e innovazione su sostenibilità, qualità e tecnologia. Part-time, da remoto."
+  logros:
+    - "Ho diretto un progetto di R&S con metodologie Agile, Kanban e Scrum"
+    - "Ho formato 4 ricercatori e 7 studenti ricercatori"
+    - "Ho elaborato i dati bibliografici e sperimentali del gruppo per relazioni, preprint e pubblicazioni in coautoria"
+colegio_ingenieros:
+  rol: "Rappresentante supplente, Dipartimento di Pesca, Acquacoltura e Attività Marittime"
+  empresa: "Ordine degli Ingegneri della Provincia di Terra del Fuoco"
+  ubicacion: "Ushuaia, Terra del Fuoco, Argentina"
+  descripcion: "Membro consultivo del Consiglio direttivo. Promozione degli standard professionali in acquacoltura e pesca."
+  logros:
+    - "Ho promosso l'etica e la professionalità nell'ingegneria dell'acquacoltura e della pesca"
+    - "Ho proposto miglioramenti normativi per elevare gli standard di qualità del settore"
+    - "Ho favorito accordi con altri ordini professionali e università"
+aiipyc:
+  rol: "Membro (su invito)"
+  empresa: "AIIPyC — Associazione Internazionale dei Professionisti di Porti e Coste"
+  descripcion: "Associazione professionale di ingegneria portuale, pianificazione e gestione dei porti, rapporto porto-città, gestione costiera, commercio internazionale e logistica."
+  logros:
+    - "Ho gestito l'accordo di collaborazione AIIPyC – UTN Terra del Fuoco, firmato il 16/09/2020 (Short Sea Shipping, cabotaggio, porti)"
+mainly_labs:
+  rol: "Ricercatore in Data Science e IA"
+  empresa: "Mainly Labs"
+  ubicacion: "Zamora, Castiglia e León, Spagna (laboratorio in presenza, trasferte settimanali da Talavera de la Reina)"
+  descripcion: "Ricerca applicata e gestione di progetti di R&S&I su sicurezza antincendio delle batterie al litio, agricoltura intelligente, IoT e biotecnologie: strumentazione di prova, prototipi IoT, proposte tecniche e di finanziamento e tutoraggio del team."
+  logros:
+    - "MICEGEL (microsfere estinguenti biodegradabili da scarti agricoli): project manager con Scrumban; report di chiusura dello Sprint 1 (05/2025) e guida di passaggio di consegne al PM successivo (06/2025)"
+    - "NEOTEC (CDTI): coautore della proposta tecnica (dalla v1.3 alla v1.5) e del budget per un sistema intelligente di rilevamento e spegnimento degli incendi di batterie con componente di IA"
+    - "Prove di incendio di batterie: strumentazione con termocoppie, sensori di fumo e gas, microcontrollori e lettura del BMS del cliente (CAN/RS485)"
+intervalor_auditoria:
+  rol: "Specialista tecnico in audit di inventario e analista di dati"
+  empresa: "Intervalor Data (Intervalor Consulting Group)"
+  ubicacion: "Madrid, Spagna"
+  descripcion: "Specialista tecnico in audit di inventario per clienti di alto profilo (EUIPO, AENA). Automazione dei processi con data science e analisi dei dati."
+  logros:
+    - "Ho coordinato squadre sul campo presso EUIPO e AENA, con due turni consecutivi per massimizzare la produttività"
+    - "Ho prodotto report giornalieri e settimanali per decisioni basate sui dati"
+    - "Ho proposto automazioni e l'integrazione dell'IA per migliorare l'efficienza operativa"
+gobierno_tdf:
+  rol: "Direttore provinciale del Collegamento Scientifico e Tecnologico"
+  empresa: "Governo della Provincia di Terra del Fuoco"
+  ubicacion: "Ushuaia, Terra del Fuoco, Argentina"
+  descripcion: "Gestione del finanziamento di progetti di R&S, coordinamento di eventi di trasferimento tecnologico e guida della pianificazione strategica della politica di Scienza, Tecnologia e Innovazione."
+  logros:
+    - "1 piano strategico provinciale e 1 nazionale per la politica di STI 2021-2030"
+    - "Ho organizzato la Settimana Nazionale della Scienza e della Tecnologia 2021 in Terra del Fuoco (15-19/11/2021)"
+    - "Coautore dell'Agenda provinciale di Scienza, Tecnologia e Innovazione 2020-2021"
+celentano_iot:
+  rol: "Ingegnere di monitoraggio e catena del freddo (autorizzazione ANMAT) — consulente esterno"
+  empresa: "Grupo Celentano — Patagonia Supply S.A., divisione Integrar Salud (Ushuaia)"
+  ubicacion: "Ushuaia, Terra del Fuoco, Argentina"
+  descripcion: "Progettazione e installazione del monitoraggio di temperatura e umidità di un magazzino farmaceutico e di un container refrigerato (2–8 °C) per l'autorizzazione come distributore di farmaci da parte dell'ANMAT (l'agenzia argentina del farmaco)."
+  logros:
+    - "Ho dimensionato, installato e configurato 13 punti di misura di temperatura e umidità (8 controller combinati, 1 controller di refrigerazione, 1 data logger e 4 controller di allarme) con monitoraggio centralizzato e allarmi su quattro canali"
+    - "Ho gestito la taratura con riferibilità metrologica: prima presso il centro tecnologico della Terra del Fuoco (10 certificati, 05/2021) e, dopo la revisione dell'ANMAT, presso un laboratorio accreditato INTI-SAC (10 certificati, 07/2021)"
+    - "Ho redatto la documentazione tecnica e regolatoria presentata all'ANMAT: planimetrie, procedure operative standard di taratura, stoccaggio e allarmi, registro delle deviazioni, grafici di qualifica e risposta ai rilievi"

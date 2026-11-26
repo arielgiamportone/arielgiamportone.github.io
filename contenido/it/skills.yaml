@@ -1,0 +1,10 @@
+# Competenze (chiave: nome esatto della base). Solo quelle con parole da tradurre.
+"Autenticación y auditoría (MFA TOTP, JWT RS256, CSRF, hash encadenado, break-glass)": { nombre: "Autenticazione e audit (MFA TOTP, JWT RS256, CSRF, hash concatenato, break-glass)" }
+"Catastro, registro e interoperabilidad (DGC, forales, CartoCiudad, geocoding)": { nombre: "Catasto, registri e interoperabilità (DGC, catasti forali, CartoCiudad, geocodifica)" }
+"Contabilidad de activos: PGC 2007 / PGC PYMES, PGCP, ICAL, RBEL, amortización": { nombre: "Contabilità dei beni: PGC 2007 / PGC PMI, PGCP, ICAL, RBEL, ammortamento" }
+"ENS (RD 311/2022) — diseño de programa de certificación": { nombre: "ENS (RD 311/2022) — progettazione del programma di certificazione" }
+"ISO/IEC 27001:2022 y RGPD (encargo del tratamiento)": { nombre: "ISO/IEC 27001:2022 e GDPR (responsabile del trattamento)" }
+"IoT / Sensores": { nombre: "IoT / Sensori" }
+"Migración de sistemas legacy (Delphi/Paradox/BDE → Python/SQL)": { nombre: "Migrazione di sistemi legacy (Delphi/Paradox/BDE → Python/SQL)" }
+"Ollama / modelos locales (deepseek-ocr, Llama, Qwen)": { nombre: "Ollama / modelli locali (deepseek-ocr, Llama, Qwen)" }
+"Microsoft Entra ID (roles, SSO)": { nombre: "Microsoft Entra ID (ruoli, SSO)" }

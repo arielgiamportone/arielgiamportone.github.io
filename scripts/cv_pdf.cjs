@@ -20,6 +20,10 @@ const PAGINAS = [
   ['software', 'en', '/en/profiles/software/cv.html'],
   ['sector-publico', 'en', '/en/profiles/public-sector/cv.html'],
   ['economia-azul', 'en', '/en/profiles/blue-economy/cv.html'],
+  ['ia', 'it', '/perfiles/ia/cv-it.html'],
+  ['software', 'it', '/perfiles/software/cv-it.html'],
+  ['sector-publico', 'it', '/perfiles/sector-publico/cv-it.html'],
+  ['economia-azul', 'it', '/perfiles/economia-azul/cv-it.html'],
 ];
 
 (async () => {

@@ -1,0 +1,25 @@
+# Traduzione italiana dei progetti che compaiono nei CV per profilo.
+trawlkit:
+  nombre: "trawlkit · Trawl Design Lab"
+  descripcion: "Motore di calcolo per la progettazione e il dimensionamento delle reti a strascico: un'evoluzione del modello in foglio di calcolo FAO A-3 per pescherecci da 150-180 CV nel Canale di Beagle, ricostruito come software riproducibile e testato."
+cfp_audit_intelligence:
+  descripcion: "Piattaforma RAG multi-LLM (OpenAI, Anthropic) per l'audit dei verbali del Consiglio Federale della Pesca argentino: FastAPI, Streamlit, ChromaDB, dati aperti e IA responsabile."
+fisheries_mlops:
+  descripcion: "MLOps end to end con deep learning e reti bayesiane per la sostenibilità della pesca."
+asset_identity_gs1:
+  descripcion: "Identità fisica dei beni inventariati con gli standard GS1: ogni bene ha un'unica identità in quattro forme equivalenti (GIAI canonico AI 8004, alias leggibile con carattere di controllo mod-43 per Code128, EPC GIAI-96 per RFID UHF e GS1 Digital Link per QR). Unicità globale multi-tenant per costruzione. Caso di studio clean-room."
+catastro_enrichment_es:
+  descripcion: "Arricchimento di inventari immobiliari con i cinque catasti spagnoli (la DGC nazionale e quelli di Álava, Bizkaia, Gipuzkoa e Navarra) dietro un'unica interfaccia instradata per codice comunale; geocodifica Nominatim di riserva, ortofoto PNOA e immagini Mapillary con attribuzione. Caso di studio clean-room."
+kippa_rov:
+  nombre: "KIPPA I — ROV con hardware e software aperti"
+  descripcion: "Veicolo subacqueo filoguidato costruito interamente con hardware e software aperti e materiali reperibili localmente, per ispezionare scafi, attrezzi, eliche e timoni dei piccoli pescherecci. Presentato al IX Congresso Nazionale di Scienze del Mare (2015)."
+paradox_db_py:
+  descripcion: "Lettore e scrittore in Python puro di tabelle Paradox (.DB dati, .MB memo/BLOB, .PX indice primario), versioni da 3.0 a 7, senza dipendenze native né copyleft. Stato esplicito per cella (OK / NULL / INVALID) con i byte grezzi, codepage per tabella e indice primario ricostruito e verificato. Caso di studio clean-room."
+periodic_report_kit:
+  descripcion: "Report periodici dichiarativi: input tabellare con regole di dominio (le righe sconosciute vanno in quarantena) e output Word, PDF e PPTX con il marchio aziendale. Copertina a vivo fuori numerazione, vero sommario di Word, catalogo YAML di sezioni e grafici condizionali. Caso di studio clean-room."
+serie_dt_algp_2026:
+  nombre: "Serie DT-ALGP-2026: Documenti di lavoro sulla governance della pesca e dell'acquacoltura"
+  descripcion: "Dieci documenti di lavoro ad accesso aperto (CC BY 4.0) che analizzano con dati pubblici la governance della pesca e dell'acquacoltura in Argentina e in Terra del Fuoco: il sistema scientifico della pesca, la legge sull'acquacoltura, le decisioni del Consiglio Federale della Pesca, il rapporto SOFIA 2026 della FAO e un piano strategico al 2050."
+casos_estudio_intervalor:
+  nombre: "Casi di studio clean-room"
+  descripcion: "multi-tenant-asset-register (registro dei beni multi-tenant, migrazione riconciliata al centesimo, motore di ammortamento spiegabile), field-inspections-dashboard (pipeline incrementale su un'API di terzi, cruscotto statico con build per ruolo, Azure SWA + Entra ID) e inspection-photo-archiver (archiviatore 24/7 con registro non distruttivo). Nessun codice né dato di clienti."

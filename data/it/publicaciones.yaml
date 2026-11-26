@@ -1,0 +1,385 @@
+# GENERADO por scripts/sync_base.py desde la base de conocimiento. No editar a mano.
+papers_peer_reviewed:
+- id: aquaculture_2018
+  tipo: articulo_referato
+  autores: Sotelano, M.P.; Lovrich, G.A.; Di Salvatore, P.; Florentín, O.; Giamportone, A.L.; Tapella, F.
+  posicion_autor: 5º de 6
+  titulo: Suspended mesh-bags enclosures for Southern King Crab Lithodes santolla (Molina 1782) larvae and juvenile culture
+    in the sea
+  revista: Aquaculture
+  volumen: '495'
+  paginas: 575-581
+  año: 2018
+  fecha_publicacion: Online 2018-06-14; número de octubre de 2018
+  doi: 10.1016/j.aquaculture.2018.06.030
+  url: https://doi.org/10.1016/j.aquaculture.2018.06.030
+  citas:
+    crossref: 12
+    openalex: 13
+    fecha_consulta: '2026-11-21'
+  resumen: 'Cultivo de larvas y juveniles de centolla austral en bolsas de malla suspendidas en el mar: crecimiento y supervivencia.'
+- id: aquacult_int_2026
+  tipo: articulo_referato
+  autores: Sotelano, M.P.; Reartes, M.B.; Romero, M.C.; Lovrich, G.A.; Florentín, O.; Giamportone, A.; Tapella, F.
+  posicion_autor: 6º de 7
+  titulo: Large-scale rearing of southern king crab (Lithodes santolla) larvae for stock enhancement initiatives
+  revista: Aquaculture International
+  volumen: '34'
+  numero: '5'
+  articulo: '142'
+  año: 2026
+  fecha_publicacion: '2026-04-21'
+  doi: 10.1007/s10499-026-02535-w
+  url: https://doi.org/10.1007/s10499-026-02535-w
+  resumen: Cultivo masivo de larvas de centolla (de zoea I a megalopa) en tres diseños de contenedor de bajo coste, como base
+    para repoblamiento.
+- id: anthropocene_2014
+  tipo: articulo_referato
+  autores: Martín, J.; Puig, P.; Palanques, A.; Giamportone, A.
+  posicion_autor: 4º de 4
+  titulo: Commercial bottom trawling as a driver of sediment dynamics and deep seascape evolution in the Anthropocene
+  revista: Anthropocene
+  volumen: '7'
+  paginas: 1-15
+  año: 2014
+  fecha_publicacion: Número de septiembre de 2014 (vol. 7); registro DOI creado el 2015-02-14
+  doi: 10.1016/j.ancene.2015.01.002
+  url: https://doi.org/10.1016/j.ancene.2015.01.002
+  citas:
+    crossref: 83
+    openalex: 129
+    fecha_consulta: '2026-11-21'
+  resumen: Impacto de la pesca de arrastre de fondo en la dinámica de sedimentos y la evolución del relieve marino profundo.
+preprints:
+- titulo: 'Integración Sostenible: Explorando el Crecimiento Económico y su Relación con las Pesquerías en Tierra del Fuego'
+  autores: Giamportone, A.L.
+  revista: Preprint (ResearchGate)
+  año: 2023
+  fecha: 2023-08
+  tipo: preprint
+  doi: 10.13140/RG.2.2.26962.94404
+  url: https://doi.org/10.13140/RG.2.2.26962.94404
+- titulo: 'Optimizando la sostenibilidad pesquera: explorando la selectividad artificial (Method)'
+  autores: Giamportone, A.L.
+  revista: Preprint (ResearchGate)
+  año: 2024
+  fecha: 2024-02
+  tipo: preprint
+  doi: 10.13140/RG.2.2.10439.06562
+  url: https://doi.org/10.13140/RG.2.2.10439.06562
+- titulo: Optimización y Diseño Avanzado de Redes de arrastre
+  autores: Giamportone, A.L.
+  revista: Preprint (ResearchGate)
+  año: 2024
+  fecha: 2024-03
+  tipo: preprint
+  doi: 10.13140/RG.2.2.32069.26080
+  url: https://doi.org/10.13140/RG.2.2.32069.26080
+- titulo: 'Puertos pesqueros: aspectos técnicos para el emplazamiento y construcción de un muelle para la pesca artesanal
+    en Ushuaia'
+  autores: Giamportone, A.L.
+  revista: Preprint (ResearchGate)
+  año: 2024
+  fecha: 2024-07
+  tipo: preprint
+  doi: 10.13140/RG.2.2.21488.06403
+  url: https://doi.org/10.13140/RG.2.2.21488.06403
+- titulo: '1ª Jornada Fueguina de Vinculación, Transferencia Tecnológica y Propiedad Intelectual: un puente entre la innovación
+    y el desarrollo territorial (coautoría)'
+  autores: Giamportone, A.L. y otros
+  revista: Preprint (ResearchGate)
+  año: 2025
+  fecha: 2025-01
+  tipo: preprint
+  doi: 10.13140/RG.2.2.21761.36965
+  url: https://doi.org/10.13140/RG.2.2.21761.36965
+- titulo: 'Conciliación de datos en la industria retail: desafíos y soluciones para PYMEs'
+  autores: Giamportone, A.L.
+  revista: Preprint (ResearchGate)
+  año: 2025
+  fecha: 2025-04
+  tipo: preprint
+  doi: 10.13140/RG.2.2.23513.84325
+  url: https://doi.org/10.13140/RG.2.2.23513.84325
+- titulo: Alfabetización en ciencia de datos e IA para profesionales del sector pesquero y acuícola
+  autores: Giamportone, A.L.
+  revista: Preprint (ResearchGate)
+  año: 2025
+  fecha: 2025-07
+  tipo: preprint
+  doi: 10.13140/RG.2.2.10057.25448
+  url: https://doi.org/10.13140/RG.2.2.10057.25448
+- titulo: Deep Learning y Redes Bayesianas en pesquerías de Lithodes santolla
+  autores: Giamportone, A.L.
+  revista: Preprint (ResearchGate)
+  año: 2026
+  fecha: 2026-02
+  tipo: preprint
+  doi: 10.13140/RG.2.2.35335.25767
+  url: https://doi.org/10.13140/RG.2.2.35335.25767
+documentos_de_trabajo:
+- titulo: 'DT-ALGP-2026-001: Análisis crítico del Proyecto de Ley Marco de Pesca Extractiva y Recolección Hidrobiológica de
+    la Provincia de Tierra del Fuego (Mensaje N.º 16/26)'
+  autores: Giamportone, A.L.
+  revista: Serie DT-ALGP-2026, Documentos de Trabajo sobre Gobernanza Pesquera y Acuícola (UTN FRTDF / Pesqueros en IA), CC
+    BY 4.0
+  año: 2026
+  fecha: '2026-04-03'
+  tipo: documento_de_trabajo
+  doi: 10.13140/RG.2.2.31787.60969
+  url: https://doi.org/10.13140/RG.2.2.31787.60969
+- titulo: 'DT-ALGP-2026-002: La asimetría oculta del sistema pesquero-científico argentino'
+  autores: Giamportone, A.L.
+  revista: Serie DT-ALGP-2026, Documentos de Trabajo sobre Gobernanza Pesquera y Acuícola (UTN FRTDF / Pesqueros en IA), CC
+    BY 4.0
+  año: 2026
+  fecha: '2026-04-14'
+  tipo: documento_de_trabajo
+  doi: 10.13140/RG.2.2.23063.12964
+  url: https://doi.org/10.13140/RG.2.2.23063.12964
+- titulo: 'DT-ALGP-2026-003: Análisis crítico del modelo acuícola de Tierra del Fuego: Ley 1601'
+  autores: Giamportone, A.L.
+  revista: Serie DT-ALGP-2026, Documentos de Trabajo sobre Gobernanza Pesquera y Acuícola (UTN FRTDF / Pesqueros en IA), CC
+    BY 4.0
+  año: 2026
+  fecha: '2026-04-17'
+  tipo: documento_de_trabajo
+  doi: 10.13140/RG.2.2.36167.05288
+  url: https://doi.org/10.13140/RG.2.2.36167.05288
+- titulo: 'DT-ALGP-2026-004: La pesca fueguina, 2026: diecisiete años de antilogía institucional'
+  autores: Giamportone, A.L.
+  revista: Serie DT-ALGP-2026, Documentos de Trabajo sobre Gobernanza Pesquera y Acuícola (UTN FRTDF / Pesqueros en IA), CC
+    BY 4.0
+  año: 2026
+  fecha: '2026-04-27'
+  tipo: documento_de_trabajo
+  doi: 10.13140/RG.2.2.16751.19367
+  url: https://doi.org/10.13140/RG.2.2.16751.19367
+- titulo: 'DT-ALGP-2026-005: Plan Estratégico Pesquero Tierra del Fuego 2050'
+  autores: Giamportone, A.L.
+  revista: Serie DT-ALGP-2026, Documentos de Trabajo sobre Gobernanza Pesquera y Acuícola (UTN FRTDF / Pesqueros en IA), CC
+    BY 4.0
+  año: 2026
+  fecha: 2026-05
+  tipo: documento_de_trabajo
+  doi: 10.13140/RG.2.2.11329.72803
+  url: https://doi.org/10.13140/RG.2.2.11329.72803
+- titulo: 'DT-ALGP-2026-006: Resolución CFP N.º 7/2026 sobre procesamiento de colas de langostino a bordo'
+  autores: Giamportone, A.L.
+  revista: Serie DT-ALGP-2026, Documentos de Trabajo sobre Gobernanza Pesquera y Acuícola (UTN FRTDF / Pesqueros en IA), CC
+    BY 4.0
+  año: 2026
+  fecha: '2026-06-16'
+  tipo: documento_de_trabajo
+  doi: 10.13140/RG.2.2.22961.95840
+  url: https://doi.org/10.13140/RG.2.2.22961.95840
+- titulo: 'DT-ALGP-2026-007: SOFIA 2026 y el caso argentino: convergencias, divergencias y vacíos analíticos'
+  autores: Giamportone, A.L.
+  revista: Serie DT-ALGP-2026, Documentos de Trabajo sobre Gobernanza Pesquera y Acuícola (UTN FRTDF / Pesqueros en IA), CC
+    BY 4.0
+  año: 2026
+  fecha: '2026-06-22'
+  tipo: documento_de_trabajo
+  doi: 10.13140/RG.2.2.18534.18240
+  url: https://doi.org/10.13140/RG.2.2.18534.18240
+- titulo: 'DT-ALGP-2026-008: El polo que no declara su tamaño'
+  autores: Giamportone, A.L.
+  revista: Serie DT-ALGP-2026, Documentos de Trabajo sobre Gobernanza Pesquera y Acuícola (UTN FRTDF / Pesqueros en IA), CC
+    BY 4.0
+  año: 2026
+  fecha: '2026-07-06'
+  tipo: documento_de_trabajo
+  doi: 10.13140/RG.2.2.15481.84320
+  url: https://doi.org/10.13140/RG.2.2.15481.84320
+- titulo: 'DT-ALGP-2026-009: Dependencia tecnológica naval e investigación pesquera en el recurso premium del Mar Argentino'
+  autores: Giamportone, A.L.
+  revista: Serie DT-ALGP-2026, Documentos de Trabajo sobre Gobernanza Pesquera y Acuícola (UTN FRTDF / Pesqueros en IA), CC
+    BY 4.0
+  año: 2026
+  fecha: '2026-07-23'
+  tipo: documento_de_trabajo
+  doi: 10.13140/RG.2.2.24588.68483
+  url: https://doi.org/10.13140/RG.2.2.24588.68483
+- titulo: 'DT-ALGP-2026-010: La centolla, de la CBA a la cuota'
+  autores: Giamportone, A.L.
+  revista: Serie DT-ALGP-2026, Documentos de Trabajo sobre Gobernanza Pesquera y Acuícola (UTN FRTDF / Pesqueros en IA), CC
+    BY 4.0
+  año: 2026
+  fecha: 2026-11
+  tipo: documento_de_trabajo
+  url: https://www.researchgate.net/publication/417821592
+trabajos_congresos:
+- id: colacmar_2011_densidad_energetica
+  tipo: trabajo_congreso
+  autores: Boy, C.C.; Vanella, F.A.; Lattuca, M.E.; Ceballos, S.G.; Rimbau, S.; Aureliano, D.R.; Gutiérrez, M.; González,
+    E.; Victorio, M.F.; Giamportone, A.
+  titulo: Densidad energética de Cottoperca gobio (Bovichthidae) y Patagonotothen ramsayi (Nototheniidae) del sur del Mar
+    Argentino
+  revista: XIV Congreso Latinoamericano de Ciencias del Mar (COLACMAR) — resumen en libro de actas
+  lugar: Camboriú, Brasil
+  año: 2011
+- id: poster_liofilizado_2023
+  tipo: poster
+  autores: Giamportone, A.L. et al.
+  titulo: 'Análisis del proceso de liofilizado aplicado a alimentos de producción local/regional en la provincia de Tierra
+    del Fuego. Salicornia y erizo: fundamentación del proyecto'
+  revista: Póster, Jornadas de Ingeniería en Tierra del Fuego
+  año: 2023
+  fecha: 2023-06
+  doi: 10.13140/RG.2.2.16467.76324
+  url: https://doi.org/10.13140/RG.2.2.16467.76324
+- id: poster_qa3ds_2023
+  tipo: poster
+  autores: Giamportone, A.L. et al.
+  titulo: 'Creación de un nuevo grupo de I+D+i en Tierra del Fuego AeIAS: QA3DS'
+  revista: Póster, Jornadas de Ingeniería en Tierra del Fuego
+  año: 2023
+  fecha: 2023-06
+  doi: 10.13140/RG.2.2.36285.84965
+  url: https://doi.org/10.13140/RG.2.2.36285.84965
+- id: presentacion_pidpp_2023
+  tipo: presentacion
+  autores: Giamportone, A.L. et al.
+  titulo: 'PIDPP UTN: análisis del proceso de liofilizado aplicado a alimentos de producción local/regional en la provincia
+    de Tierra del Fuego'
+  revista: Presentación del proyecto homologado (UTN)
+  año: 2023
+  fecha: 2023-04
+  url: https://www.researchgate.net/publication/372716879
+informes_tecnicos:
+- id: centolla_beagle_2016
+  tipo: informe_tecnico
+  titulo: Estado poblacional de la centolla (Lithodes santolla) del Canal Beagle 2016
+  autores: Lovrich, G.A.; Tapella, F.; Di Salvatore, P.; Gowland, M.F.; […]; Torres, M.; Giamportone, A.L.
+  posicion_autor: 17º de 17
+  revista: Informe técnico para el Clúster de Pesca Artesanal de Tierra del Fuego (CADIC)
+  año: 2017
+  fecha: 03/2017
+  doi: 10.13140/RG.2.2.25514.52165/1
+  url: https://doi.org/10.13140/RG.2.2.25514.52165/1
+- id: recurso_centolla_2014
+  tipo: articulo_divulgacion
+  titulo: 'El recurso centolla hoy: una perspectiva científica dentro de la problemática intersectorial'
+  autores: Lovrich, G.A.; Tapella, F.; Romero, M.C. et al. (incl. Giamportone, A.L.)
+  revista: 'Colección La Lupa, 6: 24-29'
+  año: 2014
+  fecha: 10/2014
+  doi: 10.13140/2.1.1313.3600
+  url: https://doi.org/10.13140/2.1.1313.3600
+- id: pesca_artesanal_rio_grande
+  tipo: informe_tecnico
+  titulo: Diagnóstico de la pesca artesanal en Río Grande — Variables sociales, económicas y técnicas vinculadas a su ordenamiento
+    y potenciación
+  autores: Osiroff, S.; Lattuca, M.E.; Colloca, C.B.; Vittorangeli, E.; Fábrega, A.; Fazzi, J.P.; Rodríguez, J.; Giamportone,
+    A.; Luizon, C.
+  revista: Informe técnico (325 pp.) para la Secretaría de Desarrollo Local y PyME del Gobierno de Tierra del Fuego, financiado
+    por el Consejo Federal de Inversiones (CFI)
+  año: 2013
+  periodo: 2012–2013
+- id: fauna_bentonica_2009
+  tipo: informe_tecnico
+  titulo: Fauna bentónica e isótopos estables
+  autores: Lovrich, G.A.; Fernández, D.A.; Diez, M.J.; Sotelano, M.P.; Giamportone, A.L.; Pagnossin, M.L.; Fernández, A.L.;
+    Vanella, F.A.; Rimbau, S.; Florentín, O.V.
+  revista: Informe técnico inédito (no es publicación con referato)
+  año: 2009
+  fecha: 12/2009
+software:
+- id: trawlkit
+  tipo: software
+  titulo: 'Trawl Design Lab (trawlkit): diseño y dimensionamiento de redes de arrastre'
+  autores: Giamportone, Ariel Luján
+  revista: Zenodo (software) + PyPI
+  version: 1.2.0
+  año: 2026
+  fecha: '2026-11-04'
+  doi: 10.5281/zenodo.23959629
+  doi_concepto: 10.5281/zenodo.23657981
+  url: https://doi.org/10.5281/zenodo.23959629
+  pypi: https://pypi.org/project/trawlkit/
+  repositorio: https://github.com/arielgiamportone/trawl-design-lab
+- id: paradoxdb
+  tipo: paquete_pypi
+  titulo: paradoxdb — lector y escritor en Python puro de tablas Paradox (.DB/.MB/.PX)
+  autores: Giamportone, A.L.
+  revista: PyPI
+  version: 0.1.0
+  año: 2026
+  fecha: 11/2026
+  url: https://pypi.org/project/paradoxdb/
+  repositorio: https://github.com/arielgiamportone/paradox-db-py
+- id: asset_identity_gs1
+  tipo: paquete_pypi
+  titulo: asset-identity-gs1 — identidad GS1 (GIAI, EPC GIAI-96, GS1 Digital Link) para activos de inventario
+  autores: Giamportone, A.L.
+  revista: PyPI
+  version: 0.1.0
+  año: 2026
+  fecha: 11/2026
+  url: https://pypi.org/project/asset-identity-gs1/
+  repositorio: https://github.com/arielgiamportone/asset-identity-gs1
+- id: catastro_enrich
+  tipo: paquete_pypi
+  titulo: catastro-enrich — enriquecimiento de inventarios inmobiliarios con datos catastrales (DGC y forales)
+  autores: Giamportone, A.L.
+  revista: PyPI
+  version: 0.1.0
+  año: 2026
+  fecha: 11/2026
+  url: https://pypi.org/project/catastro-enrich/
+  repositorio: https://github.com/arielgiamportone/catastro-enrichment-es
+- id: periodic_report_kit
+  tipo: paquete_pypi
+  titulo: periodic-report-kit — informes periódicos declarativos a Word/PDF/PPTX con marca
+  autores: Giamportone, A.L.
+  revista: PyPI
+  version: 0.1.0
+  año: 2026
+  fecha: 11/2026
+  url: https://pypi.org/project/periodic-report-kit/
+  repositorio: https://github.com/arielgiamportone/periodic-report-kit
+material_docente:
+- repo: curso-dl-bayesiano-pesquerias
+  titulo: 'Curso: Deep Learning y Redes Bayesianas para Sostenibilidad Pesquera'
+  año: 2026
+  org: PesquerosEnIA
+  url: https://github.com/PesquerosEnIA/curso-dl-bayesiano-pesquerias
+- repo: ML_DL_FisheriesEngineers
+  titulo: 'Curso: Machine Learning & Deep Learning para Ingeniería Pesquera'
+  año: 2026
+  org: PesquerosEnIA
+  url: https://github.com/PesquerosEnIA/ML_DL_FisheriesEngineers
+- repo: curso_alfabetizacion_CONIPE25
+  titulo: Material didáctico del curso de alfabetización en datos e IA — CONIPE 2025 (Puerto Madryn)
+  año: 2025
+  periodo: 2025–2026
+  org: PesquerosEnIA
+  url: https://github.com/PesquerosEnIA/curso_alfabetizacion_CONIPE25
+- repo: curso-ia-produccion-pesquera
+  titulo: Curso IA Aplicada a la Producción Pesquera — UTN FRCh (en activo)
+  año: 2026
+  org: PesquerosEnIA
+otras_actividades:
+- evento: 'Conversatorio Académico: Desafíos y Oportunidades del Sistema Portuario Argentino'
+  titulo: 'Conversatorio Académico: Desafíos y Oportunidades del Sistema Portuario Argentino'
+  tipo: Jornada académica
+  rol: Expositor (reconocimiento)
+- evento: Semana de la Ingeniería — UTN FRTDF
+  titulo: Semana de la Ingeniería — UTN FRTDF
+  tipo: Jornadas universitarias
+  años: 2011, 2017 (reconocimiento a la disertación de 2017)
+  rol: Ponente
+- evento: Semana Nacional de Ciencia y Tecnología
+  titulo: Semana Nacional de Ciencia y Tecnología
+  tipo: Divulgación científica
+  rol: Expositor
+- evento: FLISoL — Festival Latinoamericano de Instalación de Software Libre
+  titulo: FLISoL — Festival Latinoamericano de Instalación de Software Libre
+  tipo: Evento tecnológico
+  rol: Participante
+reconocimientos:
+- 28/09/2011 — Expositor (alumno) en las Jornadas «Experiencias de docentes y alumnos de la UTN en el continente blanco y
+  zonas marítimas subantárticas», UTN (certificado, 5 h). Es una participación certificada, no un premio
+- Reconocimiento disertación Semana de la Ingeniería 2017 (UTN FR Río Grande, Res. 68/17; nota de agradecimiento 213/17)
+- 22/10/2023 — Certificado de trabajo con valoración destacada (disposición y ética de trabajo), Berghaus Rothorn Kulm – Brienz
+  Rothorn Bahn (Suiza)
