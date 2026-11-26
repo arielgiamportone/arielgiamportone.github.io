@@ -529,6 +529,37 @@
   perfiles:
   - economia-azul
   - sector-publico
+- id: cadic_pasantias
+  empresa: CONICET - CADIC (Laboratorio de Ecofisiología y Laboratorio de Biología de Crustáceos)
+  rol: Pasante de formación y colaborador de laboratorio
+  fechas: 10/2007 – 04/2011
+  inicio: 2007-10
+  fin: 2011-04
+  actual: false
+  ubicacion: Ushuaia, Tierra del Fuego, Argentina
+  descripcion: 'Pasantías de formación como estudiante de Ingeniería Pesquera en proyectos de investigación del CADIC: trabajo
+    de campo con artes de pesca, muestreos biológicos, calorimetría y experimentos de laboratorio con peces, bivalvos y centolla.'
+  logros:
+  - 'Pasantía ad honorem de 430 h en el Laboratorio de Ecofisiología (10/2007 – 02/2008), proyecto sobre energética y ecología
+    trófica de pejerreyes de Tierra del Fuego: capturas con red de arrastre costero, montaje de acuarios y mediciones energéticas'
+  - 'Colaborador del Laboratorio de Ecofisiología (11/2007 – 11/2008): campañas con artes de pesca, muestreos biológicos,
+    calorimetría (incluida la calibración del calorímetro) y química analítica'
+  - 'Pasantías de formación profesional (04/2008 – 04/2011) en los proyectos PICT 31852 (musculatura de peces subantárticos)
+    y PICT 0906 (estructura poblacional del róbalo): campañas con arrastre costero y nasas, armado y reacondicionamiento de
+    artes de pesca, calorimetría y análisis de imagen de microscopía'
+  - 'Pasantías en el Laboratorio de Biología de Crustáceos (2008 – 2010): parcelas experimentales de bivalvos en el intermareal
+    de Bahía Ensenada (Parque Nacional Tierra del Fuego) y, en el proyecto PICT 1385, mediciones de alimento y energía en
+    huevos, larvas y juveniles de centolla'
+  keywords:
+  - Internship
+  - Fish Ecophysiology
+  - Calorimetry
+  - Fishing Gear
+  - Field Sampling
+  - King Crab
+  - Lithodes santolla
+  perfiles:
+  - economia-azul
 - id: campanas_cientificas
   empresa: Campañas oceanográficas y antárticas (CADIC-CONICET, IAA, COPLA)
   rol: Técnico de artes de pesca, maniobras y muestreo
@@ -540,11 +571,12 @@
   descripcion: 'Participación como estudiante y técnico en campañas científicas: diseño y construcción de artes de pesca y
     equipos de muestreo, maniobras a bordo y toma de muestras.'
   logros:
-  - 'Campaña Antártica de Verano 2010-2011 (Instituto Antártico Argentino, base Jubany/Carlini, 12/2010 – 01/2011): pasante
-    en el proyecto PICTO sobre deshielo glaciar y plancton; muestreo de agua, fitoplancton y zooplancton en Caleta Potter,
-    mediciones espectrofotométricas y fluorométricas'
-  - 'Campaña oceanográfica CONCACEN (BO ARA Puerto Deseado, 11–12/2009; CADIC y Escuela Nacional de Pesca): encargado del
-    diseño de maniobras y construcción de artes de pesca (arrastre de fondo, redes pelágicas y trampas)'
+  - 'Campaña Antártica de Verano 2010-2011 (Instituto Antártico Argentino, base Jubany/Carlini, 17/12/2010 – 28/01/2011; pasante
+    autorizado por Res. UTN FRRG 125/2010): pasante en el proyecto PICTO sobre deshielo glaciar y plancton; muestreo de agua,
+    fitoplancton y zooplancton en Caleta Potter, mediciones espectrofotométricas y fluorométricas'
+  - 'Campaña oceanográfica CONCACEN (BO ARA Puerto Deseado, 29/11 – 15/12/2009; CADIC y Escuela Nacional de Pesca): encargado
+    de la maniobra de pesca y del diseño de maniobras y construcción de artes de pesca (arrastre de fondo, redes pelágicas
+    y trampas)'
   - Construcción de una red de pesca para el CONICET (2008)
   keywords:
   - Oceanographic Campaigns

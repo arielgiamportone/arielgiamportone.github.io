@@ -7,7 +7,7 @@
 ramas:   # rama, año en que nace, rama de la que sale
   - { id: academia, nace: 2008.2, origen: main }
   - { id: economia-azul, nace: 2007.0, origen: main }
-  - { id: software, nace: 2012.2, origen: main }
+  - { id: software, nace: 2010.45, origen: main }
   - { id: sector-publico, nace: 2012.6, origen: economia-azul }
   - { id: ia, nace: 2017.5, origen: economia-azul }
 merges:  # cruces entre perfiles: año, desde, hacia
@@ -31,7 +31,9 @@ commits:
   - { anio: 2026.6, rama: main, hito: true, es: "Máster en Desarrollo con IA", en: "Master's in AI Development" }
   # economía azul
   - { anio: 2007.0, rama: economia-azul, hito: true, es: "Primeras campañas científicas a bordo", en: "First scientific cruises on board" }
-  - { anio: 2008.5, rama: economia-azul, es: "Construcción de una red de pesca para el CONICET", en: "Built a fishing net for CONICET" }
+  - { anio: 2007.8, rama: economia-azul, es: "Pasantía en el CADIC: energética de peces", en: "CADIC internship: fish energetics" }
+  - { anio: 2008.35, rama: economia-azul, es: "Pasantías: centolla, bivalvos y artes de pesca", en: "Internships: king crab, bivalves and fishing gear" }
+  - { anio: 2008.85, rama: economia-azul, es: "Construcción de una red de pesca para el CONICET", en: "Built a fishing net for CONICET" }
   - { anio: 2009.4, rama: economia-azul, es: "Informe: fauna bentónica e isótopos", en: "Report: benthic fauna and isotopes" }
   - { anio: 2009.9, rama: economia-azul, hito: true, es: "Campaña oceanográfica CONCACEN · artes de pesca", en: "CONCACEN oceanographic survey · fishing gear" }
   - { anio: 2010.95, rama: economia-azul, hito: true, es: "Campaña Antártica de Verano 2010-11 · pasante", en: "Antarctic Summer Campaign 2010-11 · intern" }
@@ -49,7 +51,8 @@ commits:
   - { anio: 2024.2, rama: economia-azul, es: "Preprints: redes de arrastre y selectividad", en: "Preprints: trawl nets and selectivity" }
   - { anio: 2025.3, rama: economia-azul, hito: true, es: "merge: Pesqueros en IA", en: "merge: Pesqueros en IA", proyecto: pesqueros_en_ia_cursos }
   # software
-  - { anio: 2012.2, rama: software, hito: true, es: "VITO GNU/Linux · navegación", en: "VITO GNU/Linux · navigation", proyecto: vito_gnu_linux }
+  - { anio: 2010.45, rama: software, hito: true, es: "Charla: software y cartografía antárticos", en: "Talk: Antarctic software and charts" }
+  - { anio: 2012.2, rama: software, es: "VITO GNU/Linux · navegación", en: "VITO GNU/Linux · navigation", proyecto: vito_gnu_linux }
   - { anio: 2015.0, rama: software, hito: true, es: "merge: KIPPA I · ROV con hardware libre", en: "merge: KIPPA I · open-hardware ROV", proyecto: kippa_rov }
   - { anio: 2018.6, rama: software, es: "Electrónica de navegación · Utopía Soluciones", en: "Navigation electronics · Utopía Soluciones" }
   - { anio: 2019.7, rama: software, es: "Aula virtual Moodle · UTN", en: "Moodle virtual classroom · UTN" }
@@ -61,6 +64,7 @@ commits:
   - { anio: 2012.6, rama: sector-publico, hito: true, es: "Diagnóstico de la pesca artesanal · CFI", en: "Artisanal fisheries assessment · CFI" }
   - { anio: 2015.4, rama: sector-publico, es: "Consejo Directivo del CADIC", en: "CADIC Board of Directors" }
   - { anio: 2017.2, rama: sector-publico, es: "Informe del estado de la centolla del Beagle", en: "Report on Beagle Channel king crab status" }
+  - { anio: 2018.45, rama: sector-publico, es: "Grupo de trabajo de seguridad náutica · UTN", en: "Maritime safety working group · UTN" }
   - { anio: 2019.6, rama: sector-publico, es: "Oficina de Vinculación Tecnológica · CADIC", en: "Technology Transfer Office · CADIC" }
   - { anio: 2020.5, rama: sector-publico, es: "merge: estudios portuarios · UTNAA y AIC", en: "merge: port studies · UTNAA and AIC", proyecto: utn_antartida_argentina }
   - { anio: 2021.2, rama: sector-publico, hito: true, es: "Director provincial de vinculación en CTI · TDF", en: "Provincial S&T liaison director · TDF" }

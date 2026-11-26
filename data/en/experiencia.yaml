@@ -519,6 +519,37 @@
   perfiles:
   - economia-azul
   - sector-publico
+- id: cadic_pasantias
+  empresa: CONICET - CADIC (Ecophysiology Laboratory and Crustacean Biology Laboratory)
+  rol: Trainee and laboratory collaborator
+  fechas: 10/2007 – 04/2011
+  inicio: 2007-10
+  fin: 2011-04
+  actual: false
+  ubicacion: Ushuaia, Tierra del Fuego, Argentina
+  descripcion: 'Training internships as a Fisheries Engineering student in CADIC research projects: fieldwork with fishing
+    gear, biological sampling, calorimetry and laboratory experiments with fish, bivalves and southern king crab.'
+  logros:
+  - '430-hour unpaid internship at the Ecophysiology Laboratory (10/2007 – 02/2008) on the energetics and trophic ecology
+    of silversides in Tierra del Fuego: beach-seine catches, aquarium setup and energy measurements'
+  - 'Collaborator at the Ecophysiology Laboratory (11/2007 – 11/2008): fishing-gear fieldwork, biological sampling, calorimetry
+    (including calorimeter calibration) and analytical chemistry'
+  - 'Professional training internships (04/2008 – 04/2011) in projects PICT 31852 (muscle of sub-Antarctic fish) and PICT
+    0906 (population structure of Patagonian blennie): beach-seine and trap surveys, building and refitting fishing gear,
+    calorimetry and microscopy image analysis'
+  - 'Internships at the Crustacean Biology Laboratory (2008 – 2010): experimental bivalve plots in the intertidal zone of
+    Ensenada Bay (Tierra del Fuego National Park) and, in project PICT 1385, measurements of food intake and energy in southern
+    king crab eggs, larvae and juveniles'
+  keywords:
+  - Internship
+  - Fish Ecophysiology
+  - Calorimetry
+  - Fishing Gear
+  - Field Sampling
+  - King Crab
+  - Lithodes santolla
+  perfiles:
+  - economia-azul
 - id: campanas_cientificas
   empresa: Oceanographic and Antarctic surveys (CADIC-CONICET, Argentine Antarctic Institute, COPLA)
   rol: Fishing gear, deck operations and sampling technician
@@ -530,11 +561,12 @@
   descripcion: 'Student and technician on scientific surveys: design and construction of fishing gear and sampling equipment,
     deck operations and sampling.'
   logros:
-  - 'Antarctic Summer Campaign 2010-2011 (Argentine Antarctic Institute, Carlini base, 12/2010 – 01/2011): intern on a project
-    on glacier melt and plankton; water, phytoplankton and zooplankton sampling in Potter Cove, spectrophotometric and fluorometric
-    measurements'
-  - 'CONCACEN oceanographic survey (RV ARA Puerto Deseado, 11–12/2009; CADIC and the National Fisheries School): in charge
-    of designing deck operations and building fishing gear (bottom trawl, pelagic nets and traps)'
+  - 'Antarctic Summer Campaign 2010-2011 (Argentine Antarctic Institute, Carlini base, 17/12/2010 – 28/01/2011; intern authorized
+    by UTN Res. 125/2010): intern on a project on glacier melt and plankton; water, phytoplankton and zooplankton sampling
+    in Potter Cove, spectrophotometric and fluorometric measurements'
+  - 'CONCACEN oceanographic survey (RV ARA Puerto Deseado, 29/11 – 15/12/2009; CADIC and the National Fisheries School): in
+    charge of the fishing operation and of designing deck operations and building fishing gear (bottom trawl, pelagic nets
+    and traps)'
   - Built a fishing net for CONICET (2008)
   keywords:
   - Oceanographic Campaigns
