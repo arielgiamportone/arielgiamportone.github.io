@@ -89,9 +89,10 @@ commits:
   - { anio: 2013.5, rama: academia, es: "Disertante · Taller de Operatoria Marítima", en: "Speaker · Maritime Operations Workshop" }
   - { anio: 2015.6, rama: academia, es: "Organizador de taller y expositor en Ciencias del Mar", en: "Workshop organizer and marine science speaker" }
   - { anio: 2017.3, rama: academia, es: "Ayudante de Análisis Matemático II · UTN", en: "Teaching assistant, Calculus II · UTN" }
-  - { anio: 2018.3, rama: academia, hito: true, es: "Profesor adjunto de Máquinas Térmicas · UTN", en: "Associate professor, Thermal Machines · UTN" }
+  - { anio: 2018.3, rama: academia, hito: true, es: "Profesor adjunto de Máquinas Térmicas · UTN", en: "Assistant professor, Thermal Machines · UTN" }
   - { anio: 2019.3, rama: academia, hito: true, es: "merge: profesor de Puertos Pesqueros · UTN", en: "merge: professor of Fishing Ports · UTN" }
   - { anio: 2020.6, rama: academia, es: "Expositor · Expo Ingeniería UTN", en: "Presenter · UTN Engineering Expo" }
+  - { anio: 2021.3, rama: academia, es: "Profesor adjunto de Buques Pesqueros I · UTN", en: "Assistant professor, Fishing Vessels I · UTN" }
   - { anio: 2022.3, rama: academia, es: "Formé a 4 investigadores y 7 alumnos · QA3DS", en: "Trained 4 researchers and 7 students · QA3DS" }
   - { anio: 2023.4, rama: academia, es: "Profesor invitado y docente-investigador · UTN", en: "Visiting professor and lecturer-researcher · UTN" }
   - { anio: 2024.3, rama: academia, es: "Dirección de 3 becarios de I+D", en: "Supervised 3 R&D scholarship students" }

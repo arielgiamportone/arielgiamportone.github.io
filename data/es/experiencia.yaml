@@ -260,19 +260,22 @@
   - sector-publico
 - id: utn_docencia_puertos
   empresa: Universidad Tecnológica Nacional - FRTDF
-  rol: Profesor Adjunto de Puertos Pesqueros (rentado)
+  rol: Profesor Adjunto de Puertos Pesqueros y Buques Pesqueros I (rentado)
   fechas: 04/2019 – 04/2023
   inicio: 2019-04
   fin: 2023-04
   actual: false
   ubicacion: Tierra del Fuego, Argentina
-  descripcion: Profesor Adjunto en Puertos Pesqueros y Procesamiento del Producto Pesquero. Desarrollo de aula virtual (Moodle)
-    y sistema de enseñanza híbrido.
+  descripcion: Profesor Adjunto de Puertos Pesqueros (2019-2022) y de Buques Pesqueros I (desde 2021), y JTP de Procesamiento
+    del Producto Pesquero (electiva, 2019), en Ingeniería Pesquera. Desarrollo de aula virtual (Moodle) y sistema de enseñanza
+    híbrido.
   logros:
   - Diseñé y gestioné aula-taller para prácticas de procesamiento pesquero
   - Desarrollé aula virtual Moodle con sistema de enseñanza híbrido
   - +1 convenio de colaboración en I+D+i, organicé +3 jornadas temáticas
   - Implementé técnicas de enseñanza innovadoras para fortalecer competencias técnicas
+  - 12 cursos de 5 materias de Ingeniería Pesquera entre 2018 y 2025 (40 inscripciones, 16 aprobaciones por promoción directa),
+    según el SYSACAD
   - 'Cofundador y coordinador del Grupo de Desarrollo Logístico UTN Antártida Argentina (UTNAA, 2020-2022): Estudio Estratégico
     del Sistema Portuario Argentino, Short Sea Shipping regional, desarrollo logístico-portuario de Río Grande'
   keywords:
