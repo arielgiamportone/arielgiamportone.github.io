@@ -4,7 +4,8 @@
 //   hugo --gc --minify -d /tmp/web && python3 -m http.server 8765 --directory /tmp/web &
 //   node scripts/cv_pdf.cjs http://localhost:8765
 //
-// Escribe static/cv/Ariel_Giamportone_CV_<perfil>_<idioma>.pdf. Requiere Playwright con Chromium.
+// Escribe static/cv/Ariel_Giamportone_CV_<perfil>_<idioma>.pdf (es, en, it) y el CV completo de CyT
+// (Ariel_Giamportone_CV_CyT_es.pdf). Requiere Playwright con Chromium.
 const { chromium } = require('playwright');
 const path = require('path');
 const fs = require('fs');
@@ -24,6 +25,8 @@ const PAGINAS = [
   ['software', 'it', '/perfiles/software/cv-it.html'],
   ['sector-publico', 'it', '/perfiles/sector-publico/cv-it.html'],
   ['economia-azul', 'it', '/perfiles/economia-azul/cv-it.html'],
+  // CV completo de ciencia y tecnología (solo en español)
+  ['CyT', 'es', '/trayectoria/cv-cyt.html'],
 ];
 
 (async () => {

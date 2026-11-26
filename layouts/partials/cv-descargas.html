@@ -1,0 +1,12 @@
+{{- /* Botones de descarga del CV de un perfil en los tres idiomas; el del idioma de la página, primero. */ -}}
+{{- $slug := .slug -}}
+{{- $orden := cond (eq site.Language.Lang "en") (slice "en" "es" "it") (slice "es" "en" "it") -}}
+{{- $nombres := dict "es" "Español" "en" "English" "it" "Italiano" -}}
+<p class="heroe__acciones cv-descargas"><span class="cv-descargas__titulo">⬇ {{ i18n "cv_descargar" }}</span>
+{{- range $i, $l := $orden -}}
+  {{- $pdf := printf "/cv/Ariel_Giamportone_CV_%s_%s.pdf" $slug $l -}}
+  {{- if fileExists (printf "static%s" $pdf) }}
+  <a class="boton{{ if gt $i 0 }} boton--secundario{{ end }}" href="{{ $pdf }}" download hreflang="{{ $l }}" lang="{{ $l }}">{{ index $nombres $l }}</a>
+  {{- end -}}
+{{- end }}
+</p>

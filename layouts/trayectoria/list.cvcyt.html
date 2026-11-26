@@ -1,0 +1,139 @@
+{{- /* CV completo de ciencia y tecnología (A4, en español), con el formato general de los CV de CyT
+       (CVar, SIGEVA, CONICET, UTN) pero sin el de ninguna institución. Lo imprime a PDF scripts/cv_pdf.cjs. */ -}}
+{{- $cfg := site.Data.cv.cyt -}}
+{{- $c := site.Data.es.contacto -}}
+{{- $exp := site.Data.es.experiencia -}}
+{{- $form := site.Data.es.formacion -}}
+{{- $pub := site.Data.es.publicaciones -}}
+{{- $proy := site.Data.es.proyectos -}}
+{{- $color := "#0f766e" -}}
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>{{ $c.nombre }} — CV de ciencia y tecnología</title>
+<meta name="robots" content="noindex">
+<style>
+  @page { size: A4; margin: 16mm 16mm 16mm 16mm; @bottom-right { content: counter(page) " / " counter(pages); } }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Inter", "Segoe UI", system-ui, sans-serif; font-size: 9.4pt; line-height: 1.42; color: #1e293b; }
+  header { border-bottom: 2pt solid {{ $color }}; padding-bottom: 3mm; margin-bottom: 4mm; }
+  h1 { font-size: 20pt; margin: 0; color: #0f172a; letter-spacing: -.01em; }
+  .sub { font-size: 11pt; font-weight: 650; color: {{ $color }}; margin: 1mm 0 2mm; }
+  .datos { display: flex; flex-wrap: wrap; gap: 1mm 5mm; font-size: 8.6pt; color: #475569; margin: 0; padding: 0; list-style: none; }
+  h2 { font-size: 10.5pt; text-transform: uppercase; letter-spacing: .07em; color: {{ $color }}; margin: 6mm 0 2.5mm; padding-bottom: 1mm; border-bottom: .8pt solid #cbd5e1; break-after: avoid; }
+  h3 { font-size: 9.6pt; margin: 3.5mm 0 1.5mm; color: #0f172a; break-after: avoid; }
+  p { margin: 0 0 1.5mm; }
+  ul, ol { margin: 0; padding-left: 5mm; }
+  li { margin: 0 0 1mm; }
+  a { color: inherit; text-decoration: none; }
+  .item { margin-bottom: 2.6mm; break-inside: avoid; }
+  .cab { display: flex; justify-content: space-between; gap: 4mm; }
+  .rol { font-weight: 700; color: #0f172a; }
+  .fecha { white-space: nowrap; color: #64748b; font-size: 8.5pt; }
+  .inst { color: #475569; }
+  .tenue { color: #64748b; }
+  table { width: 100%; border-collapse: collapse; font-size: 8.8pt; margin: 1mm 0 2mm; }
+  th, td { text-align: left; padding: 1mm 1.5mm; border-bottom: .5pt solid #e2e8f0; vertical-align: top; }
+  th { color: #475569; font-weight: 650; }
+  ol.refs { padding-left: 7mm; }
+  ol.refs li { margin-bottom: 1.4mm; break-inside: avoid; }
+  .yo { font-weight: 700; }
+  .cols { columns: 2; column-gap: 7mm; }
+  .cols li { break-inside: avoid; }
+  .pie { margin-top: 6mm; font-size: 8pt; color: #64748b; border-top: .5pt solid #e2e8f0; padding-top: 2mm; }
+</style>
+</head>
+<body>
+{{- define "partials/cyt-exp.html" -}}
+  <div class="item">
+    <div class="cab"><span class="rol">{{ .rol }}</span><span class="fecha">{{ partial "fechas.html" (dict "f" .fechas "lang" "es") }}</span></div>
+    <div class="inst">{{ .empresa }}{{ with .ubicacion }} · {{ . }}{{ end }}</div>
+    {{ with .descripcion }}<p>{{ . }}</p>{{ end }}
+    {{ with .logros }}<ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
+  </div>
+{{- end -}}
+{{- define "partials/cyt-ref.html" -}}
+  {{- $a := .autores | default "" -}}
+  {{- $a = replaceRE `(Giamportone, (A\.\s?L\.|A\.|Ariel Luján))` `<span class="yo">$1</span>` $a -}}
+  <li>{{ $a | safeHTML }}{{ with .año }} ({{ . }}){{ end }}. {{ .titulo }}{{ with .titulo_traducido }}{{ end }}. <i>{{ .revista }}</i>{{ with .volumen }}, {{ . }}{{ end }}{{ with .numero }}({{ . }}){{ end }}{{ with .articulo }}, art. {{ . }}{{ end }}{{ with .paginas }}, {{ . }}{{ end }}{{ with .lugar }}, {{ . }}{{ end }}{{ with .version }}, v{{ . }}{{ end }}.{{ with .doi }} doi:{{ . }}{{ else }}{{ with .url }} {{ replace . "https://" "" }}{{ end }}{{ end }}</li>
+{{- end -}}
+
+<header>
+  <h1>{{ $c.nombre }}</h1>
+  <p class="sub">Curriculum vitae · Ciencia y tecnología</p>
+  <ul class="datos">
+    <li>{{ $c.email }}</li>
+    <li>{{ $c.ubicacion }}</li>
+    <li>{{ $c.ciudadania }}</li>
+    {{ with $c.redes.orcid }}<li>ORCID {{ replace . "https://orcid.org/" "" }}</li>{{ end }}
+    {{ with $c.redes.researchgate }}<li>{{ replace . "https://www." "" }}</li>{{ end }}
+    <li>{{ replace site.BaseURL "https://" "" | strings.TrimSuffix "/" }}</li>
+  </ul>
+</header>
+
+<h2>1. Formación académica</h2>
+<h3>Títulos de grado</h3>
+{{ range $form.titulos }}<div class="item"><div class="cab"><span class="rol">{{ .titulo }}</span><span class="fecha">{{ .fechas }}</span></div><div class="inst">{{ .institucion }}{{ with .ubicacion }} · {{ . }}{{ end }}</div></div>{{ end }}
+<h3>Posgrado y especialización</h3>
+{{ range $form.posgrado_especializacion }}<div class="item"><div class="cab"><span class="rol">{{ .titulo }}</span><span class="fecha">{{ .fechas }}</span></div><div class="inst">{{ .institucion }}{{ with .nivel }} · {{ . }}{{ end }}</div></div>{{ end }}
+<h3>Formación complementaria</h3>
+<ul class="cols">{{ range sort $form.certificaciones "año" "desc" }}<li>{{ .nombre }} <span class="tenue">· {{ .entidad }}{{ with .año }}, {{ . }}{{ end }}</span></li>{{ end }}</ul>
+
+<h2>2. Antecedentes en docencia</h2>
+{{ range $id := $cfg.docencia }}{{ range where $exp "id" $id }}{{ partial "cyt-exp.html" . }}{{ end }}{{ end }}
+{{ range where $exp "id" "utn_docencia_puertos" }}{{ with .materias_dictadas }}
+<h3>Asignaturas dictadas (Ingeniería Pesquera, UTN FRTDF)</h3>
+<table><thead><tr><th>Asignatura</th><th>Cargo</th><th>Años</th><th>Inscripciones</th></tr></thead><tbody>
+{{ range . }}<tr><td>{{ .materia }}</td><td>{{ .cargo }}</td><td>{{ .anios }}</td><td>{{ .inscripciones }}</td></tr>{{ end }}
+</tbody></table>{{ end }}
+{{ with .materias_resumen }}<p class="tenue">{{ . }} Fuente: sistema académico de la UTN.</p>{{ end }}
+{{ with .docencia_previa }}<h3>Ayudantías</h3><ul>{{ range . }}<li>{{ .materia }} — {{ .cargo }}, {{ .institucion }} ({{ .anios }})</li>{{ end }}</ul>{{ end }}
+{{ end }}
+
+<h2>3. Formación de recursos humanos</h2>
+<ul>{{ range $exp }}{{ range .logros }}{{ if findRE $cfg.rrhh . }}<li>{{ . }}</li>{{ end }}{{ end }}{{ end }}</ul>
+
+<h2>4. Investigación y desarrollo</h2>
+<h3>Cargos y actividad de I+D</h3>
+{{ range $id := $cfg.investigacion }}{{ range where $exp "id" $id }}{{ partial "cyt-exp.html" . }}{{ end }}{{ end }}
+<h3>Proyectos de I+D</h3>
+{{ range where $proy "tipo" "proyecto_investigacion" }}<div class="item"><div class="cab"><span class="rol">{{ .nombre }}</span><span class="fecha">{{ partial "fechas.html" (dict "f" (.fechas | default "") "lang" "es") }}</span></div><div class="inst">{{ .organizacion }}{{ with .rol }} · {{ . }}{{ end }}{{ with .codigo }} · {{ . }}{{ end }}</div></div>{{ end }}
+<h3>Desarrollos tecnológicos</h3>
+{{ range where $proy "tipo" "desarrollo_tecnologico" }}<div class="item"><div class="cab"><span class="rol">{{ .nombre }}</span><span class="fecha">{{ partial "fechas.html" (dict "f" (.fechas | default "") "lang" "es") }}</span></div><div class="inst">{{ .organizacion }}{{ with .rol }} · {{ . }}{{ end }}</div>{{ with .descripcion }}<p>{{ . | truncate 320 }}</p>{{ end }}</div>{{ end }}
+
+<h2>5. Producción científica y tecnológica</h2>
+{{ $secs := slice
+  (dict "k" "papers_peer_reviewed" "t" "Artículos en revistas con referato")
+  (dict "k" "trabajos_congresos" "t" "Trabajos en congresos, pósteres y presentaciones")
+  (dict "k" "informes_tecnicos" "t" "Informes técnicos y divulgación")
+  (dict "k" "documentos_de_trabajo" "t" "Documentos de trabajo (serie DT-ALGP-2026)")
+  (dict "k" "preprints" "t" "Preprints y métodos")
+  (dict "k" "software" "t" "Software con DOI y paquetes publicados") }}
+{{ range $s := $secs }}{{ with index $pub $s.k }}
+<h3>{{ $s.t }}</h3>
+<ol class="refs">{{ $lista := cond (eq $s.k "documentos_de_trabajo") . (cond (eq $s.k "preprints") (sort . "fecha" "desc") (sort . "año" "desc")) }}{{ range $lista }}{{ partial "cyt-ref.html" . }}{{ end }}</ol>
+{{ end }}{{ end }}
+{{ with $pub.material_docente }}<h3>Material docente publicado</h3>
+<ol class="refs">{{ range . }}<li>{{ .titulo }}{{ with .org }}. {{ . }}{{ end }}{{ with .año }} ({{ . }}){{ end }}.{{ with .url }} {{ replace . "https://" "" }}{{ end }}</li>{{ end }}</ol>{{ end }}
+
+<h2>6. Gestión científica, vinculación y transferencia</h2>
+{{ range $id := $cfg.gestion }}{{ range where $exp "id" $id }}{{ partial "cyt-exp.html" . }}{{ end }}{{ end }}
+
+<h2>7. Actividad profesional</h2>
+{{ range $id := $cfg.profesional }}{{ range where $exp "id" $id }}{{ partial "cyt-exp.html" . }}{{ end }}{{ end }}
+
+<h2>8. Extensión y divulgación</h2>
+{{ range $id := $cfg.extension }}{{ range where $exp "id" $id }}{{ partial "cyt-exp.html" . }}{{ end }}{{ end }}
+{{ with $form.actividades_docencia_divulgacion }}<h3>Cursos, conferencias y jornadas</h3><ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
+{{ with $pub.otras_actividades }}<h3>Otras actividades</h3><ul>{{ range . }}<li>{{ .titulo }}{{ with .rol }} — {{ . }}{{ end }}{{ with .años }} ({{ . }}){{ end }}{{ with .año }} ({{ . }}){{ end }}</li>{{ end }}</ul>{{ end }}
+
+<h2>9. Premios y distinciones</h2>
+<ul>{{ range $pub.reconocimientos }}<li>{{ . }}</li>{{ end }}</ul>
+
+<h2>10. Idiomas</h2>
+<ul>{{ range site.Data.es.idiomas }}<li>{{ .idioma }} — {{ .nivel }} ({{ .codigo }}){{ with .certificado }}. <span class="tenue">{{ . }}</span>{{ end }}</li>{{ end }}</ul>
+
+<p class="pie">Actualizado en {{ now.Format "01/2006" }}. Versión web con proyectos, demos y enlaces: {{ site.BaseURL }}trayectoria/</p>
+</body>
+</html>

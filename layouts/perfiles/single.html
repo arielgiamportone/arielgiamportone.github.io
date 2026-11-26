@@ -8,8 +8,7 @@
     <p class="heroe__hola">{{ i18n "perfiles" }} · {{ $p.titulo_corto }}</p>
     <h1 class="heroe__nombre heroe__nombre--perfil">{{ $p.titulo }}</h1>
     <p class="heroe__resumen">{{ $p.resumen }}</p>
-    {{ $pdf := printf "/cv/Ariel_Giamportone_CV_%s_%s.pdf" $slug site.Language.Lang }}
-    {{ if fileExists (printf "static%s" $pdf) }}<p class="heroe__acciones"><a class="boton" href="{{ $pdf }}" download>⬇ {{ i18n "cv_descargar" }}</a></p>{{ end }}
+    {{ partial "cv-descargas.html" (dict "slug" $slug) }}
     {{ with $p.keywords }}<h2 class="mini">{{ i18n "palabras_clave" }}</h2><ul class="chips">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
   </div>
 </section>

@@ -254,6 +254,38 @@
   - Innovation
   perfiles:
   - economia-azul
+  materias_dictadas:
+  - materia: Máquinas e Instalaciones Térmicas
+    cargo: Adjunto
+    anios: '2018'
+    inscripciones: 3
+  - materia: Circuitos y Máquinas Eléctricas
+    cargo: Adjunto
+    anios: '2018'
+    inscripciones: 3
+  - materia: Procesamiento del Producto Pesquero (electiva)
+    cargo: JTP
+    anios: '2019'
+    inscripciones: 11
+  - materia: Puertos Pesqueros
+    cargo: Adjunto
+    anios: 2019-2022
+    inscripciones: 12
+  - materia: Buques Pesqueros I
+    cargo: Adjunto
+    anios: 2021-2025
+    inscripciones: 11
+  materias_resumen: '12 cursos de 5 materias entre 2018 y 2025: 40 inscripciones de 29 alumnos distintos; 16 aprobaron por
+    promoción directa, 15 regularizaron y 9 quedaron libres.'
+  docencia_previa:
+  - materia: Análisis Matemático II
+    cargo: Ayudante de trabajos prácticos (rentado)
+    anios: 2017-2018
+    institucion: UTN FRTDF
+  - materia: Recursos Pesqueros I
+    cargo: Ayudante alumno ad honorem
+    anios: 2008-2011
+    institucion: UTN FRRG, Extensión Áulica Ushuaia
 - id: gobierno_tdf
   empresa: Governo della Provincia di Terra del Fuoco
   rol: Direttore provinciale del Collegamento Scientifico e Tecnologico

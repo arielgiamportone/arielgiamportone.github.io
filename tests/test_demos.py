@@ -128,9 +128,20 @@ def test_puente_archivador(tmp_path):
 def test_cv_pdf_por_perfil():
     # Los genera scripts/cv_pdf.cjs desde las páginas cv.html; uno por perfil e idioma.
     for perfil in ("ia", "software", "sector-publico", "economia-azul"):
-        for idioma in ("es", "en"):
+        for idioma in ("es", "en", "it"):
             pdf = RAIZ / f"static/cv/Ariel_Giamportone_CV_{perfil}_{idioma}.pdf"
             assert pdf.read_bytes()[:5] == b"%PDF-", pdf.name
+    assert (RAIZ / "static/cv/Ariel_Giamportone_CV_CyT_es.pdf").read_bytes()[:5] == b"%PDF-"
+
+
+def test_cv_cyt_cubre_toda_la_experiencia():
+    # Cada experiencia publicada va en una sola sección del CV de CyT (si se añade una, hay que ubicarla).
+    import yaml
+    cyt = yaml.safe_load((RAIZ / "data/cv.yaml").read_text(encoding="utf-8"))["cyt"]
+    secciones = [i for k, v in cyt.items() if k != "rrhh" for i in v]
+    assert len(secciones) == len(set(secciones)), "experiencia repetida en dos secciones"
+    exp = yaml.safe_load((RAIZ / "data/es/experiencia.yaml").read_text(encoding="utf-8"))
+    assert sorted(e["id"] for e in exp) == sorted(secciones)
 
 
 def test_portada_ramas_y_cintas():

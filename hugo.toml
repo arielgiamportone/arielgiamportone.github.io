@@ -36,6 +36,14 @@ disableKinds = ["taxonomy", "term", "RSS"]
   changeFreq = "monthly"
 
 # CV imprimible por perfil: /perfiles/<lente>/cv.html (los PDF se generan con scripts/cv_pdf.mjs)
+# CV completo de ciencia y tecnología (solo en español): /trayectoria/cv-cyt.html.
+[outputFormats.cvcyt]
+  mediaType = "text/html"
+  baseName = "cv-cyt"
+  isHTML = true
+  permalinkable = false
+  noUgly = false
+
 # CV en italiano: /perfiles/<lente>/cv-it.html, generado desde la página en español (no hay web en italiano).
 [outputFormats.cvit]
   mediaType = "text/html"

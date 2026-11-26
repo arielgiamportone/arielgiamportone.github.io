@@ -1,8 +1,9 @@
 {{ define "main" }}
 {{ $f := partial "datos.html" "formacion" }}
+
 <section class="bloque"><div class="contenedor">
   <h1>{{ .Title }}</h1>
-  <p class="tenue">{{ .Description }}</p>
+  <p class="tenue">{{ .Description }} <a href="#descargas">⬇ {{ i18n "descargas" }}</a></p>
   {{ partial "lentes.html" . }}
   <ol class="linea" data-filtrable>
     {{ range partial "datos.html" "experiencia" }}{{ partial "exp-item.html" (dict "e" . "detalle" true) }}{{ end }}
@@ -36,6 +37,26 @@
       <div class="tarjeta"><h3 class="tarjeta__titulo mini">{{ i18n (printf "skill_%s" $grupo) | default (replace $grupo "_" " ") }}</h3>
         <ul class="chips">{{ range $items }}<li title="{{ .contexto }}">{{ .nombre }}</li>{{ end }}</ul></div>
     {{ end }}
+  </div>
+</div></section>
+<section class="bloque" id="descargas"><div class="contenedor">
+  <h2>{{ i18n "descargas" }}</h2>
+  <p class="tenue">{{ i18n "descargas_intro" }}</p>
+  <div class="rejilla rejilla--descargas">
+    {{ range partial "datos.html" "perfiles" }}
+    <div class="tarjeta descarga" style="--acento: {{ .color }}">
+      <h3 class="tarjeta__titulo">{{ .titulo_corto }}</h3>
+      <p class="tenue">{{ .titulo }}</p>
+      {{ partial "cv-descargas.html" (dict "slug" .slug) }}
+    </div>
+    {{ end }}
+    {{ with "/cv/Ariel_Giamportone_CV_CyT_es.pdf" }}{{ if fileExists (printf "static%s" .) }}
+    <div class="tarjeta descarga descarga--cyt">
+      <h3 class="tarjeta__titulo">{{ i18n "cv_cyt_titulo" }}</h3>
+      <p class="tenue">{{ i18n "cv_cyt_desc" }}</p>
+      <p class="heroe__acciones cv-descargas"><a class="boton" href="{{ . }}" download hreflang="es" lang="es">⬇ {{ i18n "cv_cyt_boton" }}</a></p>
+    </div>
+    {{ end }}{{ end }}
   </div>
 </div></section>
 {{ end }}

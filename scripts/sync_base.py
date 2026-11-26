@@ -178,6 +178,10 @@ def experiencia(base: Path) -> list[dict]:
             "keywords": e.get("keywords", []),
             "perfiles": perfiles_de(e.get("perfiles_relevantes")),
             "links": e.get("links"),
+            # Docencia: materias y resumen agregado (sin datos de alumnos), para el CV de CyT.
+            "materias_dictadas": e.get("materias_dictadas"),
+            "materias_resumen": e.get("materias_resumen"),
+            "docencia_previa": e.get("docencia_previa"),
         }
         item = limpiar({k: v for k, v in entrada.items() if v not in (None, [], "")}, e["id"])
         if completo(item, "experiencia", e["id"]):

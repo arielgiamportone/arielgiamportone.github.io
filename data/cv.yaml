@@ -10,3 +10,14 @@ textos:
   es: { contacto: "Contacto", idiomas: "Idiomas", formacion: "Formación", competencias: "Competencias", publicaciones: "Publicaciones con referato", proyectos: "Proyectos seleccionados", experiencia: "Experiencia", mas: "Proyectos con demos, publicaciones y trayectoria completa en", presente: "Actualidad" }
   en: { contacto: "Contact", idiomas: "Languages", formacion: "Education", competencias: "Skills", publicaciones: "Peer-reviewed publications", proyectos: "Selected projects", experiencia: "Experience", mas: "Projects with demos, publications and full experience at", presente: "Present" }
   it: { contacto: "Contatti", idiomas: "Lingue", formacion: "Formazione", competencias: "Competenze", publicaciones: "Pubblicazioni con revisione paritaria", proyectos: "Progetti selezionati", experiencia: "Esperienza", mas: "Progetti con demo, pubblicazioni e percorso completo su", presente: "In corso" }
+
+# CV completo de ciencia y tecnología (solo en español): /trayectoria/cv-cyt.html.
+# Cada experiencia de data/es/experiencia.yaml va en una sola sección (lo comprueba tests/test_demos.py).
+cyt:
+  docencia: [utn_docencia_actual, utn_docencia_puertos]
+  investigacion: [quimica_aplicada, mainly_labs, cadic_investigacion, trampas_centolla_cluster, diagnostico_pesca_artesanal_cfi, cadic_pasantias, campanas_cientificas]
+  gestion: [gobierno_tdf, cadic_vinculacion_jefe, cadic_consejo_directivo, colegio_ingenieros, aiipyc]
+  profesional: [intervalor_estrategia, intervalor_auditoria, aic_logistica, celentano_iot, utopia_soluciones]
+  extension: [pesqueros_en_ia]
+  # Logros que cuentan como formación de recursos humanos (se buscan en todas las experiencias).
+  rrhh: '(?i)becari|formé a|codirecci|tutor|pasantes|investigadores y'
