@@ -1,43 +1,75 @@
 # Cabecera de la portada: la carrera como un historial de git (layouts/partials/ramas.html + assets/js/ramas.js).
-# Fechas y hitos tomados de la base (experiencia, formación y proyectos). Lista curada a mano para que
-# el gráfico se lea bien: añadir un commit es añadir una entrada aquí.
+# Fechas y hitos tomados de la base (experiencia, formación, publicaciones y proyectos). Lista curada a mano
+# para que cada rama muestre una evolución continua: al menos un hito cada 1-3 años y los años con muchos
+# resultados agrupados en un solo commit. Añadir un commit es añadir una entrada aquí.
 #   anio: año decimal (2015.4 ≈ mayo de 2015) · rama: main o un perfil · hito: con rótulo en la consola y en móvil
 #   proyecto: id de data/<lang>/proyectos.yaml; si tiene ficha, el commit enlaza a ella
 ramas:   # rama, año en que nace, rama de la que sale
   - { id: economia-azul, nace: 2007.0, origen: main }
-  - { id: software, nace: 2012.5, origen: main }
-  - { id: sector-publico, nace: 2012.7, origen: economia-azul }
-  - { id: ia, nace: 2018.6, origen: software }
+  - { id: software, nace: 2012.2, origen: main }
+  - { id: sector-publico, nace: 2012.6, origen: economia-azul }
+  - { id: ia, nace: 2017.5, origen: economia-azul }
 merges:  # cruces entre perfiles: año, desde, hacia
-  - { anio: 2025.45, desde: ia, hacia: economia-azul }
-  - { anio: 2025.5, desde: sector-publico, hacia: software }
-  - { anio: 2025.9, desde: economia-azul, hacia: ia }
-  - { anio: 2025.9, desde: software, hacia: ia }
+  - { anio: 2015.0, desde: economia-azul, hacia: software }
+  - { anio: 2020.5, desde: economia-azul, hacia: sector-publico }
+  - { anio: 2025.3, desde: ia, hacia: economia-azul }
+  - { anio: 2025.4, desde: sector-publico, hacia: software }
+  - { anio: 2025.8, desde: economia-azul, hacia: ia }
+  - { anio: 2025.8, desde: software, hacia: ia }
 commits:
+  # main: la formación
   - { anio: 2006.2, rama: main, hito: true, es: "Inicio de Ingeniería Pesquera · UTN", en: "Started Fisheries Engineering · UTN" }
-  - { anio: 2007.0, rama: economia-azul, hito: true, es: "Campañas oceanográficas y antárticas", en: "Oceanographic and Antarctic cruises" }
-  - { anio: 2012.4, rama: economia-azul, hito: true, es: "Investigación en CADIC-CONICET", en: "Research at CADIC-CONICET" }
-  - { anio: 2012.5, rama: software, hito: true, es: "VITO GNU/Linux · navegación", en: "VITO GNU/Linux · navigation", proyecto: vito_gnu_linux }
-  - { anio: 2012.7, rama: sector-publico, hito: true, es: "Diagnóstico de la pesca artesanal · CFI", en: "Artisanal fisheries assessment · CFI" }
-  - { anio: 2013.9, rama: economia-azul, es: "Proyectos sobre la centolla", en: "Southern king crab projects", proyecto: cvar_centolla_bases_1 }
+  - { anio: 2008.5, rama: main, es: "Formación STCW para gente de mar", en: "STCW seafarer training" }
   - { anio: 2014.5, rama: main, es: "Técnico Universitario Pesquero", en: "University Fisheries Technician" }
-  - { anio: 2015.4, rama: economia-azul, hito: true, es: "KIPPA I · ROV con hardware libre", en: "KIPPA I · open-hardware ROV", proyecto: kippa_rov }
-  - { anio: 2015.5, rama: sector-publico, es: "Consejo Directivo del CADIC", en: "CADIC Board of Directors" }
   - { anio: 2016.5, rama: main, hito: true, es: "Ingeniero Pesquero", en: "Fisheries Engineer" }
-  - { anio: 2018.6, rama: ia, hito: true, es: "Primeros modelos · Utopía Soluciones", en: "First models · Utopía Soluciones" }
-  - { anio: 2019.3, rama: economia-azul, es: "Docencia en la UTN", en: "Teaching at UTN" }
-  - { anio: 2020.3, rama: ia, es: "IoT y sensores · Grupo Celentano", en: "IoT and sensors · Grupo Celentano" }
-  - { anio: 2020.5, rama: sector-publico, es: "UTN Antártida Argentina", en: "UTN Antártida Argentina", proyecto: utn_antartida_argentina }
-  - { anio: 2021.2, rama: sector-publico, es: "Gobierno de Tierra del Fuego", en: "Government of Tierra del Fuego" }
+  - { anio: 2019.5, rama: main, es: "Diplomatura en Gestión de la Calidad", en: "Diploma in Quality Management" }
+  - { anio: 2020.6, rama: main, es: "Diplomatura en Gestión Ambiental", en: "Diploma in Environmental Management" }
+  - { anio: 2024.5, rama: main, hito: true, es: "MBA en Logística y Operaciones", en: "MBA in Logistics and Operations" }
+  - { anio: 2026.6, rama: main, hito: true, es: "Máster en Desarrollo con IA", en: "Master's in AI Development" }
+  # economía azul
+  - { anio: 2007.0, rama: economia-azul, hito: true, es: "Campañas oceanográficas y antárticas", en: "Oceanographic and Antarctic cruises" }
+  - { anio: 2009.5, rama: economia-azul, es: "Informe: fauna bentónica e isótopos", en: "Report: benthic fauna and isotopes" }
+  - { anio: 2011.5, rama: economia-azul, es: "Congreso COLACMAR: densidad energética de peces", en: "COLACMAR conference: fish energy density" }
+  - { anio: 2012.4, rama: economia-azul, hito: true, es: "Investigación en CADIC-CONICET", en: "Research at CADIC-CONICET" }
+  - { anio: 2013.9, rama: economia-azul, es: "Proyectos sobre la centolla", en: "Southern king crab projects", proyecto: cvar_centolla_bases_1 }
+  - { anio: 2014.6, rama: economia-azul, es: "Artículo en Anthropocene: arrastre y sedimentos", en: "Anthropocene paper: trawling and sediments" }
+  - { anio: 2015.8, rama: economia-azul, es: "Trampas para la pesca artesanal · Clúster", en: "Traps for artisanal fishing · Cluster" }
+  - { anio: 2016.8, rama: economia-azul, es: "Sinergias y conflictos de la costa fueguina", en: "Synergies and conflicts on the Fuegian coast", proyecto: cvar_sinergias }
+  - { anio: 2018.3, rama: economia-azul, es: "Artículo en Aquaculture: cultivo de centolla", en: "Aquaculture paper: king crab culture" }
+  - { anio: 2019.3, rama: economia-azul, es: "Profesor de Puertos Pesqueros · UTN", en: "Professor of Fishing Ports · UTN" }
+  - { anio: 2021.1, rama: economia-azul, es: "Colegio de Ingenieros de Tierra del Fuego", en: "Tierra del Fuego Association of Engineers" }
+  - { anio: 2022.1, rama: economia-azul, hito: true, es: "Director del grupo de I+D QA3DS", en: "Director of the QA3DS R&D group" }
   - { anio: 2023.3, rama: economia-azul, es: "PID Liofilización · director", en: "Freeze-drying R&D project · director", proyecto: pid_liofilizados }
-  - { anio: 2024.4, rama: main, es: "MBA en Logística y Operaciones", en: "MBA in Logistics and Operations" }
-  - { anio: 2024.6, rama: software, hito: true, es: "trawlkit · Trawl Design Lab", en: "trawlkit · Trawl Design Lab", proyecto: trawlkit }
+  - { anio: 2024.2, rama: economia-azul, es: "Preprints: redes de arrastre y selectividad", en: "Preprints: trawl nets and selectivity" }
+  - { anio: 2025.3, rama: economia-azul, hito: true, es: "merge: Pesqueros en IA", en: "merge: Pesqueros en IA", proyecto: pesqueros_en_ia_cursos }
+  - { anio: 2026.65, rama: economia-azul, es: "Curso «IA aplicada a la producción pesquera»", en: "Course: AI applied to fish production" }
+  # software
+  - { anio: 2012.2, rama: software, hito: true, es: "VITO GNU/Linux · navegación", en: "VITO GNU/Linux · navigation", proyecto: vito_gnu_linux }
+  - { anio: 2015.0, rama: software, hito: true, es: "merge: KIPPA I · ROV con hardware libre", en: "merge: KIPPA I · open-hardware ROV", proyecto: kippa_rov }
+  - { anio: 2018.6, rama: software, es: "Electrónica de navegación · Utopía Soluciones", en: "Navigation electronics · Utopía Soluciones" }
+  - { anio: 2019.7, rama: software, es: "Aula virtual Moodle · UTN", en: "Moodle virtual classroom · UTN" }
+  - { anio: 2023.4, rama: software, es: "Formación en Git, SQL y desarrollo web", en: "Git, SQL and web development training" }
+  - { anio: 2024.4, rama: software, hito: true, es: "trawlkit · Trawl Design Lab", en: "trawlkit · Trawl Design Lab", proyecto: trawlkit }
+  - { anio: 2025.4, rama: software, hito: true, es: "merge: plataforma de datos · Intervalor", en: "merge: data platform · Intervalor" }
+  - { anio: 2026.8, rama: software, es: "Paquetes en PyPI y casos clean-room", en: "PyPI packages and clean-room cases" }
+  # sector público
+  - { anio: 2012.6, rama: sector-publico, hito: true, es: "Diagnóstico de la pesca artesanal · CFI", en: "Artisanal fisheries assessment · CFI" }
+  - { anio: 2015.4, rama: sector-publico, es: "Consejo Directivo del CADIC", en: "CADIC Board of Directors" }
+  - { anio: 2017.2, rama: sector-publico, es: "Informe del estado de la centolla del Beagle", en: "Report on Beagle Channel king crab status" }
+  - { anio: 2019.6, rama: sector-publico, es: "Oficina de Vinculación Tecnológica · CADIC", en: "Technology Transfer Office · CADIC" }
+  - { anio: 2020.5, rama: sector-publico, es: "merge: estudios portuarios · UTNAA y AIC", en: "merge: port studies · UTNAA and AIC", proyecto: utn_antartida_argentina }
+  - { anio: 2021.2, rama: sector-publico, hito: true, es: "Director provincial de vinculación en CTI · TDF", en: "Provincial S&T liaison director · TDF" }
+  - { anio: 2022.6, rama: sector-publico, es: "Convenio de I+D industria-universidad", en: "Industry-university R&D agreement" }
   - { anio: 2024.8, rama: sector-publico, es: "Auditorías de inventario · Intervalor", en: "Inventory audits · Intervalor" }
-  - { anio: 2025.2, rama: ia, es: "Mainly Labs", en: "Mainly Labs" }
-  - { anio: 2025.45, rama: economia-azul, hito: true, es: "merge: Pesqueros en IA", en: "merge: Pesqueros en IA", proyecto: pesqueros_en_ia_cursos }
-  - { anio: 2025.5, rama: software, hito: true, es: "Plataforma de datos · Intervalor Data", en: "Data platform · Intervalor Data" }
-  - { anio: 2025.9, rama: ia, hito: true, es: "merge: cfp-audit-intelligence", en: "merge: cfp-audit-intelligence", proyecto: cfp_audit_intelligence }
-  - { anio: 2026.1, rama: ia, es: "fisheries-sustainability-mlops", en: "fisheries-sustainability-mlops", proyecto: fisheries_mlops }
-  - { anio: 2026.3, rama: sector-publico, hito: true, es: "Serie DT-ALGP-2026", en: "DT-ALGP-2026 series", proyecto: serie_dt_algp_2026 }
-  - { anio: 2026.55, rama: main, es: "Máster en Desarrollo con IA", en: "Master's in AI Development" }
-  - { anio: 2026.8, rama: software, es: "Paquetes abiertos en PyPI", en: "Open packages on PyPI" }
+  - { anio: 2026.45, rama: sector-publico, es: "Plan Estratégico Pesquero TDF 2050", en: "Tierra del Fuego Fisheries Plan 2050" }
+  - { anio: 2026.25, rama: sector-publico, hito: true, es: "Serie DT-ALGP-2026", en: "DT-ALGP-2026 series", proyecto: serie_dt_algp_2026 }
+  # IA y datos
+  - { anio: 2017.5, rama: ia, hito: true, es: "ETL y análisis de datos de calidad del agua · CADIC", en: "ETL and water-quality data analysis · CADIC" }
+  - { anio: 2018.9, rama: ia, es: "Sensores IoT · Utopía Soluciones", en: "IoT sensors · Utopía Soluciones" }
+  - { anio: 2020.3, rama: ia, es: "Monitorización con sensores · Grupo Celentano", en: "Sensor monitoring · Grupo Celentano" }
+  - { anio: 2022.5, rama: ia, es: "Bases de datos de investigación · QA3DS", en: "Research databases · QA3DS" }
+  - { anio: 2023.8, rama: ia, es: "Formación en Data Science y Data Analytics", en: "Data Science and Data Analytics training" }
+  - { anio: 2024.3, rama: ia, es: "Machine learning e IA generativa", en: "Machine learning and generative AI" }
+  - { anio: 2025.2, rama: ia, es: "Investigador en datos e IA · Mainly Labs", en: "Data and AI researcher · Mainly Labs" }
+  - { anio: 2025.8, rama: ia, hito: true, es: "merge: cfp-audit-intelligence", en: "merge: cfp-audit-intelligence", proyecto: cfp_audit_intelligence }
+  - { anio: 2026.1, rama: ia, es: "fisheries-mlops y deep learning bayesiano", en: "fisheries-mlops and Bayesian deep learning", proyecto: fisheries_mlops }

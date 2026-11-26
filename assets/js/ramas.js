@@ -10,7 +10,7 @@
 const NS = 'http://www.w3.org/2000/svg';
 const CARRILES = ['main', 'economia-azul', 'sector-publico', 'software', 'ia'];
 const AÑO0 = 2005.6, HEAD = 2027.0;
-const TRAMOS = [[2005.6, 0], [2018, 0.34], [2024, 0.6], [2027.0, 1]]; // los años recientes se estiran
+const TRAMOS = [[2005.6, 0], [2018, 0.44], [2023, 0.67], [2027.0, 1]]; // los años recientes se estiran un poco
 
 const el = (tag, attrs, padre) => {
   const e = document.createElementNS(NS, tag);
@@ -31,6 +31,7 @@ export function iniciarRamas() {
   const raiz = document.querySelector('[data-ramas]');
   if (!raiz) return;
   const datos = JSON.parse(raiz.querySelector('[data-ramas-datos]').textContent);
+  datos.commits.sort((p, q) => p.a - q.a);
   const grafo = raiz.querySelector('[data-ramas-grafo]');
   const tip = raiz.querySelector('[data-ramas-tip]');
   const consola = document.querySelector('[data-ramas-consola]');
@@ -47,7 +48,7 @@ export function iniciarRamas() {
     if (!vert) {
       const T0 = 40, T1 = 980, carril = { main: 50, 'economia-azul': 130, 'sector-publico': 205, software: 280, ia: 355 };
       return { vert, vb: '0 0 1180 430', t: (a) => T0 + tiempo(a) * (T1 - T0), c: (r) => carril[r],
-        p: (t, c) => [t, c], av: [1092, 205], avR: 34, ticks: [2006, 2009, 2012, 2015, 2018, 2020, 2022, 2024, 2025, 2026, 2027] };
+        p: (t, c) => [t, c], av: [1092, 205], avR: 34, ticks: [2006, 2008, 2010, 2012, 2014, 2016, 2018, 2020, 2022, 2024, 2025, 2026, 2027] };
     }
     const T0 = 40, T1 = 760, carril = { main: 22, 'economia-azul': 48, 'sector-publico': 74, software: 100, ia: 126 };
     return { vert, vb: '0 0 390 880', t: (a) => T0 + tiempo(a) * (T1 - T0), c: (r) => carril[r],
@@ -125,7 +126,7 @@ export function iniciarRamas() {
         el('path', { d: `M${+punto.getAttribute('cx') + 9} ${punto.getAttribute('cy')} C150 ${punto.getAttribute('cy')} 150 ${y} 160 ${y}`, style: `stroke: ${col(c.r)}` }, g);
         const t = el('text', { x: 166, y: y + 4 }, g);
         el('tspan', { class: 'ramas__anio' }, t).textContent = `${Math.floor(c.a)} `;
-        el('tspan', {}, t).textContent = c.t.length > 30 ? `${c.t.slice(0, 29)}…` : c.t;
+        el('tspan', {}, t).textContent = c.t.length > 34 ? `${c.t.slice(0, 33)}…` : c.t;
         rotulos.push({ g, a: c.a });
       });
     }
