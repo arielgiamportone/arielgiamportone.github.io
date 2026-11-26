@@ -18,6 +18,21 @@ papers_peer_reviewed:
     openalex: 13
     fecha_consulta: '2026-11-21'
   resumen: 'Rearing of southern king crab larvae and juveniles in suspended mesh bags at sea: growth and survival.'
+- id: aquacult_int_2026
+  tipo: articulo_referato
+  autores: Sotelano, M.P.; Reartes, M.B.; Romero, M.C.; Lovrich, G.A.; Florentín, O.; Giamportone, A.; Tapella, F.
+  posicion_autor: 6º de 7
+  titulo: Large-scale rearing of southern king crab (Lithodes santolla) larvae for stock enhancement initiatives
+  revista: Aquaculture International
+  volumen: '34'
+  numero: '5'
+  articulo: '142'
+  año: 2026
+  fecha_publicacion: '2026-04-21'
+  doi: 10.1007/s10499-026-02535-w
+  url: https://doi.org/10.1007/s10499-026-02535-w
+  resumen: Mass rearing of southern king crab larvae (from zoea I to megalopa) in three low-cost container designs, as a basis
+    for stock enhancement.
 - id: anthropocene_2014
   tipo: articulo_referato
   autores: Martín, J.; Puig, P.; Palanques, A.; Giamportone, A.
@@ -112,15 +127,6 @@ preprints:
   doi: 10.13140/RG.2.2.35335.25767
   url: https://doi.org/10.13140/RG.2.2.35335.25767
   titulo_traducido: Deep Learning and Bayesian Networks in Lithodes santolla Fisheries
-- titulo: Plan Estratégico Pesquero TDF 2050
-  autores: Giamportone, A.L.
-  revista: Preprint (ResearchGate)
-  año: 2026
-  fecha: 2026-05
-  tipo: preprint
-  doi: 10.13140/RG.2.2.11329.72803
-  url: https://doi.org/10.13140/RG.2.2.11329.72803
-  titulo_traducido: Tierra del Fuego Fisheries Strategic Plan 2050
 documentos_de_trabajo:
 - titulo: 'DT-ALGP-2026-001: Análisis crítico del Proyecto de Ley Marco de Pesca Extractiva y Recolección Hidrobiológica de
     la Provincia de Tierra del Fuego (Mensaje N.º 16/26)'
@@ -154,7 +160,7 @@ documentos_de_trabajo:
   doi: 10.13140/RG.2.2.36167.05288
   url: https://doi.org/10.13140/RG.2.2.36167.05288
   titulo_traducido: 'DT-ALGP-2026-003: A Critical Analysis of Tierra del Fuego''s Aquaculture Model: Law 1601'
-- titulo: 'DT-ALGP-2026-005: La pesca fueguina, 2026: diecisiete años de antilogía institucional'
+- titulo: 'DT-ALGP-2026-004: La pesca fueguina, 2026: diecisiete años de antilogía institucional'
   autores: Giamportone, A.L.
   revista: Serie DT-ALGP-2026, Documentos de Trabajo sobre Gobernanza Pesquera y Acuícola (UTN FRTDF / Pesqueros en IA), CC
     BY 4.0
@@ -163,7 +169,17 @@ documentos_de_trabajo:
   tipo: documento_de_trabajo
   doi: 10.13140/RG.2.2.16751.19367
   url: https://doi.org/10.13140/RG.2.2.16751.19367
-  titulo_traducido: 'DT-ALGP-2026-005: Tierra del Fuego Fisheries, 2026: Seventeen Years of Institutional Self-Contradiction'
+  titulo_traducido: 'DT-ALGP-2026-004: Tierra del Fuego Fisheries, 2026: Seventeen Years of Institutional Self-Contradiction'
+- titulo: 'DT-ALGP-2026-005: Plan Estratégico Pesquero Tierra del Fuego 2050'
+  autores: Giamportone, A.L.
+  revista: Serie DT-ALGP-2026, Documentos de Trabajo sobre Gobernanza Pesquera y Acuícola (UTN FRTDF / Pesqueros en IA), CC
+    BY 4.0
+  año: 2026
+  fecha: 2026-05
+  tipo: documento_de_trabajo
+  doi: 10.13140/RG.2.2.11329.72803
+  url: https://doi.org/10.13140/RG.2.2.11329.72803
+  titulo_traducido: 'DT-ALGP-2026-005: Tierra del Fuego Fisheries Strategic Plan 2050'
 - titulo: 'DT-ALGP-2026-006: Resolución CFP N.º 7/2026 sobre procesamiento de colas de langostino a bordo'
   autores: Giamportone, A.L.
   revista: Serie DT-ALGP-2026, Documentos de Trabajo sobre Gobernanza Pesquera y Acuícola (UTN FRTDF / Pesqueros en IA), CC
@@ -212,6 +228,7 @@ documentos_de_trabajo:
   año: 2026
   fecha: 2026-11
   tipo: documento_de_trabajo
+  url: https://www.researchgate.net/publication/417821592
   titulo_traducido: 'DT-ALGP-2026-010: Southern King Crab, from the CBA to the Quota'
 trabajos_congresos:
 - id: colacmar_2011_densidad_energetica
@@ -225,15 +242,60 @@ trabajos_congresos:
   año: 2011
   titulo_traducido: Energy Density of Cottoperca gobio (Bovichthidae) and Patagonotothen ramsayi (Nototheniidae) from the
     Southern Argentine Sea
+- id: poster_liofilizado_2023
+  tipo: poster
+  autores: Giamportone, A.L. et al.
+  titulo: 'Análisis del proceso de liofilizado aplicado a alimentos de producción local/regional en la provincia de Tierra
+    del Fuego. Salicornia y erizo: fundamentación del proyecto'
+  revista: Póster, Jornadas de Ingeniería en Tierra del Fuego
+  año: 2023
+  fecha: 2023-06
+  doi: 10.13140/RG.2.2.16467.76324
+  url: https://doi.org/10.13140/RG.2.2.16467.76324
+  titulo_traducido: 'Analysis of Freeze-Drying Applied to Locally and Regionally Produced Foods in Tierra del Fuego. Samphire
+    and Sea Urchin: Project Rationale'
+- id: poster_qa3ds_2023
+  tipo: poster
+  autores: Giamportone, A.L. et al.
+  titulo: 'Creación de un nuevo grupo de I+D+i en Tierra del Fuego AeIAS: QA3DS'
+  revista: Póster, Jornadas de Ingeniería en Tierra del Fuego
+  año: 2023
+  fecha: 2023-06
+  doi: 10.13140/RG.2.2.36285.84965
+  url: https://doi.org/10.13140/RG.2.2.36285.84965
+  titulo_traducido: 'Creation of a New R&D&I Group in Tierra del Fuego: QA3DS'
+- id: presentacion_pidpp_2023
+  tipo: presentacion
+  autores: Giamportone, A.L. et al.
+  titulo: 'PIDPP UTN: análisis del proceso de liofilizado aplicado a alimentos de producción local/regional en la provincia
+    de Tierra del Fuego'
+  revista: Presentación del proyecto homologado (UTN)
+  año: 2023
+  fecha: 2023-04
+  url: https://www.researchgate.net/publication/372716879
+  titulo_traducido: 'UTN PIDPP: Analysis of Freeze-Drying Applied to Locally and Regionally Produced Foods in Tierra del Fuego'
 informes_tecnicos:
 - id: centolla_beagle_2016
   tipo: informe_tecnico
   titulo: Estado poblacional de la centolla (Lithodes santolla) del Canal Beagle 2016
   autores: Lovrich, G.A.; Tapella, F.; Di Salvatore, P.; Gowland, M.F.; […]; Torres, M.; Giamportone, A.L.
-  revista: Informe técnico inédito
+  posicion_autor: 17º de 17
+  revista: Informe técnico para el Clúster de Pesca Artesanal de Tierra del Fuego (CADIC)
   año: 2017
   fecha: 03/2017
+  doi: 10.13140/RG.2.2.25514.52165/1
+  url: https://doi.org/10.13140/RG.2.2.25514.52165/1
   titulo_traducido: Population Status of the Southern King Crab (Lithodes santolla) in the Beagle Channel, 2016
+- id: recurso_centolla_2014
+  tipo: articulo_divulgacion
+  titulo: 'El recurso centolla hoy: una perspectiva científica dentro de la problemática intersectorial'
+  autores: Lovrich, G.A.; Tapella, F.; Romero, M.C. et al. (incl. Giamportone, A.L.)
+  revista: 'Colección La Lupa, 6: 24-29'
+  año: 2014
+  fecha: 10/2014
+  doi: 10.13140/2.1.1313.3600
+  url: https://doi.org/10.13140/2.1.1313.3600
+  titulo_traducido: 'The Southern King Crab Resource Today: A Scientific Perspective on a Cross-Sector Issue'
 - id: pesca_artesanal_rio_grande
   tipo: informe_tecnico
   titulo: Diagnóstico de la pesca artesanal en Río Grande — Variables sociales, económicas y técnicas vinculadas a su ordenamiento

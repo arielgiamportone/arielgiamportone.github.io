@@ -10,6 +10,9 @@ campos_internos:
   - notas_internas
   - riesgo
   - nota_publicacion
+  - nota_fecha
+  - nota_doi
+  - nota_numeracion
   - clientes_nota
   - clientes_internos
   - commits_ariel
