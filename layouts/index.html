@@ -6,22 +6,20 @@
 <div class="banda" data-banda>
 {{ partial "banner-fondo.html" . }}
 <section class="heroe heroe--portada">
-  <div class="contenedor heroe__fila">
-    <div class="heroe__texto">
-      <p class="heroe__hola">{{ i18n "hola" }}</p>
-      <h1 class="heroe__nombre">Ariel Luján Giamportone</h1>
-      {{ range $perfiles }}<template data-titular="{{ .slug }}">{{ .titulo }}</template><template data-resumen="{{ .slug }}">{{ .resumen }}</template>{{ end }}
-      <div class="relato" aria-live="polite">
-        <p class="relato__paso" data-relato-paso>{{ i18n "teaser_final_paso" }}</p>
-        <p class="heroe__titular" data-texto-general="{{ i18n "teaser_final_titulo" }}">{{ i18n "teaser_final_titulo" }}</p>
-        <p class="heroe__resumen" data-resumen-activo>{{ site.Params.description }}</p>
-        <span class="relato__cifra" data-relato-cifra hidden><b></b><span></span></span>
+  <div class="contenedor">
+    <div class="heroe__cabeza">
+      <div class="heroe__texto">
+        <p class="heroe__hola">{{ i18n "hola" }}</p>
+        <h1 class="heroe__nombre">Ariel Luján Giamportone</h1>
+        {{ range $perfiles }}<template data-titular="{{ .slug }}">{{ .titulo }}</template><template data-resumen="{{ .slug }}">{{ .resumen }}</template>{{ end }}
+        <p class="heroe__titular" data-texto-general="{{ i18n "ramas_titular" }}">{{ i18n "ramas_titular" }}</p>
+        <p class="heroe__resumen" data-resumen-activo>{{ i18n "ramas_resumen" }}</p>
       </div>
-      <div class="progreso" aria-hidden="true">{{ range slice "economia-azul" "software" "ia" "sector-publico" }}<span style="--c: var(--c-{{ . }})"><i></i></span>{{ end }}</div>
-      <p class="relato__acciones"><button class="relato__repetir" type="button" data-teaser-repetir hidden>{{ i18n "teaser_repetir" }}</button> <span class="tenue" data-teaser-pista hidden>{{ i18n "teaser_pista" }}</span></p>
-      {{ partial "redes.html" . }}
+      <div class="ramas__consola" data-ramas-consola aria-live="polite"><span class="ramas__consola-anio">HEAD → main</span>{{ i18n "ramas_final" }}</div>
     </div>
-    {{ partial "teaser.html" . }}
+    {{ partial "ramas.html" . }}
+    <p class="ramas__acciones"><button class="ramas__repetir" type="button" data-ramas-repetir hidden>{{ i18n "ramas_repetir" }}</button> <span class="tenue" data-ramas-pista hidden>{{ i18n "ramas_pista" }}</span></p>
+    {{ partial "redes.html" . }}
   </div>
 </section>
 </div>

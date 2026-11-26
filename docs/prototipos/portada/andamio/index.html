@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prototipo B · Andamio</title>
+<style>
+:root {
+  --fondo: #f8fafc; --superficie: #fff; --texto: #0f172a; --texto-2: #475569; --borde: #e2e8f0; --acento: #0e7490; --andamio: #94a3b8;
+  --c-economia-azul: #0891b2; --c-software: #2563eb; --c-ia: #7c3aed; --c-sector-publico: #059669;
+  --fuente: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+:root[data-tema="oscuro"] { --fondo: #0b1120; --superficie: #111827; --texto: #e2e8f0; --texto-2: #94a3b8; --borde: #1f2a3c; --acento: #22d3ee; --andamio: #475569;
+  --c-economia-azul: #22d3ee; --c-software: #60a5fa; --c-ia: #a78bfa; --c-sector-publico: #34d399; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--fondo); color: var(--texto); font-family: var(--fuente); }
+.heroe { max-width: 1180px; margin: 0 auto; padding: 40px 20px; display: grid; grid-template-columns: 1fr 560px; gap: 32px; align-items: center; min-height: 640px; }
+.hola { color: var(--acento); font-weight: 600; margin: 0; }
+h1 { font-size: clamp(2rem, 4.4vw, 3.2rem); margin: .1rem 0 .8rem; letter-spacing: -.025em; line-height: 1.05; }
+.relato { min-height: 200px; }
+.paso { font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; margin: 0 0 .4rem; color: var(--texto-2); }
+.relato h2 { font-size: 1.45rem; margin: 0 0 .5rem; line-height: 1.2; }
+.relato p.linea { color: var(--texto-2); font-size: 1.05rem; line-height: 1.5; margin: 0; max-width: 34em; }
+.anim-in { animation: entra .5s cubic-bezier(.2,.7,.2,1) both; }
+@keyframes entra { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.acciones { margin-top: 18px; font-size: .85rem; color: var(--texto-2); display: flex; gap: 12px; align-items: center; }
+button { font: inherit; border: 1px solid var(--borde); background: var(--superficie); color: var(--texto-2); border-radius: 999px; padding: 4px 12px; cursor: pointer; }
+svg { width: 100%; height: auto; display: block; overflow: visible; }
+.palo { stroke: var(--andamio); stroke-width: 5; stroke-linecap: round; }
+.riostra { stroke: var(--andamio); stroke-width: 2.5; stroke-linecap: round; opacity: .8; }
+.tablon { fill: var(--andamio); opacity: .55; }
+.losa { stroke-width: 0; }
+.planta { cursor: pointer; }
+.planta .muro { fill: var(--superficie); stroke-width: 2.5; }
+.planta .rotulo { font: 700 12px var(--fuente); letter-spacing: .08em; text-transform: uppercase; }
+.ladrillo rect { stroke-width: 1.5; }
+.ladrillo text { font: 600 11px var(--fuente); fill: var(--texto); }
+.planta.atenuada { opacity: .35; }
+.suelo { stroke: var(--texto-2); stroke-width: 2; opacity: .4; }
+.barra { position: fixed; top: 10px; right: 10px; }
+</style>
+</head>
+<body>
+<div class="barra"><button id="tema">Tema</button></div>
+<section class="heroe">
+  <div>
+    <p class="hola">Hola, soy</p>
+    <h1>Ariel Luján Giamportone</h1>
+    <div class="relato" aria-live="polite">
+      <p class="paso" id="paso">En construcción</p>
+      <h2 id="titulo">Una carrera que se construye por capas.</h2>
+      <p class="linea" id="linea">Cada planta se apoya en la anterior: del mar a los sistemas, de los sistemas a los modelos y de los modelos a las decisiones.</p>
+    </div>
+    <div class="acciones"><button id="repetir" hidden>↻ Ver de nuevo</button><span id="pista" hidden>Pulsa una planta para ver ese perfil</span></div>
+  </div>
+  <svg id="svg" viewBox="0 -60 560 660" role="img" aria-label="Un edificio de cuatro plantas, una por perfil, con proyectos como ladrillos"></svg>
+</section>
+<script>
+const PLANTAS = [ // de abajo arriba
+  { id: 'economia-azul', rotulo: 'Economía azul', paso: '1 · Los cimientos: el mar', titulo: 'Todo empieza en el mar.', linea: 'Campañas oceanográficas, investigación en el CADIC y herramientas para la pesca: el conocimiento de campo sobre el que se apoya el resto.',
+    ladrillos: ['Campañas antárticas', 'Centolla · CADIC', 'KIPPA I · ROV', 'PID Liofilización', 'trawlkit'] },
+  { id: 'software', rotulo: 'Software', paso: '2 · Los sistemas', titulo: 'Sobre esa base, sistemas.', linea: 'Motores de cálculo, APIs y aplicaciones que funcionan sin señal; paquetes abiertos y plataformas en producción.',
+    ladrillos: ['VITO GNU/Linux', 'Plataforma Intervalor', 'Paquetes en PyPI', 'Transcriptor de placas'] },
+  { id: 'ia', rotulo: 'IA y datos', paso: '3 · Los modelos', titulo: 'Los sistemas alimentan modelos.', linea: 'Redes bayesianas, deep learning e IA aplicada: probabilidades para decidir, no un sí o un no.',
+    ladrillos: ['fisheries-mlops', 'Pesqueros en IA', 'cfp-audit', 'Simplex vs ML'] },
+  { id: 'sector-publico', rotulo: 'Sector público', paso: '4 · Las decisiones', titulo: 'Y los modelos llegan a quien decide.', linea: 'Inventarios municipales auditables, diagnósticos para el Estado y análisis de la gobernanza pesquera.',
+    ladrillos: ['Diagnóstico CFI', 'Inventario municipal', 'Gobierno de TDF', 'Serie DT-ALGP'] },
+];
+const FINAL = { paso: 'Cuatro plantas, un mismo edificio', titulo: 'Del dato de campo a la decisión pública.', linea: 'Ingeniero pesquero que construye datos, software e IA para el mar y para el sector público.' };
+const NS = 'http://www.w3.org/2000/svg', $ = (id) => document.getElementById(id);
+const el = (tag, a, p) => { const e = document.createElementNS(NS, tag); for (const k in a) e.setAttribute(k, a[k]); p && p.appendChild(e); return e; };
+const svg = $('svg');
+const BASE = 560, H = 118, X0 = 70, X1 = 490;
+el('line', { class: 'suelo', x1: 10, x2: 550, y1: BASE, y2: BASE }, svg);
+// olas bajo los cimientos
+const olas = el('path', { d: 'M20 580 q15 -8 30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0', fill: 'none', stroke: 'var(--c-economia-azul)', 'stroke-width': 2, opacity: .5 }, svg);
+const andamio = el('g', {}, svg), plantas = el('g', {}, svg);
+// andamio: postes a ambos lados, se levantan por tramos
+const postes = [30, 52, 508, 530].map((x) => el('line', { class: 'palo', x1: x, x2: x, y1: BASE, y2: BASE }, andamio));
+const tramos = [];
+PLANTAS.forEach((_, i) => {
+  const yb = BASE - i * H, yt = yb - H, g = el('g', { opacity: 0 }, andamio);
+  for (const [a, b] of [[30, 52], [508, 530]]) {
+    el('line', { class: 'riostra', x1: a, y1: yb, x2: b, y2: yt }, g);
+    el('rect', { class: 'tablon', x: a - 6, y: yt - 3, width: b - a + 12, height: 6, rx: 2 }, g);
+  }
+  tramos.push(g);
+});
+// plantas
+const grupos = PLANTAS.map((p, i) => {
+  const yb = BASE - i * H, yt = yb - H + 10, c = `var(--c-${p.id})`;
+  const g = el('g', { class: 'planta', 'data-id': p.id, opacity: 0 }, plantas);
+  el('rect', { class: 'muro', x: X0, y: yt, width: X1 - X0, height: H - 10, rx: 6, stroke: c }, g);
+  el('rect', { class: 'losa', x: X0 - 8, y: yb - 6, width: X1 - X0 + 16, height: 8, rx: 3, fill: c }, g);
+  const r = el('text', { class: 'rotulo', x: X0 + 14, y: yt + 22, fill: c }, g); r.textContent = p.rotulo;
+  const lad = [];
+  const n = p.ladrillos.length, ancho = (X1 - X0 - 28 - (n - 1) * 8) / n;
+  p.ladrillos.forEach((t, k) => {
+    const lx = X0 + 14 + k * (ancho + 8), ly = yt + 38;
+    const lg = el('g', { class: 'ladrillo', opacity: 0 }, g);
+    el('rect', { x: lx, y: ly, width: ancho, height: H - 62, rx: 6, fill: `color-mix(in srgb, ${c} 14%, var(--superficie))`, stroke: c }, lg);
+    // texto en dos líneas si hace falta
+    const pal = t.split(' '), mitad = Math.ceil(pal.length / 2), lineas = t.length > 14 ? [pal.slice(0, mitad).join(' '), pal.slice(mitad).join(' ')] : [t];
+    lineas.forEach((ln, j) => { const tx = el('text', { x: lx + ancho / 2, y: ly + (H - 62) / 2 + 4 + (j - (lineas.length - 1) / 2) * 14, 'text-anchor': 'middle' }, lg); tx.textContent = ln; });
+    lad.push(lg);
+  });
+  g.ladrillos = lad;
+  return g;
+});
+// tejado con la foto
+const techo = el('g', { opacity: 0 }, svg);
+const yTecho = BASE - PLANTAS.length * H;
+el('path', { d: `M${X0 - 14} ${yTecho} L280 ${yTecho - 46} L${X1 + 14} ${yTecho}`, fill: 'none', stroke: 'var(--texto-2)', 'stroke-width': 3, 'stroke-linejoin': 'round' }, techo);
+el('clipPath', { id: 'foto' }, techo).appendChild(el('circle', { cx: 280, cy: yTecho - 56, r: 30 }));
+el('circle', { cx: 280, cy: yTecho - 56, r: 33, fill: 'var(--superficie)', stroke: 'var(--texto-2)', 'stroke-width': 2 }, techo);
+el('image', { href: "../me.webp", x: 250, y: yTecho - 86, width: 60, height: 60, 'clip-path': 'url(#foto)' }, techo);
+
+const espera = (ms) => new Promise((r) => setTimeout(r, ms));
+const anima = (e, f, o) => e.animate(f, { fill: 'forwards', easing: 'cubic-bezier(.2,.7,.2,1)', ...o }).finished;
+function relato(p, color) {
+  $('paso').textContent = p.paso; $('paso').style.color = color || '';
+  $('titulo').textContent = p.titulo; $('linea').textContent = p.linea;
+  [$('paso'), $('titulo'), $('linea')].forEach((e, i) => { e.classList.remove('anim-in'); void e.offsetWidth; e.style.animationDelay = `${i * .06}s`; e.classList.add('anim-in'); });
+}
+let gen = 0;
+async function reproducir() {
+  const g = ++gen; $('repetir').hidden = true; $('pista').hidden = true;
+  grupos.forEach((p) => { p.setAttribute('opacity', 0); p.getAnimations().forEach((a) => a.cancel()); p.ladrillos.forEach((l) => { l.setAttribute('opacity', 0); l.getAnimations().forEach((a) => a.cancel()); }); });
+  tramos.forEach((t) => t.setAttribute('opacity', 0)); techo.setAttribute('opacity', 0);
+  postes.forEach((p) => p.setAttribute('y2', BASE));
+  await espera(400);
+  for (let i = 0; i < PLANTAS.length; i++) {
+    if (g !== gen) return;
+    const p = PLANTAS[i], c = getComputedStyle(document.documentElement).getPropertyValue(`--c-${p.id}`);
+    relato(p, c);
+    const y2 = BASE - (i + 1) * H;
+    postes.forEach((po) => anima(po, [{ y2: po.getAttribute('y2') }, { y2 }], { duration: 500 }).then(() => po.setAttribute('y2', y2)));
+    await espera(350); tramos[i].setAttribute('opacity', 1); tramos[i].animate([{ opacity: 0 }, { opacity: 1 }], { duration: 300 });
+    grupos[i].setAttribute('opacity', 1);
+    grupos[i].animate([{ opacity: 0, transform: 'translateY(-30px)' }, { opacity: 1, transform: 'none' }], { duration: 450, easing: 'cubic-bezier(.2,.7,.2,1)' });
+    await espera(400);
+    for (const l of grupos[i].ladrillos) {
+      if (g !== gen) return;
+      l.setAttribute('opacity', 1); l.animate([{ opacity: 0, transform: 'translateY(-18px)' }, { opacity: 1, transform: 'none' }], { duration: 320, easing: 'cubic-bezier(.3,1.4,.5,1)' });
+      await espera(170);
+    }
+    await espera(1100);
+  }
+  if (g !== gen) return;
+  techo.setAttribute('opacity', 1); techo.animate([{ opacity: 0, transform: 'translateY(-12px)' }, { opacity: 1, transform: 'none' }], { duration: 500 });
+  relato(FINAL); $('repetir').hidden = false; $('pista').hidden = false;
+}
+grupos.forEach((gp, i) => gp.addEventListener('click', () => {
+  const sel = gp.classList.contains('sel');
+  grupos.forEach((o) => { o.classList.remove('sel'); o.classList.toggle('atenuada', !sel && o !== gp); });
+  if (sel) { relato(FINAL); return; }
+  gp.classList.add('sel'); relato(PLANTAS[i], getComputedStyle(document.documentElement).getPropertyValue(`--c-${PLANTAS[i].id}`));
+}));
+$('repetir').onclick = reproducir;
+$('tema').onclick = () => { const r = document.documentElement; r.dataset.tema = r.dataset.tema === 'oscuro' ? '' : 'oscuro'; };
+reproducir();
+</script>
+</body>
+</html>

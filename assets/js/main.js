@@ -1,7 +1,7 @@
 // Comportamiento del portfolio: modo claro/oscuro y lentes de perfil.
 // Sin dependencias. Si el JS no carga, todo el contenido sigue visible.
 
-import { iniciarTeaser } from './teaser.js';
+import { iniciarRamas } from './ramas.js';
 
 const raiz = document.documentElement;
 
@@ -84,4 +84,4 @@ botonesTipo.forEach(b => b.addEventListener('click', () => { tipo = b.dataset.ti
 const inicial = new URLSearchParams(location.search).get('perfil') || '';
 if (botonesLente.some(b => b.dataset.lente === inicial)) lente = inicial;
 if (filtrables.length || botonesLente.length) aplicar();
-iniciarTeaser();
+iniciarRamas();

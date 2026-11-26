@@ -133,22 +133,25 @@ def test_cv_pdf_por_perfil():
             assert pdf.read_bytes()[:5] == b"%PDF-", pdf.name
 
 
-def test_portada_teaser_y_cintas():
+def test_portada_ramas_y_cintas():
     # Las piezas de la portada existen y cada logo de la cinta tiene su archivo.
     import yaml
-    for f in ("layouts/partials/teaser.html", "layouts/partials/banner-fondo.html",
-              "layouts/partials/cintas.html", "assets/js/teaser.js"):
+    for f in ("layouts/partials/ramas.html", "layouts/partials/banner-fondo.html",
+              "layouts/partials/cintas.html", "assets/js/ramas.js"):
         assert (RAIZ / f).is_file(), f
     orgs = yaml.safe_load((RAIZ / "data/organizaciones.yaml").read_text(encoding="utf-8"))
     for o in orgs:
         assert (RAIZ / "static/logos" / o["logo"]).is_file(), o["logo"]
     tecs = yaml.safe_load((RAIZ / "data/tecnologias.yaml").read_text(encoding="utf-8"))
     assert len(tecs) >= 20 and all(t["trazo"][:1] in "Mm" for t in tecs)
-    for lang in ("es", "en"):
-        i18n = yaml.safe_load((RAIZ / f"i18n/{lang}.yaml").read_text(encoding="utf-8"))
-        for p in ("economia_azul", "software", "ia", "sector_publico"):
-            for campo in ("et", "paso", "titulo", "linea", "v", "e"):
-                assert i18n.get(f"teaser_{p}_{campo}"), (lang, p, campo)
+    ramas = yaml.safe_load((RAIZ / "data/ramas.yaml").read_text(encoding="utf-8"))
+    validas = {"main"} | {r["id"] for r in ramas["ramas"]}
+    proyectos = {p["id"] for p in yaml.safe_load((RAIZ / "data/es/proyectos.yaml").read_text(encoding="utf-8"))}
+    for c in ramas["commits"]:
+        assert c["rama"] in validas and c["es"] and c["en"], c
+        assert c.get("proyecto") in (None, *proyectos), c
+    for m in ramas["merges"]:
+        assert m["desde"] in validas and m["hacia"] in validas, m
 
 
 def test_portadas_de_proyecto():

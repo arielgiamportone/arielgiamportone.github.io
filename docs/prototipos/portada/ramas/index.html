@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prototipo A · Ramas</title>
+<style>
+:root {
+  --fondo: #f8fafc; --superficie: #fff; --texto: #0f172a; --texto-2: #475569; --borde: #e2e8f0; --acento: #0e7490;
+  --c-main: #334155; --c-economia-azul: #0891b2; --c-software: #2563eb; --c-ia: #7c3aed; --c-sector-publico: #059669;
+  --fuente: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+:root[data-tema="oscuro"] { --fondo: #0b1120; --superficie: #111827; --texto: #e2e8f0; --texto-2: #94a3b8; --borde: #1f2a3c; --acento: #22d3ee;
+  --c-main: #cbd5e1; --c-economia-azul: #22d3ee; --c-software: #60a5fa; --c-ia: #a78bfa; --c-sector-publico: #34d399; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--fondo); color: var(--texto); font-family: var(--fuente); }
+.heroe { max-width: 1180px; margin: 0 auto; padding: 40px 20px 24px; }
+.cabeza { display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; }
+.hola { color: var(--acento); font-weight: 600; margin: 0; }
+h1 { font-size: clamp(2rem, 4.4vw, 3.2rem); margin: .1rem 0 .4rem; letter-spacing: -.025em; }
+.titular { font-size: 1.2rem; font-weight: 650; margin: 0; }
+.resumen { color: var(--texto-2); margin: .4rem 0 0; max-width: 60ch; }
+.consola { font-family: var(--mono); font-size: .85rem; color: var(--texto-2); border: 1px solid var(--borde); background: var(--superficie); border-radius: 12px; padding: 10px 14px; min-width: 330px; min-height: 66px; }
+.consola b { color: var(--texto); font-weight: 600; }
+.consola .anio { font-size: 1.6rem; font-weight: 700; color: var(--texto); display: block; line-height: 1.1; }
+.grafo { margin-top: 18px; position: relative; }
+svg { display: block; width: 100%; height: auto; overflow: visible; }
+.eje line { stroke: var(--borde); }
+.eje text { font: 12px var(--mono); fill: var(--texto-2); }
+.rama { fill: none; stroke-width: 3.5; stroke-linecap: round; }
+.commit { stroke-width: 3; fill: var(--superficie); cursor: pointer; transition: r .2s; }
+.commit.oculto { opacity: 0; }
+.commit.hito { fill: currentColor; }
+.commit:hover, .commit.activo { r: 9; }
+.etq-rama { font: 600 13px var(--mono); cursor: pointer; }
+.etq-rama rect { fill: var(--superficie); stroke-width: 1.5; }
+.etq-rama.atenuada { opacity: .35; }
+.tooltip { position: absolute; pointer-events: none; background: var(--texto); color: var(--fondo); font-size: .8rem; padding: 4px 8px; border-radius: 6px; white-space: nowrap; transform: translate(-50%, -130%); opacity: 0; transition: opacity .15s; }
+.head-avatar { filter: drop-shadow(0 2px 6px rgb(0 0 0 / .25)); }
+.acciones { margin-top: 10px; font-size: .85rem; color: var(--texto-2); display: flex; gap: 12px; align-items: center; }
+button { font: inherit; border: 1px solid var(--borde); background: var(--superficie); color: var(--texto-2); border-radius: 999px; padding: 4px 12px; cursor: pointer; }
+.barra { position: fixed; top: 10px; right: 10px; display: flex; gap: 6px; }
+.anim-in { animation: entra .45s cubic-bezier(.2,.7,.2,1) both; }
+@keyframes entra { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+</style>
+</head>
+<body>
+<div class="barra"><button id="tema">Tema</button></div>
+<section class="heroe">
+  <div class="cabeza">
+    <div>
+      <p class="hola">Hola, soy</p>
+      <h1>Ariel Luján Giamportone</h1>
+      <p class="titular" id="titular">Datos, IA y Producto · Ingeniero Pesquero</p>
+      <p class="resumen" id="resumen">Veinte años en una misma historia: del mar a los datos, del dato al software y del software a la decisión pública.</p>
+    </div>
+    <div class="consola" aria-live="polite" id="consola"><span class="anio">$ git log --graph</span>mi carrera, commit a commit</div>
+  </div>
+  <div class="grafo" id="grafo">
+    <svg id="svg" viewBox="0 0 1180 430" role="img" aria-label="Trayectoria como un historial de git: una rama por perfil">
+      <defs>
+        <clipPath id="revelar"><rect id="cortina" x="0" y="0" width="0" height="430"/></clipPath>
+        <clipPath id="avatar"><circle cx="0" cy="0" r="34"/></clipPath>
+        <linearGradient id="g-head" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--c-software)"/><stop offset=".33" style="stop-color:var(--c-ia)"/><stop offset=".66" style="stop-color:var(--c-sector-publico)"/><stop offset="1" style="stop-color:var(--c-economia-azul)"/></linearGradient>
+      </defs>
+      <g class="eje" id="eje"></g>
+      <g id="lineas" clip-path="url(#revelar)"></g>
+      <g id="commits"></g>
+      <g id="etiquetas"></g>
+      <g id="head"></g>
+    </svg>
+    <div class="tooltip" id="tip"></div>
+  </div>
+  <div class="acciones"><button id="repetir" hidden>↻ Ver de nuevo</button><span id="pista" hidden>Pasa el ratón por un commit · pulsa una rama para ver ese perfil</span></div>
+</section>
+
+<script>
+// ---------------------------------------------------------------- datos (de la base)
+const AÑO0 = 2005.6, AÑO1 = 2027.0, X0 = 40, X1 = 980;
+const TRAMOS = [[2005.6, 40], [2018, 360], [2024, 600], [2027.0, 980]]; // escala por tramos: los años recientes se estiran
+const AV = { x: 1092, y: 205, r: 34 };
+const LANES = { main: 50, 'economia-azul': 130, 'sector-publico': 205, software: 280, ia: 355 };
+const NOMBRES = { main: 'main', 'economia-azul': 'economía-azul', 'sector-publico': 'sector-público', software: 'software', ia: 'ia-y-datos' };
+const TITULOS = {
+  'economia-azul': ['Applied AI Engineer · Blue Economy & Marine Technology', 'Ingeniero pesquero: campañas oceanográficas, investigación en el CADIC y herramientas para la pesca.'],
+  'sector-publico': ['Data Engineer · GovTech & Sector Público', 'Datos para la gestión pública: inventarios municipales, auditoría y análisis de políticas pesqueras.'],
+  software: ['AI & Software Engineer · Producto y Plataformas de Datos', 'De una distribución Linux para la navegación a paquetes abiertos en PyPI y plataformas en producción.'],
+  ia: ['Data Scientist / AI Specialist', 'Modelos predictivos, redes bayesianas e IA aplicada a problemas reales.'],
+};
+// [año, rama, texto, hito?]
+const COMMITS = [
+  [2006.2, 'main', 'Inicio de Ingeniería Pesquera · UTN', 1],
+  [2007.0, 'economia-azul', 'Campañas oceanográficas y antárticas', 1],
+  [2012.4, 'economia-azul', 'Investigación en CADIC-CONICET', 1],
+  [2012.5, 'software', 'VITO GNU/Linux · navegación', 1],
+  [2012.7, 'sector-publico', 'Diagnóstico de la pesca artesanal · CFI', 1],
+  [2013.9, 'economia-azul', 'Proyectos de centolla'],
+  [2014.5, 'main', 'Técnico Universitario Pesquero'],
+  [2015.4, 'economia-azul', 'KIPPA I · ROV con hardware libre', 1],
+  [2015.5, 'sector-publico', 'Consejo Directivo del CADIC'],
+  [2016.5, 'main', 'Ingeniero Pesquero', 1],
+  [2018.6, 'ia', 'Primeros modelos · Utopía Soluciones', 1],
+  [2019.3, 'economia-azul', 'Docencia en la UTN'],
+  [2020.3, 'ia', 'IoT y sensores · Grupo Celentano'],
+  [2020.5, 'sector-publico', 'UTN Antártida Argentina'],
+  [2021.2, 'sector-publico', 'Gobierno de Tierra del Fuego'],
+  [2023.3, 'economia-azul', 'PID Liofilización · director'],
+  [2024.4, 'main', 'MBA Logística y Operaciones'],
+  [2024.6, 'software', 'trawlkit · Trawl Design Lab', 1],
+  [2024.8, 'sector-publico', 'Auditorías de inventario · Intervalor'],
+  [2025.2, 'ia', 'Mainly Labs'],
+  [2025.45, 'economia-azul', 'merge: Pesqueros en IA', 1],
+  [2025.5, 'software', 'Plataforma de datos · Intervalor Data', 1],
+  [2025.9, 'ia', 'merge: cfp-audit-intelligence', 1],
+  [2026.1, 'ia', 'fisheries-sustainability-mlops'],
+  [2026.3, 'sector-publico', 'Serie DT-ALGP-2026', 1],
+  [2026.55, 'main', 'Máster en Desarrollo con IA'],
+  [2026.8, 'software', 'Paquetes abiertos en PyPI'],
+];
+// ramas: [nombre, año de salida, rama de origen]
+const RAMAS = [['economia-azul', 2007.0, 'main'], ['software', 2012.5, 'main'], ['sector-publico', 2012.7, 'economia-azul'], ['ia', 2018.6, 'software']];
+// merges entre ramas: [año, desde, hacia]
+const MERGES = [[2025.45, 'ia', 'economia-azul'], [2025.9, 'economia-azul', 'ia'], [2025.9, 'software', 'ia'], [2025.5, 'sector-publico', 'software']];
+const HEAD = 2027.0;
+
+const x = (a) => { for (let i = 1; i < TRAMOS.length; i++) { const [a0, x0] = TRAMOS[i - 1], [a1, x1] = TRAMOS[i]; if (a <= a1 || i === TRAMOS.length - 1) return x0 + (a - a0) / (a1 - a0) * (x1 - x0); } };
+const NS = 'http://www.w3.org/2000/svg';
+const $ = (id) => document.getElementById(id);
+const el = (tag, attrs, padre) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); padre && padre.appendChild(e); return e; };
+const col = (r) => `var(--c-${r})`;
+
+// eje de años
+for (const a of [2006, 2009, 2012, 2015, 2018, 2020, 2022, 2024, 2025, 2026, 2027]) {
+  el('line', { x1: x(a), x2: x(a), y1: 20, y2: 390 }, $('eje'));
+  const t = el('text', { x: x(a), y: 412, 'text-anchor': 'middle' }, $('eje')); t.textContent = a === 2027 ? 'hoy' : a;
+}
+// main
+const embudo = (y) => { const xe = x(HEAD), dy = y - AV.y, ang = Math.atan2(dy, 70), ex = AV.x - AV.r * Math.cos(ang), ey = AV.y + AV.r * Math.sin(ang) * 0.9; return `H${xe} C${xe + 50} ${y} ${ex - 40} ${ey} ${ex} ${ey}`; };
+el('path', { class: 'rama', 'data-rama': 'main', d: `M${x(AÑO0 + .3)} ${LANES.main} ${embudo(LANES.main)}`, stroke: col('main') }, $('lineas'));
+// ramas: salen con una curva de su origen y vuelven a main en HEAD
+for (const [r, a, o] of RAMAS) {
+  const y0 = LANES[o], y = LANES[r], xa = x(a), xh = x(HEAD);
+  el('path', { class: 'rama', 'data-rama': r, stroke: col(r),
+    d: `M${xa - 30} ${y0} C${xa - 8} ${y0} ${xa - 22} ${y} ${xa} ${y} ${embudo(y)}` }, $('lineas'));
+}
+for (const [a, d, h] of MERGES) {
+  const xa = x(a), yd = LANES[d], yh = LANES[h];
+  el('path', { class: 'rama', stroke: col(d), 'stroke-opacity': .75, d: `M${xa - 56} ${yd} C${xa - 20} ${yd} ${xa - 30} ${yh} ${xa} ${yh}` }, $('lineas'));
+}
+// commits
+const commits = COMMITS.map(([a, r, t, h]) => {
+  const c = el('circle', { class: `commit oculto${h ? ' hito' : ''}`, cx: x(a), cy: LANES[r], r: h ? 7.5 : 6, stroke: col(r), 'data-anio': a, 'data-rama': r }, $('commits'));
+  c.style.color = col(r); c.dataset.texto = t;
+  return c;
+});
+// etiquetas de rama (a la derecha)
+const NACE = { main: 2005.9, 'economia-azul': 2007.3, 'sector-publico': 2013.0, software: 2012.9, ia: 2018.9 };
+const etiquetas = Object.entries(LANES).map(([r, y]) => {
+  const g = el('g', { class: 'etq-rama', 'data-rama': r, transform: `translate(${x(NACE[r])} ${y - 24})`, opacity: 0 }, $('etiquetas'));
+  const w = NOMBRES[r].length * 8.4 + 26;
+  el('rect', { x: 0, y: -13, width: w, height: 26, rx: 13, stroke: col(r) }, g);
+  const t = el('text', { x: 11, y: 4.5, fill: col(r) }, g); t.textContent = (r === 'main' ? '' : '⎇ ') + NOMBRES[r];
+  return g;
+});
+// HEAD con la foto
+const head = el('g', { transform: `translate(${AV.x} ${AV.y})`, opacity: 0, class: 'head-avatar' }, $('head'));
+el('circle', { r: AV.r + 3, fill: 'url(#g-head)' }, head);
+el('image', { href: "../me.webp", x: -AV.r, y: -AV.r, width: AV.r * 2, height: AV.r * 2, 'clip-path': 'url(#avatar)' }, head);
+const hl = el('text', { x: 0, y: AV.r + 22, 'text-anchor': 'middle', fill: 'var(--texto-2)', style: 'font: 600 11px var(--mono)' }, head); hl.textContent = 'HEAD · hoy';
+
+
+// tooltip
+const tip = $('tip');
+commits.forEach((c) => {
+  c.addEventListener('mouseenter', () => {
+    const r = $('svg').getBoundingClientRect(), k = r.width / 1180;
+    tip.textContent = `${Math.floor(c.dataset.anio)} · ${c.dataset.texto}`;
+    tip.style.left = `${c.getAttribute('cx') * k}px`; tip.style.top = `${c.getAttribute('cy') * k}px`; tip.style.opacity = 1;
+  });
+  c.addEventListener('mouseleave', () => { tip.style.opacity = 0; });
+});
+
+// ---------------------------------------------------------------- animación
+const consola = $('consola');
+let gen = 0;
+function escribir(html) { consola.innerHTML = html; consola.classList.remove('anim-in'); void consola.offsetWidth; consola.classList.add('anim-in'); }
+async function reproducir() {
+  const g = ++gen;
+  $('repetir').hidden = true; $('pista').hidden = true;
+  commits.forEach((c) => c.classList.add('oculto'));
+  etiquetas.forEach((e) => e.setAttribute('opacity', 0)); head.setAttribute('opacity', 0);
+  const DUR = 9500, t0 = performance.now(); let ultimo = -1;
+  await new Promise((fin) => {
+    const paso = (t) => {
+      if (g !== gen) return fin();
+      const k = Math.min(1, (t - t0) / DUR), e = k < .5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2;
+      const a = AÑO0 + e * (HEAD - AÑO0);
+      $('cortina').setAttribute('width', k < 1 ? x(a) : 1180);
+      commits.forEach((c, i) => {
+        if (c.classList.contains('oculto') && +c.dataset.anio <= a) {
+          c.classList.remove('oculto');
+          c.animate([{ r: 0 }, { r: c.getAttribute('r') }], { duration: 300 });
+          etiquetas.forEach((et) => { if (+et.getAttribute('opacity') === 0 && NACE[et.dataset.rama] - .3 <= a) et.setAttribute('opacity', 1); });
+          if (COMMITS[i][3] && i > ultimo) { ultimo = i; escribir(`<span class="anio">${Math.floor(COMMITS[i][0])}</span><b style="color:${getComputedStyle(c).stroke}">⎇ ${NOMBRES[COMMITS[i][1]]}</b> · ${COMMITS[i][2]}`); }
+        }
+      });
+      if (k < 1) requestAnimationFrame(paso); else fin();
+    };
+    requestAnimationFrame(paso);
+  });
+  if (g !== gen) return;
+  head.setAttribute('opacity', 1); head.animate([{ opacity: 0, transform: `translate(${AV.x}px, ${AV.y}px) scale(.6)` }, { opacity: 1, transform: `translate(${AV.x}px, ${AV.y}px) scale(1)` }], { duration: 500 });
+  etiquetas.forEach((e, i) => setTimeout(() => e.setAttribute('opacity', 1), i * 90));
+  escribir('<span class="anio">HEAD → main</span>cuatro ramas, una misma historia');
+  $('repetir').hidden = false; $('pista').hidden = false;
+}
+// pulsar una rama = elegir perfil
+etiquetas.forEach((e) => e.addEventListener('click', () => {
+  const r = e.dataset.rama, activa = e.classList.contains('sel') || r === 'main';
+  etiquetas.forEach((o) => { o.classList.remove('sel'); o.classList.toggle('atenuada', !activa && o !== e); });
+  document.querySelectorAll('.rama[data-rama]').forEach((p) => p.style.opacity = !activa && p.dataset.rama !== r ? .25 : 1);
+  commits.forEach((c) => c.style.opacity = !activa && c.dataset.rama !== r && c.dataset.rama !== 'main' ? .25 : 1);
+  if (activa) { $('titular').textContent = 'Datos, IA y Producto · Ingeniero Pesquero'; $('resumen').textContent = 'Veinte años en una misma historia: del mar a los datos, del dato al software y del software a la decisión pública.'; return; }
+  e.classList.add('sel'); $('titular').textContent = TITULOS[r][0]; $('resumen').textContent = TITULOS[r][1];
+}));
+$('repetir').onclick = reproducir;
+$('tema').onclick = () => { const r = document.documentElement; r.dataset.tema = r.dataset.tema === 'oscuro' ? '' : 'oscuro'; };
+reproducir();
+</script>
+</body>
+</html>

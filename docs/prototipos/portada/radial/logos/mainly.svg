@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Mainly Labs</title>
+  <desc>Iniciales ML en naranja sobre fondo azul marino.</desc>
+  <rect width="64" height="64" rx="12" fill="#172848"/>
+  <g fill="#fa7c08">
+    <path d="M7 17h7l7 12 7-12h7v30h-7V30l-7 11-7-11v17H7z"/>
+    <path d="M41 17h7v23h9v7H41z"/>
+  </g>
+</svg>
