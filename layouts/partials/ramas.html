@@ -6,14 +6,14 @@
 {{- $commits := slice -}}
 {{- range site.Data.ramas.commits -}}
   {{- $url := "" }}{{ with .proyecto }}{{ $url = index $fichas . | default "" }}{{ end -}}
-  {{- $commits = $commits | append (dict "a" .anio "r" .rama "t" (cond $en .en .es) "h" (.hito | default false) "u" $url) -}}
+  {{- $commits = $commits | append (dict "a" .anio "r" .rama "t" (cond $en .en .es) "tc" (cond $en (.en_c | default .en) (.es_c | default .es)) "h" (.hito | default false) "u" $url) -}}
 {{- end -}}
 {{- $nombres := cond $en
   (dict "main" "main" "academia" "teaching-and-science" "economia-azul" "blue-economy" "sector-publico" "public-sector" "software" "software" "ia" "ai-and-data")
   (dict "main" "main" "academia" "docencia-y-ciencia" "economia-azul" "economía-azul" "sector-publico" "sector-público" "software" "software" "ia" "ia-y-datos") -}}
 {{- $datos := dict "commits" $commits "ramas" site.Data.ramas.ramas "merges" site.Data.ramas.merges "nombres" $nombres
   "foto" ((resources.Get "images/me.png").Fill "160x160 Center webp q82").RelPermalink
-  "txt" (dict "head" (i18n "ramas_head") "final" (i18n "ramas_final") "hoy" (i18n "ramas_hoy") "aria" (i18n "ramas_aria")) -}}
+  "txt" (dict "head" (i18n "ramas_head") "final" (i18n "ramas_final") "hoy" (i18n "ramas_hoy") "saltar" (i18n "ramas_saltar") "repetir" (i18n "ramas_repetir") "aria" (i18n "ramas_aria")) -}}
 <div class="ramas" data-ramas>
   <div class="ramas__grafo" data-ramas-grafo role="group" aria-label="{{ i18n "ramas_aria" }}"></div>
   <div class="ramas__tip" data-ramas-tip></div>

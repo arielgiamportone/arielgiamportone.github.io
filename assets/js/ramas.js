@@ -19,6 +19,16 @@ const el = (tag, attrs, padre) => {
   return e;
 };
 const col = (r) => `var(--c-${r === 'main' ? 'main' : r})`;
+const anioDe = (u) => { // inversa de tiempo()
+  for (let i = 1; i < TRAMOS.length; i++) {
+    const [a0, f0] = TRAMOS[i - 1], [a1, f1] = TRAMOS[i];
+    if (u <= f1 || i === TRAMOS.length - 1) return a0 + (u - f0) / (f1 - f0) * (a1 - a0);
+  }
+  return HEAD;
+};
+// Ritmo: el frente avanza a velocidad constante, pero entre dos hitos pasa al menos HITO_MS
+// (para leer su texto en la consola) y frena al llegar a cada uno.
+const BARRIDO_MS = 7000, HITO_MS = 1000;
 const tiempo = (a) => {
   for (let i = 1; i < TRAMOS.length; i++) {
     const [a0, f0] = TRAMOS[i - 1], [a1, f1] = TRAMOS[i];
@@ -41,7 +51,7 @@ export function iniciarRamas() {
   const quieto = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const nace = { main: AÑO0 + 0.3 };
   datos.ramas.forEach((r) => { nace[r.id] = r.nace; });
-  let vertical = null, gen = 0, lente = '', partes = null;
+  let vertical = null, gen = 0, lente = '', partes = null, saltar = null;
 
   // ------------------------------------------------------------ geometría
   function geometria(vert) {
@@ -126,7 +136,8 @@ export function iniciarRamas() {
         el('path', { d: `M${+punto.getAttribute('cx') + 9} ${punto.getAttribute('cy')} C164 ${punto.getAttribute('cy')} 164 ${y} 172 ${y}`, style: `stroke: ${col(c.r)}` }, g);
         const t = el('text', { x: 178, y: y + 4 }, g);
         el('tspan', { class: 'ramas__anio' }, t).textContent = `${Math.floor(c.a)} `;
-        el('tspan', {}, t).textContent = c.t.length > 28 ? `${c.t.slice(0, 27)}…` : c.t;
+        const corto = c.tc || c.t; // texto corto para móvil (es_c / en_c en data/ramas.yaml)
+        el('tspan', {}, t).textContent = corto.length > 30 ? `${corto.slice(0, 29)}…` : corto;
         rotulos.push({ g, a: c.a });
       });
     }
@@ -183,7 +194,7 @@ export function iniciarRamas() {
     rotulos.forEach(({ g }) => g.classList.remove('oculto'));
     head.classList.remove('oculto');
     escribir('HEAD → main', datos.txt.final);
-    if (repetir) repetir.hidden = false;
+    if (repetir) { repetir.hidden = false; repetir.dataset.modo = ''; repetir.textContent = datos.txt.repetir; }
     if (pista) pista.hidden = false;
     banda?.classList.add('banda--mueve');
   }
@@ -192,7 +203,6 @@ export function iniciarRamas() {
     const g = ++gen;
     const { cortina, commits, etiquetas, head, rotulos, G } = partes;
     const vb = G.vb.split(' ').map(Number);
-    if (repetir) repetir.hidden = true;
     if (pista) pista.hidden = true;
     banda?.classList.remove('banda--mueve');
     commits.forEach(({ punto }) => punto.classList.add('oculto'));
@@ -200,13 +210,30 @@ export function iniciarRamas() {
     rotulos.forEach(({ g: r }) => r.classList.add('oculto'));
     head.classList.add('oculto');
     escribir('$ git log --graph', datos.txt.head);
-    const DUR = 9500, t0 = performance.now();
+    // tramos de la animación: [u0, u1, ms], con una parada suave en cada hito
+    const marcas = [0, ...new Set(commits.filter(({ c }) => c.h).map(({ c }) => tiempo(c.a))), 1];
+    const tramos = [];
+    for (let i = 1; i < marcas.length; i++) {
+      const du = marcas[i] - marcas[i - 1];
+      tramos.push([marcas[i - 1], marcas[i], i > 1 && i < marcas.length - 1 ? Math.max(du * BARRIDO_MS, HITO_MS) : du * BARRIDO_MS]);
+    }
+    const DUR = tramos.reduce((s, x) => s + x[2], 0), t0 = performance.now();
+    const uEn = (ms) => {
+      let resto = ms;
+      for (const [u0, u1, d] of tramos) {
+        if (resto <= d) { const x = resto / d, s = x * x * (3 - 2 * x); return u0 + s * (u1 - u0); }
+        resto -= d;
+      }
+      return 1;
+    };
+    saltar = () => { gen++; estadoFinal(); try { sessionStorage.setItem('ramas-visto', '1'); } catch (e) { /* sin almacenamiento */ } };
+    if (repetir) { repetir.hidden = false; repetir.dataset.modo = 'saltar'; repetir.textContent = datos.txt.saltar; }
     let ultimoHito = -1;
     await new Promise((fin) => {
       const paso = (t) => {
         if (g !== gen) return fin();
-        const k = Math.min(1, (t - t0) / DUR), e = k < 0.5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2;
-        const a = AÑO0 + e * (HEAD - AÑO0), frente = G.t(a);
+        const k = Math.min(1, (t - t0) / DUR);
+        const a = k < 1 ? anioDe(uEn(t - t0)) : HEAD, frente = G.t(a);
         if (!vertical) { cortina.setAttribute('width', k < 1 ? frente : vb[2]); cortina.setAttribute('height', vb[3]); }
         else { cortina.setAttribute('width', vb[2]); cortina.setAttribute('height', k < 1 ? frente : vb[3]); }
         commits.forEach(({ c, punto }, i) => {
@@ -260,7 +287,7 @@ export function iniciarRamas() {
   });
 
   // ------------------------------------------------------------ arranque
-  repetir?.addEventListener('click', reproducir);
+  repetir?.addEventListener('click', () => (repetir.dataset.modo === 'saltar' && saltar ? saltar() : reproducir()));
   const observar = (nodo, clase) => nodo && new IntersectionObserver(([e]) => nodo.classList.toggle(clase, !e.isIntersecting)).observe(nodo);
   observar(banda, 'banda--fuera');
   observar(document.querySelector('[data-cintas]'), 'cintas--fuera');
